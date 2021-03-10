@@ -5,6 +5,7 @@ import ctypes
 import pprint as pp
 import os
 import time
+import sys
 
 from data.load_mnist import load_mnist
 
@@ -15,8 +16,8 @@ NUM_TEST_IMAGES = 10000 # full test
 # matrix M: M_SIZE by V_SIZE
 # vector V: V_SIZE
 # output = M * V
-M_SIZE = 8
-V_SIZE = 8
+M_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 64
+V_SIZE = int(sys.argv[2]) if len(sys.argv) > 1 else 64
 
 class MLP(object):
   def __init__(self, net_path, m_size, v_size):
