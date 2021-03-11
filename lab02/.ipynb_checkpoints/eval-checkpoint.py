@@ -12,13 +12,6 @@ from data.load_mnist import load_mnist
 #NUM_TEST_IMAGES = 100 # fast test
 NUM_TEST_IMAGES = 10000 # full test
 
-# matrix vector multiplicator
-# matrix M: M_SIZE by V_SIZE
-# vector V: V_SIZE
-# output = M * V
-M_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 64
-V_SIZE = int(sys.argv[2]) if len(sys.argv) > 1 else 64
-
 class MLP(object):
   def __init__(self, net_path, m_size, v_size):
     self.lib = ctypes.cdll.LoadLibrary("./build/libpylib.so")
@@ -38,6 +31,13 @@ class MLP(object):
 
 
 if __name__ == "__main__":
+  # matrix vector multiplicator
+  # matrix M: M_SIZE by V_SIZE
+  # vector V: V_SIZE
+  # output = M * V
+  M_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 64
+  V_SIZE = int(sys.argv[2]) if len(sys.argv) > 1 else 64
+    
   print("read dataset...")
   images, labels = load_mnist("test", path="./data")
   images, labels = images[:NUM_TEST_IMAGES, :, :], labels[:NUM_TEST_IMAGES]
@@ -63,6 +63,7 @@ if __name__ == "__main__":
 
     n_correct += (label == prediction)
   
+#   print(net.m_size, net.v_size, float(n_correct)/NUM_TEST_IMAGES, time.time()-start_time)
   model_stats = {
     "total_time": time.time()-start_time,
     "total_image": NUM_TEST_IMAGES,
