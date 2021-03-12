@@ -36,8 +36,8 @@ if __name__ == "__main__":
   # vector V: V_SIZE
   # output = M * V
   M_SIZE = int(sys.argv[1]) if len(sys.argv) > 1 else 64
-  V_SIZE = int(sys.argv[2]) if len(sys.argv) > 1 else 64
-    
+  V_SIZE = int(sys.argv[2]) if len(sys.argv) > 1 else 64 
+
   print("read dataset...")
   images, labels = load_mnist("test", path="./data")
   images, labels = images[:NUM_TEST_IMAGES, :, :], labels[:NUM_TEST_IMAGES]
