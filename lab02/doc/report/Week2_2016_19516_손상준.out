@@ -1,0 +1,7 @@
+\BOOKMARK [1][-]{section.1}{MV Multiplication}{}% 1
+\BOOKMARK [1][-]{section.2}{Implementation}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Initialize input vector}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Assign a vector}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Assign a matrix}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Execute block MV multiplication \046 Accumulate intermediate results}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Experiment}{}% 7
