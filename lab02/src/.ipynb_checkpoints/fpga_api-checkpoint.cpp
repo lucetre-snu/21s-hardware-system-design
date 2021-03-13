@@ -71,19 +71,18 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
 	float* vec = this->vector();
 	float* mat = this->matrix();
     
-// 	for (int i = 0; i < num_output; ++i)
-// 	{
-// 		output[i] = 0;
-// 		for (int j = 0; j < num_input; ++j)
-// 			output[i] += input[j] * large_mat[num_input*i + j];
-// 	}
-//     return;
-    
 	// 0) Initialize output vector		
 	for(int i = 0; i < num_output; ++i)
 	{
 		output[i] = 0;
 	}
+    
+// 	general MV
+// 	for(int i = 0; i < num_output; i++) {
+// 		for(int j = 0; j < num_input; j++) {
+// 			output[i] += large_mat[num_input * i + j] * input[j];
+// 		}
+// 	}
     
 	for(int i = 0; i < num_output; i += m_size_)
 	{
