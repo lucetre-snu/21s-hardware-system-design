@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  23 MAR 2021 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  23 MAR 2021 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -926,25 +926,21 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 9
 
 (c:/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-LaTeX Warning: Reference `eq1' on page 1 undefined on input line 123.
-
-[1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+) [1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<fig/fig1.png, id=103, 1422.0628pt x 380.17032pt>
+<fig/fig1.png, id=133, 1422.0628pt x 380.17032pt>
 File: fig/fig1.png Graphic file (type png)
 <use fig/fig1.png>
 Package pdftex.def Info: fig/fig1.png  used on input line 180.
 (pdftex.def)             Requested size: 469.75502pt x 125.58421pt.
  [2 <./fig/fig1.png>]
-<fig/fig2.png, id=136, 1419.05156pt x 367.3725pt>
+<fig/fig2.png, id=163, 1419.05156pt x 367.3725pt>
 File: fig/fig2.png Graphic file (type png)
 <use fig/fig2.png>
 Package pdftex.def Info: fig/fig2.png  used on input line 192.
 (pdftex.def)             Requested size: 469.75502pt x 121.60887pt.
-<fig/fig3.png, id=137, 1422.0628pt x 366.61969pt>
+<fig/fig3.png, id=164, 1422.0628pt x 366.61969pt>
 File: fig/fig3.png Graphic file (type png)
 <use fig/fig3.png>
 Package pdftex.def Info: fig/fig3.png  used on input line 204.
@@ -952,8 +948,7 @@ Package pdftex.def Info: fig/fig3.png  used on input line 204.
  [3 <./fig/fig2.png> <./fig/fig3.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
-
-(./Week3_2016_10454_이지원_2016_19516_손상준.aux)
+ (./Week3_2016_10454_이지원_2016_19516_손상준.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
 
@@ -965,22 +960,16 @@ Package rerunfilecheck Warning: File `Week3_2016_10454_이지원_2016_19516_손
 
 Package rerunfilecheck Info: Checksums for `Week3_2016_10454_이지원_2016_195
 16_손상준.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             Before: 98299E383A7A74CA27725D8E48048D9A;471
 (rerunfilecheck)             After:  9F58B2F0433E184E2CA9E4B53C904CEC;463.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
- 21732 strings out of 480994
- 419923 string characters out of 5916032
- 899137 words of memory out of 5000000
- 36667 multiletter control sequences out of 15000+600000
- 552968 words of font info for 85 fonts, out of 8000000 for 9000
+ 21739 strings out of 480994
+ 420023 string characters out of 5916032
+ 899256 words of memory out of 5000000
+ 36675 multiletter control sequences out of 15000+600000
+ 551979 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,97p,492b,1433s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texm
@@ -1023,10 +1012,10 @@ s/type1/public/nanumtype1/nanummjmd6.pfb><c:/texlive/2019/texmf-dist/fonts/type
 courier/ucrr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.
 pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
 Output written on Week3_2016_10454_이지원_2016_19516_손상준.pdf (3 pages,
- 1643181 bytes).
+ 1643306 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 325 PDF objects out of 1000 (max. 8388607)
+ 253 compressed objects within 3 object streams
  64 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 188 words of extra memory for PDF output out of 10000 (max. 10000000)
 
