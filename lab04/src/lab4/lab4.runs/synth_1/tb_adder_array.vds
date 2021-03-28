@@ -1,0 +1,335 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 29 00:05:05 2021
+# Process ID: 14752
+# Current directory: A:/lab4/lab4/lab4.runs/synth_1
+# Command line: vivado.exe -log tb_adder_array.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tb_adder_array.tcl
+# Log file: A:/lab4/lab4/lab4.runs/synth_1/tb_adder_array.vds
+# Journal file: A:/lab4/lab4/lab4.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source tb_adder_array.tcl -notrace
+Command: synth_design -top tb_adder_array -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17768 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 358.148 ; gain = 103.066
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'tb_adder_array' [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:3]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:24]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:25]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:26]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:27]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:19]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:20]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:21]
+WARNING: [Synth 8-639] system function call 'urandom' not supported [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:22]
+INFO: [Common 17-14] Message 'Synth 8-639' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6157] synthesizing module 'adder_array' [A:/lab4/lab4/lab4.srcs/sources_1/new/adder_array.v:20]
+INFO: [Synth 8-6157] synthesizing module 'my_add' [A:/lab4/lab4/lab4.srcs/sources_1/new/adder_array.v:4]
+	Parameter BITWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'my_add' (1#1) [A:/lab4/lab4/lab4.srcs/sources_1/new/adder_array.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'adder_array' (2#1) [A:/lab4/lab4/lab4.srcs/sources_1/new/adder_array.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'tb_adder_array' (3#1) [A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 413.730 ; gain = 158.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 413.730 ; gain = 158.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 413.730 ; gain = 158.648
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 413.730 ; gain = 158.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 4     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module my_add 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     33 Bit       Adders := 1     
+Module adder_array 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 551.281 ; gain = 296.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 551.281 ; gain = 296.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 256 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 559.953 ; gain = 304.871
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 671.879 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+14 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 671.879 ; gain = 420.277
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 671.879 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'A:/lab4/lab4/lab4.runs/synth_1/tb_adder_array.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file tb_adder_array_utilization_synth.rpt -pb tb_adder_array_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 29 00:05:26 2021...
