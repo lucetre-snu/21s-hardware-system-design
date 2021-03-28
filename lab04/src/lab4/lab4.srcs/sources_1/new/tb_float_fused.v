@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_lab4();
+module tb_float_fused();
     parameter BITWIDTH = 32;
 
     reg [BITWIDTH-1:0] ain;
