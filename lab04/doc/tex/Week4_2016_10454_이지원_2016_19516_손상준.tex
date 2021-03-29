@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mdwlist}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{geometry}
+\usepackage{kotex}
+\geometry{margin=1in}
+\geometry{headheight=2in}
+\geometry{top=2in}
+\usepackage{palatino}
+%\renewcommand{\rmdefault}{palatino}
+\usepackage{fancyhdr}
+%\pagestyle{fancy}
+\rhead{}
+\lhead{}
+\chead{%
+  {\vbox{%
+      \vspace{2mm}
+      \large
+      Hardware System Design 4190.309A\hfill
+\\
+      Seoul National University
+      \\[4mm]
+      \textbf{Practice \#4. How to use IP catalog \& Synthesize}\\
+      \textbf{Jiwon Lee, Sangjun Son}
+    }
+  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+\usepackage{listings}
+\definecolor{vgreen}{RGB}{104,180,104}
+\definecolor{vblue}{RGB}{49,49,255}
+\definecolor{vorange}{RGB}{255,143,102}
+
+\lstdefinestyle{verilog-style}
+{
+    language=Verilog,
+    basicstyle=\small\ttfamily,
+    keywordstyle=\color{vblue},
+    identifierstyle=\color{black},
+    commentstyle=\color{vgreen},
+    numbers=left,
+    numberstyle=\tiny\color{black},
+    numbersep=10pt,
+    tabsize=8,
+    moredelim=*[s][\colorIndex]{[}{]},
+    literate=*{:}{:}1
+}
+
+\makeatletter
+\newcommand*\@lbracket{[}
+\newcommand*\@rbracket{]}
+\newcommand*\@colon{:}
+\newcommand*\colorIndex{%
+    \edef\@temp{\the\lst@token}%
+    \ifx\@temp\@lbracket \color{black}%
+    \else\ifx\@temp\@rbracket \color{black}%
+    \else\ifx\@temp\@colon \color{black}%
+    \else \color{vorange}%
+    \fi\fi\fi
+}
+\makeatother
+
+\usepackage{trace}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{paralist}
+
+\usepackage{todonotes}
+\setlength{\marginparwidth}{2.15cm}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,backgrounds}
+
+\begin{document}
+\pagestyle{fancy}
+
+\section*{Goal}
+
+\begin{itemize*}
+\item Implement base of Float32 multiplier + accumulator.
+\item Implement Floating point / Integer fused multiply-adder using IP catalog.
+\item Implement adder-array using accumulator module.
+\end{itemize*}
+
+\section{Implementation}
+
+\subsection{Adder}
+
+이 누산기는 2개의 input, 1개의 output, 1개의 overflow detecting bit 로 이루어져 있다.
+같은 크기의 bitwidth를 가지는 2개의 input을 더했을 때, output의 bitwidth도 동일하기 때문에, overflow가 발생할 수 있다.
+Overflow detecting은 concatenation assign을 통해 구현하였다.
+Overflow bit와 output의 총 길이는 bitwidth+1이고, 2개의 input을 더했을 때 나올 수 있는 최대 bit수는 bitwidth+1이기 때문에, 이를 통해 overflow를 detect 할 수 있다.
+
+\begin{lstlisting}[style={verilog-style}]
+`timescale 1ns / 1ps
+module my_add #(
+    parameter BITWIDTH = 32
+)
+(
+    input [BITWIDTH-1:0] ain,
+    input [BITWIDTH-1:0] bin,
+    output [BITWIDTH-1:0] dout,
+    output overflow
+);
+    // concatnate (overflow, dout) & detect overflow
+    assign {overflow, dout} = ain + bin;
+endmodule
+\end{lstlisting}
+
+\section{Results \& Conclusion}
+
+\subsection{Adder}
+testbench에서 주어지는 ain, bin의 값은 0 ~ $2^{31}-1$ 까지의 임의의 값이다.
+따라서, dout의 값은 최대 $2^{31}-2$  이고, 이는 32bit로 만들 수 있는 최댓값인 $2^{31}-1$  보다 작으므로 주어진 testbench에서는 overflow가 발생하지 않는다.
+하지만, 실제로 ain, bin의 값을 증가시켜 overflow가 발생하도록 하였을 때, overflow bit가 1이 되어 detecting한다는 것을 알 수 있었다.
+
+
+\end{document}

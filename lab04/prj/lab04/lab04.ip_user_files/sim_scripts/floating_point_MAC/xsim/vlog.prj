@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../lab04.gen/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
