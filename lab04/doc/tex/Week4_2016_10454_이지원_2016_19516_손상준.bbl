@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{fpmultiplyadder}
+LogiCORE IP~Product Guide.
+\newblock {\em Floating-Point Operator v7.1}.
+\newblock Vivado Design Suite, Dec 2020.
+
+\bibitem{intmultiplyadder}
+LogiCORE IP~Product Guide.
+\newblock {\em Multiply Adder v3.0}.
+\newblock Vivado Design Suite, Feb 2021.
+
+\bibitem{overton2001numerical}
+Michael~L Overton.
+\newblock {\em Numerical computing with IEEE floating point arithmetic}.
+\newblock SIAM, 2001.
+
+\end{thebibliography}
