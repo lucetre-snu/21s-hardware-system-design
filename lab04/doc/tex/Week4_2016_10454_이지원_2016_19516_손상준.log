@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  29 MAR 2021 23:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  30 MAR 2021 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -912,6 +912,12 @@ LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 8
 (c:/texlive/2019/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
+<fig/fig1.png, id=48, 592.2125pt x 75.28125pt>
+File: fig/fig1.png Graphic file (type png)
+<use fig/fig1.png>
+Package pdftex.def Info: fig/fig1.png  used on input line 108.
+(pdftex.def)             Requested size: 469.75502pt x 59.71619pt.
+
 (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
@@ -921,89 +927,85 @@ File: lstlang2.sty 2019/09/10 1.8c listings language file
 (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2019/09/10 1.8c listings language file
 )
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 9
-9.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+43.
 
 (c:/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
+ <./fig/fig1.png>] [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
 
 (./Week4_2016_10454_이지원_2016_19516_손상준.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
+Package rerunfilecheck Info: File `Week4_2016_10454_이지원_2016_19516_손상
+준.out' has not changed.
+(rerunfilecheck)             Checksum: C3FA2E8C5ED62FD997E4FB7CD112224F;245.
 
 
-Package rerunfilecheck Warning: File `Week4_2016_10454_이지원_2016_19516_손
-상준.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `Week4_2016_10454_이지원_2016_195
-16_손상준.out':
-(rerunfilecheck)             Before: 9F58B2F0433E184E2CA9E4B53C904CEC;463
-(rerunfilecheck)             After:  A17C25C7D553DFE0E3B277F54836C96C;215.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
- 21661 strings out of 480994
- 419000 string characters out of 5916032
- 892181 words of memory out of 5000000
- 36646 multiletter control sequences out of 15000+600000
- 550622 words of font info for 78 fonts, out of 8000000 for 9000
+ 21692 strings out of 480994
+ 419378 string characters out of 5916032
+ 893251 words of memory out of 5000000
+ 36662 multiletter control sequences out of 15000+600000
+ 553530 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,97p,492b,1433s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.2} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumt
-ype1/nanummjmac.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/n
-anummjmad.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummj
-mae.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pf
-b><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/
-texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texliv
-e/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2019
-/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2019/texmf
--dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/texlive/2019/texmf-dist/
-fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texlive/2019/texmf-dist/fonts/
-type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
-public/nanumtype1/nanummjmbb.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public
-/nanumtype1/nanummjmbc.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanum
-type1/nanummjmc0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/
-nanummjmc1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanumm
-jmc2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.p
-fb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb><c:
-/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><c:/texli
-ve/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/texlive/201
-9/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2019/texm
-f-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2019/texmf-dist
-/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/2019/texmf-dist/fonts
-/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2019/texmf-dist/fonts/type1
-/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publi
-c/nanumtype1/nanummjmd5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanu
-mtype1/nanummjmd6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8
-a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texli
-ve/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on Week4_2016_10454_이지원_2016_19516_손상준.pdf (1 page, 
-1189688 bytes).
+ 68i,12n,97p,492b,2266s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb><c:/tex
+live/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb><c:/texlive/2
+019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb><c:/texlive/2019/te
+xmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c:/texlive/2019/texmf-di
+st/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/texlive/2019/texmf-dist/fon
+ts/type1/public/nanumtype1/nanummjmb2.pfb><c:/texlive/2019/texmf-dist/fonts/typ
+e1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pub
+lic/nanumtype1/nanummjmb4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/na
+numtype1/nanummjmb5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtyp
+e1/nanummjmb6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nan
+ummjmb7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb
+8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb>
+<c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/te
+xlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/texlive/
+2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/texlive/2019/t
+exmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:/texlive/2019/texmf-d
+ist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/texlive/2019/texmf-dist/fo
+nts/type1/public/nanumtype1/nanummjmbf.pfb><c:/texlive/2019/texmf-dist/fonts/ty
+pe1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pu
+blic/nanumtype1/nanummjmc1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/n
+anumtype1/nanummjmc2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumty
+pe1/nanummjmc5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/na
+nummjmc6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjm
+c7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb
+><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/t
+exlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb><c:/texlive
+/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2019/
+texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/2019/texmf-
+dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2019/texmf-dist/f
+onts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2019/texmf-dist/fonts/t
+ype1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/p
+ublic/nanumtype1/nanummjmd3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/
+nanumtype1/nanummjmd4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumt
+ype1/nanummjmd5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/n
+anummjmd6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c
+:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2019/
+texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on Week4_2016_10454_이지원_2016_19516_손상준.pdf (2 pages,
+ 1747483 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 
