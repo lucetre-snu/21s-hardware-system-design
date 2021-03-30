@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../lab04.gen/sources_1/ip/xbip_multadd_MAC/sim/xbip_multadd_MAC.vhd" \
+
+nosort

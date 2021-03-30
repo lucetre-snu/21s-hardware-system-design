@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar 29 21:34:39 2021
+# Process ID: 13448
+# Current directory: C:/Users/lucetre/Documents/semester/lab04/lab04.runs/xbip_multadd_MAC_synth_1
+# Command line: vivado.exe -log xbip_multadd_MAC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xbip_multadd_MAC.tcl
+# Log file: C:/Users/lucetre/Documents/semester/lab04/lab04.runs/xbip_multadd_MAC_synth_1/xbip_multadd_MAC.vds
+# Journal file: C:/Users/lucetre/Documents/semester/lab04/lab04.runs/xbip_multadd_MAC_synth_1\vivado.jou
+#-----------------------------------------------------------
+source xbip_multadd_MAC.tcl -notrace

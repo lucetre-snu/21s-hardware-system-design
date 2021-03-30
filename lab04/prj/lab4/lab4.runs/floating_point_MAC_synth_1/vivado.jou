@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 28 01:14:43 2021
+# Process ID: 14424
+# Current directory: A:/lab4/lab4/lab4.runs/floating_point_MAC_synth_1
+# Command line: vivado.exe -log floating_point_MAC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source floating_point_MAC.tcl
+# Log file: A:/lab4/lab4/lab4.runs/floating_point_MAC_synth_1/floating_point_MAC.vds
+# Journal file: A:/lab4/lab4/lab4.runs/floating_point_MAC_synth_1\vivado.jou
+#-----------------------------------------------------------
+source floating_point_MAC.tcl -notrace

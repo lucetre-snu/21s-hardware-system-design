@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+A:/lab4/lab4/lab4.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+A:/lab4/lab4/lab4.srcs/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.vhd,1616861678,vhdl,,,,floating_point_mac,,,,,,,,
+A:/lab4/lab4/lab4.srcs/sources_1/ip/xbip_multadd_MAC/sim/xbip_multadd_MAC.vhd,1616914238,vhdl,,,,xbip_multadd_mac,,,,,,,,
+A:/lab4/lab4/lab4.srcs/sources_1/new/adder_array.v,1616943746,verilog,,A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v,,adder_array;my_add,,,,,,,,
+A:/lab4/lab4/lab4.srcs/sources_1/new/tb_adder_array.v,1616943840,verilog,,,,tb_adder_array,,,,,,,,
+A:/lab4/lab4/lab4.srcs/sources_1/new/tb_float_fused.v,1616945289,verilog,,,,tb_float_fused,,,,,,,,
