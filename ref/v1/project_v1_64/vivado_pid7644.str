@@ -1,0 +1,341 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 7644
+License: Customer
+
+Current time: 	Sun Jun 21 00:06:07 KST 2020
+Time zone: 	Korean Standard Time (Asia/Seoul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 283 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	DAUN
+User home directory: C:/Users/DAUN
+User working directory: C:/Users/DAUN/Desktop/v1/project_v1_64
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/DAUN/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/DAUN/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/DAUN/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/DAUN/Desktop/v1/project_v1_64/vivado.log
+Vivado journal file location: 	C:/Users/DAUN/Desktop/v1/project_v1_64/vivado.jou
+Engine tmp dir: 	C:/Users/DAUN/Desktop/v1/project_v1_64/.Xil/Vivado-7644-DESKTOP-NE0V45F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 615 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\DAUN\Desktop\v1\project_v1_64\project_v1_64.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// Tcl Message: open_project C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.xpr 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 641 MB. GUI used memory: 45 MB. Current time: 6/21/20, 12:06:09 AM KST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 58 MB (+58750kb) [00:00:12]
+// [Engine Memory]: 656 MB (+536889kb) [00:00:12]
+// [GUI Memory]: 91 MB (+31422kb) [00:00:12]
+// [GUI Memory]: 111 MB (+16158kb) [00:00:13]
+// [Engine Memory]: 690 MB (+547kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  3301 ms.
+// Tcl Message: open_project C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 714.617 ; gain = 101.422 
+// Project name: project_v1_64; location: C:/Users/DAUN/Desktop/v1/project_v1_64; part: xc7z020clg484-1
+// [Engine Memory]: 844 MB (+125159kb) [00:00:17]
+dismissDialog("Open Project"); // bx (cp)
+// [GUI Memory]: 124 MB (+7185kb) [00:00:21]
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 3); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci)]", 8); // B (D, cp)
+// A (cp): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // A (cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v)]", 9); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v)]", 14, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[2].pe : my_pe (my_pe.v)]", 17, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[2].pe : my_pe (my_pe.v)]", 17, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[2].pe : my_pe (my_pe.v)]", 17, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 65 MB. Current time: 6/21/20, 12:06:44 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 65 MB. Current time: 6/21/20, 12:36:44 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 1:06:45 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 1:36:45 AM KST
+// Elapsed time: 6865 seconds
+selectCodeEditor("my_pearray.v", 593, 390); // D (w, cp)
+typeControlKey((HResource) null, "my_pearray.v", 'c'); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 2:06:45 AM KST
+// Elapsed time: 414 seconds
+selectCodeEditor("my_pearray.v", 449, 387); // D (w, cp)
+selectCodeEditor("my_pearray.v", 453, 402); // D (w, cp)
+selectCodeEditor("my_pearray.v", 463, 400); // D (w, cp)
+selectCodeEditor("my_pearray.v", 464, 440); // D (w, cp)
+selectCodeEditor("my_pearray.v", 464, 481); // D (w, cp)
+selectCodeEditor("my_pearray.v", 462, 502); // D (w, cp)
+// Elapsed time: 16 seconds
+selectCodeEditor("my_pearray.v", 95, 235); // D (w, cp)
+selectCodeEditor("my_pearray.v", 233, 273); // D (w, cp)
+selectCodeEditor("my_pearray.v", 93, 237); // D (w, cp)
+selectCodeEditor("my_pearray.v", 501, 294); // D (w, cp)
+selectCodeEditor("my_pearray.v", 542, 352); // D (w, cp)
+selectCodeEditor("my_pearray.v", 96, 307); // D (w, cp)
+selectCodeEditor("my_pearray.v", 96, 307); // D (w, cp)
+selectCodeEditor("my_pearray.v", 580, 381); // D (w, cp)
+selectCodeEditor("my_pearray.v", 559, 358); // D (w, cp)
+selectCodeEditor("my_pearray.v", 100, 303); // D (w, cp)
+selectCodeEditor("my_pearray.v", 94, 310); // D (w, cp)
+selectCodeEditor("my_pearray.v", 831, 395); // D (w, cp)
+selectCodeEditor("my_pearray.v", 602, 358); // D (w, cp)
+// Elapsed time: 1308 seconds
+selectCodeEditor("my_pearray.v", 401, 279); // D (w, cp)
+selectCodeEditor("my_pearray.v", 448, 385); // D (w, cp)
+selectCodeEditor("my_pearray.v", 485, 249); // D (w, cp)
+selectCodeEditor("my_pearray.v", 510, 366); // D (w, cp)
+selectCodeEditor("my_pearray.v", 539, 271); // D (w, cp)
+selectCodeEditor("my_pearray.v", 582, 324); // D (w, cp)
+selectCodeEditor("my_pearray.v", 467, 291); // D (w, cp)
+selectCodeEditor("my_pearray.v", 485, 343); // D (w, cp)
+selectCodeEditor("my_pearray.v", 476, 293); // D (w, cp)
+selectCodeEditor("my_pearray.v", 513, 340); // D (w, cp)
+selectCodeEditor("my_pearray.v", 495, 288); // D (w, cp)
+selectCodeEditor("my_pearray.v", 623, 339); // D (w, cp)
+// Elapsed time: 256 seconds
+selectCodeEditor("my_pearray.v", 95, 312); // D (w, cp)
+selectCodeEditor("my_pearray.v", 266, 419); // D (w, cp)
+selectCodeEditor("my_pearray.v", 261, 402); // D (w, cp)
+selectCodeEditor("my_pearray.v", 88, 319); // D (w, cp)
+selectCodeEditor("my_pearray.v", 88, 319, false, false, false, false, true); // D (w, cp) - Double Click
+selectCodeEditor("my_pearray.v", 246, 411); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 2:36:45 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 3:06:46 AM KST
+// WARNING: HEventQueue.dispatchEvent() is taking  10797709 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 6:07:01 AM KST
+// WARNING: HEventQueue.dispatchEvent() is taking  27865492 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1492 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 1:51:34 PM KST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 27866993 ms. Increasing delay to 83600979 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 2:21:32 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 2:51:33 PM KST
+// Elapsed time: 44460 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pe.v", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 2); // k (j, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[3].pe : my_pe (my_pe.v)]", 18, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[3].pe : my_pe (my_pe.v)]", 18, false, false, false, false, false, true); // B (D, cp) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 3:21:33 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 3:51:33 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 4:21:34 PM KST
+// Elapsed time: 6523 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 2); // k (j, cp)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pe.v", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 2); // k (j, cp)
+selectCodeEditor("pe_con.v", 398, 606); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 4:51:34 PM KST
+// Elapsed time: 441 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 5:21:34 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 5:51:35 PM KST
+// Elapsed time: 4888 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v)]", 14, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v)]", 14, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 200 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 6:21:35 PM KST
+// Elapsed time: 1597 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 2); // k (j, cp)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "start", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "start"); // l (aT, cp)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "load", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "load"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "load"); // l (aT, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pe.v", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 2); // k (j, cp)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pe.v", 3); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 6:51:35 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 7:21:36 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 7:51:36 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 58 MB. Current time: 6/21/20, 8:21:36 PM KST
+// Elapsed time: 7521 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+selectCodeEditor("my_pearray.v", 96, 217); // D (w, cp)
+selectCodeEditor("my_pearray.v", 283, 242); // D (w, cp)
+selectCodeEditor("my_pearray.v", 278, 237); // D (w, cp)
+selectCodeEditor("my_pearray.v", 267, 206); // D (w, cp)
+selectCodeEditor("my_pearray.v", 267, 206); // D (w, cp)
+selectCodeEditor("my_pearray.v", 286, 279); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 8:51:36 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 9:21:37 PM KST
+// Elapsed time: 1899 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v)]", 11, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v)]", 11, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v)]", 10, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v)]", 9, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v)]", 10, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v)]", 10, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v)]", 10, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v)]", 10, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectCodeEditor("myip_v1_0.v", 619, 356); // D (w, cp)
+typeControlKey((HResource) null, "myip_v1_0.v", 'c'); // D (w, cp)
+selectCodeEditor("myip_v1_0.v", 686, 452); // D (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "myip_v1_0_S00_AXI.v", 4); // k (j, cp)
+selectCodeEditor("myip_v1_0_S00_AXI.v", 637, 510); // D (w, cp)
+typeControlKey((HResource) null, "myip_v1_0_S00_AXI.v", 'c'); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/21/20, 9:51:37 PM KST
+// WARNING: HEventQueue.dispatchEvent() is taking  150557 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 151048 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 10:21:39 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/21/20, 10:51:39 PM KST
+// Elapsed time: 5391 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 394, 91); // D (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+// Elapsed time: 142 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "myip_v1_0_S00_AXI.v", 4); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "myip_v1_0.v", 5); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pe.v", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "myip_v1_0_S00_AXI.v", 4); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 61 MB. Current time: 6/21/20, 11:21:39 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/21/20, 11:51:40 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/22/20, 12:21:40 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/22/20, 12:51:40 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 1:21:41 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 1:51:41 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 2:21:41 AM KST
+// WARNING: HEventQueue.dispatchEvent() is taking  11984 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/22/20, 2:51:43 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/22/20, 3:21:43 AM KST
+// Elapsed time: 17607 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+selectCodeEditor("my_pearray.v", 300, 412); // D (w, cp)
+selectCodeEditor("my_pearray.v", 298, 334); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 3:51:43 AM KST
+// Elapsed time: 1937 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "myip_v1_0.v", 5); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 4:21:44 AM KST
+// Elapsed time: 1113 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+// Elapsed time: 45 seconds
+selectCodeEditor("my_pearray.v", 204, 123); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/22/20, 4:51:46 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 5:21:47 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 8:24:57 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/22/20, 11:34:31 AM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 59 MB. Current time: 6/22/20, 12:04:31 PM KST
+// WARNING: HEventQueue.dispatchEvent() is taking  2102663 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 12:47:29 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 1:17:28 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 1:47:28 PM KST
+// Elapsed time: 33828 seconds
+selectCodeEditor("my_pearray.v", 98, 250); // D (w, cp)
+// Elapsed time: 225 seconds
+selectCodeEditor("my_pearray.v", 158, 335); // D (w, cp)
+selectCodeEditor("my_pearray.v", 65, 311); // D (w, cp)
+selectCodeEditor("my_pearray.v", 78, 299); // D (w, cp)
+selectCodeEditor("my_pearray.v", 181, 339); // D (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("my_pearray.v", 634, 637); // D (w, cp)
+// Elapsed time: 48 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cp)
+closeTask("Project Manager", "Project Manager", "DesignTask.PROJECT_MANAGER");
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// A (cp): Close Project: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+dismissDialog("Close Project"); // A (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 2:17:28 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 2:47:28 PM KST
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 60 MB. Current time: 6/22/20, 3:17:29 PM KST
+// Elapsed time: 5542 seconds
+selectCodeEditor("my_pearray.v", 412, 219); // D (w, cp)
+selectCodeEditor("my_pearray.v", 451, 389); // D (w, cp)
+selectCodeEditor("my_pearray.v", 350, 117); // D (w, cp)
+selectCodeEditor("my_pearray.v", 359, 152); // D (w, cp)
+selectCodeEditor("my_pearray.v", 350, 118); // D (w, cp)
+selectCodeEditor("my_pearray.v", 429, 369); // D (w, cp)
+// Elapsed time: 108 seconds
+selectCodeEditor("my_pearray.v", 743, 365, false, false, false, true, false); // D (w, cp) - Popup Trigger
+selectCodeEditor("my_pearray.v", 506, 403); // D (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 870 MB. GUI used memory: 61 MB. Current time: 6/22/20, 3:47:29 PM KST
+// Elapsed time: 1058 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "myip_v1_0_S00_AXI.v", 4); // k (j, cp)
+// Elapsed time: 70 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "myip_v1_0.v", 5); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 1); // k (j, cp)
+// Elapsed time: 933 seconds
+closeMainWindow("project_v1_64 - [C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.xpr] - Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify

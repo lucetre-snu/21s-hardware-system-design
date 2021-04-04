@@ -1,0 +1,367 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Jun 20 18:11:50 2020
+# Process ID: 27036
+# Current directory: C:/Users/DAUN/Desktop/v1/project_v1_64
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29060 C:\Users\DAUN\Desktop\v1\project_v1_64\project_v1_64.xpr
+# Log file: C:/Users/DAUN/Desktop/v1/project_v1_64/vivado.log
+# Journal file: C:/Users/DAUN/Desktop/v1/project_v1_64\vivado.jou
+#-----------------------------------------------------------sstart_guioopen_project C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo'.IINFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.oopen_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:12 . Memory (MB): peak = 671.512 ; gain = 39.832
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 18:14:58 2020...
+nding command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: A408-FE2D
+
+ C:\Users\DAUN\desktop\v1 디렉터리
+
+2020-06-20  오후 06:09    <DIR>          .
+2020-06-20  오후 06:09    <DIR>          ..
+2020-06-20  오후 06:12    <DIR>          project_v1_64
+               0개 파일                   0 바이트
+               3개 디렉터리  304,209,727,488 바이트 남음
+cd project_v1_64
+dir
+WARNING: [Common 17-259] Unknown Tcl command 'dir' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: A408-FE2D
+
+ C:\Users\DAUN\desktop\v1\project_v1_64 디렉터리
+
+2020-06-20  오후 06:12    <DIR>          .
+2020-06-20  오후 06:12    <DIR>          ..
+2020-06-20  오후 06:12    <DIR>          .Xil
+2020-06-20  오후 06:09    <DIR>          lab10_git
+2020-06-20  오후 06:12    <DIR>          project_v1_64.cache
+2020-06-20  오후 06:12    <DIR>          project_v1_64.hw
+2020-06-20  오후 06:12    <DIR>          project_v1_64.ip_user_files
+2020-06-20  오후 06:12    <DIR>          project_v1_64.sim
+2020-06-20  오후 06:11             8,595 project_v1_64.xpr
+2020-06-20  오후 06:12               717 vivado.jou
+2020-06-20  오후 06:12             1,122 vivado.log
+2020-06-20  오후 06:12             4,487 vivado_pid19424.str
+2020-06-20  오후 06:12             4,395 vivado_pid27036.str
+               5개 파일              19,316 바이트
+               8개 디렉터리  304,209,727,488 바이트 남음
+cd lab10_git
+dir
+WARNING: [Common 17-259] Unknown Tcl command 'dir' sending command to the OS shell for execution. It is recommended to use 'exec' to send the command to the OS shell.
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: A408-FE2D
+
+ C:\Users\DAUN\desktop\v1\project_v1_64\lab10_git 디렉터리
+
+2020-06-20  오후 06:09    <DIR>          .
+2020-06-20  오후 06:09    <DIR>          ..
+2020-06-20  오후 06:09    <DIR>          .git
+2019-05-07  오후 09:24             2,215 block_design.tcl
+2020-06-20  오후 06:09    <DIR>          lab10_ip_repo
+2019-05-07  오후 01:46           302,180 lab10_ip_repo.tar.gz
+2017-03-13  오전 03:12               891 main.c
+2017-03-13  오전 03:06                40 Makefile
+               4개 파일             305,326 바이트
+               4개 디렉터리  304,209,727,488 바이트 남음
+source block_design.tcl
+# create_bd_design "design_1"
+Wrote  : <C:\Users\DAUN\Desktop\v1\project_v1_64\project_v1_64.srcs\sources_1\bd\design_1\design_1.bd> 
+create_bd_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 831.547 ; gain = 66.656
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+# endgroup
+# apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+# startgroup
+# set_property -dict [list CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1}] [get_bd_cells processing_system7_0]
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.1 axi_bram_ctrl_0
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] design_1_axi_bram_ctrl_0_0: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] design_1_axi_bram_ctrl_0_0: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+# endgroup
+# set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
+# startgroup
+# create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+# endgroup
+# startgroup
+# set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_32bit_Address {true} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.use_bram_block {Stand_Alone} CONFIG.Use_Byte_Write_Enable {true} CONFIG.Byte_Size {8} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {true} CONFIG.Use_RSTB_Pin {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_bd_cells blk_mem_gen_0]
+# endgroup
+# startgroup
+# create_bd_cell -type ip -vlnv user.org:user:myip:1.0 myip_0
+WARNING: [IP_Flow 19-3571] IP 'design_1_myip_0_0' is restricted:
+* IP definition 'myip_v1.0 (1.0)' relies on the following subcore(s) that were not found in the IP Catalog: xilinx.com:ip:clk_wiz:5.3
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+# endgroup
+# connect_bd_intf_net [get_bd_intf_pins myip_0/m00_bram] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTB]
+# connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
+# startgroup
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+</axi_bram_ctrl_0/S_AXI/Mem0> is being mapped into </processing_system7_0/Data> at <0x40000000 [ 8K ]>
+# apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "/processing_system7_0/FCLK_CLK0 (50 MHz)" }  [get_bd_intf_pins myip_0/S00_AXI]
+</myip_0/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+# endgroup
+# set_property range 32K [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_bram_ctrl_0_Mem0}]
+# regenerate_bd_layout
+# validate_bd_design
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /blk_mem_gen_0/BRAM_PORTA(OTHER) and /axi_bram_ctrl_0/BRAM_PORTA(BRAM_CTRL)
+# save_bd_design
+Wrote  : <C:\Users\DAUN\Desktop\v1\project_v1_64\project_v1_64.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+# update_compile_order -fileset sources_1
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+# update_compile_order -fileset sim_1
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sim_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.use_bram_block {BRAM_Controller}] [get_bd_cells blk_mem_gen_0]
+endgroup
+ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 1221.938 ; gain = 0.613
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/hdl/myip_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/hdl/myip_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:21 . Memory (MB): peak = 1245.410 ; gain = 24.086
+update_compile_order -fileset sources_1
+close [ open C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/pe_con.v w ]
+add_files C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/pe_con.v
+close [ open C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/my_pearray.v w ]
+add_files C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/my_pearray.v
+close [ open C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/my_pe.v w ]
+add_files C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/my_pe.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+Upgrading 'clk_wiz_0'
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'MMCM_CLKIN1_PERIOD' from '20.000' to '20.0' has been ignored for IP 'clk_wiz_0'
+WARNING: [IP_Flow 19-3501] Upgraded clk_wiz_0 from Clocking Wizard 5.3 to Clocking Wizard 6.0, with warnings. Please review the message log.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+CRITICAL WARNING: [Coretcl 2-1279] The upgrade of 'clk_wiz_0' has identified issues that may require user intervention. Please review the upgrade log 'c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/ip_upgrade.log', and verify that the upgraded IP is correctly configured.
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1262.902 ; gain = 0.000
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+generate_target all [get_files  c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/src/clk_wiz_0_4/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+export_ip_user_files -of_objects [get_files c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/src/clk_wiz_0_4/clk_wiz_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/src/clk_wiz_0_4/clk_wiz_0.xci] -directory c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/myip_v1_0_project.ip_user_files/sim_scripts -ip_user_files_dir c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/myip_v1_0_project.ip_user_files -ipstatic_source_dir c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/myip_v1_0_project.ip_user_files/ipstatic -lib_map_path [list {modelsim=c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/myip_v1_0_project.cache/compile_simlib/modelsim} {questa=c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/myip_v1_0_project.cache/compile_simlib/questa} {riviera=c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/myip_v1_0_project.cache/compile_simlib/riviera} {activehdl=c:/users/daun/desktop/v1/project_v1_64/project_v1_64.tmp/myip_v1_0_project/myip_v1_0_project.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-4963] clk_wiz_0 has board value specified. The packaged IP will be restricted to usage with board 'em.avnet.com:zed:part0:1.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/component.xml' ignored by IP packager.
+ipx::remove_all_hdl_parameter -remove_inferred_params [ipx::current_core]
+ipx::add_model_parameters_from_hdl [ipx::current_core] -top_level_hdl_file c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/hdl/myip_v1_0.v -top_module_name myip_v1_0
+ipx::infer_user_parameters [ipx::current_core]
+ipgui::add_param -name {C_M00_BRAM_ADDR_WIDTH} -component [ipx::current_core]
+ipgui::add_param -name {C_M00_BRAM_DATA_WIDTH} -component [ipx::current_core]
+ipgui::add_param -name {C_M00_BRAM_WE_WIDTH} -component [ipx::current_core]
+ipgui::add_param -name {C_S00_AXI_DATA_WIDTH} -component [ipx::current_core]
+ipgui::add_param -name {C_S00_AXI_ADDR_WIDTH} -component [ipx::current_core]
+ipgui::add_param -name {MSIZE} -component [ipx::current_core]
+ipgui::add_param -name {VSIZE} -component [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-4963] clk_wiz_0 has board value specified. The packaged IP will be restricted to usage with board 'em.avnet.com:zed:part0:1.4'
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo/myip_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+ipx::add_bus_parameter MASTER_TYPE [ipx::get_bus_interfaces m00_bram -of_objects [ipx::current_core]]
+report_ip_status -name ip_status 
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:myip:1.0 [get_ips  design_1_myip_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_myip_0_0 (myip_v1.0 1.0) from revision 4 to revision 5
+WARNING: [IP_Flow 19-3571] IP 'design_1_myip_0_0' is restricted:
+* IP definition 'myip_v1.0 (1.0)' relies on the following subcore(s) that were not found in the IP Catalog: xilinx.com:ip:clk_wiz:5.3
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+Wrote  : <C:\Users\DAUN\Desktop\v1\project_v1_64\project_v1_64.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/DAUN/Desktop/v1/project_v1_64/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_myip_0_0] -no_script -sync -force -quiet
+set_property synth_checkpoint_mode None [get_files  C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/design_1.bd]
+generate_target all [get_files  C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+Wrote  : <C:\Users\DAUN\Desktop\v1\project_v1_64\project_v1_64.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(15) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(15) - Only lower order bits will be connected.
+VHDL Output written to : C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m01_couplers/auto_pc .
+Exporting to file C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:01:10 ; elapsed = 00:01:23 . Memory (MB): peak = 1475.824 ; gain = 52.965
+export_ip_user_files -of_objects [get_files C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.ip_user_files -ipstatic_source_dir C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.cache/compile_simlib/modelsim} {questa=C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.cache/compile_simlib/questa} {riviera=C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.cache/compile_simlib/riviera} {activehdl=C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+make_wrapper -files [get_files C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+launch_runs synth_1 -jobs 8
+[Sat Jun 20 18:25:31 2020] Launched synth_1...
+Run output will be captured here: C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Sat Jun 20 18:30:53 2020] Launched impl_1...
+Run output will be captured here: C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Jun 20 18:36:44 2020] Launched impl_1...
+Run output will be captured here: C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 3476 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2271.910 ; gain = 18.402
+Restored from archive | CPU: 8.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2271.910 ; gain = 18.402
+Generating merged BMM file for the design top 'design_1_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2271.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2050 instances were transformed.
+  RAM64X1S => RAM64X1S (RAMS64E): 2048 instances
+  SRLC32E => SRL16E: 2 instances
+
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Common 17-14] Message 'Designutils 20-3303' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+open_run: Time (s): cpu = 00:01:19 ; elapsed = 00:01:06 . Memory (MB): peak = 2404.547 ; gain = 928.723
+open_report: Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 2768.133 ; gain = 327.719
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 20 21:46:10 2020...
