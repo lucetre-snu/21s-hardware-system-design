@@ -1,0 +1,12 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/DAUN/lab4/lab4.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/DAUN/lab4/lab4.srcs/sources_1/ip/floating_point_0/sim/floating_point_0.vhd,1586081600,vhdl,,,,floating_point_0,,,,,,,,
+C:/Users/DAUN/lab4/lab4.srcs/sources_1/ip/multadd_0/sim/multadd_0.vhd,1586081640,vhdl,,,,multadd_0,,,,,,,,
+C:/Users/DAUN/lab4/lab4.srcs/sources_1/new/adder_array.v,1585934146,verilog,,C:/Users/DAUN/lab4/lab4.srcs/sources_1/new/myadder.v,,adder_array,,,,,,,,
+C:/Users/DAUN/lab4/lab4.srcs/sources_1/new/myadder.v,1585908764,verilog,,C:/Users/DAUN/lab4/lab4.srcs/sources_1/new/tb_array.v,,myadder,,,,,,,,
+C:/Users/DAUN/lab4/lab4.srcs/sources_1/new/tb_array.v,1585924100,verilog,,,,tb_array,,,,,,,,
+C:/Users/DAUN/lab4/lab4.srcs/sources_1/new/tb_float.v,1586086098,verilog,,,,tb_float,,,,,,,,
+C:/Users/DAUN/lab4/lab4.srcs/sources_1/new/tb_mul.v,1586088653,verilog,,,,tb_mul,,,,,,,,

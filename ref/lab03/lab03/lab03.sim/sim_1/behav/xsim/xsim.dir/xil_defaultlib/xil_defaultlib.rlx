@@ -1,0 +1,11 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/DAUN/lab03/lab03.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/my_add.v,1585127133,verilog,,C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/tb_adder.v,,my_add,,,,,,,,
+C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/my_fusemul.v,1585129718,verilog,,C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/tb_fusemul.v,,my_fusemul,,,,,,,,
+C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/my_mul.v,1585127670,verilog,,C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/tb_mul.v,,my_mul,,,,,,,,
+C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/tb_adder.v,1585127782,verilog,,,,tb_add,,,,,,,,
+C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/tb_fusemul.v,1585128559,verilog,,,,tb_fusemul,,,,,,,,
+C:/Users/DAUN/lab03/lab03.srcs/sim_1/new/tb_mul.v,1585127859,verilog,,,,tb_mul,,,,,,,,
