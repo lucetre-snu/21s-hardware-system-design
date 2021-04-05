@@ -3,5 +3,6 @@
 Nov 18 2020
 09:47:47
 C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
-C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v,1617527830,verilog,,,,tb_my_bram,,,,,,,,
-C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/new/my_bram.v,1617527408,verilog,,C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v,,my_bram,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_bram.v,1617530405,verilog,,,,tb_bram,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v,1617603536,verilog,,,,tb_my_bram,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/new/my_bram.v,1617602063,verilog,,C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v,,my_bram,,,,,,,,

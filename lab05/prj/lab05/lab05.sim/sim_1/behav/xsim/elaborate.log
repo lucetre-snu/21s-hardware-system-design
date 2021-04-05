@@ -4,8 +4,8 @@ Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto e02bd60700
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'BRAM_WE' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v:51]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'done' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v:52]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 4 for port 'BRAM_WE' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v:49]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'done' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sim_1/new/tb_my_bram.v:50]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

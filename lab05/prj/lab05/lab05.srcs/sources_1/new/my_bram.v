@@ -15,7 +15,7 @@ module my_bram #(
 );
     reg [31:0] mem[0:8191];
     wire [BRAM_ADDR_WIDTH-3:0] addr = BRAM_ADDR[BRAM_ADDR_WIDTH-1:2];
-    reg [31:0] rdout, wdout;
+    reg [31:0] dout, wdout;
     integer rflag = 0, wflag = 0;
     
     initial begin
@@ -33,27 +33,15 @@ module my_bram #(
         end
         if (BRAM_EN) begin
             if (BRAM_WE) begin
-                if (BRAM_WE[0]) wdout[7:0] <= BRAM_WRDATA[7:0];
-                if (BRAM_WE[1]) wdout[15:8] <= BRAM_WRDATA[15:8];
-                if (BRAM_WE[2]) wdout[23:16] <= BRAM_WRDATA[23:16];
-                if (BRAM_WE[3]) wdout[31:24] <= BRAM_WRDATA[31:24]; 
-                if (wflag == 1) begin
-                    mem[addr] <= wdout;
-                    wflag <= 0;
-                end
-                else wflag <= wflag + 1;
+                if (BRAM_WE[0]) mem[addr][7:0] <= BRAM_WRDATA[7:0];
+                if (BRAM_WE[1]) mem[addr][15:8] <= BRAM_WRDATA[15:8];
+                if (BRAM_WE[2]) mem[addr][23:16] <= BRAM_WRDATA[23:16];
+                if (BRAM_WE[3]) mem[addr][31:24] <= BRAM_WRDATA[31:24]; 
             end
             else begin
-                rdout <= mem[addr];
-                if (rflag == 2) begin
-                    BRAM_RDDATA <= rdout;
-                    rflag <= 0;
-                end
-                else rflag <= rflag + 1;
+                dout <= mem[addr];
+                BRAM_RDDATA <= dout;
             end
         end
     end
-    
-    
-    
 endmodule
