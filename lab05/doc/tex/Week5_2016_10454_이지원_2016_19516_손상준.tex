@@ -104,7 +104,15 @@ BRAM의 경우 크게 두 부분으로 이뤄져 있다. (1) 모듈이 실행이
 \texttt{\$readmemh} 로 시작함으로써 INIT\_FILE 파일을 읽어 \texttt{mem}에 저장한다. 
 그 후 \texttt{done} 신호 들어올 때 까지 대기하다가 신호가 들어오면 \texttt{\$writememh} 함수를 사용해 OUT\_FILE에 \texttt{mem} 데이터를 저장한다.
 이 때 함수에 붙어있는 \texttt{\$readmem\textbf{h}}와 \texttt{\$writemem\textbf{h}}의 \textbf{h}는 hexadecimal로 파일에 저장하는 값을 16진수 형태로 저장하는 옵션을 의미한다. \\
-\item hello
+\item 30-46 라인은 BRAM의 input으로 주어지는 신호에 따라 모듈로써의 기능을 구현하는 부분이다. BRAM\_CLK와 BRAM\_RST 그리고 BRAM\_EN, BRAM\_WE의 신호에 따라 읽기, 쓰기, 초기화, 파일 출력을 위한 기능을 수행하게 된다. BRAM\_RST은 BRAM\_CLK에 Async로, BRAM\_EN, BRAM\_WE는 Sync로 구현하였다.
+\begin{itemize*}
+\item BRAM\_RST이 posedge일 경우 BRAM\_RDDATA에는 0을 할당한다. (31 라인)
+\item BRAM\_EN이 활성화되어 있고 BRAM\_WE 또한 활성화되어 있다면, True를 가지는 bit에 해당하는 영역을 BRAM\_WRDATA에서 \texttt{mem}으로 복사한다. (35-38 라인)
+\begin{equation}
+\texttt{mem}[ \texttt{addr} ][8*(i+1)-1:8* i ]  \leftarrow \text{BRAM\_WRDATA}[8*(i+1) -1:8* i ] 
+\end{equation}
+\item BRAM\_EN이 활성화되어 있고 BRAM\_WE이 활성화되어 있다면, 메모리로부터 데이터를 읽어오는 기능을 수행한다. Read에 걸리는 싸이클이 2 cycle이 걸리도록 구현을 해야하기 때문에 $dout$을 버퍼로 사용해 1 cycle이 추가되도록 한다. (41-42 라인)
+\end{itemize*}
 \end{itemize*}
 
 \subsubsection*{\texttt{MY\_BRAM}}
@@ -126,8 +134,7 @@ module my_bram #(
 );
     reg [31:0] mem[0:8191];
     wire [BRAM_ADDR_WIDTH-3:0] addr = BRAM_ADDR[BRAM_ADDR_WIDTH-1:2];
-    reg [31:0] dout, wdout;
-    integer rflag = 0, wflag = 0;
+    reg [31:0] dout;
     
     initial begin
         if (INIT_FILE != "") begin
@@ -158,14 +165,10 @@ module my_bram #(
 endmodule
 \end{lstlisting}
 
-
-\subsection{Integer fused multiply-adder}
-Floating point multiply-adder와 동일하게, 미리 구현된 IP catalog를 사용, testbench 에서 입력값을 조정하여 출력값을 확인하였다. 
-IP catalog를 customize 할 때, Multiply와 Add가 동시에 수행되어 결과값을 나타내야 했기 때문에, P-A:B latency 와 P-C latency를 0으로 설정하였다. 
-
-IP catalog에는 입력값에 clk signal이 존재하지 않았다. 따라서, async한 방식으로 A,B,C (inputs)의 값이 변화할 때, P (output)이 계산되는 것을 볼 수 있었다. 또한, P값이 나오기까지는 delay가 존재하였는데, 이는 주어진 A, B, C값을 최종 결과값으로 나타내기까지 걸리는 시간 (latency)이다.
-
+\newpage
 \subsection{Processing Element, PE}
+
+아래의 모듈은 Lab03 adder 모듈이다. ain과 bin 길이의 입력값이 
 
 \subsubsection*{\texttt{MY\_PE}}
 \begin{lstlisting}[style={verilog-style}]
@@ -184,14 +187,25 @@ module my_add #(
 endmodule
 \end{lstlisting}
 
-상기된 모듈은 Lab03 adder 모듈이다. ain과 bin 길이의 입력값이 
 
-
+\newpage
 \section{Result}
 
 \subsection{Block Random Access Memory, BRAM}
+아래의 코드는 BRAM의 구현의 Validity를 확인하기 위해 시나리오에 맞게 구현한 것이다. BRAM 인스턴스 두 개를 만들고 각각을 MY\_BRAM1과 MY\_BRAM2로 명명하였다. 
+
+MY\_BRAM1은 \texttt{input.txt}에 저장된 \texttt{mem}에 있는 값들을 호출하여 저장하는 역할을 하고 또한 \texttt{mem}에 있는 값들을 MY\_ADDR을 변화하면서 BRAM\_RDDATA1로 읽어온다. MY\_BRAM2의 경우 이렇게 읽어온 \linebreak BRAM\_RDDATA1을 BRAM\_WRDATA2로 사용하여 \texttt{mem}에 저장하게 되고 완료가 되면 \texttt{done} 신호를 주어 \linebreak \texttt{output.txt}에 저장하게 된다. 아래 Figure~\ref{fig1}은 상기된 설명을 도식화한 것이다.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.49\textwidth]{fig/fig1.png}
+	\includegraphics[width=0.49\textwidth]{fig/fig2.png}
+\caption{Testbench Scenarios: 2개의 BRAM을 인스턴스화 하고 BRAM1에서 \texttt{input.txt}을 읽어 메모리에 저장하고 다른 BRAM2에서 BRAM1의 데이터를 전달받아  \texttt{output.txt}에 저장한다. }
+\label{fig1}
+\end{figure}
+
+모든 테스트를 시작하기 전에 \texttt{input.txt}를 초기화하기 위한 과정을 거친다. 주소에 해당하는 인덱스를 값으로 가질 수 있도록 for문을 통해 대입시킨 후 \texttt{\$writememh}를 통해 파일에 저장을 한다. (23-24 라인)
+
 \subsubsection*{\texttt{TB\_MY\_BRAM}}
-아래의 코드는 BRAM의 구현의 Validity를 확인하기 위해 시나리오에 맞게 구현한 것이다.
 \begin{lstlisting}[style={verilog-style}]
 `timescale 1ns / 1ps
 
