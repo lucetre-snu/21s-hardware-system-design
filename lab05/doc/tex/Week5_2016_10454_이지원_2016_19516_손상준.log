@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  6 APR 2021 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  6 APR 2021 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1015,7 +1015,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
 Here is how much of TeX's memory you used:
  21897 strings out of 480994
  422946 string characters out of 5916032
- 905711 words of memory out of 5000000
+ 906711 words of memory out of 5000000
  36735 multiletter control sequences out of 15000+600000
  556554 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1063,7 +1063,7 @@ urw/courier/ucrb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr
 8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texl
 ive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
 Output written on Week5_2016_10454_이지원_2016_19516_손상준.pdf (6 pages,
- 1943855 bytes).
+ 1943097 bytes).
 PDF statistics:
  441 PDF objects out of 1000 (max. 8388607)
  358 compressed objects within 4 object streams

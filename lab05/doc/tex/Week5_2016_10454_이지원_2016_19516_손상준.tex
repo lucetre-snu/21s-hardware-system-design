@@ -111,7 +111,7 @@ BRAM의 경우 크게 두 부분으로 이뤄져 있다. (1) 모듈이 실행이
 \begin{equation}
 \texttt{mem}[ \texttt{addr} ][8*(i+1)-1:8* i ]  \leftarrow \text{BRAM\_WRDATA}[8*(i+1) -1:8* i ] 
 \end{equation}
-\item BRAM\_EN이 활성화되어 있고 BRAM\_WE이 활성화되어 있다면, 메모리로부터 데이터를 읽어오는 기능을 수행한다. Read에 걸리는 싸이클이 2 cycle이 걸리도록 구현을 해야하기 때문에 $dout$을 버퍼로 사용해 1 cycle이 추가되도록 한다. (41-42 라인)
+\item BRAM\_EN이 활성화되어 있고 BRAM\_WE이 활성화되어 있다면, 메모리로부터 데이터를 읽어오는 기능을 수행한다. Read에 걸리는 싸이클이 2 cycle이 걸리도록 구현을 해야하기 때문에 \texttt{dout}을 버퍼로 사용해 1 cycle이 추가되도록 한다. (41-42 라인)
 \end{itemize*}
 \end{itemize*}
 
