@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{lab}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 5: PE implementation and BRAM modeling}.
+\newblock Hardware System Design, April 2021.
+
+\bibitem{thomas2008verilog}
+Donald Thomas and Philip Moorby.
+\newblock {\em The Verilog{\textregistered} hardware description language}.
+\newblock Springer Science \& Business Media, 2008.
+
+\bibitem{memh}
+WillFlux.
+\newblock {\em Initialize Memory in Verilog}.
+\newblock Project F - FPGA Development, April 2020.
+
+\end{thebibliography}
