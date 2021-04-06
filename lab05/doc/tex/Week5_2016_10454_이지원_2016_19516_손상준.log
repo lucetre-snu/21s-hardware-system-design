@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  6 APR 2021 13:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  6 APR 2021 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -946,9 +946,6 @@ mmj/m/n/10/bd ÄÑ\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/b2 ‰\OT1/ppl/m/n/10
  . BRAM[]CLK
  []
 
-[1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-]
 (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
@@ -957,19 +954,36 @@ File: lstlang2.sty 2019/09/10 1.8c listings language file
 )
 (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2019/09/10 1.8c listings language file
-) [2] [3]
-<fig/fig1.png, id=211, 419.31656pt x 195.73125pt>
+) [1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]
+Overfull \hbox (6.4059pt too wide) in paragraph at lines 183--184
+\LUC/nanummj/m/n/10/d5 t\LUC/nanummj/m/n/10/c9 ^^@\LUC/nanummj/m/n/10/b2 ‰\OT1/
+ppl/m/n/10 . \LUC/nanummj/m/n/10/b5 0\LUC/nanummj/m/n/10/b7 |\LUC/nanummj/m/n/1
+0/c1 ^^\\OT1/ppl/m/n/10 , al-ways\LUC/nanummj/m/n/10/ad l\LUC/nanummj/m/n/10/bb
+ 8\LUC/nanummj/m/n/10/c7 D \LUC/nanummj/m/n/10/c0 ¨\LUC/nanummj/m/n/10/c6 ©\LUC
+/nanummj/m/n/10/d5 X\LUC/nanummj/m/n/10/c5 Ï \LUC/nanummj/m/n/10/ac ∞¸^^R\LUC/n
+anummj/m/n/10/c7 D \LUC/nanummj/m/n/10/b2 ‰\LUC/nanummj/m/n/10/c2 ‹ \OT1/ppl/m/
+n/10 psum reg-is-ter\LUC/nanummj/m/n/10/c5 – \LUC/nanummj/m/n/10/c8 ^^@\LUC/nan
+ummj/m/n/10/c7 •\LUC/nanummj/m/n/10/d5 t \LUC/nanummj/m/n/10/c8 ¸\LUC/nanummj/m
+/n/10/c5 »\LUC/nanummj/m/n/10/b2 ‰\OT1/ppl/m/n/10 . \LUC/nanummj/m/n/10/cf T\LU
+C/nanummj/m/n/10/b4 ‹\LUC/nanummj/m/n/10/b9 | \LUC/nanummj/m/n/10/bc Ù\LUC/nanu
+mmj/m/n/10/ba t\OT1/ppl/m/n/10 , s[]axis[]c[]tdata
+ []
+
+[2] [3]
+<fig/fig1.png, id=219, 419.31656pt x 195.73125pt>
 File: fig/fig1.png Graphic file (type png)
 <use fig/fig1.png>
-Package pdftex.def Info: fig/fig1.png  used on input line 228.
+Package pdftex.def Info: fig/fig1.png  used on input line 240.
 (pdftex.def)             Requested size: 230.18253pt x 107.44643pt.
-<fig/fig2.png, id=213, 416.30531pt x 194.22563pt>
+<fig/fig2.png, id=221, 416.30531pt x 194.22563pt>
 File: fig/fig2.png Graphic file (type png)
 <use fig/fig2.png>
-Package pdftex.def Info: fig/fig2.png  used on input line 229.
+Package pdftex.def Info: fig/fig2.png  used on input line 241.
 (pdftex.def)             Requested size: 230.18253pt x 107.39047pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--234
+Underfull \hbox (badness 10000) in paragraph at lines 237--246
 \LUC/nanummj/m/n/10/b4 ‰\LUC/nanummj/m/n/10/c7 D \OT1/ppl/m/n/10 MY[]ADDR\LUC/n
 anummj/m/n/10/c7 D \LUC/nanummj/m/n/10/bc ¿\LUC/nanummj/m/n/10/d6 T\LUC/nanummj
 /m/n/10/d5 X\LUC/nanummj/m/n/10/ba t\LUC/nanummj/m/n/10/c1 ^^\ \OT1/ppl/m/n/10 
@@ -981,49 +995,48 @@ anummj/m/n/10/c7 }\LUC/nanummj/m/n/10/c5 ¥\LUC/nanummj/m/n/10/c6 (
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
 [4 <./fig/fig1.png> <./fig/fig2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 304--305
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
-[5]
-<../../submission/MY_BRAM/MY_BRAM_Waveform1.png, id=297, 1442.38875pt x 365.866
+<../../submission/MY_BRAM/MY_BRAM_Waveform1.png, id=253, 1442.38875pt x 365.866
 88pt>
 File: ../../submission/MY_BRAM/MY_BRAM_Waveform1.png Graphic file (type png)
 <use ../../submission/MY_BRAM/MY_BRAM_Waveform1.png>
 Package pdftex.def Info: ../../submission/MY_BRAM/MY_BRAM_Waveform1.png  used o
-n input line 311.
+n input line 322.
 (pdftex.def)             Requested size: 469.75502pt x 119.15096pt.
-<../../submission/MY_BRAM/MY_BRAM_Waveform2.png, id=298, 1440.13031pt x 365.114
+<../../submission/MY_BRAM/MY_BRAM_Waveform2.png, id=254, 1440.13031pt x 365.114
 06pt>
 File: ../../submission/MY_BRAM/MY_BRAM_Waveform2.png Graphic file (type png)
 <use ../../submission/MY_BRAM/MY_BRAM_Waveform2.png>
 Package pdftex.def Info: ../../submission/MY_BRAM/MY_BRAM_Waveform2.png  used o
-n input line 312.
+n input line 323.
 (pdftex.def)             Requested size: 469.75502pt x 119.09521pt.
-<../../submission/MY_BRAM/MY_BRAM_result.png, id=299, 653.44125pt x 341.77687pt
+<../../submission/MY_BRAM/MY_BRAM_result.png, id=255, 653.44125pt x 341.77687pt
 >
 File: ../../submission/MY_BRAM/MY_BRAM_result.png Graphic file (type png)
 <use ../../submission/MY_BRAM/MY_BRAM_result.png>
 Package pdftex.def Info: ../../submission/MY_BRAM/MY_BRAM_result.png  used on i
-nput line 318.
+nput line 329.
 (pdftex.def)             Requested size: 281.85587pt x 147.4201pt.
 
-Overfull \hbox (10.43083pt too wide) in paragraph at lines 308--322
+Overfull \hbox (10.43083pt too wide) in paragraph at lines 319--333
 []\OT1/ppl/m/n/10 Figure [][]4[][]\LUC/nanummj/m/n/10/c7 @ \LUC/nanummj/m/n/10/
 c0 ›\LUC/nanummj/m/n/10/c1 1\LUC/nanummj/m/n/10/b4 ^^\ \LUC/nanummj/m/n/10/c7 Ö
 \LUC/nanummj/m/n/10/b8 %\LUC/nanummj/m/n/10/ac ¸ \LUC/nanummj/m/n/10/cd ú\LUC/n
@@ -1035,36 +1048,50 @@ m/n/10/b8 %\LUC/nanummj/m/n/10/c7 D \LUC/nanummj/m/n/10/bc ^^[\LUC/nanummj/m/n/
 d3 ^^L\LUC/nanummj/m/n/10/c7 |\OT1/ppl/m/n/10 , \OT1/pcr/m/n/10 output.txt
  []
 
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
 [6 <../../submission/MY_BRAM/MY_BRAM_Waveform1.png> <../../submission/MY_BRAM/M
 Y_BRAM_Waveform2.png>] [7 <../../submission/MY_BRAM/MY_BRAM_result.png>]
-<../../submission/MY_PE/MY_PE_Waveform1.png, id=358, 1424.32124pt x 365.11406pt
+<../../submission/MY_PE/MY_PE_Waveform1.png, id=379, 1424.32124pt x 365.11406pt
 >
 File: ../../submission/MY_PE/MY_PE_Waveform1.png Graphic file (type png)
 <use ../../submission/MY_PE/MY_PE_Waveform1.png>
 Package pdftex.def Info: ../../submission/MY_PE/MY_PE_Waveform1.png  used on in
-put line 392.
+put line 409.
 (pdftex.def)             Requested size: 469.75502pt x 120.41557pt.
-<../../submission/MY_PE/MY_PE_Waveform2.png, id=359, 1428.08531pt x 365.86688pt
+<../../submission/MY_PE/MY_PE_Waveform2.png, id=380, 1428.08531pt x 365.86688pt
 >
 File: ../../submission/MY_PE/MY_PE_Waveform2.png Graphic file (type png)
 <use ../../submission/MY_PE/MY_PE_Waveform2.png>
 Package pdftex.def Info: ../../submission/MY_PE/MY_PE_Waveform2.png  used on in
-put line 393.
+put line 410.
 (pdftex.def)             Requested size: 469.75502pt x 120.34564pt.
 
-[8 <../../submission/MY_PE/MY_PE_Waveform1.png> <../../submission/MY_PE/MY_PE_W
-aveform2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
 
  []
 
-(./Week5_2016_10454_Ïù¥ÏßÄÏõê_2016_19516_ÏÜêÏÉÅÏ§Ä.bbl) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 408.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 408.
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
+
+ []
+
+(./Week5_2016_10454_Ïù¥ÏßÄÏõê_2016_19516_ÏÜêÏÉÅÏ§Ä.bbl [8 <../../submission/MY_
+PE/MY_PE_Waveform1.png> <../../submission/MY_PE/MY_PE_Waveform2.png>]) [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 426.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 426.
 
 (./Week5_2016_10454_Ïù¥ÏßÄÏõê_2016_19516_ÏÜêÏÉÅÏ§Ä.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 408.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 408.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 426.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 426.
 Package rerunfilecheck Info: File `Week5_2016_10454_Ïù¥ÏßÄÏõê_2016_19516_ÏÜêÏÉÅ
 Ï§Ä.out' has not changed.
 (rerunfilecheck)             Checksum: 09FA08D69C2A24C40144A73073D8F423;439.
@@ -1072,65 +1099,67 @@ Package rerunfilecheck Info: File `Week5_2016_10454_Ïù¥ÏßÄÏõê_2016_19516_ÏÜêÏÉÅ
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 408.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 426.
  ) 
 Here is how much of TeX's memory you used:
- 22047 strings out of 480994
- 425369 string characters out of 5916032
- 917005 words of memory out of 5000000
- 36777 multiletter control sequences out of 15000+600000
- 558505 words of font info for 103 fonts, out of 8000000 for 9000
+ 22054 strings out of 480994
+ 425436 string characters out of 5916032
+ 912992 words of memory out of 5000000
+ 36778 multiletter control sequences out of 15000+600000
+ 558797 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,97p,604b,2065s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,12n,97p,692b,2258s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2019/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/na
-numtype1/nanummjmac.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtyp
-e1/nanummjmad.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nan
-ummjmae.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb
-0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb>
-<c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/te
-xlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/
-2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2019/t
-exmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2019/texmf-d
-ist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2019/texmf-dist/fo
-nts/type1/public/nanumtype1/nanummjmb7.pfb><c:/texlive/2019/texmf-dist/fonts/ty
-pe1/public/nanumtype1/nanummjmb8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pu
-blic/nanumtype1/nanummjmb9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/n
-anumtype1/nanummjmba.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumty
-pe1/nanummjmbb.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/na
-nummjmbc.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjm
-bd.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb
-><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/t
-exlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/texlive
-/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/texlive/2019/
-texmf-dist/fonts/type1/public/nanumtype1/nanummjmc3.pfb><c:/texlive/2019/texmf-
-dist/fonts/type1/public/nanumtype1/nanummjmc4.pfb><c:/texlive/2019/texmf-dist/f
-onts/type1/public/nanumtype1/nanummjmc5.pfb><c:/texlive/2019/texmf-dist/fonts/t
-ype1/public/nanumtype1/nanummjmc6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/p
-ublic/nanumtype1/nanummjmc7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/
-nanumtype1/nanummjmc8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumt
-ype1/nanummjmc9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/n
-anummjmcc.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummj
-mcd.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pf
-b><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/
-texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texliv
-e/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2019
-/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2019/texmf
--dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2019/texmf-dist/
-fonts/type1/public/nanumtype1/nanummjmd5.pfb><c:/texlive/2019/texmf-dist/fonts/
-type1/public/nanumtype1/nanummjmd6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
-public/nanumtype1/nanummjmd7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/co
-urier/ucrb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
-><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/20
-19/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2019/texmf-dist/f
-onts/type1/urw/palatino/uplri8a.pfb>
+nts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/n
+anummjmac.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummj
+mad.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pf
+b><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c:/
+texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/texliv
+e/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/texlive/2019
+/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/2019/texmf
+-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2019/texmf-dist/
+fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2019/texmf-dist/fonts/
+type1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/
+public/nanumtype1/nanummjmb7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public
+/nanumtype1/nanummjmb8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanum
+type1/nanummjmb9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/
+nanummjmba.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanumm
+jmbb.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.p
+fb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:
+/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/texli
+ve/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/201
+9/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/texlive/2019/texm
+f-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/texlive/2019/texmf-dist
+/fonts/type1/public/nanumtype1/nanummjmc3.pfb><c:/texlive/2019/texmf-dist/fonts
+/type1/public/nanumtype1/nanummjmc4.pfb><c:/texlive/2019/texmf-dist/fonts/type1
+/public/nanumtype1/nanummjmc5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publi
+c/nanumtype1/nanummjmc6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanu
+mtype1/nanummjmc7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1
+/nanummjmc8.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanum
+mjmc9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.
+pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c
+:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texl
+ive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/20
+19/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2019/tex
+mf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2019/texmf-dis
+t/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2019/texmf-dist/font
+s/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2019/texmf-dist/fonts/type
+1/public/nanumtype1/nanummjmd4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
+ic/nanumtype1/nanummjmd5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nan
+umtype1/nanummjmd6.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype
+1/nanummjmd7.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
+><c:/texlive/2019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/201
+9/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2019/texmf-dist/fo
+nts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/p
+alatino/uplri8a.pfb>
 Output written on Week5_2016_10454_Ïù¥ÏßÄÏõê_2016_19516_ÏÜêÏÉÅÏ§Ä.pdf (9 pages,
- 2092683 bytes).
+ 2175018 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
- 500 compressed objects within 5 object streams
- 242 named destinations out of 1000 (max. 500000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 513 compressed objects within 6 object streams
+ 247 named destinations out of 1000 (max. 500000)
  200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
