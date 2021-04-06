@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Tue Apr  6 01:23:46 2021">
+<application name="pa" timeStamp="Tue Apr  6 13:32:17 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="f184b306717d42d9845026dde0db826f" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
@@ -17,40 +17,46 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
+<property name="ExitApp" value="1" type="JavaHandler"/>
 <property name="OpenProject" value="2" type="JavaHandler"/>
+<property name="ReportIPStatus" value="1" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="3" type="JavaHandler"/>
 <property name="ShowView" value="2" type="JavaHandler"/>
-<property name="SimulationRun" value="43" type="JavaHandler"/>
+<property name="SimulationRun" value="44" type="JavaHandler"/>
 <property name="ToolsSettings" value="2" type="JavaHandler"/>
 </item>
 <item name="Gui Handlers">
 <property name="BaseDialog_APPLY" value="2" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="23" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="25" type="GuiHandlerData"/>
 <property name="CmdMsgDialog_OPEN_MESSAGES_VIEW" value="2" type="GuiHandlerData"/>
 <property name="DefaultOptionPane_CLOSE" value="1" type="GuiHandlerData"/>
-<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="16" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="54" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="30" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="55" type="GuiHandlerData"/>
 <property name="GettingStartedView_OPEN_PROJECT" value="2" type="GuiHandlerData"/>
+<property name="GraphicalView_ZOOM_IN" value="2" type="GuiHandlerData"/>
+<property name="GraphicalView_ZOOM_OUT" value="8" type="GuiHandlerData"/>
 <property name="LanguageOptionsPanel_LOOP_COUNT" value="4" type="GuiHandlerData"/>
-<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="44" type="GuiHandlerData"/>
+<property name="PACommandNames_SIMULATION_RUN_BEHAVIORAL" value="45" type="GuiHandlerData"/>
 <property name="PACommandNames_SIMULATION_SETTINGS" value="2" type="GuiHandlerData"/>
-<property name="PAViews_PROJECT_SUMMARY" value="39" type="GuiHandlerData"/>
+<property name="PAViews_PROJECT_SUMMARY" value="40" type="GuiHandlerData"/>
 <property name="ProgressDialog_BACKGROUND" value="10" type="GuiHandlerData"/>
 <property name="ProgressDialog_CANCEL" value="1" type="GuiHandlerData"/>
 <property name="ProjectSettingsSimulationPanel_TABBED_PANE" value="2" type="GuiHandlerData"/>
-<property name="RDIViews_WAVEFORM_VIEWER" value="30" type="GuiHandlerData"/>
+<property name="RDIViews_WAVEFORM_VIEWER" value="32" type="GuiHandlerData"/>
+<property name="ReportIPStatusInfoDialog_REPORT_IP_STATUS" value="1" type="GuiHandlerData"/>
 <property name="SettingsDialog_PROJECT_TREE" value="8" type="GuiHandlerData"/>
 <property name="SimulationObjectsPanel_SIMULATION_OBJECTS_TREE_TABLE" value="6" type="GuiHandlerData"/>
-<property name="TaskBanner_CLOSE" value="2" type="GuiHandlerData"/>
+<property name="TaskBanner_CLOSE" value="3" type="GuiHandlerData"/>
 <property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="1" type="GuiHandlerData"/>
-<property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="80" type="GuiHandlerData"/>
+<property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="83" type="GuiHandlerData"/>
 <property name="WaveformOptionsView_TABBED_PANE" value="2" type="GuiHandlerData"/>
-<property name="WaveformRealSettingsDialog_SINGLE_PRECISION" value="19" type="GuiHandlerData"/>
+<property name="WaveformRealSettingsDialog_SINGLE_PRECISION" value="20" type="GuiHandlerData"/>
+<property name="WaveformView_GOTO_TIME_0" value="1" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="1" type="GuiMode"/>
+<property name="GuiMode" value="10" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="0" type="TclMode"/>
+<property name="TclMode" value="9" type="TclMode"/>
 </item>
 </section>
 </application>

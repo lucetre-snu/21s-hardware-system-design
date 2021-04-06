@@ -1,0 +1,103 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Apr  6 13:32:09 2021
+# Process ID: 21416
+# Current directory: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21232 C:\Users\lucetre\Documents\semester\21s-hardware-system-design\lab05\prj\lab05\lab05.xpr
+# Log file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/vivado.log
+# Journal file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.xpr
+update_compile_order -fileset sources_1
+import_files -norecurse {C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05-jw/lab5/lab5.srcs/sources_1/new/tb_my_pe.v C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05-jw/lab5/lab5.srcs/sources_1/new/my_pe.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_ip -name floating_point -vendor xilinx.com -library ip -version 7.1 -module_name floating_point_MAC
+set_property -dict [list CONFIG.Component_Name {floating_point_MAC} CONFIG.Operation_Type {FMA} CONFIG.Add_Sub_Value {Add} CONFIG.Has_ARESETn {true} CONFIG.A_Precision_Type {Single} CONFIG.C_A_Exponent_Width {8} CONFIG.C_A_Fraction_Width {24} CONFIG.Result_Precision_Type {Single} CONFIG.C_Result_Exponent_Width {8} CONFIG.C_Result_Fraction_Width {24} CONFIG.C_Mult_Usage {Medium_Usage} CONFIG.C_Latency {17} CONFIG.C_Rate {1}] [get_ips floating_point_MAC]
+generate_target {instantiation_template} [get_files c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci]
+catch { config_ip_cache -export [get_ips -all floating_point_MAC] }
+export_ip_user_files -of_objects [get_files c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci]
+launch_runs floating_point_MAC_synth_1 -jobs 2
+wait_on_run floating_point_MAC_synth_1
+export_simulation -of_objects [get_files c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci] -directory C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.ip_user_files -ipstatic_source_dir C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/modelsim} {questa=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/questa} {riviera=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/riviera} {activehdl=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_my_pe [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_my_pe.tcl
+set_property -dict [list CONFIG.Flow_Control {NonBlocking} CONFIG.Has_RESULT_TREADY {false} CONFIG.C_Latency {16}] [get_ips floating_point_MAC]
+generate_target all [get_files  c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci]
+catch { config_ip_cache -export [get_ips -all floating_point_MAC] }
+export_ip_user_files -of_objects [get_files c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci] -no_script -sync -force -quiet
+reset_run floating_point_MAC_synth_1
+launch_runs floating_point_MAC_synth_1 -jobs 2
+wait_on_run floating_point_MAC_synth_1
+export_simulation -of_objects [get_files c:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci] -directory C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.ip_user_files -ipstatic_source_dir C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/modelsim} {questa=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/questa} {riviera=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/riviera} {activehdl=C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+reset_run floating_point_MAC_synth_1
+close_project
+open_project C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.xpr
+launch_simulation
+source tb_my_pe.tcl
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_my_bram [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source tb_my_bram.tcl
+set_property -name {xsim.simulate.runtime} -value {1ms} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_my_bram.tcl
+set_property -name {xsim.simulate.runtime} -value {0.5 ms} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_my_bram.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_my_pe [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source tb_my_pe.tcl
+update_compile_order -fileset sim_1
+move_files -fileset sim_1 [get_files  C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05/lab05.srcs/sources_1/imports/new/tb_my_pe.v]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source tb_my_pe.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tb_my_pe.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_my_bram [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_my_bram.tcl
+close_sim

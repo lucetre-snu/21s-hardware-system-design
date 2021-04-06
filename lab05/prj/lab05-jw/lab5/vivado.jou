@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Apr  6 13:24:10 2021
+# Process ID: 8728
+# Current directory: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05-jw/lab5
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4644 C:\Users\lucetre\Documents\semester\21s-hardware-system-design\lab05\prj\lab05-jw\lab5\lab5.xpr
+# Log file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05-jw/lab5/vivado.log
+# Journal file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05-jw/lab5\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab05/prj/lab05-jw/lab5/lab5.xpr
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_my_pe.tcl
+close_sim

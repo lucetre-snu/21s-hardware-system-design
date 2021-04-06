@@ -174,20 +174,47 @@ endmodule
 \subsubsection*{\texttt{MY\_PE}}
 \begin{lstlisting}[style={verilog-style}]
 `timescale 1ns / 1ps
-module my_add #(
+
+module my_pe #(
+    parameter L_RAM_SIZE = 6,
     parameter BITWIDTH = 32
 )
 (
+    input aclk,
+    input aresetn,
     input [BITWIDTH-1:0] ain,
     input [BITWIDTH-1:0] bin,
-    output [BITWIDTH-1:0] dout,
-    output overflow
+    input valid,
+    output dvalid,
+    output [BITWIDTH-1:0] dout
 );
-    // concatnate (overflow, dout) & detect overflow
-    assign {overflow, dout} = ain + bin;
+
+    // local reg ( can make overflow )
+    reg [BITWIDTH-1:0] psum = 0;
+    wire [BITWIDTH-1:0] res;
+    
+    floating_point_MAC UUT (
+        .aclk(aclk),
+        .aresetn(aresetn),
+        .s_axis_a_tvalid(valid),
+        .s_axis_b_tvalid(valid),
+        .s_axis_c_tvalid(valid),
+        .s_axis_a_tdata(ain),
+        .s_axis_b_tdata(bin),
+        .s_axis_c_tdata(psum),
+        .m_axis_result_tvalid(dvalid), 
+        .m_axis_result_tdata(res)
+    );
+  
+    always @(dvalid) begin
+        if(dvalid == 1) begin
+            psum = res;
+        end
+    end
+    
+    assign dout = dvalid == 1 ? psum : 0;
 endmodule
 \end{lstlisting}
-
 
 \newpage
 \section{Result}
@@ -208,6 +235,7 @@ MY\_BRAM1은 \texttt{input.txt}에 저장된 \texttt{mem}에 있는 값들을 �
 \item 테스트벤치에서 BRAM\_EN 신호는 항상 활성화 하고 (45, 55 라인) BRAM\_RST와 \texttt{done} 신호는 모든 데이터 전송이 끝나고 입력과 출력이 완료되었을 때 True를 대입할 것이다 (33-34 라인).\\
 \item BRAM\_ADDR의 경우 $i$번째 entry의 주소값은 BRAM에서 2개의 LSB를 사용하지 않으므로 주소값 또한 4의 배수로 증가시켜 대입해 주어야 한다. BRAM\_WE 신호를 주소값이 유지되는 한 구간을 5 CLK 싸이클과 1 CLK 싸이클로 나누어 DISABLE과 ENABLE을 번갈아 대입해준다 (29-31 라인).
 \end{itemize*}
+
 \newpage
 \subsubsection*{\texttt{TB\_MY\_BRAM}}
 \begin{lstlisting}[style={verilog-style}]
@@ -280,21 +308,92 @@ endmodule
 Figure~\ref{fig3}은 생성된 입력과 출력파일로 각각 \texttt{input.txt}는 MY\_BRAM1이 입력을 받기 위한 파일, \texttt{output.txt}는 MY\_BRAM2이 MY\_BRAM1으로부터 데이터를 전달받아 출력을 하기 위해 생성된 파일이다. 모든 데이터가 입력을 받은 대로 정상적으로 출력이 되었음을 확인하였다.
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0\textwidth]{../../submission/My_BRAM/My_BRAM_Waveform1.png}
-	\includegraphics[width=1.0\textwidth]{../../submission/My_BRAM/My_BRAM_Waveform2.png}
+	\includegraphics[width=1.0\textwidth]{../../submission/MY_BRAM/MY_BRAM_Waveform1.png}
+	\includegraphics[width=1.0\textwidth]{../../submission/MY_BRAM/MY_BRAM_Waveform2.png}
 \caption{\texttt{TB\_MY\_BRAM} Waveform}
 \label{fig2}
 \end{figure}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8\textwidth]{../../submission/My_BRAM/My_BRAM_result.png}
-\caption{\texttt{TB\_MY\_BRAM} I/O files: \texttt{input.txt}와 \texttt{output.txt}의 8192개의 \texttt{mem} 값이 서로 같다는 결과를 토대로 데이터 전달 및 입력/출력이 잘 이뤄진 것을 짐작할 수 있다.}
+	\includegraphics[width=0.6\textwidth]{../../submission/MY_BRAM/MY_BRAM_result.png}
+\caption{\texttt{TB\_MY\_BRAM} I/O files. \texttt{input.txt}와 \texttt{output.txt}의 8192개의 \texttt{mem} 값이 서로 같다는 결과를 토대로 데이터 전달 및 입력/출력이 잘 이뤄진 것을 짐작할 수 있다.}
 \label{fig3}
 \end{figure}
 
 \newpage
 \subsection{Processing Element, PE}
+\subsubsection*{\texttt{TB\_MY\_PE}}
+\begin{lstlisting}[style={verilog-style}]
+`timescale 1ns / 1ps
 
+module tb_my_pe #(
+    parameter L_RAM_SIZE = 6,
+    parameter BITWIDTH = 32
+);
+
+    reg [BITWIDTH-1:0] gb1 [0:2**L_RAM_SIZE-1];
+    reg [BITWIDTH-1:0] gb2 [0:2**L_RAM_SIZE-1];
+    reg [BITWIDTH-1:0] ain;
+    reg [BITWIDTH-1:0] bin;
+    reg rst;
+    reg clk;
+    wire [BITWIDTH-1:0] dout;
+    reg valid;
+    wire dvalid;
+   
+    integer i;         
+    initial begin
+        clk <= 0;
+        rst <= 1;
+        #20;
+        rst <= 0;
+        
+        // value setting in global buffers
+        for(i = 0; i < 16; i = i+1) begin
+            gb1[i] = $urandom_range(2**30,2**30+2**26);
+            gb2[i] = $urandom_range(2**30,2**30+2**26);
+//            gb1[i] <= ($urandom%2 << 31) + ($urandom%(2**8) << 23) + $urandom%(2**23);
+//            gb2[i] <= ($urandom%2 << 31) + ($urandom%(2**8) << 23) + $urandom%(2**23);
+        end
+        
+        // execute PE
+        for(i = 0; i < 16; i = i+1) begin
+            if(i != 0) begin
+                wait (dvalid == 1);
+                wait (dvalid == 0);
+            end
+            ain = gb1[i];
+            bin = gb2[i];
+            #15;
+            valid <= 1;
+            #10;
+            valid <= 0;
+        end
+    end
+    
+    always #5 clk = ~clk;
+    
+    my_pe MY_PE (
+        .aclk(clk),
+        .aresetn(~rst),
+        .ain(ain),
+        .bin(bin),
+        .valid(valid),
+        .dvalid(dvalid),
+        .dout(dout)
+    );
+    
+endmodule
+\end{lstlisting}
+
+위 Testbench 코드를 수행하면 아래의 Figure~\ref{fig3}와 같은 Waveform을 확인할 수 있다. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{../../submission/MY_PE/MY_PE_Waveform1.png}
+	\includegraphics[width=1.0\textwidth]{../../submission/MY_PE/MY_PE_Waveform2.png}
+\caption{\texttt{TB\_MY\_PE} Waveform}
+\label{fig3}
+\end{figure}
 
 \newpage
 \section{Conclusion}
