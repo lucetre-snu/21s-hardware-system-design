@@ -115,6 +115,7 @@ BRAM의 경우 크게 두 부분으로 이뤄져 있다. (1) 모듈이 실행이
 \end{itemize*}
 \end{itemize*}
 
+\newpage
 \subsubsection*{\texttt{MY\_BRAM}}
 \begin{lstlisting}[style={verilog-style}]
 `timescale 1ns / 1ps
@@ -165,6 +166,7 @@ module my_bram #(
 endmodule
 \end{lstlisting}
 
+\quad
 \subsection{Processing Element, PE}
 
 Processing Element (이하 PE)는 구현의 최종목표인 CNN에서 벡터의 내적연산을 계산하는 역할을 한다. PE의 구현방식은 다음과 같다.
@@ -176,13 +178,12 @@ Processing Element (이하 PE)는 구현의 최종목표인 CNN에서 벡터의 
 \end{enumerate}
 
 위의 구현을 수식으로 나타내면 다음과 같다. 
-\begin{equation}
+\begin{equation*}
 \texttt{psum} = \texttt{ain}_i \times \texttt{bin}_i + \texttt{psum  }(\texttt{i} : \texttt{input number}) 
-\end{equation}
+\end{equation*}
 
 MAC모듈의 parameter중 dvalid bit는 연산이 끝난 후, m\_axis\_result\_tdata가 실제 연산의 결과값임을 보장해준다. 따라서, always구문을 사용하여 결과값을 다시 psum register에 저장해 주었다. 코드를 보면, s\_axis\_c\_tdata과 m\_axis\_result\_tdata가 다름을 확인 할 수 있는데, 이는 MAC에서 parallel 하게 cin과 result값을 parameter로 줄 수 없기 때문이다. 따라서, 임시 res register를 이용하여 결과값을 받았고, 이후 그 값을 psum에 할당해주었다.
 
-\newpage
 \subsubsection*{\texttt{MY\_PE}}
 \begin{lstlisting}[style={verilog-style}]
 `timescale 1ns / 1ps
@@ -317,14 +318,14 @@ endmodule
 \texttt{mem}에 write가 될 때 1 cycle delay가 되는 것을 눈으로 확인할 수는 없지만 BRAM\_WE가 ENABLE 되었다가 DISABLE 되었을 때 read하는 데이터 BRAM\_RDDATA2의 delay가 총 3 cycle가 걸렸다는 것을 확인할 수 있었다. 이 사실로 미뤄 보아 읽기에 걸리는 시간이 2 CLK 싸이클, 쓰기에 걸리는 시간이 1 CLK 싸이클이 걸린다는 것을 유추할 수 있었고 스펙에 맞는 올바른 구현이 되었다는 것을 짐작할 수 있었다.\\
 
 Figure~\ref{fig3}은 생성된 입력과 출력파일로 각각 \texttt{input.txt}는 MY\_BRAM1이 입력을 받기 위한 파일, \texttt{output.txt}는 MY\_BRAM2이 MY\_BRAM1으로부터 데이터를 전달받아 출력을 하기 위해 생성된 파일이다. 모든 데이터가 입력을 받은 대로 정상적으로 출력이 되었음을 확인하였다.
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=1.0\textwidth]{../../submission/MY_BRAM/MY_BRAM_Waveform1.png}
 	\includegraphics[width=1.0\textwidth]{../../submission/MY_BRAM/MY_BRAM_Waveform2.png}
 \caption{\texttt{TB\_MY\_BRAM} Waveform}
 \label{fig2}
 \end{figure}
-\begin{figure}[ht]
+\begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.6\textwidth]{../../submission/MY_BRAM/MY_BRAM_result.png}
 \caption{\texttt{TB\_MY\_BRAM} I/O files. \texttt{input.txt}와 \texttt{output.txt}의 8192개의 \texttt{mem} 값이 서로 같다는 결과를 토대로 데이터 전달 및 입력/출력이 잘 이뤄진 것을 짐작할 수 있다.}
