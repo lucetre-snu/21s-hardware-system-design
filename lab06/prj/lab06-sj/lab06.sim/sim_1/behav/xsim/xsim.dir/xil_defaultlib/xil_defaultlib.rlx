@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/lucet/lab06/lab06.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/lucet/lab06/lab06.srcs/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.vhd,1618275814,vhdl,,,,floating_point_mac,,,,,,,,
+C:/Users/lucet/lab06/lab06.srcs/sources_1/new/my_pe.v,1618300994,verilog,,C:/Users/lucet/lab06/lab06.srcs/sources_1/new/my_pe_controller.v,,my_pe,,,,,,,,
+C:/Users/lucet/lab06/lab06.srcs/sources_1/new/my_pe_controller.v,1618301569,verilog,,C:/Users/lucet/lab06/lab06.srcs/sources_1/new/tb_my_pe_controller.v,,my_pe_controller,,,,,,,,
+C:/Users/lucet/lab06/lab06.srcs/sources_1/new/tb_my_pe.v,1618285041,verilog,,,,tb_my_pe,,,,,,,,
+C:/Users/lucet/lab06/lab06.srcs/sources_1/new/tb_my_pe_controller.v,1618298791,verilog,,,,tb_my_pe_controller,,,,,,,,
