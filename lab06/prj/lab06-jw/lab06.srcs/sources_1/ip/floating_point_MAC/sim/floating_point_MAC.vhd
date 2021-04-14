@@ -199,7 +199,7 @@ ARCHITECTURE floating_point_MAC_arch OF floating_point_MAC IS
 BEGIN
   U0 : floating_point_v7_1_7
     GENERIC MAP (
-      C_XDEVICEFAMILY => "zynq",
+      C_XDEVICEFAMILY => "kintex7",
       C_HAS_ADD => 0,
       C_HAS_SUBTRACT => 0,
       C_HAS_MULTIPLY => 0,
