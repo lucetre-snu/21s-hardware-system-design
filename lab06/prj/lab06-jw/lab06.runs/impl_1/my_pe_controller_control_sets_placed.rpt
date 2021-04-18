@@ -1,0 +1,87 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Apr 18 22:45:03 2021
+| Host         : DESKTOP-PVRNCV3 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file my_pe_controller_control_sets_placed.rpt
+| Design       : my_pe_controller
+| Device       : xc7k70t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    19 |
+| Unused register locations in slices containing registers |    43 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            2 |
+|      2 |            1 |
+|      4 |            3 |
+|      7 |            1 |
+|    16+ |           12 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1058 |          301 |
+| No           | No                    | Yes                    |               9 |            4 |
+| No           | Yes                   | No                     |             162 |           50 |
+| Yes          | No                    | No                     |              32 |            9 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|          Clock Signal         |                     Enable Signal                     |                                                                       Set/Reset Signal                                                                      | Slice Load Count | Bel Load Count |
++-------------------------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  counter_rst_load_reg_i_2_n_2 |                                                       |                                                                                                                                                             |                1 |              1 |
+|  valid_reg_i_2_n_2            |                                                       |                                                                                                                                                             |                1 |              1 |
+|  clk_IBUF_BUFG                |                                                       | reset_IBUF                                                                                                                                                  |                1 |              2 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]_0 |                2 |              4 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/NORM/LZE/ENCODE[0].MUX_Z/OP_DEL/i_pipe/first_q[1]                                                                 |                1 |              4 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/NORM/LZE/ENCODE[0].MUX_Z/OP_DEL/i_pipe/opt_has_pipe.first_q_reg[0]_0                                              |                1 |              4 |
+|  clk_IBUF_BUFG                |                                                       | counter_rst_load                                                                                                                                            |                3 |              7 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ABS_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]_0                                                          |                4 |             16 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ABS_DELAY/i_pipe/first_q[5]                                                                             |                6 |             16 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/NORM/LZE/ZERO_DET_CC_1/CHAIN_GEN[3].CARRYS_DEL.NEED_DEL.CARRYS_FD_0                                               |                3 |             16 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/NORM/LZE/ZERO_DET_CC_1/CARRYS_OUT[7]                                                                              |                3 |             16 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/sclr_i                                                                                                                                 |                3 |             17 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/EXP/conv_exp.downsize_exp/FLOW_REQ.EXP_NE.FLOW_DELAY/i_pipe/opt_has_pipe.first_q_reg[3]_1                         |                7 |             22 |
+|  clk_IBUF_BUFG                | MY_PE/UUT/U0/i_synth/i_nd_to_rdy/m_axis_result_tvalid |                                                                                                                                                             |                9 |             32 |
+|  n_0_80_BUFG                  |                                                       |                                                                                                                                                             |               18 |             32 |
+|  n_1_79_BUFG                  |                                                       |                                                                                                                                                             |               19 |             32 |
+|  clk_IBUF_BUFG                |                                                       | MY_PE/UUT/U0/i_synth/FMA_OP.OP/addsub/add/zero_largest                                                                                                      |               20 |             47 |
+|  ain_BUFG                     |                                                       |                                                                                                                                                             |               32 |             64 |
+|  clk_IBUF_BUFG                |                                                       |                                                                                                                                                             |              230 |           1001 |
++-------------------------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

@@ -12,6 +12,7 @@ module tb_my_pe_controller #(
     wire [BITWIDTH-1:0] sth;
     wire [BITWIDTH-1:0] sth1;
     wire [BITWIDTH-1:0] sth2;
+    wire sth_dvalid;
     
     reg start;
     reg clk;
@@ -48,7 +49,8 @@ module tb_my_pe_controller #(
         .state(state),
         .sth(sth),
         .sth1(sth1),
-        .sth2(sth2)
+        .sth2(sth2),
+        .sth_dvalid(sth_dvalid)
     );
 
 endmodule

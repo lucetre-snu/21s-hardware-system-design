@@ -27,8 +27,9 @@ module my_pe #(
       .m_axis_result_tdata(res)                     // output wire [31 : 0] m_axis_result_tdata
     );
     
-    always @(posedge dvalid)
-        cin = res;
+    always @(posedge aclk) begin
+        if(dvalid == 1) cin = res;
+    end
     assign dout = dvalid ? res : 0;
 
 endmodule
