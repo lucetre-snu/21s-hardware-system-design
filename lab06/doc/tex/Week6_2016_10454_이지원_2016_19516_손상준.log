@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.30)  19 APR 2021 12:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.30)  19 APR 2021 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -786,7 +786,7 @@ File: tikzlibrarybackgrounds.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@layerboxsaved@background=\box83
 )
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 8
-0.
+5.
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -796,33 +796,36 @@ File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count312
 \l__pdf_internal_box=\box84
 )
-(./Week6_2016_10454_이지원_2016_19516_손상준.aux)
+(./Week6_2016_10454_이지원_2016_19516_손상준.aux
+
+LaTeX Warning: Label `fig3' multiply defined.
+
+)
 \openout1 = `Week6_2016_10454_이지원_2016_19516_손상준.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 85.
 LaTeX Font Info:    Trying to load font information for LUC+nanummj on input li
-ne 80.
-
-(c:/texlive/2020/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+ne 85.
+ (c:/texlive/2020/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
 )
-LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    ... okay on input line 85.
 
 (c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -846,7 +849,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 80.
+Package hyperref Info: Link coloring ON on input line 85.
 
 (c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -859,9 +862,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count319
 )
-LaTeX Info: Redefining \ref on input line 80.
-LaTeX Info: Redefining \pageref on input line 80.
-LaTeX Info: Redefining \nameref on input line 80.
+LaTeX Info: Redefining \ref on input line 85.
+LaTeX Info: Redefining \pageref on input line 85.
+LaTeX Info: Redefining \nameref on input line 85.
 
 (./Week6_2016_10454_이지원_2016_19516_손상준.out)
 (./Week6_2016_10454_이지원_2016_19516_손상준.out)
@@ -904,38 +907,38 @@ LaTeX Info: Redefining \nameref on input line 80.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count320
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 8
-7.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 9
+2.
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 9
-3.
+8.
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<fig/fig1.png, id=55, 504.6855pt x 225.84375pt>
+<fig/fig1.png, id=59, 504.6855pt x 225.84375pt>
 File: fig/fig1.png Graphic file (type png)
 <use fig/fig1.png>
-Package pdftex.def Info: fig/fig1.png  used on input line 97.
+Package pdftex.def Info: fig/fig1.png  used on input line 102.
 (pdftex.def)             Requested size: 281.85587pt x 126.13391pt.
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 1
-11.
+31.
 
 (c:/texlive/2020/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
 
-LaTeX Warning: Citation `memh' on page 1 undefined on input line 113.
+LaTeX Warning: Citation `memh' on page 1 undefined on input line 131.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
 
  []
 
 
-Overfull \hbox (4.6327pt too wide) in paragraph at lines 114--116
+Overfull \hbox (4.6327pt too wide) in paragraph at lines 131--131
 []\OT1/ppl/m/n/10 30-46 \LUC/nanummj/m/n/10/b7 |\LUC/nanummj/m/n/10/c7 x@ \OT1/
 ppl/m/n/10 BRAM\LUC/nanummj/m/n/10/c7 X \OT1/ppl/m/n/10 in-put\LUC/nanummj/m/n/
 10/c7 <\LUC/nanummj/m/n/10/b8 \ \LUC/nanummj/m/n/10/c8 �\LUC/nanummj/m/n/10/c5 
@@ -951,8 +954,7 @@ mmj/m/n/10/bd ��\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/b2 �\OT1/ppl/m/n/10
 
 [1{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./fig/fig1.png>] [2] (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.
-sty
+ <./fig/fig1.png>] (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang2.sty
@@ -961,7 +963,31 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 (c:/texlive/2020/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 )
-Overfull \hbox (6.4059pt too wide) in paragraph at lines 192--193
+Overfull \hbox (4.84981pt too wide) in paragraph at lines 177--178
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.84981pt too wide) in paragraph at lines 178--179
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.84981pt too wide) in paragraph at lines 179--180
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.84981pt too wide) in paragraph at lines 180--181
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][] 
+ []
+
+[2]
+Overfull \hbox (6.4059pt too wide) in paragraph at lines 231--232
 \LUC/nanummj/m/n/10/d5 t\LUC/nanummj/m/n/10/c9 ^^@\LUC/nanummj/m/n/10/b2 �\OT1/
 ppl/m/n/10 . \LUC/nanummj/m/n/10/b5 0\LUC/nanummj/m/n/10/b7 |\LUC/nanummj/m/n/1
 0/c1 ^^\\OT1/ppl/m/n/10 , al-ways\LUC/nanummj/m/n/10/ad l\LUC/nanummj/m/n/10/bb
@@ -975,123 +1001,146 @@ C/nanummj/m/n/10/b4 �\LUC/nanummj/m/n/10/b9 | \LUC/nanummj/m/n/10/bc �\LUC/nanu
 mmj/m/n/10/ba t\OT1/ppl/m/n/10 , s[]axis[]c[]tdata
  []
 
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
-\LUC/nanummj/m/n/10/b4 �\LUC/nanummj/m/n/10/c7 D \OT1/ppl/m/n/10 MY[]ADDR\LUC/n
-anummj/m/n/10/c7 D \LUC/nanummj/m/n/10/bc �\LUC/nanummj/m/n/10/d6 T\LUC/nanummj
-/m/n/10/d5 X\LUC/nanummj/m/n/10/ba t\LUC/nanummj/m/n/10/c1 ^^\ \OT1/ppl/m/n/10 
-BRAM[]RDDATA1\LUC/nanummj/m/n/10/b8 \ \LUC/nanummj/m/n/10/c7 }\LUC/nanummj/m/n/
-10/c5 �\LUC/nanummj/m/n/10/c6 (\LUC/nanummj/m/n/10/b2 �\OT1/ppl/m/n/10 . MY[]BR
-AM2\LUC/nanummj/m/n/10/c7 X \LUC/nanummj/m/n/10/ac �\LUC/nanummj/m/n/10/c6 � \L
-UC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/b8 ^^G\LUC/nanummj/m/n/10/ac � \LUC/n
-anummj/m/n/10/c7 }\LUC/nanummj/m/n/10/c5 �\LUC/nanummj/m/n/10/c6 (
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 246--246
 
  []
 
-[5]
-
-LaTeX Warning: Reference `fig2' on page 6 undefined on input line 317.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
- []
-
-
-LaTeX Warning: Citation `thomas2008verilog' on page 6 undefined on input line 3
+[4]
+<fig/My_PE_Controller_Waveform1.png, id=267, 1149.69525pt x 343.2825pt>
+File: fig/My_PE_Controller_Waveform1.png Graphic file (type png)
+<use fig/My_PE_Controller_Waveform1.png>
+Package pdftex.def Info: fig/My_PE_Controller_Waveform1.png  used on input line
+ 304.
+(pdftex.def)             Requested size: 469.75502pt x 140.25958pt.
+<fig/My_PE_Controller_Waveform2.png, id=268, 1148.49075pt x 342.078pt>
+File: fig/My_PE_Controller_Waveform2.png Graphic file (type png)
+<use fig/My_PE_Controller_Waveform2.png>
+Package pdftex.def Info: fig/My_PE_Controller_Waveform2.png  used on input line
+ 305.
+(pdftex.def)             Requested size: 469.75502pt x 139.91882pt.
+<fig/My_PE_Controller_Waveform3.png, id=269, 1147.8885pt x 393.8715pt>
+File: fig/My_PE_Controller_Waveform3.png Graphic file (type png)
+<use fig/My_PE_Controller_Waveform3.png>
+Package pdftex.def Info: fig/My_PE_Controller_Waveform3.png  used on input line
+ 306.
+(pdftex.def)             Requested size: 469.75502pt x 161.18184pt.
+<fig/My_PE_Controller_Waveform4.png, id=270, 1149.093pt x 394.47375pt>
+File: fig/My_PE_Controller_Waveform4.png Graphic file (type png)
+<use fig/My_PE_Controller_Waveform4.png>
+Package pdftex.def Info: fig/My_PE_Controller_Waveform4.png  used on input line
+ 314.
+(pdftex.def)             Requested size: 469.75502pt x 161.26578pt.
+<fig/My_PE_Controller_Waveform5.png, id=271, 1146.08176pt x 343.88475pt>
+File: fig/My_PE_Controller_Waveform5.png Graphic file (type png)
+<use fig/My_PE_Controller_Waveform5.png>
+Package pdftex.def Info: fig/My_PE_Controller_Waveform5.png  used on input line
+ 315.
+(pdftex.def)             Requested size: 469.75502pt x 140.95168pt.
+<fig/My_PE_Controller_Design1.png, id=272, 387.24675pt x 615.4995pt>
+File: fig/My_PE_Controller_Design1.png Graphic file (type png)
+<use fig/My_PE_Controller_Design1.png>
+Package pdftex.def Info: fig/My_PE_Controller_Design1.png  used on input line 3
+24.
+(pdftex.def)             Requested size: 230.18253pt x 365.86516pt.
+<fig/My_PE_Controller_Design2.png, id=273, 388.45125pt x 617.30624pt>
+File: fig/My_PE_Controller_Design2.png Graphic file (type png)
+<use fig/My_PE_Controller_Design2.png>
+Package pdftex.def Info: fig/My_PE_Controller_Design2.png  used on input line 3
 25.
+(pdftex.def)             Requested size: 230.18253pt x 365.7994pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
+
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--326
+LaTeX Warning: Citation `thomas2008verilog' on page 5 undefined on input line 3
+37.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--337
 
  []
 
 No file Week6_2016_10454_이지원_2016_19516_손상준.bbl.
-[6] (./Week6_2016_10454_이지원_2016_19516_손상준.aux)
+[5] [6 <./fig/My_PE_Controller_Waveform1.png> <./fig/My_PE_Controller_Waveform2
+.png> <./fig/My_PE_Controller_Waveform3.png>] [7 <./fig/My_PE_Controller_Wavefo
+rm4.png> <./fig/My_PE_Controller_Waveform5.png>] [8 <./fig/My_PE_Controller_Des
+ign1.png> <./fig/My_PE_Controller_Design2.png>]
+(./Week6_2016_10454_이지원_2016_19516_손상준.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Week6_2016_10454_이지원_2016_19516_손상
 준.out' has not changed.
-(rerunfilecheck)             Checksum: E2B72F0B3A5D389F454E577DFF994C61;368.
+(rerunfilecheck)             Checksum: 0AA69F7190587EA1C6241E3395C1FD06;407.
  ) 
 Here is how much of TeX's memory you used:
- 22029 strings out of 479304
- 426324 string characters out of 5871219
- 992794 words of memory out of 5000000
- 38526 multiletter control sequences out of 15000+600000
- 428231 words of font info for 103 fonts, out of 8000000 for 9000
+ 22059 strings out of 479304
+ 427538 string characters out of 5871219
+ 1014319 words of memory out of 5000000
+ 38561 multiletter control sequences out of 15000+600000
+ 427939 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,102p,692b,2070s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,12n,102p,671b,2267s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2020/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/n
-anummjmac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummj
-mad.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pf
-b><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c:/
-texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/texliv
-e/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/texlive/2020
-/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/2020/texmf
--dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2020/texmf-dist/
-fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2020/texmf-dist/fonts/
-type1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/
-public/nanumtype1/nanummjmb7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public
-/nanumtype1/nanummjmb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanum
-type1/nanummjmb9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/
-nanummjmba.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanumm
-jmbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.p
-fb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:
-/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/texli
-ve/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/202
-0/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/texlive/2020/texm
-f-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/texlive/2020/texmf-dist
-/fonts/type1/public/nanumtype1/nanummjmc3.pfb><c:/texlive/2020/texmf-dist/fonts
-/type1/public/nanumtype1/nanummjmc4.pfb><c:/texlive/2020/texmf-dist/fonts/type1
-/public/nanumtype1/nanummjmc5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
-c/nanumtype1/nanummjmc6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanu
-mtype1/nanummjmc7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1
-/nanummjmc8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanum
-mjmc9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.
-pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c
-:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texl
-ive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/20
-20/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2020/tex
-mf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2020/texmf-dis
-t/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2020/texmf-dist/font
-s/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2020/texmf-dist/fonts/type
-1/public/nanumtype1/nanummjmd4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publ
-ic/nanumtype1/nanummjmd5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nan
-umtype1/nanummjmd6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype
-1/nanummjmd7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb
-><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/202
-0/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2020/texmf-dist/fo
-nts/type1/urw/palatino/uplr8a.pfb>
-Output written on Week6_2016_10454_이지원_2016_19516_손상준.pdf (6 pages,
- 1968621 bytes).
+nts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/na
+nummjmac.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjm
+ad.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb
+><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb><c:/t
+exlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb><c:/texlive
+/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb><c:/texlive/2020/
+texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb><c:/texlive/2020/texmf-
+dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/texlive/2020/texmf-dist/f
+onts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/2020/texmf-dist/fonts/t
+ype1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/p
+ublic/nanumtype1/nanummjmb7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/
+nanumtype1/nanummjmb8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumt
+ype1/nanummjmb9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/n
+anummjmba.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummj
+mbb.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pf
+b><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb><c:/
+texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbe.pfb><c:/texliv
+e/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb><c:/texlive/2020/texmf
+-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/texlive/2020/texmf-dist/
+fonts/type1/public/nanumtype1/nanummjmc3.pfb><c:/texlive/2020/texmf-dist/fonts/
+type1/public/nanumtype1/nanummjmc4.pfb><c:/texlive/2020/texmf-dist/fonts/type1/
+public/nanumtype1/nanummjmc5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public
+/nanumtype1/nanummjmc6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanum
+type1/nanummjmc7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/
+nanummjmc8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanumm
+jmc9.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.p
+fb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:
+/texlive/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texli
+ve/2020/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/202
+0/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2020/texm
+f-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/texlive/2020/texmf-dist
+/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texlive/2020/texmf-dist/fonts
+/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2020/texmf-dist/fonts/type1
+/public/nanumtype1/nanummjmd5.pfb><c:/texlive/2020/texmf-dist/fonts/type1/publi
+c/nanumtype1/nanummjmd6.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/nanu
+mtype1/nanummjmd7.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrb8
+a.pfb><c:/texlive/2020/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texliv
+e/2020/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2020/texmf-di
+st/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on Week6_2016_10454_이지원_2016_19516_손상준.pdf (8 pages,
+ 2195253 bytes).
 PDF statistics:
- 480 PDF objects out of 1000 (max. 8388607)
- 401 compressed objects within 5 object streams
- 173 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 395 compressed objects within 4 object streams
+ 162 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

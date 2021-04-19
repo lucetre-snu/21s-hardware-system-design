@@ -13,6 +13,11 @@
 %\renewcommand{\rmdefault}{palatino}
 \usepackage{fancyhdr}
 
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+\newcommand{\orange}[1]{{\color{orange} #1}}
+\newcommand{\purple}[1]{{\color{purple} #1}}
+
 %\pagestyle{fancy}
 \rhead{}
 \lhead{}
@@ -100,10 +105,12 @@
 \end{figure}
 
 \section{Implementation}
-
+\orange{
 이번 프로젝트는 Block Random Access Memory와 Processing Element를 각각 구현함으로써 추후 구현할 Matrix-Matrix Multiplication을 수행하기 위한 기본 모듈을 구성하는 것을 목적으로 한다. 아래는 코드 구현과 함께 간략한 아이디어 및 기능에 대한 설명이 (1) BRAM, (2) PE 순으로 진행된다.
+}
 
-\subsection{Block Random Access Memory, BRAM}
+\subsection{PE Controller}
+\orange{
 BRAM의 경우 크게 두 부분으로 이뤄져 있다. (1) 모듈이 실행이 되기 전 INIT\_FILE에서 내부 메모리 \texttt{mem}를 읽는 부분과 done 신호가 주어졌을 때, OUT\_FILE에 \texttt{mem}의 상태를 출력하는 부분과, (2) EN, RST, WE 신호가 들어왔을 때 경우에 따라 입력되는 데이터를 \texttt{mem}에 읽고 쓰는 역할을 한다.
 
 \begin{itemize*}
@@ -121,210 +128,213 @@ BRAM의 경우 크게 두 부분으로 이뤄져 있다. (1) 모듈이 실행이
 \item BRAM\_EN이 활성화되어 있고 BRAM\_WE이 활성화되어 있다면, 메모리로부터 데이터를 읽어오는 기능을 수행한다. Read에 걸리는 싸이클이 2 cycle이 걸리도록 구현을 해야하기 때문에 \texttt{dout}을 버퍼로 사용해 1 cycle이 추가되도록 한다. (41-42 라인)
 \end{itemize*}
 \end{itemize*}
-
-\newpage
-\subsubsection*{\texttt{MY\_BRAM}}
+}
+\subsubsection*{\texttt{MY\_PE\_CONTROLLER}}
 \begin{lstlisting}[style={verilog-style}]
 `timescale 1ns / 1ps
-module my_bram #(
-    parameter integer BRAM_ADDR_WIDTH = 15,
-    parameter INIT_FILE = "input.txt",
-    parameter OUT_FILE = "output.txt"
-)(
-    input wire [BRAM_ADDR_WIDTH-1:0] BRAM_ADDR,
-    input wire BRAM_CLK,
-    input wire [31:0] BRAM_WRDATA,
-    output reg [31:0] BRAM_RDDATA,
-    input wire BRAM_EN,
-    input wire BRAM_RST,
-    input wire [3:0] BRAM_WE,
-    input wire done
-);
-    reg [31:0] mem[0:8191];
-    wire [BRAM_ADDR_WIDTH-3:0] addr = BRAM_ADDR[BRAM_ADDR_WIDTH-1:2];
-    reg [31:0] dout;
-    
-    initial begin
-        if (INIT_FILE != "") begin
-            $readmemh(INIT_FILE, mem);
-        end
-        wait (done) begin
-            $writememh(OUT_FILE, mem);
-        end
-    end
-    
-    always @(posedge BRAM_CLK or posedge BRAM_RST) begin
-        if (BRAM_RST) begin 
-            BRAM_RDDATA <= 0;
-        end
-        if (BRAM_EN) begin
-            if (BRAM_WE) begin
-                if (BRAM_WE[0]) mem[addr][7:0] <= BRAM_WRDATA[7:0];
-                if (BRAM_WE[1]) mem[addr][15:8] <= BRAM_WRDATA[15:8];
-                if (BRAM_WE[2]) mem[addr][23:16] <= BRAM_WRDATA[23:16];
-                if (BRAM_WE[3]) mem[addr][31:24] <= BRAM_WRDATA[31:24]; 
-            end
-            else begin
-                dout <= mem[addr];
-                BRAM_RDDATA <= dout;
-            end
-        end
-    end
-endmodule
-\end{lstlisting}
-
-\quad
-\subsection{Processing Element, PE}
-
-Processing Element (이하 PE)는 구현의 최종목표인 CNN에서 벡터의 내적연산을 계산하는 역할을 한다. PE의 구현방식은 다음과 같다.
-\begin{enumerate}
-    \item 외부 컨트롤러 (현재는 testbench로 대체)에서 들어온 input값들을 받는다.
-    \item ain, bin, cin로 floating point fused multiply-add(이하 MAC)를 수행한다.
-    \item (2)에서 나온 결과값을 psum에 더해준다.
-    \item (1),(2),(3)을 모든 입력값에 대해 반복해서 수행한다.
-\end{enumerate}
-
-위의 구현을 수식으로 나타내면 다음과 같다. 
-\begin{equation*}
-\texttt{psum} = \texttt{ain}_i \times \texttt{bin}_i + \texttt{psum  }(\texttt{i} : \texttt{input number}) 
-\end{equation*}
-
-MAC모듈의 parameter중 dvalid bit는 연산이 끝난 후, m\_axis\_result\_tdata가 실제 연산의 결과값임을 보장해준다. 따라서, always구문을 사용하여 결과값을 다시 psum register에 저장해 주었다. 코드를 보면, s\_axis\_c\_tdata과 m\_axis\_result\_tdata가 다름을 확인 할 수 있는데, 이는 MAC에서 parallel 하게 cin과 result값을 parameter로 줄 수 없기 때문이다. 따라서, 임시 res register를 이용하여 결과값을 받았고, 이후 그 값을 psum에 할당해주었다.
-
-\subsubsection*{\texttt{MY\_PE}}
-\begin{lstlisting}[style={verilog-style}]
-`timescale 1ns / 1ps
-
-module my_pe #(
+module my_pe_controller #(
     parameter L_RAM_SIZE = 6,
     parameter BITWIDTH = 32
-)
-(
-    input aclk,
-    input aresetn,
-    input [BITWIDTH-1:0] ain,
-    input [BITWIDTH-1:0] bin,
-    input valid,
-    output dvalid,
-    output [BITWIDTH-1:0] dout
+)(
+    input start,
+    input reset,
+    input clk,
+    output [L_RAM_SIZE:0] rdaddr,
+    input [BITWIDTH-1:0] rddata,
+    output [BITWIDTH-1:0] out,
+    output done
 );
-
-    // local reg ( can make overflow )
-    reg [BITWIDTH-1:0] psum = 0;
-    wire [BITWIDTH-1:0] res;
+    parameter DONE_LATENCY = 5;
+    parameter S_IDLE = 2'd0, S_LOAD = 2'd1, S_CALC = 2'd2, S_DONE = 2'd3;
+    reg [1:0] present_state, next_state;
     
-    floating_point_MAC UUT (
-        .aclk(aclk),
-        .aresetn(aresetn),
-        .s_axis_a_tvalid(valid),
-        .s_axis_b_tvalid(valid),
-        .s_axis_c_tvalid(valid),
-        .s_axis_a_tdata(ain),
-        .s_axis_b_tdata(bin),
-        .s_axis_c_tdata(psum),
-        .m_axis_result_tvalid(dvalid), 
-        .m_axis_result_tdata(res)
-    );
-  
-    always @(dvalid) begin
-        if(dvalid == 1) begin
-            psum = res;
+    reg [L_RAM_SIZE:0] cnt_load, cnt_calc;
+    reg [2:0] cnt_done;
+    reg rst_cnt_load, rst_cnt_calc, rst_cnt_done;
+    
+    reg [BITWIDTH-1:0] gb1[0:2**L_RAM_SIZE-1];
+    reg [BITWIDTH-1:0] gb2[0:2**L_RAM_SIZE-1];
+    
+    reg [BITWIDTH-1:0] ain;
+    reg [BITWIDTH-1:0] bin;
+    reg valid = 0;
+    
+    wire [BITWIDTH-1:0] dout;
+    wire dvalid;
+    
+    always @(posedge clk or posedge reset)
+        if (reset) present_state <= S_IDLE; else present_state <= next_state;
+        
+    always @(posedge clk or posedge rst_cnt_load) 
+        if (rst_cnt_load) cnt_load <= 0; else cnt_load <= cnt_load + 1;
+    always @(posedge clk or posedge rst_cnt_calc) 
+        if (rst_cnt_calc) cnt_calc <= 0;
+    always @(posedge clk or posedge rst_cnt_done) 
+        if (rst_cnt_done) cnt_done <= 0; else cnt_done <= cnt_done + 1;
+    
+    always @(*)
+        case (present_state)
+            S_IDLE: if (start)                              next_state = S_LOAD; else next_state = present_state;
+            S_LOAD: if (cnt_load == 2**(L_RAM_SIZE+1)-1)    next_state = S_CALC; else next_state = present_state;
+            S_CALC: if (cnt_calc == 2**L_RAM_SIZE)          next_state = S_DONE; else next_state = present_state;
+            S_DONE: if (cnt_done == DONE_LATENCY-1)         next_state = S_IDLE; else next_state = present_state;
+        endcase
+    
+    always @(*)
+        case (present_state)
+            S_LOAD: rst_cnt_load <= 0;
+            S_CALC: rst_cnt_calc <= 0;
+            S_DONE: rst_cnt_done <= 0;
+            default: begin
+                rst_cnt_load <= 1; 
+                rst_cnt_calc <= 1;
+                rst_cnt_done <= 1;
+            end
+        endcase
+        
+    always @(rddata or present_state)
+        if (present_state == S_LOAD) begin
+            if (cnt_load < 2**L_RAM_SIZE) gb1[cnt_load] = rddata; else gb2[cnt_load-2**L_RAM_SIZE] = rddata;
         end
-    end
     
-    assign dout = dvalid == 1 ? psum : 0;
+    always @(dvalid or present_state)
+        if (present_state == S_CALC) begin
+            if (dvalid) begin
+                cnt_calc <= cnt_calc + 1;
+                valid <= 0;
+            end
+            else begin
+                ain <= gb1[cnt_calc];
+                bin <= gb2[cnt_calc];
+                valid <= 1;
+            end
+        end
+    
+    assign rdaddr = present_state == S_LOAD ? cnt_load : 0;
+    assign out = present_state == S_DONE ? dout : 0;
+    assign done = present_state == S_DONE ? 1 : 0;
+    
+    my_pe #(L_RAM_SIZE, BITWIDTH) MY_PE(
+        .aclk(clk),
+        .aresetn(~reset),
+        .ain(ain),
+        .bin(bin),
+        .valid(valid),
+        .dvalid(dvalid),
+        .dout(dout)
+    );
 endmodule
 \end{lstlisting}
+
+\orange{
+MAC모듈의 parameter중 dvalid bit는 연산이 끝난 후, m\_axis\_result\_tdata가 실제 연산의 결과값임을 보장해준다. 따라서, always구문을 사용하여 결과값을 다시 psum register에 저장해 주었다. 코드를 보면, s\_axis\_c\_tdata과 m\_axis\_result\_tdata가 다름을 확인 할 수 있는데, 이는 MAC에서 parallel 하게 cin과 result값을 parameter로 줄 수 없기 때문이다. 따라서, 임시 res register를 이용하여 결과값을 받았고, 이후 그 값을 psum에 할당해주었다.
+}
 
 \newpage
 \section{Result}
 
-\subsection{Block Random Access Memory, BRAM}
-아래의 코드는 BRAM의 구현의 Validity를 확인하기 위해 시나리오에 맞게 구현한 것이다. BRAM 인스턴스 두 개를 만들고 각각을 MY\_BRAM1과 MY\_BRAM2로 명명하였다. 
+\subsection{Testbench Implementation}
+\label{sec:testbench}
+아래의 코드는 MY\_PE\_CONTROLLER의 구현의 Validity를 확인하기 위해 검증 시나리오를 설정하고 그에 맞게 구현한 것이다. MY\_CONTROLLER 인스턴스를 입력 벡터의 크기, $2^\texttt{L\_RAM\_SIZE}= 2^4=16$와 저장되는 실수의 자료형 크기, $\texttt{BITWIDTH}=32$를 사용하여 선언하였다.
 
-MY\_BRAM1은 \texttt{input.txt}에 저장된 \texttt{mem}에 있는 값들을 호출하여 저장하는 역할을 하고 또한 \texttt{mem}에 있는 값들을 MY\_ADDR을 변화하면서 BRAM\_RDDATA1로 읽어온다. MY\_BRAM2의 경우 이렇게 읽어온 \linebreak BRAM\_RDDATA1을 BRAM\_WRDATA2로 사용하여 \texttt{mem}에 저장하게 되고 완료가 되면 \texttt{done} 신호를 주어 \linebreak \texttt{output.txt}에 저장하게 된다. 아래 Figure~\ref{fig1}은 상기된 설명을 도식화한 것이다.
-
+\orange{
 \begin{itemize*}
 \item 모든 테스트를 시작하기 전에 \texttt{input.txt}를 초기화하기 위한 과정을 거친다. 주소에 해당하는 인덱스를 값으로 가질 수 있도록 for문을 통해 대입시킨 후 \texttt{\$writememh}를 통해 파일에 저장을 한다 (23-24 라인).\\
 \item 테스트벤치에서 BRAM\_EN 신호는 항상 활성화 하고 (45, 55 라인) BRAM\_RST와 \texttt{done} 신호는 모든 데이터 전송이 끝나고 입력과 출력이 완료되었을 때 True를 대입할 것이다 (33-34 라인).\\
 \item BRAM\_ADDR의 경우 $i$번째 entry의 주소값은 BRAM에서 2개의 LSB를 사용하지 않으므로 주소값 또한 4의 배수로 증가시켜 대입해 주어야 한다. BRAM\_WE 신호를 주소값이 유지되는 한 구간을 5 CLK 싸이클과 1 CLK 싸이클로 나누어 DISABLE과 ENABLE을 번갈아 대입해준다 (29-31 라인).
 \end{itemize*}
+}
 
-\subsubsection*{\texttt{TB\_MY\_BRAM}}
+\subsubsection*{\texttt{TB\_MY\_PE\_CONTROLLER}}
 \begin{lstlisting}[style={verilog-style}]
 `timescale 1ns / 1ps
-
-module tb_my_bram #(
-    parameter integer BRAM_ADDR_WIDTH = 15,
-    parameter INIT_FILE = "input.txt"
+module tb_my_pe_controller #(
+    parameter L_RAM_SIZE = 4,
+    parameter BITWIDTH = 32
 )();
-    reg [31:0] BRAM_INIT[0:8191];
-    reg [BRAM_ADDR_WIDTH-1:0] BRAM_ADDR;
-    reg BRAM_CLK;
-    reg BRAM_RST;
-    reg [3:0] BRAM_WE;
-    reg done;
-    wire [31:0] BRAM_WRDATA1, BRAM_RDDATA1;
-    wire [31:0] BRAM_WRDATA2, BRAM_RDDATA2;
+    reg [BITWIDTH-1:0] gb[0:2**(L_RAM_SIZE+1)-1];
+    reg [BITWIDTH-1:0] rddata;
+    wire [BITWIDTH-1:0] out;
+    wire [L_RAM_SIZE:0] rdaddr;
+    wire done;
+    
+    reg start, clk, reset;
     integer i;
     
     initial begin
-        BRAM_ADDR <= 0;
-        BRAM_CLK <= 1;
-        BRAM_RST <= 0;
-        BRAM_WE <= 0;
-        done <= 0;
-        for (i = 0; i < 8192; i = i + 1) begin
-            BRAM_INIT[i][31:0] <= i;
+        for(i = 0; i < 2**L_RAM_SIZE; i = i+1) begin
+            gb[i]                 = $urandom_range(2**30, 2**30+2**24);
+            gb[2**L_RAM_SIZE + i] = $urandom_range(2**30, 2**30+2**24);
         end
-        #10 $writememh(INIT_FILE, BRAM_INIT);
+    
+        clk <= 0;
+        start <= 0;
+        reset <= 1; #20;
         
-        for (i = 0; i <= 8192; i = i + 1) begin
-            BRAM_ADDR <= i << 2; #20;
-            BRAM_WE <= 4'b1111; #10;
-            BRAM_WE <= 0; #30;
-        end
-        done <= 1'b1; #30;
-        BRAM_RST <= 1'b1;
+        start <= 1;
+        reset <= 0; #20;
     end
     
-    always #5 BRAM_CLK = ~BRAM_CLK;
-    assign BRAM_WRDATA2 = BRAM_RDDATA1;
+    always #5 clk = ~clk;
+    always @(rdaddr) begin
+        rddata = gb[rdaddr];
+    end
     
-    my_bram MY_BRAM1 (
-        .BRAM_ADDR(BRAM_ADDR),
-        .BRAM_CLK(BRAM_CLK),
-        .BRAM_WRDATA(BRAM_WRDATA1),
-        .BRAM_RDDATA(BRAM_RDDATA1),
-        .BRAM_EN(1'b1),
-        .BRAM_RST(BRAM_RST),
-        .BRAM_WE(0),
-        .done(0)
-    );
-    my_bram #(.INIT_FILE("")) MY_BRAM2 (
-        .BRAM_ADDR(BRAM_ADDR),
-        .BRAM_CLK(BRAM_CLK),
-        .BRAM_WRDATA(BRAM_WRDATA2),
-        .BRAM_RDDATA(BRAM_RDDATA2),
-        .BRAM_EN(1'b1),
-        .BRAM_RST(BRAM_RST),
-        .BRAM_WE(BRAM_WE),
+    my_pe_controller #(L_RAM_SIZE, BITWIDTH) MY_PE_CONTROLLER(
+        .start(start),
+        .reset(reset),
+        .clk(clk),
+        .rdaddr(rdaddr),
+        .rddata(rddata),
+        .out(out),
         .done(done)
     );
 endmodule
 \end{lstlisting}
 
+\orange{
 위 Testbench 코드를 수행하면 아래의 Figure~\ref{fig2}와 같은 Waveform을 확인할 수 있다. 결과를 자세히 보면 \texttt{mem}에 해당하는 BRAM\_ADDR이 4씩 증가하는 것을 확인할 수 있고 이에 따라 BRAM\_RDDATA1 또한 BRAM\_WE가 비활성화 되어 있을 때 2 cycle을 delay로 읽게 되는 것을 확인할 수 있다. BRAM\_RDDATA1가 곧 BRAM2의 BRAM\_WRDATA2이므로 같은 Waveform을 관찰하였다. \\
+}
 
-\texttt{mem}에 write가 될 때 1 cycle delay가 되는 것을 눈으로 확인할 수는 없지만 BRAM\_WE가 ENABLE 되었다가 DISABLE 되었을 때 read하는 데이터 BRAM\_RDDATA2의 delay가 총 3 cycle가 걸렸다는 것을 확인할 수 있었다. 이 사실로 미뤄 보아 읽기에 걸리는 시간이 2 CLK 싸이클, 쓰기에 걸리는 시간이 1 CLK 싸이클이 걸린다는 것을 유추할 수 있었고 스펙에 맞는 올바른 구현이 되었다는 것을 짐작할 수 있었다.\\
+\subsection{Simulation Results}
+Section~\ref{sec:testbench}에서 구현된 테스트 벤치를 실행하면 아래와 같은 Waveform을 확인할 수 있다.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform1.png}
+	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform2.png}
+	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform3.png}
+\caption{Waveform}
+\label{fig2}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform4.png}
+	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform5.png}
+\caption{Waveform}
+\label{fig3}
+\end{figure}
+
+\subsection{Design Implementation}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.49\textwidth]{fig/My_PE_Controller_Design1.png}
+	\includegraphics[width=0.49\textwidth]{fig/My_PE_Controller_Design2.png}
+\caption{Waveform}
+\label{fig3}
+\end{figure}
 
 \section{Conclusion}
-
+\orange{
 이후 프로젝트에서 어떤 모듈을 구현해야 하는지 Bottom-up으로 구현하다 보니 무슨 기능을 위한 구현인지는 아직 잘 모르겠지만 반대로 이전 lab 세션에서 구현을 진행한 모듈에 대해서는 연계성을 확인할 수 있었다. 지금 구현한 모듈이 앞으로도 쓰일 수 있기 때문에 가독성을 높이면서 최대한 임의 구현 방식을 최대한 피하기 위해 노력하였다. \\
 
 MY\_BRAM 모듈을 구현하면서 WE signal에 따라 \texttt{mem}에 저장하는 statement를 for-generate로 구현해보려 했으나 이런 저런 오류가 나면서 나열형 방식으로 구현해 코드의 효율성이 떨어진다는 나름의 판단을 하였다. 추후 프로젝트를 진행하기 전에 always 구문 안에서 block assignment를 for-generate로 구현하는 방식을 익혀야 겠다는 필요성을 제고하였다~\cite{thomas2008verilog}.\\
 
 MY\_PE 모듈 자체의 구현은 그리 어렵지 않았지만, IP catalog의 floating point MAC모듈의 내부 구조를 모르기 때문에, testbench를 작성하는데 어려움을 겪었는데, 이는 valid bit의 high 설정 후 dvalid bit가 high가 될 때까지의 정확한 clock cycle delay, valid bit와 input parameter가 동시에 할당되었을 때의 비정상적인 출력이 그리 직관적이지는 않았기 때문이라고 생각한다. MY\_PE 모듈도 이후 구현에서 중요한 부분을 차지하기 때문에, 최대한 이번 과제에만 국한되지 않게 구현하려 하였다. 
+}
 
 \bibliographystyle{plain}
 \bibliography{other}
