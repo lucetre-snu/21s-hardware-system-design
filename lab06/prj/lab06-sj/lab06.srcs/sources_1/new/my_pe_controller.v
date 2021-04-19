@@ -10,71 +10,85 @@ module my_pe_controller #(
     input [BITWIDTH-1:0] rddata,
     output [BITWIDTH-1:0] out,
     output done,
-    output [1:0] state,
-    output [BITWIDTH-1:0] sth,
-    output [BITWIDTH-1:0] sth1,
-    output [BITWIDTH-1:0] sth2
+    output [1:0] state,             // TO BE REMOVED
+    output [BITWIDTH-1:0] sth1,     // TO BE REMOVED
+    output [BITWIDTH-1:0] sth2,     // TO BE REMOVED
+    output [BITWIDTH-1:0] sth3      // TO BE REMOVED
 );
+    parameter DONE_LATENCY = 5;
     parameter S_IDLE = 2'd0, S_LOAD = 2'd1, S_CALC = 2'd2, S_DONE = 2'd3;
     reg [1:0] present_state, next_state;
     
-    reg [L_RAM_SIZE:0] counter;
-    reg counter_rst;
+    reg [L_RAM_SIZE:0] cnt_load, cnt_calc;
+    reg [2:0] cnt_done;
+    reg rst_cnt_load, rst_cnt_calc, rst_cnt_done;
     
     reg [BITWIDTH-1:0] gb1[0:2**L_RAM_SIZE-1];
     reg [BITWIDTH-1:0] gb2[0:2**L_RAM_SIZE-1];
-    reg done_load = 0;
     
     reg [BITWIDTH-1:0] ain;
     reg [BITWIDTH-1:0] bin;
     reg valid = 0;
+    
     wire [BITWIDTH-1:0] dout;
     wire dvalid;
     
-    always @(posedge clk or posedge counter_rst) 
-        if (counter_rst) counter <= 0; else counter <= counter+1;
-    
     always @(posedge clk or posedge reset)
         if (reset) present_state <= S_IDLE; else present_state <= next_state;
+        
+    always @(posedge clk or posedge rst_cnt_load) 
+        if (rst_cnt_load) cnt_load <= 0; else cnt_load <= cnt_load + 1;
+    always @(posedge clk or posedge rst_cnt_calc) 
+        if (rst_cnt_calc) cnt_calc <= 0;
+    always @(posedge clk or posedge rst_cnt_done) 
+        if (rst_cnt_done) cnt_done <= 0; else cnt_done <= cnt_done + 1;
     
     always @(*)
         case (present_state)
-            S_IDLE: if (start) next_state = S_LOAD; else next_state = present_state;
-            S_LOAD: if (done_load) next_state = S_CALC; else next_state = present_state;
-            S_CALC: next_state = present_state;
-            S_DONE: ;            
+            S_IDLE: if (start)                              next_state = S_LOAD; else next_state = present_state;
+            S_LOAD: if (cnt_load == 2**(L_RAM_SIZE+1)-1)    next_state = S_CALC; else next_state = present_state;
+            S_CALC: if (cnt_calc == 2**L_RAM_SIZE)          next_state = S_DONE; else next_state = present_state;
+            S_DONE: if (cnt_done == DONE_LATENCY-1)         next_state = S_IDLE; else next_state = present_state;
         endcase
     
     always @(*)
         case (present_state)
-            S_LOAD:  counter_rst <= 0;
-            default: counter_rst <= 1;
+            S_LOAD: rst_cnt_load <= 0;
+            S_CALC: rst_cnt_calc <= 0;
+            S_DONE: rst_cnt_done <= 0;
+            default: begin
+                rst_cnt_load <= 1; 
+                rst_cnt_calc <= 1;
+                rst_cnt_done <= 1;
+            end
         endcase
         
     always @(rddata or present_state)
         if (present_state == S_LOAD) begin
-            if (counter < 2**L_RAM_SIZE) gb1[counter] = rddata; else gb2[counter-2**L_RAM_SIZE] = rddata;
-            if (counter == 2**(L_RAM_SIZE+1)-1) begin
-                done_load = 1;
-            end
+            if (cnt_load < 2**L_RAM_SIZE) gb1[cnt_load] = rddata; else gb2[cnt_load-2**L_RAM_SIZE] = rddata;
         end
     
-    integer i;
-    always @(present_state)
+    always @(dvalid or present_state)
         if (present_state == S_CALC) begin
-            for(i = 0; i < 2**L_RAM_SIZE; i = i+1) begin
-                ain = gb1[i];
-                bin = gb2[i];                
-                valid <= 1; wait (dvalid == 1);
-                valid <= 0; wait (dvalid == 0);
+            if (dvalid) begin
+                cnt_calc <= cnt_calc + 1;
+                valid <= 0;
+            end
+            else begin
+                ain <= gb1[cnt_calc];
+                bin <= gb2[cnt_calc];
+                valid <= 1;
             end
         end
     
-    assign rdaddr = counter;
-    assign state = present_state;
-    assign sth = ain;
-    assign sth1 = bin;
-    assign sth2 = dout;
+    assign rdaddr = present_state == S_LOAD ? cnt_load : 0;
+    assign out = present_state == S_DONE ? dout : 0;
+    assign done = present_state == S_DONE ? 1 : 0;
+    
+    assign state = present_state;   // TO BE REMOVED
+    assign sth1 = ain;              // TO BE REMOVED
+    assign sth2 = bin;              // TO BE REMOVED
+    assign sth3 = dout;             // TO BE REMOVED
     
     my_pe #(L_RAM_SIZE, BITWIDTH) MY_PE(
         .aclk(clk),

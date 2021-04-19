@@ -1,0 +1,771 @@
+
+*** Running vivado
+    with args -log my_pe_controller.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source my_pe_controller.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source my_pe_controller.tcl -notrace
+Command: synth_design -top my_pe_controller -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15548 
+WARNING: [Synth 8-2507] parameter declaration becomes local in my_pe_controller with formal parameter declaration list [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:18]
+WARNING: [Synth 8-2507] parameter declaration becomes local in my_pe_controller with formal parameter declaration list [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:19]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 403.922 ; gain = 109.691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'my_pe_controller' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:2]
+	Parameter L_RAM_SIZE bound to: 6 - type: integer 
+	Parameter BITWIDTH bound to: 32 - type: integer 
+	Parameter DONE_LATENCY bound to: 5 - type: integer 
+	Parameter S_IDLE bound to: 2'b00 
+	Parameter S_LOAD bound to: 2'b01 
+	Parameter S_CALC bound to: 2'b10 
+	Parameter S_DONE bound to: 2'b11 
+WARNING: [Synth 8-567] referenced signal 'cnt_load' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:66]
+WARNING: [Synth 8-567] referenced signal 'cnt_calc' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:71]
+WARNING: [Synth 8-567] referenced signal 'gb1' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:71]
+WARNING: [Synth 8-567] referenced signal 'gb2' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:71]
+INFO: [Synth 8-6157] synthesizing module 'my_pe' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe.v:2]
+	Parameter L_RAM_SIZE bound to: 6 - type: integer 
+	Parameter BITWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'floating_point_MAC' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.runs/synth_1/.Xil/Vivado-20600-lucetre/realtime/floating_point_MAC_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'floating_point_MAC' (1#1) [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.runs/synth_1/.Xil/Vivado-20600-lucetre/realtime/floating_point_MAC_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'my_pe' (2#1) [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'my_pe_controller' (3#1) [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 449.133 ; gain = 154.902
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 449.133 ; gain = 154.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 449.133 ; gain = 154.902
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC/floating_point_0_in_context.xdc] for cell 'MY_PE/UUT'
+Finished Parsing XDC File [c:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC/floating_point_0_in_context.xdc] for cell 'MY_PE/UUT'
+Parsing XDC File [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 766.738 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 766.738 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 766.738 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 766.750 ; gain = 472.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 766.750 ; gain = 472.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for MY_PE/UUT. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 766.750 ; gain = 472.520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'present_state_reg' in module 'my_pe_controller'
+INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[49]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[50]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[51]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[52]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[53]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[54]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[55]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[56]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[57]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[58]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[59]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[60]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[61]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[62]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[63]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "gb2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_cnt_done" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_cnt_calc" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_cnt_load" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "valid" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                  S_LOAD |                               01 |                               01
+                  S_CALC |                               10 |                               10
+                  S_DONE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'present_state_reg' using encoding 'sequential' in module 'my_pe_controller'
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_load_reg' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:56]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_calc_reg' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:74]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_done_reg' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:58]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:78]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:79]
+WARNING: [Synth 8-327] inferring latch for variable 'valid_reg' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:75]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_calc_reg' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:57]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[13]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[14]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[15]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[16]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[17]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[18]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[19]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[20]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[21]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[22]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[23]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[24]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[25]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[26]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[27]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[28]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[29]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[30]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[31]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[32]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[33]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[34]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[35]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[36]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[37]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[38]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[39]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[40]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[41]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[42]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[43]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[44]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[45]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[46]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[47]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[48]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[49]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[50]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[51]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[52]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[53]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[54]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[55]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[56]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[57]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[58]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[59]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[60]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[61]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[62]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[63]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[0]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[1]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[2]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[3]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[4]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[5]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[6]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[7]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[8]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[9]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[10]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[11]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[12]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[13]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[14]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[15]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[16]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[17]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[18]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[19]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[20]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[21]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[22]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[23]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[24]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[25]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[26]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[27]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[28]' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:68]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 766.750 ; gain = 472.520
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 260   
+	   4 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module my_pe_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 260   
+	   4 Input      1 Bit        Muxes := 6     
+Module my_pe 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "gb2_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "gb1_reg[63]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[62]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[61]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[60]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[59]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[58]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[57]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[56]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[55]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[54]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[53]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[52]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[51]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[50]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[49]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (cnt_calc_reg[6]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (cnt_calc_reg[5]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (cnt_calc_reg[4]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (cnt_calc_reg[3]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (cnt_calc_reg[2]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (cnt_calc_reg[1]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (cnt_calc_reg[0]) is unused and will be removed from module my_pe_controller.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cnt_calc_reg[6]__0/Q' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cnt_calc_reg[5]__0/Q' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cnt_calc_reg[4]__0/Q' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cnt_calc_reg[3]__0/Q' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cnt_calc_reg[2]__0/Q' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cnt_calc_reg[1]__0/Q' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'cnt_calc_reg[0]__0/Q' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.srcs/sources_1/new/my_pe_controller.v:42]
+WARNING: [Synth 8-3332] Sequential element (rst_cnt_calc_reg) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][31]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][30]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][29]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][28]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][27]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][26]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][25]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][24]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][23]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][22]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][21]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][20]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][19]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][18]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][17]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][16]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][15]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][14]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][13]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][12]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][11]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][10]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][9]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][8]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][7]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][6]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][5]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][4]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][3]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][2]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][1]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[1][0]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][31]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][30]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][29]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][28]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][27]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][26]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][25]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][24]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][23]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][22]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][21]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][20]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][19]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][18]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][17]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][16]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][15]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][14]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][13]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][12]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][11]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][10]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][9]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][8]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][7]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][6]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][5]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][4]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][3]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][2]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][1]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[2][0]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][31]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][30]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][29]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][28]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][27]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][26]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][25]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][24]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][23]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][22]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][21]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][20]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][19]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][18]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][17]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][16]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][15]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][14]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][13]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][12]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][11]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][10]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][9]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][8]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][7]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][6]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][5]) is unused and will be removed from module my_pe_controller.
+WARNING: [Synth 8-3332] Sequential element (gb1_reg[3][4]) is unused and will be removed from module my_pe_controller.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 766.750 ; gain = 472.520
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 772.680 ; gain = 478.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 772.828 ; gain = 478.598
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------+----------+
+|      |BlackBox name      |Instances |
++------+-------------------+----------+
+|1     |floating_point_MAC |         1|
++------+-------------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |floating_point_MAC |     1|
+|2     |BUFG               |     5|
+|3     |LUT1               |     6|
+|4     |LUT2               |    38|
+|5     |LUT3               |    11|
+|6     |LUT4               |    34|
+|7     |LUT5               |     2|
+|8     |LUT6               |     5|
+|9     |FDCE               |    12|
+|10    |FDRE               |    32|
+|11    |LD                 |   131|
+|12    |IBUF               |    35|
+|13    |OBUF               |   138|
++------+-------------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   482|
+|2     |  MY_PE  |my_pe  |   132|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 21 critical warnings and 4175 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 782.770 ; gain = 170.922
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 782.770 ; gain = 488.539
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 131 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 791.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 131 instances were transformed.
+  LD => LDCE: 130 instances
+  LD => LDCE (inverted pins: G): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+230 Infos, 206 Warnings, 21 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 791.211 ; gain = 506.891
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 791.211 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lucet/semester/21s-hardware-system-design/lab06/prj/lab06-sj/lab06.runs/synth_1/my_pe_controller.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file my_pe_controller_utilization_synth.rpt -pb my_pe_controller_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 19 16:12:43 2021...

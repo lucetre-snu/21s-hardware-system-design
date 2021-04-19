@@ -8,15 +8,12 @@ module tb_my_pe_controller #(
     wire [BITWIDTH-1:0] out;
     wire [L_RAM_SIZE:0] rdaddr;
     wire done;
-    wire [1:0] state;
-    wire [BITWIDTH-1:0] sth;
-    wire [BITWIDTH-1:0] sth1;
-    wire [BITWIDTH-1:0] sth2;
+    wire [1:0] state;           // TO BE REMOVED
+    wire [BITWIDTH-1:0] ain;    // TO BE REMOVED
+    wire [BITWIDTH-1:0] bin;    // TO BE REMOVED
+    wire [BITWIDTH-1:0] dout;   // TO BE REMOVED
     
-    reg start;
-    reg clk;
-    reg reset;
-    reg valid;
+    reg start, clk, reset;
     integer i;
     
     initial begin
@@ -46,10 +43,10 @@ module tb_my_pe_controller #(
         .rddata(rddata),
         .out(out),
         .done(done),
-        .state(state),
-        .sth(sth),
-        .sth1(sth1),
-        .sth2(sth2)
+        .state(state),  // TO BE REMOVED
+        .sth1(ain),     // TO BE REMOVED
+        .sth2(bin),     // TO BE REMOVED
+        .sth3(dout)     // TO BE REMOVED
     );
 
 endmodule
