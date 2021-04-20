@@ -105,30 +105,36 @@
 \end{figure}
 
 \section{Implementation}
-\orange{
-이번 프로젝트는 Block Random Access Memory와 Processing Element를 각각 구현함으로써 추후 구현할 Matrix-Matrix Multiplication을 수행하기 위한 기본 모듈을 구성하는 것을 목적으로 한다. 아래는 코드 구현과 함께 간략한 아이디어 및 기능에 대한 설명이 (1) BRAM, (2) PE 순으로 진행된다.
-}
+이번 프로젝트는 지난 프로젝트에서 구현한 Processing Element와 이를 실행을 시키기 위해 사용되었던 테스트벤치 코드를 결합한 새로운 모듈을 구현하는 것을 목적으로 한다. PE Control 모듈은 추후 구현할 Matrix-Matrix Multiplication을 수행하기 위해 존재하는 하위 모듈이다. 아래는 코드 구현과 함께 아이디어 및 기능에 대한 설명이 진행된다.
 
 \subsection{PE Controller}
-\orange{
-BRAM의 경우 크게 두 부분으로 이뤄져 있다. (1) 모듈이 실행이 되기 전 INIT\_FILE에서 내부 메모리 \texttt{mem}를 읽는 부분과 done 신호가 주어졌을 때, OUT\_FILE에 \texttt{mem}의 상태를 출력하는 부분과, (2) EN, RST, WE 신호가 들어왔을 때 경우에 따라 입력되는 데이터를 \texttt{mem}에 읽고 쓰는 역할을 한다.
+Figure~\ref{fig1}을 참고하면 Practice \#5에서 구현한 벡터의 내적을 계산할 수 있는 \texttt{my\_pe} 모듈과 그것을 구성하는 Floating-point fused multiplier IP catalog가 존재한다. PE controller에서는 내적을 연산할 벡터의 모음을 Global buffer에 저장한 뒤 PE에 전달, 연산을 수행하게 된다. 상기된 Sequential logic 모듈이 상황에 따라 어떤 기능을 수행할 지 다르게 명시해주어야 하기 때문에 State를 정의하여 FSM의 논리를 모두 구현해준다.\\
+
+PE controller는 IDLE, LOAD, CALC, DONE이라는 총 4가지 state를 가진다. IDLE은 대기 상태를 의미하며 이 때 
+\texttt{start} 신호가 입력되면 LOAD state로 전이된다. 이 상태에서는 \texttt{rdaddr} 주소를 Testbench에 전달하여 \texttt{rddata} 값을 하나씩 입력받아 Global buffer에 저장한다.\\
+
+모든 LOAD 과정이 마치면 CALC 단계에서 FP IP catalog를 수행하게 된다. Global buffer에 저장된 16개의 실수 벡터 2개를 추출하여 Multiply-Accumulator를 이용해 내적 값을 구하게 된다. 연산이 모두 끝난 후 state는 DONE으로 넘어가게 되고 5 사이클의 Latency를 가지고 \texttt{done} signal과 함께 결과 값을 반환한다. 5 사이클 이후에는 다시 state를 IDLE 상태로 돌려 놓고 \texttt{start} 신호를 기다린다.\\
 
 \begin{itemize*}
-\item 아래에 첨부된 코드 중 21-28 라인의 외부 파일 입출력에 관한 구현 보면, \texttt{initial} 구문을 이용하여 모듈의 생성과 동시에 파일 입출력에 대한 실행 구문에 대한 scope를 지정한다. 
-\texttt{\$readmemh} 로 시작함으로써 INIT\_FILE 파일을 읽어 \texttt{mem}에 저장한다. 
-그 후 \texttt{done} 신호 들어올 때 까지 대기하다가 신호가 들어오면 \texttt{\$writememh} 함수를 사용해 OUT\_FILE에 \texttt{mem} 데이터를 저장한다.
-이 때 함수에 붙어있는 \texttt{\$readmem\textbf{h}}와 \texttt{\$writemem\textbf{h}}의 \textbf{h}는 hexadecimal로 파일에 저장하는 값을 16진수 형태로 저장하는 옵션을 의미한다~\cite{memh}. \\
-\item 30-46 라인은 BRAM의 input으로 주어지는 신호에 따라 모듈로써의 기능을 구현하는 부분이다. BRAM\_CLK와 BRAM\_RST 그리고 BRAM\_EN, BRAM\_WE의 신호에 따라 읽기, 쓰기, 초기화, 파일 출력을 위한 기능을 수행하게 된다. BRAM\_RST은 BRAM\_CLK에 Async로, BRAM\_EN, BRAM\_WE는 Sync로 구현하였다.
+\item 아래에 첨부된 코드 중 3-30 라인은 PE controller의 변수 선언에 관한 내용이다.
 \begin{itemize*}
-\item BRAM\_RST이 posedge일 경우 BRAM\_RDDATA에는 0을 할당한다. (31 라인)
-\item BRAM\_EN이 활성화되어 있고 BRAM\_WE 또한 활성화되어 있다면, True를 가지는 bit에 해당하는 영역을 BRAM\_WRDATA에서 \texttt{mem}으로 복사한다. (35-38 라인)
-\begin{equation}
-\texttt{mem}[ \texttt{addr} ][8*(i+1)-1:8* i ]  \leftarrow \text{BRAM\_WRDATA}[8*(i+1) -1:8* i ] 
-\end{equation}
-\item BRAM\_EN이 활성화되어 있고 BRAM\_WE이 활성화되어 있다면, 메모리로부터 데이터를 읽어오는 기능을 수행한다. Read에 걸리는 싸이클이 2 cycle이 걸리도록 구현을 해야하기 때문에 \texttt{dout}을 버퍼로 사용해 1 cycle이 추가되도록 한다. (41-42 라인)
+\item \texttt{parameter}에 포함된 (1) \texttt{L\_RAM\_SIZE}는 입력되는 벡터의 크기를 표현하는 상수이고 (2) \texttt{BITWIDTH}는 연산을 하기 위한 실수 자료형의 크기를 나타낸다. 나머지 입력과 출력에 관한 Wire는 모두 Figure~\ref{fig1}에서 표기한 바와 같다. 
+\item FSM과 관련된 변수는 현재 상태와 앞으로 업데이트해야하는 상태 변수 \texttt{present\_state}와 \texttt{next\_state}가 있고 그 외에 Counter가 있다. 상태를 나타내는 상수는 총 네 가지로 $0 \sim 3$의 값을 \texttt{S\_IDLE}, \texttt{S\_LOAD}, \texttt{S\_CALC}과 \texttt{S\_DONE}에 해당하도록 설정하였다.
+\item 내장 모듈인 MY\_PE의 입출력 변수 \texttt{ain}, \texttt{bin}, \texttt{valid}, \texttt{dout}, \texttt{dvalid}를 함께 선언하고 지정시켜주어야 한다.
 \end{itemize*}
+
+\item 32-23 라인과 42-78 라인은 강의시간에 배운 FSM의 format을 그대로 차용하여 구현하였다. 초기 상태를 \texttt{reset} 신호와 함께 IDLE 상태로 초기화 한다. 현재 상태에서 어떤 조건이 중족되었을 때 다음 상태를 지정해주는 논리를 구현해준다.
+\begin{itemize*}
+\item IDLE 상태에서 \texttt{start} 신호가 들어올 경우 LOAD로 전환. (44 라인)
+\item LOAD 상태에서 테스트 벤치에서 모든 데이터 (\texttt{cnt\_load} 갯수 만큼의 데이터)를 전달받아 연산에 쓰일 값들이 Global buffer에 전부 저장이 되었을 경우 CALC로 전환. (45 라인)
+\item CALC 상태에서 내장 모듈 MY\_PE에서 2개의 벡터의 크기만큼의 연산을 모두 마쳤을 경우 (\texttt{cnt\_calc} 갯수 만큼의 Fused multiplication 수행) DONE로 전환. (46 라인)
+\item DONE 상태에서 Latency 만큼 딜레이가 진행된 후에 (Clock이 \texttt{cnt\_done} 만큼 경과된 후) IDLE로 전환. (47 라인)
 \end{itemize*}
-}
+
+\item 50-60라인은 각 상태에 위치했을 때 어떤 Counter를 활성화 시킬지 지정해주는 부분이다. 62-65라인에서는 현재 상태가 LOAD에 이르렀을 때 테스트벤치로 \texttt{rdaddr}을 전달해주고 해당하는 실수형 자료 \texttt{rddata}를 받아와 Global buffer에 저장한다.
+\end{itemize*}
+
+
 \subsubsection*{\texttt{MY\_PE\_CONTROLLER}}
 \begin{lstlisting}[style={verilog-style}]
 `timescale 1ns / 1ps
@@ -226,9 +232,7 @@ module my_pe_controller #(
 endmodule
 \end{lstlisting}
 
-\orange{
-MAC모듈의 parameter중 dvalid bit는 연산이 끝난 후, m\_axis\_result\_tdata가 실제 연산의 결과값임을 보장해준다. 따라서, always구문을 사용하여 결과값을 다시 psum register에 저장해 주었다. 코드를 보면, s\_axis\_c\_tdata과 m\_axis\_result\_tdata가 다름을 확인 할 수 있는데, 이는 MAC에서 parallel 하게 cin과 result값을 parameter로 줄 수 없기 때문이다. 따라서, 임시 res register를 이용하여 결과값을 받았고, 이후 그 값을 psum에 할당해주었다.
-}
+코드의 하단부에는 지난 실습에서 구현한 Floating point MAC모듈의 호출 부분이다. Parameter에 들어가는 값은 모두 변수명과 동일하게 매칭을 해주었다~\cite{thomas2008verilog}.
 
 \newpage
 \section{Result}
@@ -323,7 +327,7 @@ Section~\ref{sec:testbench}에서 구현된 테스트 벤치를 실행하면 아
 	\centering
 	\includegraphics[width=0.49\textwidth]{fig/My_PE_Controller_Design1.png}
 	\includegraphics[width=0.49\textwidth]{fig/My_PE_Controller_Design2.png}
-\caption{Waveform}
+\caption{Implementation design}
 \label{fig3}
 \end{figure}
 
@@ -331,7 +335,7 @@ Section~\ref{sec:testbench}에서 구현된 테스트 벤치를 실행하면 아
 \orange{
 이후 프로젝트에서 어떤 모듈을 구현해야 하는지 Bottom-up으로 구현하다 보니 무슨 기능을 위한 구현인지는 아직 잘 모르겠지만 반대로 이전 lab 세션에서 구현을 진행한 모듈에 대해서는 연계성을 확인할 수 있었다. 지금 구현한 모듈이 앞으로도 쓰일 수 있기 때문에 가독성을 높이면서 최대한 임의 구현 방식을 최대한 피하기 위해 노력하였다. \\
 
-MY\_BRAM 모듈을 구현하면서 WE signal에 따라 \texttt{mem}에 저장하는 statement를 for-generate로 구현해보려 했으나 이런 저런 오류가 나면서 나열형 방식으로 구현해 코드의 효율성이 떨어진다는 나름의 판단을 하였다. 추후 프로젝트를 진행하기 전에 always 구문 안에서 block assignment를 for-generate로 구현하는 방식을 익혀야 겠다는 필요성을 제고하였다~\cite{thomas2008verilog}.\\
+MY\_BRAM 모듈을 구현하면서 WE signal에 따라 \texttt{mem}에 저장하는 statement를 for-generate로 구현해보려 했으나 이런 저런 오류가 나면서 나열형 방식으로 구현해 코드의 효율성이 떨어진다는 나름의 판단을 하였다. 추후 프로젝트를 진행하기 전에 always 구문 안에서 block assignment를 for-generate로 구현하는 방식을 익혀야 겠다는 필요성을 제고하였다.\\
 
 MY\_PE 모듈 자체의 구현은 그리 어렵지 않았지만, IP catalog의 floating point MAC모듈의 내부 구조를 모르기 때문에, testbench를 작성하는데 어려움을 겪었는데, 이는 valid bit의 high 설정 후 dvalid bit가 high가 될 때까지의 정확한 clock cycle delay, valid bit와 input parameter가 동시에 할당되었을 때의 비정상적인 출력이 그리 직관적이지는 않았기 때문이라고 생각한다. MY\_PE 모듈도 이후 구현에서 중요한 부분을 차지하기 때문에, 최대한 이번 과제에만 국한되지 않게 구현하려 하였다. 
 }
