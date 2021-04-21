@@ -100,7 +100,7 @@
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.6\textwidth]{fig/fig1.png}
-\caption{PE와 FSM이 결합된 2개의 벡터의 내적을 연산하는 PE Controller module이다.}
+\caption{PE와 FSM이 결합된 2개의 벡터의 내적을 연산하는 PE Controller module이다~\cite{lab6}.}
 \label{fig1}
 \end{figure}
 
@@ -232,22 +232,24 @@ module my_pe_controller #(
 endmodule
 \end{lstlisting}
 
-코드의 하단부에는 지난 실습에서 구현한 Floating point MAC모듈의 호출 부분이다. Parameter에 들어가는 값은 모두 변수명과 동일하게 매칭을 해주었다~\cite{thomas2008verilog}.
+코드의 하단부에는 지난 실습에서 구현한 Floating point MAC모듈의 호출 부분이다. Parameter에 들어가는 값은 모두 변수명과 동일하게 매칭을 해주었다~\cite{lab5, thomas2008verilog}.
 
 \newpage
 \section{Result}
 
 \subsection{Testbench Implementation}
 \label{sec:testbench}
-아래의 코드는 MY\_PE\_CONTROLLER의 구현의 Validity를 확인하기 위해 검증 시나리오를 설정하고 그에 맞게 구현한 것이다. MY\_CONTROLLER 인스턴스를 입력 벡터의 크기, $2^\texttt{L\_RAM\_SIZE}= 2^4=16$와 저장되는 실수의 자료형 크기, $\texttt{BITWIDTH}=32$를 사용하여 선언하였다.
+아래의 코드는 MY\_PE\_CONTROLLER의 구현의 Validity를 확인하기 위해 검증 시나리오를 설정하고 그에 맞게 구현한 것이다. MY\_PE\_CONTROLLER 인스턴스를 입력 벡터의 크기, $2^\texttt{L\_RAM\_SIZE}= 2^4=16$와 저장되는 실수의 자료형 크기, $\texttt{BITWIDTH}=32$를 사용하여 선언하였다.\\
+전체적인 testbench의 수행순서는 다음과 같다. 1. 두 개의 벡터 데이터의 초기화 및 설정. 2. floating\_point\_MAC의 정상적인 동작을 위한 기본설정. 3. MY\_PE\_CONTROLLER의 동작 과정에서 data load요청이 들어왔을 때, 요청한 주솟값의 데이터 전달.\\
 
-\orange{
+아래는 작성된 코드의 자세한 설명이다.
 \begin{itemize*}
-\item 모든 테스트를 시작하기 전에 \texttt{input.txt}를 초기화하기 위한 과정을 거친다. 주소에 해당하는 인덱스를 값으로 가질 수 있도록 for문을 통해 대입시킨 후 \texttt{\$writememh}를 통해 파일에 저장을 한다 (23-24 라인).\\
-\item 테스트벤치에서 BRAM\_EN 신호는 항상 활성화 하고 (45, 55 라인) BRAM\_RST와 \texttt{done} 신호는 모든 데이터 전송이 끝나고 입력과 출력이 완료되었을 때 True를 대입할 것이다 (33-34 라인).\\
-\item BRAM\_ADDR의 경우 $i$번째 entry의 주소값은 BRAM에서 2개의 LSB를 사용하지 않으므로 주소값 또한 4의 배수로 증가시켜 대입해 주어야 한다. BRAM\_WE 신호를 주소값이 유지되는 한 구간을 5 CLK 싸이클과 1 CLK 싸이클로 나누어 DISABLE과 ENABLE을 번갈아 대입해준다 (29-31 라인).
+\item 내적 연산을 위해서는 두 개의 벡터가 필요하고, 하나의 벡터당 크기가 16이므로, 총 32개의 데이터가 초기화되는 셈이다. 따라서, 먼저 \texttt{gb1}(첫번째 벡터), \texttt{gb2}(두번째 벡터)의 값들을 초기화 시켜주었다. 초기화된 데이터의 전체 주소는 0x00-0x1f 이고, \texttt{gb1}가 0x00-0x0f, \texttt{gb2}가 0x10-0x1f의 주소를 갖는다 (16-19 라인).\\
+
+\item testbench에서 가장 먼저 수행한 작업은 floating\_point\_MAC을 초기화한 것이다. reset 값을 1로 설정한 후, 적절한 clock cycle만큼 기다려주었다. 그 이후, start 값을 1로, reset 값을 0으로 설정하여 MY\_PE\_CONTROLLER 가 동작하도록 하였다 (21-26 라인).\\
+
+\item \texttt{always} 구문을 사용하여, rdaddr(주솟값의 데이터 요청)이 들어왔을 때, 해당 주소의  벡터 데이터를 제공해준다 (30-31 라인).
 \end{itemize*}
-}
 
 \subsubsection*{\texttt{TB\_MY\_PE\_CONTROLLER}}
 \begin{lstlisting}[style={verilog-style}]
@@ -296,49 +298,78 @@ module tb_my_pe_controller #(
 endmodule
 \end{lstlisting}
 
-\orange{
-위 Testbench 코드를 수행하면 아래의 Figure~\ref{fig2}와 같은 Waveform을 확인할 수 있다. 결과를 자세히 보면 \texttt{mem}에 해당하는 BRAM\_ADDR이 4씩 증가하는 것을 확인할 수 있고 이에 따라 BRAM\_RDDATA1 또한 BRAM\_WE가 비활성화 되어 있을 때 2 cycle을 delay로 읽게 되는 것을 확인할 수 있다. BRAM\_RDDATA1가 곧 BRAM2의 BRAM\_WRDATA2이므로 같은 Waveform을 관찰하였다. \\
-}
-
 \subsection{Simulation Results}
-Section~\ref{sec:testbench}에서 구현된 테스트 벤치를 실행하면 아래와 같은 Waveform을 확인할 수 있다.
+Section~\ref{sec:testbench}에서 구현된 테스트 벤치를 실행하면 아래 Figure~\ref{fig2}와 같은 Waveform을 확인할 수 있다. 결과를 자세히 보면, \texttt{start}가 high일 때 MY\_PE\_CONTROLLER가 동작을 시작하고, LOAD\_STATE일 때, 주솟값을 요청하여 데이터를 받고, CALC\_STATE일 때, floating\_point\_MAC의 동작으로 출력값을 계산하는 것을 볼 수 있다. 모든 계산이 완료되면, \texttt{done}이 high가 되며, 최종 결과값을 \texttt{out}으로 출력한다.\\
 
-\begin{figure}[ht]
+아래의 Table~\ref{tab1}은 \texttt{TB\_MY\_PE\_CONTROLLER} 17-18 라인에서 생성된 테스트 데이터이며 벡터 \texttt{ain}과 \texttt{bin}의 내적 결과값을 구하기 위해 각 원소별로 곱셈 결과값을 3열에 연산하였고 이를 누적하여 마지막에 약 323.0319 라는 결과값을 가지는 것을 확인할 수 있다. 아래의 Figure~\ref{fig3}의 \texttt{CALC} 상태와 \texttt{DONE} Waveform을 확인하면 같은 값이 출력됨을 알 수 있다.
+
+\begin{table}[htb]
+\renewcommand*{\arraystretch}{1.4}
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+ \hline
+ \textbf{\texttt{index}} & \textbf{\texttt{ain}} & \textbf{\texttt{bin}} & \textbf{\texttt{dout}} \\ 
+ \hline
+1 & 7.80244779586791 & 5.81660604476929 & 45.3837650134422 \\
+2 & 4.89655828475952 & 4.23463726043701 & 66.1189131739864 \\
+3 & 3.40448760986328 & 2.32309341430664 & 74.0278559195483 \\
+4 & 2.79091644287109 & 3.30574178695679 & 83.2539050286521 \\
+5 & 6.46279287338257 & 6.47845220565796 & 125.122799773928 \\
+6 & 6.84624338150024 & 2.63594484329224 & 143.169119711317 \\
+7 & 7.12470054626465 & 2.21409893035889 & 158.943911569929 \\
+8 & 3.94174790382385 & 5.58761501312256 & 180.96888133528 \\
+9 & 6.90677261352539 & 3.36496090888977 & 204.209901186383 \\
+10 & 6.85968828201294 & 6.03147268295288 & 245.583923672916 \\
+11 & 3.57905983924866 & 3.37159180641174 & 257.651052501584 \\
+12 & 3.80960464477539 & 3.03244590759277 & 269.20347251618 \\
+13 & 5.47310543060303 & 3.23944854736328 & 286.933315952913 \\
+14 & 2.04824304580688 & 2.31567335128784 & 291.676377791048 \\
+15 & 5.22220277786255 & 3.8579089641571 & 311.82316070041 \\
+16 & 3.34818053245544 & 3.34771490097046 & 323.031914560051 \\
+\hline
+\end{tabular}
+\caption{Testbench dataset}
+\label{tab1}
+\end{center}
+\end{table}
+
+\begin{figure}[htb!]
 	\centering
 	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform1.png}
 	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform2.png}
 	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform3.png}
-\caption{Waveform}
+\caption{\texttt{IDLE}, \texttt{LOAD}, \texttt{CALC} 전환이 되는 동안의 Waveform이다. 중간에 \texttt{state}를 출력하여 Controller 모듈의 FSM이 제대로 된 기능을 하는지 볼 수 있다. 또한 \texttt{CALC}에서 하위 모듈 \texttt{MY\_PE}에 올바른 입력과 출력이 이뤄지는지 확인을 위해 \texttt{ain}, \texttt{bin}, \texttt{dout}을 함께 비교하였다.}
 \label{fig2}
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[htb!]
 	\centering
 	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform4.png}
 	\includegraphics[width=1.0\textwidth]{fig/My_PE_Controller_Waveform5.png}
-\caption{Waveform}
+\caption{\texttt{CALC}, \texttt{DONE}, 다음 \texttt{IDLE} 전환이 되는 동안의 Waveform이다. 벡터 내적 결과값이 \texttt{out}에 \texttt{done} 신호와 함께 5 Cycle 동안 지속되고 \texttt{start} 신호가 활성화 되어 같은 작업을 기존 \texttt{out}에 누적하여 연산을 반복하는 것을 볼 수 있다.}
 \label{fig3}
 \end{figure}
 
+\newpage
 \subsection{Design Implementation}
+Figure~\ref{fig4}는 구현된 MY\_PE\_CONTROLLER를 synthesis, implementation을 하였을 때 나오는 implementation design 결과이다.
 
-\begin{figure}[ht]
+\begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.49\textwidth]{fig/My_PE_Controller_Design1.png}
 	\includegraphics[width=0.49\textwidth]{fig/My_PE_Controller_Design2.png}
-\caption{Implementation design}
-\label{fig3}
+\caption{Implementation design, \texttt{MY\_PE\_CONTROLLER} 모듈을 Synthesis와 Implementation을 진행하고 보드에 어느 부분을 사용하는 지 시각화 시킨 것이다. 좌측에 전반적인 보드와 특히 많이 사용된 \texttt{X0Y1}를 확대한 결과이다.}
+\label{fig4}
 \end{figure}
 
+\newpage
 \section{Conclusion}
-\orange{
-이후 프로젝트에서 어떤 모듈을 구현해야 하는지 Bottom-up으로 구현하다 보니 무슨 기능을 위한 구현인지는 아직 잘 모르겠지만 반대로 이전 lab 세션에서 구현을 진행한 모듈에 대해서는 연계성을 확인할 수 있었다. 지금 구현한 모듈이 앞으로도 쓰일 수 있기 때문에 가독성을 높이면서 최대한 임의 구현 방식을 최대한 피하기 위해 노력하였다. \\
+이번 과제는 고려해야 할 것들이 많았다. counter를 이용하여 LOAD 데이터 갯수 설정, floating\_point\_MAC의 계산 횟수, DONE\_STATE에서의 latency 설정을 제어해 주었다.\\
 
-MY\_BRAM 모듈을 구현하면서 WE signal에 따라 \texttt{mem}에 저장하는 statement를 for-generate로 구현해보려 했으나 이런 저런 오류가 나면서 나열형 방식으로 구현해 코드의 효율성이 떨어진다는 나름의 판단을 하였다. 추후 프로젝트를 진행하기 전에 always 구문 안에서 block assignment를 for-generate로 구현하는 방식을 익혀야 겠다는 필요성을 제고하였다.\\
+CALC\_STATE에서 latency에 관계없이 올바른 결과값이 출력되도록 하는 부분의 구현이 까다로웠는데, 먼저 MY\_PE에서 dvalid값을 clk에 동기화 시켜주었다. 이후에, MY\_PE\_CONTROLLER에서 dvalid가 high이고, 모든 계산을 마쳤을 때 state를 바꿔줌으로써 done state일 때 올바른 결과값을 출력해내었다.\\
 
-MY\_PE 모듈 자체의 구현은 그리 어렵지 않았지만, IP catalog의 floating point MAC모듈의 내부 구조를 모르기 때문에, testbench를 작성하는데 어려움을 겪었는데, 이는 valid bit의 high 설정 후 dvalid bit가 high가 될 때까지의 정확한 clock cycle delay, valid bit와 input parameter가 동시에 할당되었을 때의 비정상적인 출력이 그리 직관적이지는 않았기 때문이라고 생각한다. MY\_PE 모듈도 이후 구현에서 중요한 부분을 차지하기 때문에, 최대한 이번 과제에만 국한되지 않게 구현하려 하였다. 
-}
+이번 과제를 수행하면서 올바른 시뮬레이션 결과를 얻었지만, synthesis와 implementation이 정상적으로 되지 않는 경우가 있었다. 이를 고쳐나가면서, 어느 구문들이 implementation이 되지 않는지, net이 동시에 업데이트 되어 충돌되는 부분은 없는지 등을 확인하며 구현해야겠다고 생각하였다.\\
 
 \bibliographystyle{plain}
 \bibliography{other}

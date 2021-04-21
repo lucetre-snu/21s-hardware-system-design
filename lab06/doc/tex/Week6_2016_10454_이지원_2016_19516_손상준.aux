@@ -16,22 +16,29 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces PE와 FSM이 결합된 2개의 벡터의 내적을 연산하는 PE Controller module이다.}}{1}{figure.1}\protected@file@percent }
-\newlabel{fig1}{{1}{1}{PE와 FSM이 결합된 2개의 벡터의 내적을 연산하는 PE Controller module이다}{figure.1}{}}
+\citation{lab6}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces PE와 FSM이 결합된 2개의 벡터의 내적을 연산하는 PE Controller module이다\nobreakspace  {}\cite  {lab6}.}}{1}{figure.1}\protected@file@percent }
+\newlabel{fig1}{{1}{1}{PE와 FSM이 결합된 2개의 벡터의 내적을 연산하는 PE Controller module이다~\cite {lab6}}{figure.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Implementation}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}PE Controller}{1}{subsection.1.1}\protected@file@percent }
+\citation{lab5}
 \citation{thomas2008verilog}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Result}{4}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Testbench Implementation}{4}{subsection.2.1}\protected@file@percent }
 \newlabel{sec:testbench}{{2.1}{4}{Testbench Implementation}{subsection.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Simulation Results}{5}{subsection.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Testbench dataset}}{5}{table.1}\protected@file@percent }
+\newlabel{tab1}{{1}{5}{Testbench dataset}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \texttt  {IDLE}, \texttt  {LOAD}, \texttt  {CALC} 전환이 되는 동안의 Waveform이다. 중간에 \texttt  {state}를 출력하여 Controller 모듈의 FSM이 제대로 된 기능을 하는지 볼 수 있다. 또한 \texttt  {CALC}에서 하위 모듈 \texttt  {MY\_PE}에 올바른 입력과 출력이 이뤄지는지 확인을 위해 \texttt  {ain}, \texttt  {bin}, \texttt  {dout}을 함께 비교하였다.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig2}{{2}{6}{\texttt {IDLE}, \texttt {LOAD}, \texttt {CALC} 전환이 되는 동안의 Waveform이다. 중간에 \texttt {state}를 출력하여 Controller 모듈의 FSM이 제대로 된 기능을 하는지 볼 수 있다. 또한 \texttt {CALC}에서 하위 모듈 \texttt {MY\_PE}에 올바른 입력과 출력이 이뤄지는지 확인을 위해 \texttt {ain}, \texttt {bin}, \texttt {dout}을 함께 비교하였다}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Design Implementation}{6}{subsection.2.3}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{other}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Simulation Results}{5}{subsection.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Design Implementation}{5}{subsection.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Conclusion}{5}{section.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Waveform}}{6}{figure.2}\protected@file@percent }
-\newlabel{fig2}{{2}{6}{Waveform}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Waveform}}{7}{figure.3}\protected@file@percent }
-\newlabel{fig3}{{3}{7}{Waveform}{figure.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Implementation design}}{8}{figure.4}\protected@file@percent }
-\newlabel{fig3}{{4}{8}{Implementation design}{figure.4}{}}
+\bibcite{lab5}{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \texttt  {CALC}, \texttt  {DONE}, 다음 \texttt  {IDLE} 전환이 되는 동안의 Waveform이다. 벡터 내적 결과값이 \texttt  {out}에 \texttt  {done} 신호와 함께 5 Cycle 동안 지속되고 \texttt  {start} 신호가 활성화 되어 같은 작업을 기존 \texttt  {out}에 누적하여 연산을 반복하는 것을 볼 수 있다.}}{7}{figure.3}\protected@file@percent }
+\newlabel{fig3}{{3}{7}{\texttt {CALC}, \texttt {DONE}, 다음 \texttt {IDLE} 전환이 되는 동안의 Waveform이다. 벡터 내적 결과값이 \texttt {out}에 \texttt {done} 신호와 함께 5 Cycle 동안 지속되고 \texttt {start} 신호가 활성화 되어 같은 작업을 기존 \texttt {out}에 누적하여 연산을 반복하는 것을 볼 수 있다}{figure.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Conclusion}{7}{section.3}\protected@file@percent }
+\bibcite{lab6}{2}
+\bibcite{thomas2008verilog}{3}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Implementation design, \texttt  {MY\_PE\_CONTROLLER} 모듈을 Synthesis와 Implementation을 진행하고 보드에 어느 부분을 사용하는 지 시각화 시킨 것이다. 좌측에 전반적인 보드와 특히 많이 사용된 \texttt  {X0Y1}를 확대한 결과이다.}}{8}{figure.4}\protected@file@percent }
+\newlabel{fig4}{{4}{8}{Implementation design, \texttt {MY\_PE\_CONTROLLER} 모듈을 Synthesis와 Implementation을 진행하고 보드에 어느 부분을 사용하는 지 시각화 시킨 것이다. 좌측에 전반적인 보드와 특히 많이 사용된 \texttt {X0Y1}를 확대한 결과이다}{figure.4}{}}
