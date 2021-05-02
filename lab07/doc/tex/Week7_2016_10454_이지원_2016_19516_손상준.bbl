@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{lab7}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 5: PE implementation and BRAM modeling}.
+\newblock Hardware System Design, April 2021.
+
+\bibitem{UG}
+ZedBoard.
+\newblock {\em Hardware User’s Guide, Version 2.2}.
+\newblock Zynq™ Evaluation and Development, January 2014.
+
+\end{thebibliography}

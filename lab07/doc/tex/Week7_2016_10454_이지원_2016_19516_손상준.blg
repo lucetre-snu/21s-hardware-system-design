@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Week7_2016_10454_이지원_2016_19516_손상준.aux
+The style file: plain.bst
+Database file #1: other.bib
+You've used 2 entries,
+            2118 wiz_defined-function locations,
+            508 strings with 4257 characters,
+and the built_in function-call counts, 422 in all, are:
+= -- 40
+> -- 14
+< -- 0
++ -- 6
+- -- 4
+* -- 22
+:= -- 81
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 6
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 18
+empty$ -- 37
+format.name$ -- 4
+if$ -- 83
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 0
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 10
+stack$ -- 0
+substring$ -- 10
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 4
+width$ -- 3
+write$ -- 22

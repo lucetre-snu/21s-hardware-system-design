@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun May  2 20:13:02 2021
+# Process ID: 16752
+# Current directory: C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22640 C:\Users\lucet\semester\21s-hardware-system-design\lab07\proj\lab07-sj\lab07.xpr
+# Log file: C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj/vivado.log
+# Journal file: C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj\vivado.jou
+#-----------------------------------------------------------start_gui
+open_project C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj/lab07.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/lucet/semester/21s-hardware-system-design/lab07' since last save.
+SScanning sources...FFinished scanning sourcesINFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 802.652 ; gain = 140.797
+uupdate_compile_order -fileset sources_1sopen_run impl_1
+ERROR: [Common 17-49] Internal Data Exception: Design::refreshDesign : Run checkpoint 'C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj/lab07.runs/impl_1/one_sec_checker_routed.dcp' does not exist. Cannot open run.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  2 20:42:53 2021...
+ay  2 20:27:24 2021] Launched synth_1...
+Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj/lab07.runs/synth_1/runme.log
+[Sun May  2 20:27:24 2021] Launched impl_1...
+Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj/lab07.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1582.207 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1582.207 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1582.207 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 1734.305 ; gain = 931.535
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+set_property top one_sec_checker [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+[Sun May  2 21:04:59 2021] Launched synth_1...
+Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj/lab07.runs/synth_1/runme.log
+[Sun May  2 21:04:59 2021] Launched impl_1...
+Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/lab07/proj/lab07-sj/lab07.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1856.715 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1856.715 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 1876.871 ; gain = 31.855
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+close_design
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun May  2 21:21:12 2021...
