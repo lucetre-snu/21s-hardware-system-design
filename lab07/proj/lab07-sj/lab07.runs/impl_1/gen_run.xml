@@ -1,69 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1619957099">
-  <File Type="BITSTR-BMM" Name="one_sec_checker_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="one_sec_checker_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="one_sec_checker_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR" Name="one_sec_checker_power_routed.rpt"/>
   <File Type="PA-TCL" Name="one_sec_checker.tcl"/>
-  <File Type="OPT-TIMING" Name="one_sec_checker_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="one_sec_checker_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="one_sec_checker_bd.bmm"/>
   <File Type="ROUTE-PWR-SUM" Name="one_sec_checker_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="one_sec_checker_reports.tcl"/>
+  <File Type="OPT-DCP" Name="one_sec_checker_opt.dcp"/>
   <File Type="OPT-DRC" Name="one_sec_checker_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="one_sec_checker.hwdef"/>
   <File Type="PWROPT-DCP" Name="one_sec_checker_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="one_sec_checker_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="one_sec_checker_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="one_sec_checker_placed.dcp"/>
   <File Type="PLACE-IO" Name="one_sec_checker_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="one_sec_checker_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="one_sec_checker_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="one_sec_checker_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="one_sec_checker_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="one_sec_checker_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="one_sec_checker_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="one_sec_checker.bgn"/>
-  <File Type="PLACE-TIMING" Name="one_sec_checker_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="one_sec_checker_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="one_sec_checker.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="one_sec_checker_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="one_sec_checker_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="one_sec_checker_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="one_sec_checker.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="one_sec_checker_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="one_sec_checker_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="one_sec_checker_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="one_sec_checker_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="one_sec_checker_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="one_sec_checker_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="one_sec_checker.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="one_sec_checker_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="one_sec_checker.mmi"/>
+  <File Type="BITSTR-LTX" Name="one_sec_checker.ltx"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="one_sec_checker_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="one_sec_checker.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="one_sec_checker_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="one_sec_checker.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="one_sec_checker_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="one_sec_checker.sysdef"/>
   <File Type="ROUTE-PWR-RPX" Name="one_sec_checker_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="one_sec_checker_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="one_sec_checker_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="one_sec_checker_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="one_sec_checker_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="one_sec_checker_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="one_sec_checker_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="one_sec_checker_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="one_sec_checker_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="one_sec_checker_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="one_sec_checker_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="one_sec_checker_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="one_sec_checker_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="one_sec_checker_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="one_sec_checker_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="one_sec_checker_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="one_sec_checker_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="one_sec_checker_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="one_sec_checker.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="one_sec_checker_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="one_sec_checker.rbt"/>
   <File Type="BITSTR-NKY" Name="one_sec_checker.nky"/>
   <File Type="BG-DRC" Name="one_sec_checker.drc"/>

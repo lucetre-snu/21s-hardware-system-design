@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log one_sec_checker.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source one_sec_checker.tcl -notrace
 
 
