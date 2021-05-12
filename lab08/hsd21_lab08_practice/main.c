@@ -28,6 +28,7 @@ int main(int argc, char** argv)
   // run ip
   *(fpga_ip) = 0x5555;
   while (*fpga_ip == 0x5555);
+  printf("%X", *fpga_ip);
 
   printf("%-10s%-10s\n", "addr", "FPGA(hex)");
   for (i = 0; i < SIZE * 2; i++)
