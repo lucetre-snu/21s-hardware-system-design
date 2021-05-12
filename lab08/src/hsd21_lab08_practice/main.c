@@ -16,7 +16,8 @@ int main(int argc, char** argv)
 
   // initialize memory
   for (i = 0; i < SIZE; i++)
-    *(fpga_bram + i) = (i * 2); 
+    // *(fpga_bram + i) = (i * 2); 
+    *(fpga_bram + i) = rand(); 
   for (i = SIZE; i < SIZE * 2; i++)
     *(fpga_bram + i) = 0.0f; 
 
