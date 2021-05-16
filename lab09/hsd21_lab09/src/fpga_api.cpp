@@ -102,33 +102,44 @@ const float* __attribute__((optimize("O0"))) FPGA::blockMM()
 
 void FPGA::largeMV(const float* large_mat, const float* input, float* output, int num_input, int num_output)
 {
-  float* vec = this->vector();
-  float* mat = this->matrix();
+	float* vec = this->vector();
+	float* mat = this->matrix();
+    
+	// 0) Initialize output vector		
+	for(int i = 0; i < num_output; ++i)
+	{
+		output[i] = 0;
+	}
+    
+	for(int i = 0; i < num_output; i += m_size_)
+	{
+		for(int j = 0; j < num_input; j += v_size_)
+		{			
+			// 0) Initialize input vector		
+			int block_row = min(m_size_, num_output-i);
+			int block_col = min(v_size_, num_input-j);
+            
+			// 1) Assign a vector
+      for (int col = 0; col < block_col; col++)
+          data_[col] = input[j + col];
+      for (int col = block_col; col < v_size_; col++)
+          data_[col] = 0;
 
-  // 0) Initialize output vector		
-  for(int i = 0; i < num_output; ++i)
-    output[i] = 0;
+			// 2) Assign a matrix
+      for (int row = 0; row < block_row; row++)
+          for (int col = 0; col < block_col; col++)
+              data_[(row+1)*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
 
-  for(int i = 0; i < num_output; i += m_size_)
-  {
-    for(int j = 0; j < num_input; j += v_size_)
-    {			
-      // 0) Initialize input vector
-      int block_row = min(m_size_, num_output-i);
-      int block_col = min(v_size_, num_input-j);
+			// 3) Call a function `block_call() to execute MV multiplication
+			const float* ret = this->blockMV();
 
-      // 1) Assign a vector
-     
-      // 2) Assign a matrix
-
-      // 3) Call a function `blockMV() to execute MV multiplication
-      const float* ret = this->blockMV();
-
-      // 4) Accumulate intermediate results
-      for(int row = 0; row < block_row; ++row)
-        output[i + row] += ret[row];
-    } 
-  }
+			// 4) Accumulate intermediate results
+			for(int row = 0; row < block_row; ++row)
+			{
+				output[i + row] += ret[row];
+			}
+		} 
+	}
 }
 
 void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* output, int num_input, int num_output, int num_matrix2)
