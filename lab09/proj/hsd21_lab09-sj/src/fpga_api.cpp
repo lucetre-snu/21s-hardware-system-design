@@ -183,9 +183,6 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
       // 0) Initialize input vector
       int block_row = min(m_size_, num_output-i);
       int block_col = min(v_size_, num_input-j);
-
-			int block_row = min(m_size_, num_output-i);
-			int block_col = min(v_size_, num_input-j);
             
 			// 1) Assign a vector
       for (int col = 0; col < block_col; col++)
