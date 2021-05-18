@@ -5,6 +5,7 @@ import pprint as pp
 import os
 import time
 import argparse
+import json
 
 from models import MLP, CNN
 from data.load_mnist import load_mnist
@@ -48,7 +49,7 @@ def main(args):
     'v_size': net.v_size,
   }
   pp.pprint(model_stats)
-  print(model_stats.v_size)
+  return model_stats
 
 
 if __name__ == '__main__':
@@ -63,4 +64,7 @@ if __name__ == '__main__':
     print('[*] Varying num_test_images')
     for i in range(5):
         args = parser.parse_args(['--num_test_images', "{}".format(10**i)])
-        main(args)
+        model_stats = main(args)
+        filename = "results/num_test_images_{}.json".format(10**i)
+        with open(filename, 'w') as fp:
+            json.dump(model_stats, fp)
