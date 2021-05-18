@@ -10,7 +10,6 @@ from models import MLP, CNN
 from data.load_mnist import load_mnist
 
 def main(args):
-  print('[*] Arguments: %s' % args)
   num_test_images = args.num_test_images
   images, labels = load_mnist('test', path='./data', max_ind=num_test_images)
   images, labels = images[:num_test_images, :, :], labels[:num_test_images]
@@ -39,9 +38,7 @@ def main(args):
     label = labels[i,]
 
     n_correct += (label == prediction)
-  
-
-  print('[*] Statistics...')		
+  	
   model_stats = {
     'total_time': time.time()-start_time,
     'total_image': num_test_images,
@@ -51,6 +48,7 @@ def main(args):
     'v_size': net.v_size,
   }
   pp.pprint(model_stats)
+  print(model_stats.v_size)
 
 
 if __name__ == '__main__':
@@ -61,6 +59,8 @@ if __name__ == '__main__':
     parser.add_argument('--run_type', type=str, default='cpu', help='The type of execution e.g. cpu, fpga')
     parser.add_argument('--network', type=str, default='cnn', help='The type of execution e.g. cnn, mlp')
 
+    print('[*] Arguments: %s' % parser.parse_args())
+    print('[*] Varying num_test_images')
     for i in range(5):
         args = parser.parse_args(['--num_test_images', "{}".format(10**i)])
         main(args)
