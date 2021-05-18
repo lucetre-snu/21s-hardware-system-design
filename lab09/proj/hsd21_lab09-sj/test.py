@@ -62,5 +62,5 @@ if __name__ == '__main__':
     parser.add_argument('--network', type=str, default='cnn', help='The type of execution e.g. cnn, mlp')
 
     for i in range(5):
-        args = parser.parse_args(['--num_test_images', f"{10**i}"])
+        args = parser.parse_args(['--num_test_images', "{}".format(10**i)])
         main(args)
