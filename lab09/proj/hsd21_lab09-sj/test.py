@@ -61,10 +61,22 @@ if __name__ == '__main__':
     parser.add_argument('--network', type=str, default='cnn', help='The type of execution e.g. cnn, mlp')
 
     print('[*] Arguments: %s' % parser.parse_args())
-    print('[*] Varying num_test_images')
-    for i in range(5):
-        args = parser.parse_args(['--num_test_images', "{}".format(10**i)])
+
+    # for i in range(5):
+    #     num_test_images = 10**i
+    #     print('[*] Varying num_test_images to {}'.format(num_test_images))
+    #     args = parser.parse_args(['--num_test_images', "{}".format(num_test_images)])
+    #     model_stats = main(args)
+    #     filename = "results/num_test_images_{}.json".format(num_test_images)
+    #     with open(filename, 'w') as fp:
+    #         json.dump(model_stats, fp)
+
+    
+    for i in range(8):
+        v_size = 2**i
+        print('[*] Varying v_size to {}'.format(v_size))
+        args = parser.parse_args(['--v_size', "{}".format(v_size)])
         model_stats = main(args)
-        filename = "results/num_test_images_{}.json".format(10**i)
+        filename = "results/v_size_{}.json".format(v_size)
         with open(filename, 'w') as fp:
             json.dump(model_stats, fp)
