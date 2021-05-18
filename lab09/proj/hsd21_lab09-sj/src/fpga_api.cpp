@@ -148,7 +148,7 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
           for (int col = block_col_2; col < v_size_; col++)
             data_M[m1_size_ + row*v_size_ + col] = 0;
       	}
-        for (int l = block_col_1*v_size_; l < m2_size_; l++)
+        for (int l = block_col_2*v_size_; l < m2_size_; l++)
             data_M[m1_size_ + l] = 0;
 
         // 3) Call a function `blockMM() to execute Matrix matrix multiplication
