@@ -135,21 +135,35 @@ void FPGA::largeMM(const float *weight_mat, const float *input_mat, float *outpu
 
         // 1) Assign a m1
         // IMPLEMENT THIS
-        for (int row = 0; row < block_row; row++)
-        {
-          for (int col = 0; col < block_col_1; col++)
-          {
+        for (int row = 0; row < block_row; row++) {
+          for (int col = 0; col < block_col_1; col++) {
             data_M[row * v_size_ + col] = weight_mat[(i + row) * num_input + (col + j)];
+          }
+          for (int col = block_col_1; col < v_size_; col++) {
+            data_M[row * v_size_ + col] = 0;
           }
       	}
 
+        for (int row = block_row; row < v_size_; row++) {
+          for (int col = 0; col < v_size_; col++) {
+            data_M[row * v_size_ + col] = 0;
+          }
+        }
+
         // 2) Assign a m2
         // IMPLEMENT THIS
-        for (int row = 0; row < block_col_1; row++)
-        {
-          for (int col = 0; col < block_col_2; col++)
-          {
+        for (int row = 0; row < block_col_1; row++) {
+          for (int col = 0; col < block_col_2; col++) {
             data_M[v_size_ * v_size_ + row * v_size_ + col] = input_mat[(j + row) * num_matrix2 + (col + k)];
+          }
+          for (int col = block_col_2; col < v_size_; col++) {
+            data_M[v_size_ * v_size_ + row * v_size_ + col] = 0;
+          }
+        }
+
+        for (int row = block_col_1; row < v_size_; row++) {
+          for (int col = 0; col < v_size_; col++) {
+            data_M[v_size_ * v_size_ + row * v_size_ + col] = 0;
           }
         }
 
