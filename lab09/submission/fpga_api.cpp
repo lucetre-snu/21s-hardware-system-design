@@ -1,9 +1,9 @@
 #include"fpga_api.h"
 #include<stdio.h>
-#include<iostream>
+#include<fcntl.h>
+#include<unistd.h>
+#include<sys/mman.h>
 #include<cstring>
-
-using namespace std;
 
 #define min(x,y) (((x)<(y))?(x):(y))
 
@@ -13,25 +13,28 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   v_size_ = v_size;
 
   m1_size_ = v_size * v_size;
-  m2_size_ = v_size * v_size;
+
   data_size_ = (m_size_+1)*v_size_; // fpga bram data size
+  data_size_M = (2*v_size_)*v_size_*sizeof(float);
 
-  data_size_M = (v_size_+v_size_)*v_size_; // for Matrix matrix multiplication
-
-  output_ = new unsigned int[m_size_];    // use output_ as tempolar output
-  output_M = new unsigned int[v_size_*v_size_];
-
+  fd_ = open("/dev/mem", O_RDWR);
+  data_M = static_cast<float*>(mmap(NULL, data_size_M, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_addr));
   data_ = new float[data_size_];	
-  data_M = new float[data_size_M]; // for Matrix matrix multiplication
+
+  output_ = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, output_addr));
+  output_MV = new unsigned int[m_size_];
+  // output_M = static_cast<unsigned int*>(NULL);
 
   num_block_call_ = 0;
 }
+
 FPGA::~FPGA()
 {
-  // delete[] output_;
-  delete[] output_M;
-  // delete[] data_;
-  delete[] data_M;
+  munmap(data_M, data_size_M);
+  munmap(output_, sizeof(unsigned int));
+  close(fd_);
+
+  delete[] data_;
 }
 
 float* FPGA::matrix(void)
@@ -64,31 +67,6 @@ int FPGA::num_block_call(void)
   return num_block_call_;
 }
 
-const float* FPGA::blockMM()
-{
-  num_block_call_ += 1;
-
-  // cpu version
-  float* m1 = this->matrix_M1();
-  float* m2 = this->matrix_M2();
-  float* out  = reinterpret_cast<float*>(output_M);  
-
-  for(int i = 0; i < v_size_; ++i)
-  {
-    for(int j = 0; j < v_size_; ++j){    
-      out[v_size_*i+j] = 0;
-      for(int k = 0; k < v_size_; ++k){
-        out[v_size_*i+j] += m1[v_size_*i+k] * m2[v_size_*k + j];
-      }
-    }
-  }
-
-  for(int i = 0; i < m1_size_; ++i)
-    data_M[i] = out[i];
-
-  return data_M;    
-}
-
 const float* FPGA::blockMV()
 {
   num_block_call_ += 1;
@@ -96,7 +74,7 @@ const float* FPGA::blockMV()
   // cpu version
   float* vec = this->vector();
   float* mat = this->matrix();
-  float* out  = reinterpret_cast<float*>(output_);  
+  float* out  = reinterpret_cast<float*>(output_MV);  
 
   for(int i = 0; i < m_size_; ++i)
   {
@@ -109,6 +87,56 @@ const float* FPGA::blockMV()
     data_[i] = out[i];
 
   return data_;    
+}
+
+const float* __attribute__((optimize("O0"))) FPGA::blockMM()
+{
+  num_block_call_ += 1;
+
+  // fpga version
+  *output_ = 0x5555;
+  while(*output_ == 0x5555);
+
+  return data_M;    
+}
+
+void FPGA::largeMV(const float* large_mat, const float* input, float* output, int num_input, int num_output)
+{
+  float* vec = this->vector();
+  float* mat = this->matrix();
+
+  // 0) Initialize output vector		
+  for(int i = 0; i < num_output; ++i)
+    output[i] = 0;
+
+  for(int i = 0; i < num_output; i += m_size_)
+  {
+    for(int j = 0; j < num_input; j += v_size_)
+    {			
+      // 0) Initialize input vector
+      int block_row = min(m_size_, num_output-i);
+      int block_col = min(v_size_, num_input-j);
+            
+      // 1) Assign a vector
+      for (int col = 0; col < block_col; col++)
+        data_[col] = input[j + col];
+      for (int col = block_col; col < v_size_; col++)
+        data_[col] = 0;
+
+      // 2) Assign a matrix
+      for (int row = 0; row < block_row; row++)
+        for (int col = 0; col < block_col; col++)
+          data_[(row+1)*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
+
+
+      // 3) Call a function `blockMV() to execute MV multiplication
+      const float* ret = this->blockMV();
+
+      // 4) Accumulate intermediate results
+      for(int row = 0; row < block_row; ++row)
+        output[i + row] += ret[row];
+    } 
+  }
 }
 
 void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* output, int num_input, int num_output, int num_matrix2)
@@ -148,7 +176,7 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
           for (int col = block_col_2; col < v_size_; col++)
             data_M[m1_size_ + row*v_size_ + col] = 0;
       	}
-        for (int l = block_col_1*v_size_; l < m2_size_; l++)
+        for (int l = block_col_1*v_size_; l < m1_size_; l++)
             data_M[m1_size_ + l] = 0;
 
         // 3) Call a function `blockMM() to execute Matrix matrix multiplication
@@ -163,45 +191,6 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
           }
         }
       }
-    } 
-  }
-}
-
-void FPGA::largeMV(const float* large_mat, const float* input, float* output, int num_input, int num_output)
-{
-  float* vec = this->vector();
-  float* mat = this->matrix();
-
-  // 0) Initialize output vector		
-  for(int i = 0; i < num_output; ++i)
-    output[i] = 0;
-
-  for(int i = 0; i < num_output; i += m_size_)
-  {
-    for(int j = 0; j < num_input; j += v_size_)
-    {			
-      // 0) Initialize input vector
-      int block_row = min(m_size_, num_output-i);
-      int block_col = min(v_size_, num_input-j);
-            
-      // 1) Assign a vector
-      for (int col = 0; col < block_col; col++)
-        data_[col] = input[j + col];
-      for (int col = block_col; col < v_size_; col++)
-        data_[col] = 0;
-
-      // 2) Assign a matrix
-      for (int row = 0; row < block_row; row++)
-        for (int col = 0; col < block_col; col++)
-          data_[(row+1)*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
-
-
-      // 3) Call a function `blockMV() to execute MV multiplication
-      const float* ret = this->blockMV();
-
-      // 4) Accumulate intermediate results
-      for(int row = 0; row < block_row; ++row)
-        output[i + row] += ret[row];
     } 
   }
 }
