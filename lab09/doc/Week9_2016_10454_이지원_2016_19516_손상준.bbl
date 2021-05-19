@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{chellapilla2006high}
+Kumar Chellapilla, Sidd Puri, and Patrice Simard.
+\newblock High performance convolutional neural networks for document
+  processing.
+\newblock In {\em Tenth International Workshop on Frontiers in Handwriting
+  Recognition}. Suvisoft, 2006.
+
+\bibitem{chetlur2014cudnn}
+Sharan Chetlur, Cliff Woolley, Philippe Vandermersch, Jonathan Cohen, John
+  Tran, Bryan Catanzaro, and Evan Shelhamer.
+\newblock cudnn: Efficient primitives for deep learning.
+\newblock {\em arXiv preprint arXiv:1410.0759}, 2014.
+
+\bibitem{lab2}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 2: SW app on MNIST}.
+\newblock Hardware System Design, March 2021.
+
+\bibitem{lab9}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 9: Convolution Lowering SW}.
+\newblock Hardware System Design, May 2021.
+
+\end{thebibliography}
