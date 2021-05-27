@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.runs/synth_1'
+HD_PWD='C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

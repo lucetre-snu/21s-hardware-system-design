@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <sys/mman.h>
 
-#define SIZE 4
+#define SIZE 10
 
 int main(int argc, char** argv)
 {
@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 
   // initialize memory
   for (i = 0; i < SIZE; i++)
-    *(fpga_bram + i) = (float) (i * 2); 
+    *(fpga_bram + i) = i*10; 
   for (i = SIZE; i < SIZE * 2; i++)
     *(fpga_bram + i) = 0.0f; 
 
@@ -25,8 +25,8 @@ int main(int argc, char** argv)
     printf("%-10d%-10X\n", i, *(fpga_bram + i));
 
   // run ip
-  *(fpga_ip) = 0x5555;
-  while (*fpga_ip == 0x5555);
+  *(fpga_ip) = 0x9876;
+  while (*fpga_ip == 0x9876);
 
   printf("%-10s%-10s\n", "addr", "FPGA(hex)");
   for (i = 0; i < SIZE * 2; i++)

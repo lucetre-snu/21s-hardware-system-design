@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Thu May 27 10:08:26 2021
+| Date             : Thu May 27 13:47:29 2021
 | Host             : lucetre running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.788        |
+| Total On-Chip Power (W)  | 1.789        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.644        |
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.004 |        6 |       --- |             --- |
-| Slice Logic             |     0.001 |     3342 |       --- |             --- |
-|   LUT as Logic          |     0.001 |     1138 |     53200 |            2.14 |
-|   Register              |    <0.001 |     1572 |    106400 |            1.48 |
-|   CARRY4                |    <0.001 |       39 |     13300 |            0.29 |
+| Slice Logic             |     0.001 |     3414 |       --- |             --- |
+|   LUT as Logic          |     0.001 |     1158 |     53200 |            2.18 |
+|   Register              |    <0.001 |     1601 |    106400 |            1.50 |
+|   CARRY4                |    <0.001 |       58 |     13300 |            0.44 |
 |   LUT as Shift Register |    <0.001 |       72 |     17400 |            0.41 |
 |   F7/F8 Muxes           |    <0.001 |        1 |     53200 |           <0.01 |
-|   Others                |     0.000 |      239 |       --- |             --- |
-| Signals                 |     0.002 |     2506 |       --- |             --- |
-| Block RAM               |     0.003 |        2 |       140 |            1.43 |
+|   Others                |     0.000 |      238 |       --- |             --- |
+| Signals                 |     0.002 |     2621 |       --- |             --- |
+| Block RAM               |     0.004 |        2 |       140 |            1.43 |
 | MMCM                    |     0.105 |        1 |         4 |           25.00 |
 | PS7                     |     1.528 |        1 |       --- |             --- |
 | Static Power            |     0.144 |          |           |                 |
-| Total                   |     1.788 |          |           |                 |
+| Total                   |     1.789 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.026 |       0.011 |      0.016 |
+| Vccint    |       1.000 |     0.027 |       0.011 |      0.016 |
 | Vccaux    |       1.800 |     0.074 |       0.058 |      0.016 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |

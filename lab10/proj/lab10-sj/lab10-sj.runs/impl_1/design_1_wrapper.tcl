@@ -69,17 +69,17 @@ set rc [catch {
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.cache/wt [current_project]
-  set_property parent.project_path C:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.xpr [current_project]
-  set_property ip_repo_paths c:/Users/lucet/semester/21s-hardware-system-design/lab10/src/lab10_ip_repo [current_project]
+  set_property webtalk.parent_dir C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.cache/wt [current_project]
+  set_property parent.project_path C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.xpr [current_project]
+  set_property ip_repo_paths C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/src/lab10_ip_repo [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.srcs/sources_1/bd/design_1/design_1.bd
+  add_files C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z020clg484-1

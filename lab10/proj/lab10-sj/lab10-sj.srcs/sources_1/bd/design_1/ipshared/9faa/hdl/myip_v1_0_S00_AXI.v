@@ -405,12 +405,14 @@
     wire bram_write;
     assign BRAM_WE = (bram_write)? 4'hF : 4'h0;
     
-    reg [1:0] bram_counter;
-    wire [31:0] bram_wr_addr = {28'd1, bram_counter, 2'd0};
-    wire [31:0] bram_rd_addr = {28'd0, bram_counter, 2'd0};
+    localparam NUM = 4'd10;
+    
+    reg [30:0] bram_counter;
+    wire [31:0] bram_wr_addr = {bram_counter, 2'd0};
+    wire [31:0] bram_rd_addr = {bram_counter+NUM, 2'd0};
     assign BRAM_ADDR = (bram_write)? bram_wr_addr : bram_rd_addr;
     
-    assign BRAM_WRDATA = BRAM_RDDATA << 1;
+    assign BRAM_WRDATA = BRAM_RDDATA + 1;
     
     //FSM: IDLE -> repeate {READ -> WRITE} -> IDLE
     reg [1:0] bram_state;
@@ -419,7 +421,7 @@
     localparam BRAM_WRITE = 2'd2;
     localparam BRAM_WAIT = 2'd3;
     
-    wire magic_code = (slv_reg0 == 32'h5555);
+    wire magic_code = (slv_reg0 == 32'h9876);
     
     always @( posedge S_AXI_ACLK )
     begin
@@ -454,7 +456,7 @@
         end
     end
     
-    assign run_complete = (bram_counter == 2'h3);
+    assign run_complete = (bram_counter == NUM);
 	// User logic ends
 
 	endmodule

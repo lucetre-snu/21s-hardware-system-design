@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Thu May 27 10:06:19 2021
 -- Host        : lucetre running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_pc_1 -prefix
+--               design_1_auto_pc_1_ design_1_auto_pc_1_stub.vhdl
 -- Design      : design_1_auto_pc_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

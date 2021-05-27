@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Thu May 27 10:05:35 2021
+-- Date        : Thu May 27 13:34:15 2021
 -- Host        : lucetre running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/lucet/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/design_1_myip_0_0_sim_netlist.vhdl
+--               C:/Users/lucetre/Documents/semester/21s-hardware-system-design/lab10/proj/lab10-sj/lab10-sj.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/design_1_myip_0_0_sim_netlist.vhdl
 -- Design      : design_1_myip_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -189,14 +189,14 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_myip_0_0_myip_v1_0_S00_AXI is
   port (
-    \bram_counter_reg[1]_0\ : out STD_LOGIC;
-    \bram_counter_reg[0]_0\ : out STD_LOGIC;
     m00_bram_clk : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 0 to 0 );
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
+    m00_bram_wrdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_bram_addr : out STD_LOGIC_VECTOR ( 29 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
@@ -205,6 +205,7 @@ entity design_1_myip_0_0_myip_v1_0_S00_AXI is
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_bram_rddata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -217,9 +218,18 @@ end design_1_myip_0_0_myip_v1_0_S00_AXI;
 
 architecture STRUCTURE of design_1_myip_0_0_myip_v1_0_S00_AXI is
   signal \FSM_onehot_bram_state[0]_i_1_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_bram_state[0]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_bram_state[1]_i_10_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_11_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_12_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_13_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_14_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_15_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_16_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_17_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_18_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_19_n_0\ : STD_LOGIC;
   signal \FSM_onehot_bram_state[1]_i_1_n_0\ : STD_LOGIC;
+  signal \FSM_onehot_bram_state[1]_i_20_n_0\ : STD_LOGIC;
   signal \FSM_onehot_bram_state[1]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_bram_state[1]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_bram_state[1]_i_4_n_0\ : STD_LOGIC;
@@ -247,9 +257,131 @@ architecture STRUCTURE of design_1_myip_0_0_myip_v1_0_S00_AXI is
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
   signal \bram_counter[0]_i_1_n_0\ : STD_LOGIC;
-  signal \bram_counter[1]_i_1_n_0\ : STD_LOGIC;
-  signal \^bram_counter_reg[0]_0\ : STD_LOGIC;
-  signal \^bram_counter_reg[1]_0\ : STD_LOGIC;
+  signal \bram_counter[0]_i_3_n_0\ : STD_LOGIC;
+  signal bram_counter_reg : STD_LOGIC_VECTOR ( 30 downto 0 );
+  signal \bram_counter_reg[0]_i_2_n_0\ : STD_LOGIC;
+  signal \bram_counter_reg[0]_i_2_n_1\ : STD_LOGIC;
+  signal \bram_counter_reg[0]_i_2_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[0]_i_2_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[0]_i_2_n_4\ : STD_LOGIC;
+  signal \bram_counter_reg[0]_i_2_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[0]_i_2_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[0]_i_2_n_7\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_0\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_1\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_4\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[12]_i_1_n_7\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_0\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_1\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_4\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[16]_i_1_n_7\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_0\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_1\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_4\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[20]_i_1_n_7\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_0\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_1\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_4\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[24]_i_1_n_7\ : STD_LOGIC;
+  signal \bram_counter_reg[28]_i_1_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[28]_i_1_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[28]_i_1_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[28]_i_1_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[28]_i_1_n_7\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_0\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_1\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_4\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[4]_i_1_n_7\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_0\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_1\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_2\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_3\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_4\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_5\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_6\ : STD_LOGIC;
+  signal \bram_counter_reg[8]_i_1_n_7\ : STD_LOGIC;
+  signal bram_rd_addr0 : STD_LOGIC_VECTOR ( 29 downto 0 );
+  signal \bram_rd_addr0_carry__0_n_0\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__0_n_1\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__0_n_2\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__0_n_3\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__1_n_0\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__1_n_1\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__1_n_2\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__1_n_3\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__2_n_0\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__2_n_1\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__2_n_2\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__2_n_3\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__3_n_0\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__3_n_1\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__3_n_2\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__3_n_3\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__4_n_0\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__4_n_1\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__4_n_2\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__4_n_3\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__5_n_0\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__5_n_1\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__5_n_2\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__5_n_3\ : STD_LOGIC;
+  signal \bram_rd_addr0_carry__6_n_3\ : STD_LOGIC;
+  signal bram_rd_addr0_carry_i_1_n_0 : STD_LOGIC;
+  signal bram_rd_addr0_carry_i_2_n_0 : STD_LOGIC;
+  signal bram_rd_addr0_carry_n_0 : STD_LOGIC;
+  signal bram_rd_addr0_carry_n_1 : STD_LOGIC;
+  signal bram_rd_addr0_carry_n_2 : STD_LOGIC;
+  signal bram_rd_addr0_carry_n_3 : STD_LOGIC;
+  signal \m00_bram_wrdata[13]_INST_0_n_0\ : STD_LOGIC;
+  signal \m00_bram_wrdata[13]_INST_0_n_1\ : STD_LOGIC;
+  signal \m00_bram_wrdata[13]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[13]_INST_0_n_3\ : STD_LOGIC;
+  signal \m00_bram_wrdata[17]_INST_0_n_0\ : STD_LOGIC;
+  signal \m00_bram_wrdata[17]_INST_0_n_1\ : STD_LOGIC;
+  signal \m00_bram_wrdata[17]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[17]_INST_0_n_3\ : STD_LOGIC;
+  signal \m00_bram_wrdata[1]_INST_0_n_0\ : STD_LOGIC;
+  signal \m00_bram_wrdata[1]_INST_0_n_1\ : STD_LOGIC;
+  signal \m00_bram_wrdata[1]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[1]_INST_0_n_3\ : STD_LOGIC;
+  signal \m00_bram_wrdata[21]_INST_0_n_0\ : STD_LOGIC;
+  signal \m00_bram_wrdata[21]_INST_0_n_1\ : STD_LOGIC;
+  signal \m00_bram_wrdata[21]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[21]_INST_0_n_3\ : STD_LOGIC;
+  signal \m00_bram_wrdata[25]_INST_0_n_0\ : STD_LOGIC;
+  signal \m00_bram_wrdata[25]_INST_0_n_1\ : STD_LOGIC;
+  signal \m00_bram_wrdata[25]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[25]_INST_0_n_3\ : STD_LOGIC;
+  signal \m00_bram_wrdata[29]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[29]_INST_0_n_3\ : STD_LOGIC;
+  signal \m00_bram_wrdata[5]_INST_0_n_0\ : STD_LOGIC;
+  signal \m00_bram_wrdata[5]_INST_0_n_1\ : STD_LOGIC;
+  signal \m00_bram_wrdata[5]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[5]_INST_0_n_3\ : STD_LOGIC;
+  signal \m00_bram_wrdata[9]_INST_0_n_0\ : STD_LOGIC;
+  signal \m00_bram_wrdata[9]_INST_0_n_1\ : STD_LOGIC;
+  signal \m00_bram_wrdata[9]_INST_0_n_2\ : STD_LOGIC;
+  signal \m00_bram_wrdata[9]_INST_0_n_3\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal reg_data_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \^s00_axi_bvalid\ : STD_LOGIC;
@@ -259,6 +391,8 @@ architecture STRUCTURE of design_1_myip_0_0_myip_v1_0_S00_AXI is
   signal \slv_reg0[23]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg0[31]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg0[31]_i_2_n_0\ : STD_LOGIC;
+  signal \slv_reg0[31]_i_3_n_0\ : STD_LOGIC;
+  signal \slv_reg0[31]_i_4_n_0\ : STD_LOGIC;
   signal \slv_reg0[7]_i_1_n_0\ : STD_LOGIC;
   signal slv_reg1 : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \slv_reg1[15]_i_1_n_0\ : STD_LOGIC;
@@ -277,65 +411,89 @@ architecture STRUCTURE of design_1_myip_0_0_myip_v1_0_S00_AXI is
   signal \slv_reg3[7]_i_1_n_0\ : STD_LOGIC;
   signal \slv_reg_rden__0\ : STD_LOGIC;
   signal \slv_reg_wren__0\ : STD_LOGIC;
+  signal \NLW_bram_counter_reg[28]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_bram_counter_reg[28]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal \NLW_bram_rd_addr0_carry__6_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
+  signal \NLW_bram_rd_addr0_carry__6_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_m00_bram_wrdata[29]_INST_0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
+  signal \NLW_m00_bram_wrdata[29]_INST_0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_bram_state[0]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \FSM_onehot_bram_state[1]_i_6\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \FSM_onehot_bram_state[1]_i_18\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \FSM_onehot_bram_state[1]_i_20\ : label is "soft_lutpair0";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_bram_state_reg[0]\ : label is "BRAM_WAIT:0100,BRAM_WRITE:1000,BRAM_READ:0010,BRAM_IDLE:0001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_bram_state_reg[1]\ : label is "BRAM_WAIT:0100,BRAM_WRITE:1000,BRAM_READ:0010,BRAM_IDLE:0001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_bram_state_reg[2]\ : label is "BRAM_WAIT:0100,BRAM_WRITE:1000,BRAM_READ:0010,BRAM_IDLE:0001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_bram_state_reg[3]\ : label is "BRAM_WAIT:0100,BRAM_WRITE:1000,BRAM_READ:0010,BRAM_IDLE:0001";
-  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \axi_awaddr[2]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \bram_counter[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \bram_counter[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \slv_reg0[31]_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \axi_araddr[2]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \axi_awaddr[3]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of axi_awready_i_1 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \m00_bram_addr[10]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m00_bram_addr[11]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m00_bram_addr[12]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m00_bram_addr[13]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m00_bram_addr[14]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m00_bram_addr[15]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m00_bram_addr[16]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m00_bram_addr[17]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m00_bram_addr[18]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m00_bram_addr[19]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m00_bram_addr[20]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \m00_bram_addr[21]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \m00_bram_addr[22]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \m00_bram_addr[23]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m00_bram_addr[24]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m00_bram_addr[25]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \m00_bram_addr[26]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m00_bram_addr[27]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \m00_bram_addr[28]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m00_bram_addr[29]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m00_bram_addr[2]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m00_bram_addr[30]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m00_bram_addr[31]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \m00_bram_addr[3]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m00_bram_addr[4]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m00_bram_addr[5]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m00_bram_addr[6]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m00_bram_addr[7]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m00_bram_addr[8]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m00_bram_addr[9]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \slv_reg0[31]_i_3\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \slv_reg0[31]_i_4\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \slv_reg0[31]_i_5\ : label is "soft_lutpair4";
 begin
   Q(0) <= \^q\(0);
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
   S_AXI_WREADY <= \^s_axi_wready\;
-  \bram_counter_reg[0]_0\ <= \^bram_counter_reg[0]_0\;
-  \bram_counter_reg[1]_0\ <= \^bram_counter_reg[1]_0\;
   s00_axi_bvalid <= \^s00_axi_bvalid\;
   s00_axi_rvalid <= \^s00_axi_rvalid\;
 \FSM_onehot_bram_state[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFBFFF0000"
+      INIT => X"D0D0FFD0D0D0D0D0"
     )
         port map (
       I0 => \FSM_onehot_bram_state[1]_i_2_n_0\,
       I1 => \FSM_onehot_bram_state[1]_i_3_n_0\,
-      I2 => \FSM_onehot_bram_state[1]_i_4_n_0\,
-      I3 => \FSM_onehot_bram_state[1]_i_5_n_0\,
-      I4 => \FSM_onehot_bram_state_reg_n_0_[0]\,
-      I5 => \FSM_onehot_bram_state[0]_i_2_n_0\,
+      I2 => \FSM_onehot_bram_state_reg_n_0_[0]\,
+      I3 => \FSM_onehot_bram_state[1]_i_4_n_0\,
+      I4 => \FSM_onehot_bram_state[1]_i_5_n_0\,
+      I5 => \^q\(0),
       O => \FSM_onehot_bram_state[0]_i_1_n_0\
-    );
-\FSM_onehot_bram_state[0]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"80"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^bram_counter_reg[1]_0\,
-      I2 => \^bram_counter_reg[0]_0\,
-      O => \FSM_onehot_bram_state[0]_i_2_n_0\
     );
 \FSM_onehot_bram_state[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFF40000000"
+      INIT => X"FFFF20FF20202020"
     )
         port map (
       I0 => \FSM_onehot_bram_state[1]_i_2_n_0\,
       I1 => \FSM_onehot_bram_state[1]_i_3_n_0\,
-      I2 => \FSM_onehot_bram_state[1]_i_4_n_0\,
-      I3 => \FSM_onehot_bram_state[1]_i_5_n_0\,
-      I4 => \FSM_onehot_bram_state_reg_n_0_[0]\,
-      I5 => \FSM_onehot_bram_state[1]_i_6_n_0\,
+      I2 => \FSM_onehot_bram_state_reg_n_0_[0]\,
+      I3 => \FSM_onehot_bram_state[1]_i_4_n_0\,
+      I4 => \FSM_onehot_bram_state[1]_i_5_n_0\,
+      I5 => \^q\(0),
       O => \FSM_onehot_bram_state[1]_i_1_n_0\
     );
 \FSM_onehot_bram_state[1]_i_10\: unisim.vcomponents.LUT4
@@ -344,81 +502,168 @@ begin
     )
         port map (
       I0 => slv_reg0(2),
-      I1 => slv_reg0(0),
-      I2 => slv_reg0(6),
+      I1 => slv_reg0(1),
+      I2 => slv_reg0(5),
       I3 => slv_reg0(4),
       O => \FSM_onehot_bram_state[1]_i_10_n_0\
     );
-\FSM_onehot_bram_state[1]_i_2\: unisim.vcomponents.LUT5
+\FSM_onehot_bram_state[1]_i_11\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFEFFFF"
+      INIT => X"8000"
     )
         port map (
-      I0 => slv_reg0(16),
-      I1 => slv_reg0(17),
-      I2 => slv_reg0(18),
-      I3 => slv_reg0(19),
-      I4 => \FSM_onehot_bram_state[1]_i_7_n_0\,
-      O => \FSM_onehot_bram_state[1]_i_2_n_0\
+      I0 => slv_reg0(11),
+      I1 => slv_reg0(6),
+      I2 => slv_reg0(15),
+      I3 => slv_reg0(12),
+      O => \FSM_onehot_bram_state[1]_i_11_n_0\
     );
-\FSM_onehot_bram_state[1]_i_3\: unisim.vcomponents.LUT5
+\FSM_onehot_bram_state[1]_i_12\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00000001"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => slv_reg0(28),
-      I1 => slv_reg0(29),
-      I2 => slv_reg0(31),
-      I3 => slv_reg0(30),
-      I4 => \FSM_onehot_bram_state[1]_i_8_n_0\,
-      O => \FSM_onehot_bram_state[1]_i_3_n_0\
-    );
-\FSM_onehot_bram_state[1]_i_4\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000001"
-    )
-        port map (
-      I0 => slv_reg0(9),
-      I1 => slv_reg0(11),
-      I2 => slv_reg0(13),
-      I3 => slv_reg0(15),
-      I4 => \FSM_onehot_bram_state[1]_i_9_n_0\,
-      O => \FSM_onehot_bram_state[1]_i_4_n_0\
-    );
-\FSM_onehot_bram_state[1]_i_5\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00008000"
-    )
-        port map (
-      I0 => slv_reg0(12),
-      I1 => slv_reg0(14),
+      I0 => slv_reg0(3),
+      I1 => slv_reg0(0),
       I2 => slv_reg0(8),
-      I3 => slv_reg0(10),
-      I4 => \FSM_onehot_bram_state[1]_i_10_n_0\,
-      O => \FSM_onehot_bram_state[1]_i_5_n_0\
+      I3 => slv_reg0(7),
+      O => \FSM_onehot_bram_state[1]_i_12_n_0\
     );
-\FSM_onehot_bram_state[1]_i_6\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"2A"
-    )
-        port map (
-      I0 => \^q\(0),
-      I1 => \^bram_counter_reg[1]_0\,
-      I2 => \^bram_counter_reg[0]_0\,
-      O => \FSM_onehot_bram_state[1]_i_6_n_0\
-    );
-\FSM_onehot_bram_state[1]_i_7\: unisim.vcomponents.LUT4
+\FSM_onehot_bram_state[1]_i_13\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"0001"
     )
         port map (
-      I0 => slv_reg0(23),
-      I1 => slv_reg0(22),
-      I2 => slv_reg0(21),
-      I3 => slv_reg0(20),
-      O => \FSM_onehot_bram_state[1]_i_7_n_0\
+      I0 => slv_reg0(14),
+      I1 => slv_reg0(13),
+      I2 => slv_reg0(10),
+      I3 => slv_reg0(9),
+      O => \FSM_onehot_bram_state[1]_i_13_n_0\
     );
-\FSM_onehot_bram_state[1]_i_8\: unisim.vcomponents.LUT4
+\FSM_onehot_bram_state[1]_i_14\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => bram_counter_reg(25),
+      I1 => bram_counter_reg(24),
+      I2 => bram_counter_reg(27),
+      I3 => bram_counter_reg(26),
+      O => \FSM_onehot_bram_state[1]_i_14_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_15\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => bram_counter_reg(23),
+      I1 => bram_counter_reg(22),
+      I2 => bram_counter_reg(21),
+      I3 => bram_counter_reg(20),
+      O => \FSM_onehot_bram_state[1]_i_15_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_16\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => bram_counter_reg(19),
+      I1 => bram_counter_reg(18),
+      I2 => bram_counter_reg(17),
+      I3 => bram_counter_reg(16),
+      O => \FSM_onehot_bram_state[1]_i_16_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_17\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFF7"
+    )
+        port map (
+      I0 => bram_counter_reg(3),
+      I1 => bram_counter_reg(1),
+      I2 => bram_counter_reg(2),
+      I3 => bram_counter_reg(0),
+      O => \FSM_onehot_bram_state[1]_i_17_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_18\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => bram_counter_reg(7),
+      I1 => bram_counter_reg(6),
+      I2 => bram_counter_reg(5),
+      I3 => bram_counter_reg(4),
+      O => \FSM_onehot_bram_state[1]_i_18_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_19\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => bram_counter_reg(9),
+      I1 => bram_counter_reg(8),
+      I2 => bram_counter_reg(11),
+      I3 => bram_counter_reg(10),
+      O => \FSM_onehot_bram_state[1]_i_19_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"4000"
+    )
+        port map (
+      I0 => \FSM_onehot_bram_state[1]_i_6_n_0\,
+      I1 => \FSM_onehot_bram_state[1]_i_7_n_0\,
+      I2 => \FSM_onehot_bram_state[1]_i_8_n_0\,
+      I3 => \FSM_onehot_bram_state[1]_i_9_n_0\,
+      O => \FSM_onehot_bram_state[1]_i_2_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_20\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => bram_counter_reg(15),
+      I1 => bram_counter_reg(14),
+      I2 => bram_counter_reg(13),
+      I3 => bram_counter_reg(12),
+      O => \FSM_onehot_bram_state[1]_i_20_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FBFF"
+    )
+        port map (
+      I0 => \FSM_onehot_bram_state[1]_i_10_n_0\,
+      I1 => \FSM_onehot_bram_state[1]_i_11_n_0\,
+      I2 => \FSM_onehot_bram_state[1]_i_12_n_0\,
+      I3 => \FSM_onehot_bram_state[1]_i_13_n_0\,
+      O => \FSM_onehot_bram_state[1]_i_3_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0001000000000000"
+    )
+        port map (
+      I0 => \FSM_onehot_bram_state[1]_i_14_n_0\,
+      I1 => bram_counter_reg(30),
+      I2 => bram_counter_reg(28),
+      I3 => bram_counter_reg(29),
+      I4 => \FSM_onehot_bram_state[1]_i_15_n_0\,
+      I5 => \FSM_onehot_bram_state[1]_i_16_n_0\,
+      O => \FSM_onehot_bram_state[1]_i_4_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_5\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FBFF"
+    )
+        port map (
+      I0 => \FSM_onehot_bram_state[1]_i_17_n_0\,
+      I1 => \FSM_onehot_bram_state[1]_i_18_n_0\,
+      I2 => \FSM_onehot_bram_state[1]_i_19_n_0\,
+      I3 => \FSM_onehot_bram_state[1]_i_20_n_0\,
+      O => \FSM_onehot_bram_state[1]_i_5_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_6\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
@@ -427,17 +672,39 @@ begin
       I1 => slv_reg0(24),
       I2 => slv_reg0(27),
       I3 => slv_reg0(26),
+      O => \FSM_onehot_bram_state[1]_i_6_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_7\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => slv_reg0(30),
+      I1 => slv_reg0(31),
+      I2 => slv_reg0(29),
+      I3 => slv_reg0(28),
+      O => \FSM_onehot_bram_state[1]_i_7_n_0\
+    );
+\FSM_onehot_bram_state[1]_i_8\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => slv_reg0(23),
+      I1 => slv_reg0(22),
+      I2 => slv_reg0(21),
+      I3 => slv_reg0(20),
       O => \FSM_onehot_bram_state[1]_i_8_n_0\
     );
 \FSM_onehot_bram_state[1]_i_9\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFE"
+      INIT => X"0001"
     )
         port map (
-      I0 => slv_reg0(3),
-      I1 => slv_reg0(1),
-      I2 => slv_reg0(7),
-      I3 => slv_reg0(5),
+      I0 => slv_reg0(19),
+      I1 => slv_reg0(18),
+      I2 => slv_reg0(17),
+      I3 => slv_reg0(16),
       O => \FSM_onehot_bram_state[1]_i_9_n_0\
     );
 \FSM_onehot_bram_state[3]_i_1\: unisim.vcomponents.LUT1
@@ -1335,44 +1602,914 @@ axi_wready_reg: unisim.vcomponents.FDRE
       Q => \^s_axi_wready\,
       R => \FSM_onehot_bram_state[3]_i_1_n_0\
     );
-\bram_counter[0]_i_1\: unisim.vcomponents.LUT4
+\bram_counter[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"0060"
+      INIT => X"B"
     )
         port map (
-      I0 => \^bram_counter_reg[0]_0\,
-      I1 => \^q\(0),
-      I2 => s00_axi_aresetn,
-      I3 => \FSM_onehot_bram_state_reg_n_0_[0]\,
+      I0 => \FSM_onehot_bram_state_reg_n_0_[0]\,
+      I1 => s00_axi_aresetn,
       O => \bram_counter[0]_i_1_n_0\
     );
-\bram_counter[1]_i_1\: unisim.vcomponents.LUT5
+\bram_counter[0]_i_3\: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"00006A00"
+      INIT => X"1"
     )
         port map (
-      I0 => \^bram_counter_reg[1]_0\,
-      I1 => \^q\(0),
-      I2 => \^bram_counter_reg[0]_0\,
-      I3 => s00_axi_aresetn,
-      I4 => \FSM_onehot_bram_state_reg_n_0_[0]\,
-      O => \bram_counter[1]_i_1_n_0\
+      I0 => bram_counter_reg(0),
+      O => \bram_counter[0]_i_3_n_0\
     );
 \bram_counter_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => '1',
-      D => \bram_counter[0]_i_1_n_0\,
-      Q => \^bram_counter_reg[0]_0\,
-      R => '0'
+      CE => \^q\(0),
+      D => \bram_counter_reg[0]_i_2_n_7\,
+      Q => bram_counter_reg(0),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[0]_i_2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \bram_counter_reg[0]_i_2_n_0\,
+      CO(2) => \bram_counter_reg[0]_i_2_n_1\,
+      CO(1) => \bram_counter_reg[0]_i_2_n_2\,
+      CO(0) => \bram_counter_reg[0]_i_2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0001",
+      O(3) => \bram_counter_reg[0]_i_2_n_4\,
+      O(2) => \bram_counter_reg[0]_i_2_n_5\,
+      O(1) => \bram_counter_reg[0]_i_2_n_6\,
+      O(0) => \bram_counter_reg[0]_i_2_n_7\,
+      S(3 downto 1) => bram_counter_reg(3 downto 1),
+      S(0) => \bram_counter[0]_i_3_n_0\
+    );
+\bram_counter_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[8]_i_1_n_5\,
+      Q => bram_counter_reg(10),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[8]_i_1_n_4\,
+      Q => bram_counter_reg(11),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[12]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[12]_i_1_n_7\,
+      Q => bram_counter_reg(12),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[12]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_counter_reg[8]_i_1_n_0\,
+      CO(3) => \bram_counter_reg[12]_i_1_n_0\,
+      CO(2) => \bram_counter_reg[12]_i_1_n_1\,
+      CO(1) => \bram_counter_reg[12]_i_1_n_2\,
+      CO(0) => \bram_counter_reg[12]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \bram_counter_reg[12]_i_1_n_4\,
+      O(2) => \bram_counter_reg[12]_i_1_n_5\,
+      O(1) => \bram_counter_reg[12]_i_1_n_6\,
+      O(0) => \bram_counter_reg[12]_i_1_n_7\,
+      S(3 downto 0) => bram_counter_reg(15 downto 12)
+    );
+\bram_counter_reg[13]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[12]_i_1_n_6\,
+      Q => bram_counter_reg(13),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[14]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[12]_i_1_n_5\,
+      Q => bram_counter_reg(14),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[15]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[12]_i_1_n_4\,
+      Q => bram_counter_reg(15),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[16]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[16]_i_1_n_7\,
+      Q => bram_counter_reg(16),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[16]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_counter_reg[12]_i_1_n_0\,
+      CO(3) => \bram_counter_reg[16]_i_1_n_0\,
+      CO(2) => \bram_counter_reg[16]_i_1_n_1\,
+      CO(1) => \bram_counter_reg[16]_i_1_n_2\,
+      CO(0) => \bram_counter_reg[16]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \bram_counter_reg[16]_i_1_n_4\,
+      O(2) => \bram_counter_reg[16]_i_1_n_5\,
+      O(1) => \bram_counter_reg[16]_i_1_n_6\,
+      O(0) => \bram_counter_reg[16]_i_1_n_7\,
+      S(3 downto 0) => bram_counter_reg(19 downto 16)
+    );
+\bram_counter_reg[17]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[16]_i_1_n_6\,
+      Q => bram_counter_reg(17),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[18]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[16]_i_1_n_5\,
+      Q => bram_counter_reg(18),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[19]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[16]_i_1_n_4\,
+      Q => bram_counter_reg(19),
+      R => \bram_counter[0]_i_1_n_0\
     );
 \bram_counter_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
-      CE => '1',
-      D => \bram_counter[1]_i_1_n_0\,
-      Q => \^bram_counter_reg[1]_0\,
-      R => '0'
+      CE => \^q\(0),
+      D => \bram_counter_reg[0]_i_2_n_6\,
+      Q => bram_counter_reg(1),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[20]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[20]_i_1_n_7\,
+      Q => bram_counter_reg(20),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[20]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_counter_reg[16]_i_1_n_0\,
+      CO(3) => \bram_counter_reg[20]_i_1_n_0\,
+      CO(2) => \bram_counter_reg[20]_i_1_n_1\,
+      CO(1) => \bram_counter_reg[20]_i_1_n_2\,
+      CO(0) => \bram_counter_reg[20]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \bram_counter_reg[20]_i_1_n_4\,
+      O(2) => \bram_counter_reg[20]_i_1_n_5\,
+      O(1) => \bram_counter_reg[20]_i_1_n_6\,
+      O(0) => \bram_counter_reg[20]_i_1_n_7\,
+      S(3 downto 0) => bram_counter_reg(23 downto 20)
+    );
+\bram_counter_reg[21]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[20]_i_1_n_6\,
+      Q => bram_counter_reg(21),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[22]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[20]_i_1_n_5\,
+      Q => bram_counter_reg(22),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[23]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[20]_i_1_n_4\,
+      Q => bram_counter_reg(23),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[24]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[24]_i_1_n_7\,
+      Q => bram_counter_reg(24),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[24]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_counter_reg[20]_i_1_n_0\,
+      CO(3) => \bram_counter_reg[24]_i_1_n_0\,
+      CO(2) => \bram_counter_reg[24]_i_1_n_1\,
+      CO(1) => \bram_counter_reg[24]_i_1_n_2\,
+      CO(0) => \bram_counter_reg[24]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \bram_counter_reg[24]_i_1_n_4\,
+      O(2) => \bram_counter_reg[24]_i_1_n_5\,
+      O(1) => \bram_counter_reg[24]_i_1_n_6\,
+      O(0) => \bram_counter_reg[24]_i_1_n_7\,
+      S(3 downto 0) => bram_counter_reg(27 downto 24)
+    );
+\bram_counter_reg[25]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[24]_i_1_n_6\,
+      Q => bram_counter_reg(25),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[26]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[24]_i_1_n_5\,
+      Q => bram_counter_reg(26),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[27]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[24]_i_1_n_4\,
+      Q => bram_counter_reg(27),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[28]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[28]_i_1_n_7\,
+      Q => bram_counter_reg(28),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[28]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_counter_reg[24]_i_1_n_0\,
+      CO(3 downto 2) => \NLW_bram_counter_reg[28]_i_1_CO_UNCONNECTED\(3 downto 2),
+      CO(1) => \bram_counter_reg[28]_i_1_n_2\,
+      CO(0) => \bram_counter_reg[28]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \NLW_bram_counter_reg[28]_i_1_O_UNCONNECTED\(3),
+      O(2) => \bram_counter_reg[28]_i_1_n_5\,
+      O(1) => \bram_counter_reg[28]_i_1_n_6\,
+      O(0) => \bram_counter_reg[28]_i_1_n_7\,
+      S(3) => '0',
+      S(2 downto 0) => bram_counter_reg(30 downto 28)
+    );
+\bram_counter_reg[29]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[28]_i_1_n_6\,
+      Q => bram_counter_reg(29),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[2]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[0]_i_2_n_5\,
+      Q => bram_counter_reg(2),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[30]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[28]_i_1_n_5\,
+      Q => bram_counter_reg(30),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[3]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[0]_i_2_n_4\,
+      Q => bram_counter_reg(3),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[4]_i_1_n_7\,
+      Q => bram_counter_reg(4),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[4]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_counter_reg[0]_i_2_n_0\,
+      CO(3) => \bram_counter_reg[4]_i_1_n_0\,
+      CO(2) => \bram_counter_reg[4]_i_1_n_1\,
+      CO(1) => \bram_counter_reg[4]_i_1_n_2\,
+      CO(0) => \bram_counter_reg[4]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \bram_counter_reg[4]_i_1_n_4\,
+      O(2) => \bram_counter_reg[4]_i_1_n_5\,
+      O(1) => \bram_counter_reg[4]_i_1_n_6\,
+      O(0) => \bram_counter_reg[4]_i_1_n_7\,
+      S(3 downto 0) => bram_counter_reg(7 downto 4)
+    );
+\bram_counter_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[4]_i_1_n_6\,
+      Q => bram_counter_reg(5),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[4]_i_1_n_5\,
+      Q => bram_counter_reg(6),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[4]_i_1_n_4\,
+      Q => bram_counter_reg(7),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[8]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[8]_i_1_n_7\,
+      Q => bram_counter_reg(8),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+\bram_counter_reg[8]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_counter_reg[4]_i_1_n_0\,
+      CO(3) => \bram_counter_reg[8]_i_1_n_0\,
+      CO(2) => \bram_counter_reg[8]_i_1_n_1\,
+      CO(1) => \bram_counter_reg[8]_i_1_n_2\,
+      CO(0) => \bram_counter_reg[8]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \bram_counter_reg[8]_i_1_n_4\,
+      O(2) => \bram_counter_reg[8]_i_1_n_5\,
+      O(1) => \bram_counter_reg[8]_i_1_n_6\,
+      O(0) => \bram_counter_reg[8]_i_1_n_7\,
+      S(3 downto 0) => bram_counter_reg(11 downto 8)
+    );
+\bram_counter_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => \^q\(0),
+      D => \bram_counter_reg[8]_i_1_n_6\,
+      Q => bram_counter_reg(9),
+      R => \bram_counter[0]_i_1_n_0\
+    );
+bram_rd_addr0_carry: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => bram_rd_addr0_carry_n_0,
+      CO(2) => bram_rd_addr0_carry_n_1,
+      CO(1) => bram_rd_addr0_carry_n_2,
+      CO(0) => bram_rd_addr0_carry_n_3,
+      CYINIT => '0',
+      DI(3) => bram_counter_reg(3),
+      DI(2) => '0',
+      DI(1) => bram_counter_reg(1),
+      DI(0) => '0',
+      O(3 downto 0) => bram_rd_addr0(3 downto 0),
+      S(3) => bram_rd_addr0_carry_i_1_n_0,
+      S(2) => bram_counter_reg(2),
+      S(1) => bram_rd_addr0_carry_i_2_n_0,
+      S(0) => bram_counter_reg(0)
+    );
+\bram_rd_addr0_carry__0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => bram_rd_addr0_carry_n_0,
+      CO(3) => \bram_rd_addr0_carry__0_n_0\,
+      CO(2) => \bram_rd_addr0_carry__0_n_1\,
+      CO(1) => \bram_rd_addr0_carry__0_n_2\,
+      CO(0) => \bram_rd_addr0_carry__0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => bram_rd_addr0(7 downto 4),
+      S(3 downto 0) => bram_counter_reg(7 downto 4)
+    );
+\bram_rd_addr0_carry__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_rd_addr0_carry__0_n_0\,
+      CO(3) => \bram_rd_addr0_carry__1_n_0\,
+      CO(2) => \bram_rd_addr0_carry__1_n_1\,
+      CO(1) => \bram_rd_addr0_carry__1_n_2\,
+      CO(0) => \bram_rd_addr0_carry__1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => bram_rd_addr0(11 downto 8),
+      S(3 downto 0) => bram_counter_reg(11 downto 8)
+    );
+\bram_rd_addr0_carry__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_rd_addr0_carry__1_n_0\,
+      CO(3) => \bram_rd_addr0_carry__2_n_0\,
+      CO(2) => \bram_rd_addr0_carry__2_n_1\,
+      CO(1) => \bram_rd_addr0_carry__2_n_2\,
+      CO(0) => \bram_rd_addr0_carry__2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => bram_rd_addr0(15 downto 12),
+      S(3 downto 0) => bram_counter_reg(15 downto 12)
+    );
+\bram_rd_addr0_carry__3\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_rd_addr0_carry__2_n_0\,
+      CO(3) => \bram_rd_addr0_carry__3_n_0\,
+      CO(2) => \bram_rd_addr0_carry__3_n_1\,
+      CO(1) => \bram_rd_addr0_carry__3_n_2\,
+      CO(0) => \bram_rd_addr0_carry__3_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => bram_rd_addr0(19 downto 16),
+      S(3 downto 0) => bram_counter_reg(19 downto 16)
+    );
+\bram_rd_addr0_carry__4\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_rd_addr0_carry__3_n_0\,
+      CO(3) => \bram_rd_addr0_carry__4_n_0\,
+      CO(2) => \bram_rd_addr0_carry__4_n_1\,
+      CO(1) => \bram_rd_addr0_carry__4_n_2\,
+      CO(0) => \bram_rd_addr0_carry__4_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => bram_rd_addr0(23 downto 20),
+      S(3 downto 0) => bram_counter_reg(23 downto 20)
+    );
+\bram_rd_addr0_carry__5\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_rd_addr0_carry__4_n_0\,
+      CO(3) => \bram_rd_addr0_carry__5_n_0\,
+      CO(2) => \bram_rd_addr0_carry__5_n_1\,
+      CO(1) => \bram_rd_addr0_carry__5_n_2\,
+      CO(0) => \bram_rd_addr0_carry__5_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => bram_rd_addr0(27 downto 24),
+      S(3 downto 0) => bram_counter_reg(27 downto 24)
+    );
+\bram_rd_addr0_carry__6\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \bram_rd_addr0_carry__5_n_0\,
+      CO(3 downto 1) => \NLW_bram_rd_addr0_carry__6_CO_UNCONNECTED\(3 downto 1),
+      CO(0) => \bram_rd_addr0_carry__6_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 2) => \NLW_bram_rd_addr0_carry__6_O_UNCONNECTED\(3 downto 2),
+      O(1 downto 0) => bram_rd_addr0(29 downto 28),
+      S(3 downto 2) => B"00",
+      S(1 downto 0) => bram_counter_reg(29 downto 28)
+    );
+bram_rd_addr0_carry_i_1: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => bram_counter_reg(3),
+      O => bram_rd_addr0_carry_i_1_n_0
+    );
+bram_rd_addr0_carry_i_2: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => bram_counter_reg(1),
+      O => bram_rd_addr0_carry_i_2_n_0
+    );
+\m00_bram_addr[10]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(8),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(8),
+      O => m00_bram_addr(8)
+    );
+\m00_bram_addr[11]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(9),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(9),
+      O => m00_bram_addr(9)
+    );
+\m00_bram_addr[12]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(10),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(10),
+      O => m00_bram_addr(10)
+    );
+\m00_bram_addr[13]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(11),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(11),
+      O => m00_bram_addr(11)
+    );
+\m00_bram_addr[14]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(12),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(12),
+      O => m00_bram_addr(12)
+    );
+\m00_bram_addr[15]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(13),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(13),
+      O => m00_bram_addr(13)
+    );
+\m00_bram_addr[16]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(14),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(14),
+      O => m00_bram_addr(14)
+    );
+\m00_bram_addr[17]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(15),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(15),
+      O => m00_bram_addr(15)
+    );
+\m00_bram_addr[18]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(16),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(16),
+      O => m00_bram_addr(16)
+    );
+\m00_bram_addr[19]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(17),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(17),
+      O => m00_bram_addr(17)
+    );
+\m00_bram_addr[20]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(18),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(18),
+      O => m00_bram_addr(18)
+    );
+\m00_bram_addr[21]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(19),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(19),
+      O => m00_bram_addr(19)
+    );
+\m00_bram_addr[22]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(20),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(20),
+      O => m00_bram_addr(20)
+    );
+\m00_bram_addr[23]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(21),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(21),
+      O => m00_bram_addr(21)
+    );
+\m00_bram_addr[24]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(22),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(22),
+      O => m00_bram_addr(22)
+    );
+\m00_bram_addr[25]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(23),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(23),
+      O => m00_bram_addr(23)
+    );
+\m00_bram_addr[26]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(24),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(24),
+      O => m00_bram_addr(24)
+    );
+\m00_bram_addr[27]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(25),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(25),
+      O => m00_bram_addr(25)
+    );
+\m00_bram_addr[28]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(26),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(26),
+      O => m00_bram_addr(26)
+    );
+\m00_bram_addr[29]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(27),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(27),
+      O => m00_bram_addr(27)
+    );
+\m00_bram_addr[2]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(0),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(0),
+      O => m00_bram_addr(0)
+    );
+\m00_bram_addr[30]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(28),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(28),
+      O => m00_bram_addr(28)
+    );
+\m00_bram_addr[31]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(29),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(29),
+      O => m00_bram_addr(29)
+    );
+\m00_bram_addr[3]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(1),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(1),
+      O => m00_bram_addr(1)
+    );
+\m00_bram_addr[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(2),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(2),
+      O => m00_bram_addr(2)
+    );
+\m00_bram_addr[5]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(3),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(3),
+      O => m00_bram_addr(3)
+    );
+\m00_bram_addr[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(4),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(4),
+      O => m00_bram_addr(4)
+    );
+\m00_bram_addr[7]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(5),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(5),
+      O => m00_bram_addr(5)
+    );
+\m00_bram_addr[8]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(6),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(6),
+      O => m00_bram_addr(6)
+    );
+\m00_bram_addr[9]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => bram_counter_reg(7),
+      I1 => \^q\(0),
+      I2 => bram_rd_addr0(7),
+      O => m00_bram_addr(7)
+    );
+\m00_bram_wrdata[0]_INST_0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => m00_bram_rddata(0),
+      O => m00_bram_wrdata(0)
+    );
+\m00_bram_wrdata[13]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m00_bram_wrdata[9]_INST_0_n_0\,
+      CO(3) => \m00_bram_wrdata[13]_INST_0_n_0\,
+      CO(2) => \m00_bram_wrdata[13]_INST_0_n_1\,
+      CO(1) => \m00_bram_wrdata[13]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[13]_INST_0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => m00_bram_wrdata(16 downto 13),
+      S(3 downto 0) => m00_bram_rddata(16 downto 13)
+    );
+\m00_bram_wrdata[17]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m00_bram_wrdata[13]_INST_0_n_0\,
+      CO(3) => \m00_bram_wrdata[17]_INST_0_n_0\,
+      CO(2) => \m00_bram_wrdata[17]_INST_0_n_1\,
+      CO(1) => \m00_bram_wrdata[17]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[17]_INST_0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => m00_bram_wrdata(20 downto 17),
+      S(3 downto 0) => m00_bram_rddata(20 downto 17)
+    );
+\m00_bram_wrdata[1]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \m00_bram_wrdata[1]_INST_0_n_0\,
+      CO(2) => \m00_bram_wrdata[1]_INST_0_n_1\,
+      CO(1) => \m00_bram_wrdata[1]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[1]_INST_0_n_3\,
+      CYINIT => m00_bram_rddata(0),
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => m00_bram_wrdata(4 downto 1),
+      S(3 downto 0) => m00_bram_rddata(4 downto 1)
+    );
+\m00_bram_wrdata[21]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m00_bram_wrdata[17]_INST_0_n_0\,
+      CO(3) => \m00_bram_wrdata[21]_INST_0_n_0\,
+      CO(2) => \m00_bram_wrdata[21]_INST_0_n_1\,
+      CO(1) => \m00_bram_wrdata[21]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[21]_INST_0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => m00_bram_wrdata(24 downto 21),
+      S(3 downto 0) => m00_bram_rddata(24 downto 21)
+    );
+\m00_bram_wrdata[25]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m00_bram_wrdata[21]_INST_0_n_0\,
+      CO(3) => \m00_bram_wrdata[25]_INST_0_n_0\,
+      CO(2) => \m00_bram_wrdata[25]_INST_0_n_1\,
+      CO(1) => \m00_bram_wrdata[25]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[25]_INST_0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => m00_bram_wrdata(28 downto 25),
+      S(3 downto 0) => m00_bram_rddata(28 downto 25)
+    );
+\m00_bram_wrdata[29]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m00_bram_wrdata[25]_INST_0_n_0\,
+      CO(3 downto 2) => \NLW_m00_bram_wrdata[29]_INST_0_CO_UNCONNECTED\(3 downto 2),
+      CO(1) => \m00_bram_wrdata[29]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[29]_INST_0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \NLW_m00_bram_wrdata[29]_INST_0_O_UNCONNECTED\(3),
+      O(2 downto 0) => m00_bram_wrdata(31 downto 29),
+      S(3) => '0',
+      S(2 downto 0) => m00_bram_rddata(31 downto 29)
+    );
+\m00_bram_wrdata[5]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m00_bram_wrdata[1]_INST_0_n_0\,
+      CO(3) => \m00_bram_wrdata[5]_INST_0_n_0\,
+      CO(2) => \m00_bram_wrdata[5]_INST_0_n_1\,
+      CO(1) => \m00_bram_wrdata[5]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[5]_INST_0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => m00_bram_wrdata(8 downto 5),
+      S(3 downto 0) => m00_bram_rddata(8 downto 5)
+    );
+\m00_bram_wrdata[9]_INST_0\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m00_bram_wrdata[5]_INST_0_n_0\,
+      CO(3) => \m00_bram_wrdata[9]_INST_0_n_0\,
+      CO(2) => \m00_bram_wrdata[9]_INST_0_n_1\,
+      CO(1) => \m00_bram_wrdata[9]_INST_0_n_2\,
+      CO(0) => \m00_bram_wrdata[9]_INST_0_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3 downto 0) => m00_bram_wrdata(12 downto 9),
+      S(3 downto 0) => m00_bram_rddata(12 downto 9)
     );
 \slv_reg0[15]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -1396,14 +2533,15 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I3 => s00_axi_wstrb(2),
       O => \slv_reg0[23]_i_1_n_0\
     );
-\slv_reg0[31]_i_1\: unisim.vcomponents.LUT3
+\slv_reg0[31]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8F"
+      INIT => X"80FF"
     )
         port map (
-      I0 => \^bram_counter_reg[1]_0\,
-      I1 => \^bram_counter_reg[0]_0\,
-      I2 => s00_axi_aresetn,
+      I0 => \slv_reg0[31]_i_3_n_0\,
+      I1 => \slv_reg0[31]_i_4_n_0\,
+      I2 => \FSM_onehot_bram_state[1]_i_4_n_0\,
+      I3 => s00_axi_aresetn,
       O => \slv_reg0[31]_i_1_n_0\
     );
 \slv_reg0[31]_i_2\: unisim.vcomponents.LUT4
@@ -1417,7 +2555,31 @@ axi_wready_reg: unisim.vcomponents.FDRE
       I3 => s00_axi_wstrb(3),
       O => \slv_reg0[31]_i_2_n_0\
     );
-\slv_reg0[31]_i_3\: unisim.vcomponents.LUT4
+\slv_reg0[31]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000001"
+    )
+        port map (
+      I0 => bram_counter_reg(4),
+      I1 => bram_counter_reg(5),
+      I2 => bram_counter_reg(6),
+      I3 => bram_counter_reg(7),
+      I4 => \FSM_onehot_bram_state[1]_i_17_n_0\,
+      O => \slv_reg0[31]_i_3_n_0\
+    );
+\slv_reg0[31]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000001"
+    )
+        port map (
+      I0 => bram_counter_reg(12),
+      I1 => bram_counter_reg(13),
+      I2 => bram_counter_reg(14),
+      I3 => bram_counter_reg(15),
+      I4 => \FSM_onehot_bram_state[1]_i_19_n_0\,
+      O => \slv_reg0[31]_i_4_n_0\
+    );
+\slv_reg0[31]_i_5\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"8000"
     )
@@ -2617,14 +3779,14 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_myip_0_0_myip_v1_0 is
   port (
-    \bram_counter_reg[1]\ : out STD_LOGIC;
-    \bram_counter_reg[0]\ : out STD_LOGIC;
     m00_bram_clk : out STD_LOGIC;
     BRAM_WE : out STD_LOGIC_VECTOR ( 0 to 0 );
     S_AXI_AWREADY : out STD_LOGIC;
     S_AXI_WREADY : out STD_LOGIC;
+    m00_bram_wrdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     S_AXI_ARREADY : out STD_LOGIC;
     s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_bram_addr : out STD_LOGIC_VECTOR ( 29 downto 0 );
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_bvalid : out STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
@@ -2633,6 +3795,7 @@ entity design_1_myip_0_0_myip_v1_0 is
     s00_axi_awvalid : in STD_LOGIC;
     s00_axi_wvalid : in STD_LOGIC;
     s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    m00_bram_rddata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_arvalid : in STD_LOGIC;
     s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2651,9 +3814,10 @@ myip_v1_0_S00_AXI_inst: entity work.design_1_myip_0_0_myip_v1_0_S00_AXI
       S_AXI_ARREADY => S_AXI_ARREADY,
       S_AXI_AWREADY => S_AXI_AWREADY,
       S_AXI_WREADY => S_AXI_WREADY,
-      \bram_counter_reg[0]_0\ => \bram_counter_reg[0]\,
-      \bram_counter_reg[1]_0\ => \bram_counter_reg[1]\,
+      m00_bram_addr(29 downto 0) => m00_bram_addr(29 downto 0),
       m00_bram_clk => m00_bram_clk,
+      m00_bram_rddata(31 downto 0) => m00_bram_rddata(31 downto 0),
+      m00_bram_wrdata(31 downto 0) => m00_bram_wrdata(31 downto 0),
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_araddr(1 downto 0) => s00_axi_araddr(1 downto 0),
       s00_axi_aresetn => s00_axi_aresetn,
@@ -2718,8 +3882,8 @@ end design_1_myip_0_0;
 architecture STRUCTURE of design_1_myip_0_0 is
   signal \<const0>\ : STD_LOGIC;
   signal \<const1>\ : STD_LOGIC;
-  signal \^m00_bram_addr\ : STD_LOGIC_VECTOR ( 4 downto 2 );
-  signal \^m00_bram_rddata\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal \^m00_bram_addr\ : STD_LOGIC_VECTOR ( 31 downto 2 );
+  signal \^m00_bram_we\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m00_bram_clk : signal is "xilinx.com:signal:clock:1.0 m00_bram_clk CLK, xilinx.com:interface:bram:1.0 m00_bram CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -2757,45 +3921,15 @@ architecture STRUCTURE of design_1_myip_0_0 is
   attribute X_INTERFACE_INFO of s00_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WDATA";
   attribute X_INTERFACE_INFO of s00_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB";
 begin
-  \^m00_bram_rddata\(30 downto 0) <= m00_bram_rddata(30 downto 0);
-  m00_bram_addr(31) <= \<const0>\;
-  m00_bram_addr(30) <= \<const0>\;
-  m00_bram_addr(29) <= \<const0>\;
-  m00_bram_addr(28) <= \<const0>\;
-  m00_bram_addr(27) <= \<const0>\;
-  m00_bram_addr(26) <= \<const0>\;
-  m00_bram_addr(25) <= \<const0>\;
-  m00_bram_addr(24) <= \<const0>\;
-  m00_bram_addr(23) <= \<const0>\;
-  m00_bram_addr(22) <= \<const0>\;
-  m00_bram_addr(21) <= \<const0>\;
-  m00_bram_addr(20) <= \<const0>\;
-  m00_bram_addr(19) <= \<const0>\;
-  m00_bram_addr(18) <= \<const0>\;
-  m00_bram_addr(17) <= \<const0>\;
-  m00_bram_addr(16) <= \<const0>\;
-  m00_bram_addr(15) <= \<const0>\;
-  m00_bram_addr(14) <= \<const0>\;
-  m00_bram_addr(13) <= \<const0>\;
-  m00_bram_addr(12) <= \<const0>\;
-  m00_bram_addr(11) <= \<const0>\;
-  m00_bram_addr(10) <= \<const0>\;
-  m00_bram_addr(9) <= \<const0>\;
-  m00_bram_addr(8) <= \<const0>\;
-  m00_bram_addr(7) <= \<const0>\;
-  m00_bram_addr(6) <= \<const0>\;
-  m00_bram_addr(5) <= \<const0>\;
-  m00_bram_addr(4 downto 2) <= \^m00_bram_addr\(4 downto 2);
+  m00_bram_addr(31 downto 2) <= \^m00_bram_addr\(31 downto 2);
   m00_bram_addr(1) <= \<const0>\;
   m00_bram_addr(0) <= \<const0>\;
   m00_bram_en <= \<const1>\;
   m00_bram_rst <= \<const0>\;
-  m00_bram_we(3) <= \^m00_bram_addr\(4);
-  m00_bram_we(2) <= \^m00_bram_addr\(4);
-  m00_bram_we(1) <= \^m00_bram_addr\(4);
-  m00_bram_we(0) <= \^m00_bram_addr\(4);
-  m00_bram_wrdata(31 downto 1) <= \^m00_bram_rddata\(30 downto 0);
-  m00_bram_wrdata(0) <= \<const0>\;
+  m00_bram_we(3) <= \^m00_bram_we\(0);
+  m00_bram_we(2) <= \^m00_bram_we\(0);
+  m00_bram_we(1) <= \^m00_bram_we\(0);
+  m00_bram_we(0) <= \^m00_bram_we\(0);
   s00_axi_bresp(1) <= \<const0>\;
   s00_axi_bresp(0) <= \<const0>\;
   s00_axi_rresp(1) <= \<const0>\;
@@ -2810,13 +3944,14 @@ VCC: unisim.vcomponents.VCC
     );
 inst: entity work.design_1_myip_0_0_myip_v1_0
      port map (
-      BRAM_WE(0) => \^m00_bram_addr\(4),
+      BRAM_WE(0) => \^m00_bram_we\(0),
       S_AXI_ARREADY => s00_axi_arready,
       S_AXI_AWREADY => s00_axi_awready,
       S_AXI_WREADY => s00_axi_wready,
-      \bram_counter_reg[0]\ => \^m00_bram_addr\(2),
-      \bram_counter_reg[1]\ => \^m00_bram_addr\(3),
+      m00_bram_addr(29 downto 0) => \^m00_bram_addr\(31 downto 2),
       m00_bram_clk => m00_bram_clk,
+      m00_bram_rddata(31 downto 0) => m00_bram_rddata(31 downto 0),
+      m00_bram_wrdata(31 downto 0) => m00_bram_wrdata(31 downto 0),
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_araddr(1 downto 0) => s00_axi_araddr(3 downto 2),
       s00_axi_aresetn => s00_axi_aresetn,
