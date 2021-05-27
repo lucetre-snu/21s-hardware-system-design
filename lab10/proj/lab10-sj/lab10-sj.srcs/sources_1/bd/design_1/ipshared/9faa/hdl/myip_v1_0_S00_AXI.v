@@ -408,8 +408,8 @@
     localparam NUM = 4'd10;
     
     reg [30:0] bram_counter;
-    wire [31:0] bram_wr_addr = {bram_counter, 2'd0};
-    wire [31:0] bram_rd_addr = {bram_counter+NUM, 2'd0};
+    wire [31:0] bram_rd_addr = {bram_counter, 2'd0};
+    wire [31:0] bram_wr_addr = {bram_counter+NUM, 2'd0};
     assign BRAM_ADDR = (bram_write)? bram_wr_addr : bram_rd_addr;
     
     assign BRAM_WRDATA = BRAM_RDDATA + 1;

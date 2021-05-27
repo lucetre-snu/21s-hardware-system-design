@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Thu May 27 13:47:29 2021
+| Date             : Thu May 27 14:19:07 2021
 | Host             : lucetre running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.789        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.644        |
+| Dynamic (W)              | 1.645        |
 | Device Static (W)        | 0.144        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 64.4         |
@@ -53,14 +53,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.004 |        6 |       --- |             --- |
-| Slice Logic             |     0.001 |     3414 |       --- |             --- |
-|   LUT as Logic          |     0.001 |     1158 |     53200 |            2.18 |
+| Slice Logic             |     0.001 |     3407 |       --- |             --- |
+|   LUT as Logic          |     0.001 |     1166 |     53200 |            2.19 |
 |   Register              |    <0.001 |     1601 |    106400 |            1.50 |
 |   CARRY4                |    <0.001 |       58 |     13300 |            0.44 |
 |   LUT as Shift Register |    <0.001 |       72 |     17400 |            0.41 |
-|   F7/F8 Muxes           |    <0.001 |        1 |     53200 |           <0.01 |
-|   Others                |     0.000 |      238 |       --- |             --- |
-| Signals                 |     0.002 |     2621 |       --- |             --- |
+|   Others                |     0.000 |      236 |       --- |             --- |
+| Signals                 |     0.002 |     2613 |       --- |             --- |
 | Block RAM               |     0.004 |        2 |       140 |            1.43 |
 | MMCM                    |     0.105 |        1 |         4 |           25.00 |
 | PS7                     |     1.528 |        1 |       --- |             --- |
@@ -154,13 +153,13 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| design_1_wrapper         |     1.644 |
-|   design_1_i             |     1.644 |
+| design_1_wrapper         |     1.645 |
+|   design_1_i             |     1.645 |
 |     axi_bram_ctrl_0      |     0.001 |
 |       U0                 |     0.001 |
 |     axi_mem_intercon     |     0.004 |
 |       m01_couplers       |     0.002 |
-|       xbar               |     0.002 |
+|       xbar               |     0.003 |
 |     blk_mem_gen_0        |     0.004 |
 |       U0                 |     0.004 |
 |     myip_0               |     0.106 |
