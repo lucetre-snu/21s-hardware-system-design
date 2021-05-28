@@ -27,9 +27,8 @@ int main(int argc, char** argv)
   float flat[SIZE * (SIZE + 1)];
 
   // initialization
-  FILE *fd, *fo;
+  FILE *fd;
   fd = fopen("./input.txt", "r");
-  fo = fopen("./output.txt", "w");
 
   unsigned int a;
   i = 0;
@@ -39,7 +38,6 @@ int main(int argc, char** argv)
     {
       container.i = a;
       flat[i] = container.f;
-      fprintf(fo, "%lf\n", container.f);
       i++;
     }
   }
@@ -52,12 +50,11 @@ int main(int argc, char** argv)
 
   // MCPY: DRAM -> DRAM
   gettimeofday (&st[0], NULL);
-  memcpy( ps_dram, flat, SIZE * (SIZE + 1) * sizeof(float) );
-  //for (i = 0; i < SIZE * (SIZE + 1); i++)
-  //{
-  //  *(ps_dram + i) = flat[i];
-  //
+  for (i = 0; i < SIZE * (SIZE + 1); i++)
+    *(ps_dram + i) = flat[i];
   gettimeofday (&st[1], NULL);
+  memcpy( ps_dram, flat, SIZE * (SIZE + 1) * sizeof(float) );
+  gettimeofday (&st[2], NULL);
 
   // DMA : DRAM -> BRAM
   unsigned int *fpga_dma = mmap(NULL, 16*sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED, foo, 0x7E200000);
@@ -84,8 +81,9 @@ int main(int argc, char** argv)
   
   printf("The number of mismatch (dram <-> bram) : %d\n", num_mismatch);
 
-  printf("%s: %d\n", "MCPY", st2time(st[ 1]) - st2time(st[ 0]));
-  printf("%s: %d\n", "DMA ", st2time(st[ 3]) - st2time(st[ 2]));
+  printf("%s: %d\n", "MCPY1", st2time(st[ 1]) - st2time(st[ 0]));
+  printf("%s: %d\n", "MCPY2", st2time(st[ 2]) - st2time(st[ 1]));
+  printf("%s: %d\n", "DMA  ", st2time(st[ 3]) - st2time(st[ 2]));
 
   close(foo);
 
