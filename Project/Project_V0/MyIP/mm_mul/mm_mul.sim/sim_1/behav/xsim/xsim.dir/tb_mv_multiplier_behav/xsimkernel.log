@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_mv_multiplier_behav/xsimk.exe -simmode gui -wdb tb_mv_multiplier_behav.wdb -simrunnum 0 -socket 4211
-Design successfully loaded
-Design Loading Memory Usage: 16308 KB (Peak: 16308 KB)
-Design Loading CPU Usage: 46 ms
-Simulation completed
-Simulation Memory Usage: 18456 KB (Peak: 18456 KB)
-Simulation CPU Usage: 280 ms
