@@ -27,8 +27,9 @@ int main(int argc, char** argv)
   float flat[SIZE * (SIZE + 1)];
 
   // initialization
-  FILE *fd;
+  FILE *fd, *fo;
   fd = fopen("./input.txt", "r");
+  fo = fopen("./output.txt", "w");
 
   unsigned int a;
   i = 0;
@@ -38,6 +39,7 @@ int main(int argc, char** argv)
     {
       container.i = a;
       flat[i] = container.f;
+      fprintf(fo, "%lf\n", container.f);
       i++;
     }
   }
