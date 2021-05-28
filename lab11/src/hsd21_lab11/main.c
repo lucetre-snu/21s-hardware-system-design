@@ -10,17 +10,14 @@
 typedef union {
   float f;
   unsigned int i;
-}foo;
+} foo;
 
 struct timeval st[4];
-
-int st2time (struct timeval st_) 
-{
+int st2time (struct timeval st_) {
   return st_.tv_sec * 1000 * 1000 + st_.tv_usec;
 }
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv) {
   int i, j;
   foo container;
 
@@ -32,10 +29,8 @@ int main(int argc, char** argv)
 
   unsigned int a;
   i = 0;
-  while ( !feof(fd) )
-  {
-    if (fscanf(fd, "%X", &a) != EOF)
-    {
+  while ( !feof(fd) ) {
+    if (fscanf(fd, "%X", &a) != EOF) {
       container.i = a;
       flat[i] = container.f;
       i++;
@@ -58,7 +53,6 @@ int main(int argc, char** argv)
 
   // DMA : DRAM -> BRAM
   unsigned int *fpga_dma = mmap(NULL, 16*sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED, foo, 0x7E200000);
-  
   gettimeofday (&st[2], NULL);
   *(fpga_dma+6) = 0x10000000;
   *(fpga_dma+8) = 0xC0000000;
@@ -68,12 +62,9 @@ int main(int argc, char** argv)
 
   // Check if the data is valid
   float *fpga_bram = mmap(NULL, (SIZE * (SIZE + 1))* sizeof(float), PROT_READ|PROT_WRITE, MAP_SHARED, foo, 0x40000000);
-  
   int num_mismatch = 0;
-  for (i = 0; i < SIZE * (SIZE + 1); i++)
-  {
-    if ( *(fpga_bram + i) != *(ps_dram + i) )
-    {
+  for (i = 0; i < SIZE * (SIZE + 1); i++) {
+    if ( *(fpga_bram + i) != *(ps_dram + i) ) {
       printf("%f, %f\n", *(fpga_bram + i), *(ps_dram + i) );
       num_mismatch++;
     }
