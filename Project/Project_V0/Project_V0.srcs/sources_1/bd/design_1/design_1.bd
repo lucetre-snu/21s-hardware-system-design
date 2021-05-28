@@ -4,7 +4,7 @@
       "boundary_crc": "0xCC6CFA5306BD3ECB",
       "device": "xc7z020clg484-1",
       "name": "design_1",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2018.3",
       "validated": "true"
     },
@@ -21,9 +21,9 @@
         }
       },
       "blk_mem_gen_0": "",
-      "myip_0": "",
       "processing_system7_0": "",
-      "rst_ps7_0_50M": ""
+      "rst_ps7_0_50M": "",
+      "myip_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -272,16 +272,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -444,16 +444,16 @@
           }
         },
         "interface_nets": {
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
           "m00_couplers_to_axi_mem_intercon": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
             ]
           },
           "axi_mem_intercon_to_s00_couplers": {
@@ -462,10 +462,10 @@
               "s00_couplers/S_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
           "m01_couplers_to_axi_mem_intercon": {
@@ -546,10 +546,6 @@
             "value": "BRAM_Controller"
           }
         }
-      },
-      "myip_0": {
-        "vlnv": "user.org:user:myip:1.0",
-        "xci_name": "design_1_myip_0_0"
       },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
@@ -1356,13 +1352,23 @@
       "rst_ps7_0_50M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_50M_0"
+      },
+      "myip_0": {
+        "vlnv": "user.org:user:myip:1.0",
+        "xci_name": "design_1_myip_0_0"
       }
     },
     "interface_nets": {
-      "processing_system7_0_DDR": {
+      "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "axi_bram_ctrl_0/BRAM_PORTA",
+          "blk_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "axi_mem_intercon/S00_AXI",
+          "processing_system7_0/M_AXI_GP0"
         ]
       },
       "axi_mem_intercon_M01_AXI": {
@@ -1371,10 +1377,10 @@
           "myip_0/S00_AXI"
         ]
       },
-      "axi_bram_ctrl_0_BRAM_PORTA": {
+      "axi_mem_intercon_M00_AXI": {
         "interface_ports": [
-          "axi_bram_ctrl_0/BRAM_PORTA",
-          "blk_mem_gen_0/BRAM_PORTA"
+          "axi_bram_ctrl_0/S_AXI",
+          "axi_mem_intercon/M00_AXI"
         ]
       },
       "myip_0_m00_bram": {
@@ -1383,22 +1389,16 @@
           "myip_0/m00_bram"
         ]
       },
-      "axi_mem_intercon_M00_AXI": {
-        "interface_ports": [
-          "axi_bram_ctrl_0/S_AXI",
-          "axi_mem_intercon/M00_AXI"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
+      "processing_system7_0_DDR": {
         "interface_ports": [
-          "axi_mem_intercon/S00_AXI",
-          "processing_system7_0/M_AXI_GP0"
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       }
     },
@@ -1411,9 +1411,9 @@
           "axi_mem_intercon/M00_ACLK",
           "axi_mem_intercon/M01_ACLK",
           "axi_mem_intercon/S00_ACLK",
-          "myip_0/s00_axi_aclk",
           "processing_system7_0/M_AXI_GP0_ACLK",
-          "rst_ps7_0_50M/slowest_sync_clk"
+          "rst_ps7_0_50M/slowest_sync_clk",
+          "myip_0/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

@@ -410,9 +410,8 @@
     reg [30:0] bram_counter;
     wire [31:0] bram_rd_addr = {bram_counter, 2'd0};
     wire [31:0] bram_wr_addr = {bram_counter+NUM, 2'd0};
-    assign BRAM_ADDR = (bram_write)? bram_wr_addr : bram_rd_addr;
-    
-    assign BRAM_WRDATA = BRAM_RDDATA + 1;
+    assign BRAM_ADDR = (bram_write) ? bram_wr_addr : bram_rd_addr;
+//    assign BRAM_WRDATA = BRAM_RDDATA + 1;
     
     //FSM: IDLE -> repeate {READ -> WRITE} -> IDLE
     reg [1:0] bram_state;
@@ -421,7 +420,7 @@
     localparam BRAM_WRITE = 2'd2;
     localparam BRAM_WAIT = 2'd3;
     
-    wire magic_code = (slv_reg0 == 32'h9876);
+    wire magic_code = (slv_reg0 == 32'h5555);
     
     always @( posedge S_AXI_ACLK )
     begin
@@ -429,34 +428,48 @@
         bram_state <= BRAM_IDLE;
       else
         case (bram_state)
-          BRAM_IDLE: bram_state <= (magic_code)? BRAM_READ : BRAM_IDLE;
-          BRAM_READ: bram_state <= BRAM_WAIT;
-          BRAM_WAIT: bram_state <= BRAM_WRITE;
-          BRAM_WRITE: bram_state <= (run_complete)? BRAM_IDLE: BRAM_READ;
-          default  : bram_state <= BRAM_IDLE;
+          BRAM_IDLE:    bram_state <= (magic_code) ? BRAM_READ : BRAM_IDLE;
+          BRAM_READ:    bram_state <= BRAM_WAIT;
+          BRAM_WAIT:    bram_state <= BRAM_WRITE;
+          BRAM_WRITE:   bram_state <= (run_complete) ? BRAM_IDLE : BRAM_READ;
+          default:      bram_state <= BRAM_IDLE;
         endcase
     end
     
-    assign bram_write = (bram_state == BRAM_WRITE)? 1'b1 : 1'b0;
+    assign bram_write = (bram_state == BRAM_WRITE) ? 1'b1 : 1'b0;
     
-    //COUNTER: 0~511 (total 2KB)
-    wire bram_counter_reset = (S_AXI_ARESETN == 1'b0) || (bram_state == BRAM_IDLE);
-    wire bram_counter_enable = (bram_state == BRAM_WRITE);
+    // COUNTER: 0~511 (total 2KB)
+    wire reset = (S_AXI_ARESETN == 1'b0) || (bram_state == BRAM_IDLE);
+    wire start = (bram_state == BRAM_WRITE);
       
-    always @( posedge S_AXI_ACLK )
-    begin
-      if ( bram_counter_reset )
-        bram_counter <= 2'd0;
-      else
-        begin
-          if (bram_counter_enable)
-            bram_counter <= bram_counter + 2'd1; 
-          else
-            bram_counter <= bram_counter;
-        end
-    end
+//    always @( posedge S_AXI_ACLK )
+//    begin
+//      if ( reset )
+//        bram_counter <= 2'd0;
+//      else
+//        begin
+//          if (start)
+//            bram_counter <= bram_counter + 2'd1; 
+//          else
+//            bram_counter <= bram_counter;
+//        end
+//    end
     
-    assign run_complete = (bram_counter == NUM);
+    localparam L_RAM_SIZE = 3;
+    localparam BITWIDTH = 32;
+    localparam MATRIX_SIZE = 2**(L_RAM_SIZE*2);
+    localparam VECTOR_SIZE = 2**(L_RAM_SIZE);
+    
+    mm_multiplier #(L_RAM_SIZE, BITWIDTH) MM_MULTIPLIER(
+        .start(start),
+        .reset(~reset),
+        .clk(S_AXI_ACLK),
+        .rdaddr(BRAM_ADDR),
+        .rddata(BRAM_RDDATA),
+        .done(run_complete)
+    );
+    
+//    assign run_complete = (bram_counter == NUM);
 	// User logic ends
 
 	endmodule

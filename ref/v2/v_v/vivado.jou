@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri May 28 01:04:01 2021
+# Process ID: 17476
+# Current directory: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/ref/v2/v_v
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5680 C:\Users\lucetre\Documents\semester\21s-hardware-system-design\ref\v2\v_v\v_v.xpr
+# Log file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/ref/v2/v_v/vivado.log
+# Journal file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/ref/v2/v_v\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lucetre/Documents/semester/21s-hardware-system-design/ref/v2/v_v/v_v.xpr
+update_compile_order -fileset sources_1
