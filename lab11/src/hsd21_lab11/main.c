@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
   gettimeofday (&st[6], NULL);
   
   // Check if the data is valid
-  int num_mismatch = 0;
+  num_mismatch = 0;
   for (i = 0; i < SIZE * (SIZE + 1); i++)
     if ( *(fpga_bram + i) != *(ps_dram + i) )
       num_mismatch++;
