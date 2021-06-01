@@ -145,13 +145,13 @@ while ((*(fpga_dma+1) & 0x00000002) == 0); // CDMASR.IDLE
 gettimeofday (&st[3], NULL);
 \end{lstlisting}
 \begin{itemize}
-    \item  \texttt{mmap()}함수를 통해, bitstream에서 미리 할당된 CDMA address(0x7E200000 - 0x7E20FFFF)를 메모리(fpga\_dma)에 대응시킨다(4번째 줄).
-    \item CDMA IP에 올바른 input값들(source addr, dest addr, bytes to trnasfer)을 할당하고, while문을 통해 DMA operation이 종료될 때까지 기다린다(6-8번째 줄).
+    \item  \texttt{mmap()} 함수를 통해, bitstream에서 미리 할당된 CDMA address(0x7E200000 - 0x7E20FFFF)를 메모리 (fpga\_dma)에 대응시킨다(4번째 줄).
+    \item CDMA IP에 올바른 input값들 (source addr, dest addr, bytes to trnasfer)을 할당하고, while문을 통해 DMA operation이 종료될 때까지 기다린다(6-8번째 줄).
     \item \texttt{gettimeofday()}함수를 통해 수행시간을 측정한다(5, 10번째 줄).
 \end{itemize}
 
 \subsection*{\texttt{About Register Address Map of CDMA}}
-아래는 AXI CDMA register mapping table\cite{CDMA}을 나타낸다. 이 표를 통해, CDMA를 수행하는 c코드에서 source address, destination address, bit to transfer, AXI CDMA state의 address offset을 확인할 수 있다.
+아래는 AXI CDMA register mapping table~\cite{CDMA}을 나타낸다. 이 표를 통해, CDMA를 수행하는 c코드에서 source address, destination address, bit to transfer, AXI CDMA state의 address offset을 확인할 수 있다.
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{fig/cmda_addrmap_1.png}
@@ -184,6 +184,7 @@ memcpy( ps_dram, flat, SIZE * (SIZE + 1) * sizeof(float) );
 gettimeofday (&st[2], NULL);
 \end{lstlisting}
 \begin{itemize}
+  \setlength\itemsep{-0.5em}
     \item  \texttt{mmap()} 함수를 통해, bitstream에서 미리 할당된 DRAM address(0x00000000 - 0x0000FFFF)를 메모리(ps\_dram)에 대응시킨다 (6번째 줄).
     \item for문을 통해 memory load를 수행한다 (10-11번째 줄).
     \item  \texttt{memcpy()} 함수를 통해 memory copy를 수행한다 (13번째 줄).
@@ -194,8 +195,8 @@ memcpy와 for문을 이용한 memory load에서 memcpy가 더 좋은 수행시�
 \section{Result}
 \begin{figure}[htb!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{fig/make1.jpg}
-\caption{DMA, memcpy, memory load의 수행시간(micro second) 비교}
+	\includegraphics[width=0.7\textwidth]{fig/make2.png}
+\caption{\texttt{for-loop}(\textit{MCPY1})/\texttt{memcpy}(\textit{MCPY2}) 비교, DMA/CPU memory load의 수행시간 (micro second) 비교: DMA를 사용하여 non-cacheable memory에서 BRAM으로 데이터를 전달하는 시간이 CPU의 내장함수 \texttt{memcpy} 보다 훨씬 (약 7배) 적은 시간 이 걸렸다.}
 \label{fig6}
 \end{figure}
 
