@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  28 MAY 2021 08:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  1 JUN 2021 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,215 +907,137 @@ LaTeX Info: Redefining \nameref on input line 99.
 \c@lstlisting=\count311
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-06.
+05.
 
 (c:/texlive/2019/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-
-LaTeX Warning: Reference `fig1' on page 1 undefined on input line 109.
-
-<fig/overview.jpg, id=31, 1422.81563pt x 541.27219pt>
-File: fig/overview.jpg Graphic file (type jpg)
-<use fig/overview.jpg>
-Package pdftex.def Info: fig/overview.jpg  used on input line 114.
-(pdftex.def)             Requested size: 469.75502pt x 178.70296pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-
- []
-
-
-LaTeX Warning: Citation `chellapilla2006high' on page 1 undefined on input line
- 132.
-
-
-LaTeX Warning: Citation `chetlur2014cudnn' on page 1 undefined on input line 13
-2.
-
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-37.
+06.
+
 (c:/texlive/2019/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+Underfull \hbox (badness 3128) in paragraph at lines 106--107
+[]\OT1/ppl/m/n/10 Compare per-for-mance be-tween CDMA, con-ven-tional data tran
+s-fer-ring through CPU us-ing
+ []
 
-LaTeX Warning: Citation `lab2' on page 1 undefined on input line 137.
+<fig/overview.jpg, id=43, 1093.08376pt x 254.45062pt>
+File: fig/overview.jpg Graphic file (type jpg)
+<use fig/overview.jpg>
+Package pdftex.def Info: fig/overview.jpg  used on input line 110.
+(pdftex.def)             Requested size: 469.75502pt x 109.3495pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 116--119
+
+ []
+
+<fig/address.jpg, id=45, 539.76656pt x 151.3153pt>
+File: fig/address.jpg Graphic file (type jpg)
+<use fig/address.jpg>
+Package pdftex.def Info: fig/address.jpg  used on input line 127.
+(pdftex.def)             Requested size: 469.75502pt x 131.69173pt.
 [1{c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./fig/overview.jpg>] (c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.
-sty
+ <./fig/overview.jpg> <./fig/address.jpg>]
+(c:/texlive/2019/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 (c:/texlive/2019/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
-
-LaTeX Warning: Reference `sec:mv' on page 2 undefined on input line 182.
-
-<fig/mm.jpg, id=79, 628.59843pt x 561.59813pt>
-File: fig/mm.jpg Graphic file (type jpg)
-<use fig/mm.jpg>
-Package pdftex.def Info: fig/mm.jpg  used on input line 186.
-(pdftex.def)             Requested size: 281.85587pt x 251.80847pt.
-
-LaTeX Warning: Reference `fig3' on page 2 undefined on input line 191.
-
-[2] [3 <./fig/mm.jpg>]
-
-LaTeX Warning: Citation `lab2' on page 4 undefined on input line 257.
-
-[4]
-<fig/convlow.jpg, id=202, 768.62157pt x 472.76625pt>
-File: fig/convlow.jpg Graphic file (type jpg)
-<use fig/convlow.jpg>
-Package pdftex.def Info: fig/convlow.jpg  used on input line 268.
-(pdftex.def)             Requested size: 422.77664pt x 260.05109pt.
-
-
-LaTeX Warning: Citation `chetlur2014cudnn' on page 5 undefined on input line 26
-9.
-
-
-LaTeX Warning: Citation `lab9' on page 5 undefined on input line 269.
-
-
-LaTeX Warning: Citation `chetlur2014cudnn' on page 5 undefined on input line 26
-9.
-
-
-LaTeX Warning: Citation `lab9' on page 5 undefined on input line 269.
-
-
-LaTeX Warning: Reference `fig4' on page 5 undefined on input line 273.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 275.
-
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 275.
-
-
-Overfull \hbox (0.64977pt too wide) in paragraph at lines 289--290
+Overfull \hbox (0.64977pt too wide) in paragraph at lines 139--140
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[5 <./fig/convlow.jpg>] [6]
-
-LaTeX Warning: Reference `fig5' on page 7 undefined on input line 323.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
+<fig/cmda_addrmap_1.png, id=88, 937.5025pt x 515.9275pt>
+File: fig/cmda_addrmap_1.png Graphic file (type png)
+<use fig/cmda_addrmap_1.png>
+Package pdftex.def Info: fig/cmda_addrmap_1.png  used on input line 157.
+(pdftex.def)             Requested size: 375.80544pt x 206.8082pt.
+<fig/cdma_addrmap_2.png, id=90, 937.5025pt x 102.3825pt>
+File: fig/cdma_addrmap_2.png Graphic file (type png)
+<use fig/cdma_addrmap_2.png>
+Package pdftex.def Info: fig/cdma_addrmap_2.png  used on input line 163.
+(pdftex.def)             Requested size: 375.80544pt x 41.03975pt.
+[2 <./fig/cmda_addrmap_1.png>]
+Overfull \hbox (13.2499pt too wide) in paragraph at lines 176--178
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<fig/benchmark results.png, id=257, 570.933pt x 540.8205pt>
-File: fig/benchmark results.png Graphic file (type png)
-<use fig/benchmark results.png>
-Package pdftex.def Info: fig/benchmark results.png  used on input line 327.
-(pdftex.def)             Requested size: 375.80544pt x 355.99362pt.
-[7 <./fig/benchmark results.png>] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 388--389
+<fig/make1.jpg, id=117, 437.38406pt x 69.25874pt>
+File: fig/make1.jpg Graphic file (type jpg)
+<use fig/make1.jpg>
+Package pdftex.def Info: fig/make1.jpg  used on input line 197.
+(pdftex.def)             Requested size: 375.80544pt x 59.5085pt.
+[3 <./fig/cdma_addrmap_2.png> <./fig/make1.jpg>]
+(./Week11_2016_10454_이지원_2016_19516_손상준.bbl) [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 390--391
-
- []
-
-No file Week11_2016_10454_이지원_2016_19516_손상준.bbl.
-[9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 395.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 395.
- (./Week11_2016_10454_이지원_2016_19516_손상준.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 395.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 395.
-
-
-Package rerunfilecheck Warning: File `Week11_2016_10454_이지원_2016_19516_�
-�상준.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Week11_2016_10454_이지원_2016_19
-516_손상준.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  97FC49F86A92573E446DEF66A9AB5CD3;358.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 395.
+(./Week11_2016_10454_이지원_2016_19516_손상준.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
+Package rerunfilecheck Info: File `Week11_2016_10454_이지원_2016_19516_손�
+�준.out' has not changed.
+(rerunfilecheck)             Checksum: 08B52BD41A41E46045A0E2C13F831E19;135.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 21847 strings out of 480994
- 421420 string characters out of 5916032
- 918649 words of memory out of 5000000
- 36670 multiletter control sequences out of 15000+600000
- 558247 words of font info for 101 fonts, out of 8000000 for 9000
+ 21645 strings out of 480994
+ 418865 string characters out of 5916032
+ 896368 words of memory out of 5000000
+ 36597 multiletter control sequences out of 15000+600000
+ 552322 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,97p,668b,2060s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,97p,656b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2019/texmf-dist/fon
-ts/type1/public/nanumtype1/nanummjmac.pfb><c:/texlive/2019/texmf-dist/fonts/typ
-e1/public/nanumtype1/nanummjmad.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pub
-lic/nanumtype1/nanummjmae.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/na
-numtype1/nanummjmaf.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtyp
-e1/nanummjmb0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nan
-ummjmb1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb
-2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb>
-<c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb><c:/te
-xlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.pfb><c:/texlive/
-2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c:/texlive/2019/t
-exmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/texlive/2019/texmf-d
-ist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texlive/2019/texmf-dist/fo
-nts/type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/2019/texmf-dist/fonts/ty
-pe1/public/nanumtype1/nanummjmba.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pu
-blic/nanumtype1/nanummjmbb.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/n
-anumtype1/nanummjmbc.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumty
-pe1/nanummjmbd.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/na
-nummjmbe.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjm
-c0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb
-><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb><c:/t
-exlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc4.pfb><c:/texlive
-/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb><c:/texlive/2019/
-texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb><c:/texlive/2019/texmf-
-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><c:/texlive/2019/texmf-dist/f
-onts/type1/public/nanumtype1/nanummjmc8.pfb><c:/texlive/2019/texmf-dist/fonts/t
-ype1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2019/texmf-dist/fonts/type1/p
-ublic/nanumtype1/nanummjmca.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/
-nanumtype1/nanummjmcc.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumt
-ype1/nanummjmcd.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/n
-anummjmce.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummj
-mcf.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pf
-b><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb><c:/
-texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb><c:/texliv
-e/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb><c:/texlive/2019
-/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb><c:/texlive/2019/texmf
--dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:/texlive/2019/texmf-dist/
-fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/
-courier/ucrr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplb8a.
-pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive
-/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Week11_2016_10454_이지원_2016_19516_손상준.pdf (9 pages
-, 2420958 bytes).
+f-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb><c:/texlive/2019/texmf-dist
+/fonts/type1/public/nanumtype1/nanummjmad.pfb><c:/texlive/2019/texmf-dist/fonts
+/type1/public/nanumtype1/nanummjmae.pfb><c:/texlive/2019/texmf-dist/fonts/type1
+/public/nanumtype1/nanummjmb0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publi
+c/nanumtype1/nanummjmb2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanu
+mtype1/nanummjmb3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1
+/nanummjmb4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanum
+mjmb5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.
+pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c
+:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texl
+ive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/20
+19/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/texlive/2019/tex
+mf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/texlive/2019/texmf-dis
+t/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/texlive/2019/texmf-dist/font
+s/type1/public/nanumtype1/nanummjmbe.pfb><c:/texlive/2019/texmf-dist/fonts/type
+1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
+ic/nanumtype1/nanummjmc1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nan
+umtype1/nanummjmc2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype
+1/nanummjmc4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanu
+mmjmc5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6
+.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><
+c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/tex
+live/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2
+019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb><c:/texlive/2019/te
+xmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2019/texmf-di
+st/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texlive/2019/texmf-dist/fon
+ts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/2019/texmf-dist/fonts/typ
+e1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pub
+lic/nanumtype1/nanummjmd1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/na
+numtype1/nanummjmd2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtyp
+e1/nanummjmd3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nan
+ummjmd4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd
+5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb>
+<c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb><c:/te
+xlive/2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2019/texmf
+-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type
+1/urw/palatino/uplb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/
+uplr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Week11_2016_10454_이지원_2016_19516_손상준.pdf (4 pages
+, 2040120 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 372 compressed objects within 4 object streams
- 166 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

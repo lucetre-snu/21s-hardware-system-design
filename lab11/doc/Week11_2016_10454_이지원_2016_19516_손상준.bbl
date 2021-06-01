@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{lab11}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 11: DMA (Direct Memory Access)}.
+\newblock Hardware System Design, May 2021.
+
+\bibitem{CDMA}
+Xilinx.
+\newblock {\em AXI Central Direct Memory Access v4.1}.
+\newblock Xilinx, 2018.
+
+\end{thebibliography}
