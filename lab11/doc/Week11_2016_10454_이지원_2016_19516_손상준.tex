@@ -203,9 +203,16 @@ memcpy와 for문을 이용한 memory load에서 memcpy가 더 좋은 수행시�
 주어진 main.c코드를 zedboard위에서 수행하였을 때, 수행속도는 DMA, memcpy (MCPY2), memory load (MCPY1)순으로 빠르게 나타난 것을 확인할 수 있었다. 실험을 진행하기 전 예상과 일치하였는데, 이는 DMA는 CPU를 거치지 않고 바로 memory에 접근하여 copy하여, c코드를 통해 구현한 memcpy, memory load보다 속도 측면에서 더 효율적이었다.
 memcpy, memory load는 위에서 언급했듯, memcpy의 구현이 for loop를 통한 memory load보다 더 효율적이기 때문에 속도 측면에서 차이가 난 것이라 생각하였다.
 
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{fig/implementation.jpg}
+\caption{Implementation, DMA 모듈을 함께 넣어 하드웨어 구현을 하였을 때의 모습이다.}
+\label{fig7}
+\end{figure}
+
 \section{Conclusion}
 이번 실습에서는 DMA를 사용해 수행시간을 일반적으로 사용하는 memory copy, load와 비교해 보았다.
-우리는 최종적으로 CNN을 위한 Matrix-Matrix multiplication을 구현한다. 여기서, DMA를 사용한 memory load의 속도 개선은 결과적으로 training, inference time의 속도 개선을 의미한다. 따라서, 이번 실습을 토대로 최종 프로젝트의 optimization의 힌트르 얻을 수 있었다.
+우리는 최종적으로 CNN을 위한 Matrix-Matrix multiplication을 구현한다. 여기서, DMA를 사용한 memory load의 속도 개선은 결과적으로 training, inference time의 속도 개선을 의미한다. 따라서, 이번 실습을 토대로 최종 프로젝트의 optimization의 힌트를 얻을 수 있었다.
 
 \bibliographystyle{plain}
 \bibliography{other}

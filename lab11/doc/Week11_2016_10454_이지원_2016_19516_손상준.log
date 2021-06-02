@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  1 JUN 2021 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.23)  2 JUN 2021 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -973,25 +973,34 @@ File: fig/make2.png Graphic file (type png)
 <use fig/make2.png>
 Package pdftex.def Info: fig/make2.png  used on input line 198.
 (pdftex.def)             Requested size: 328.82707pt x 77.72752pt.
+<fig/implementation.jpg, id=118, 802.49812pt x 670.00313pt>
+File: fig/implementation.jpg Graphic file (type jpg)
+<use fig/implementation.jpg>
+Package pdftex.def Info: fig/implementation.jpg  used on input line 208.
+(pdftex.def)             Requested size: 328.82707pt x 274.53949pt.
 [3 <./fig/cdma_addrmap_2.png> <./fig/make2.png>]
-(./Week11_2016_10454_이지원_2016_19516_손상준.bbl) [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
-
-(./Week11_2016_10454_이지원_2016_19516_손상준.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
+(./Week11_2016_10454_이지원_2016_19516_손상준.bbl) [4 <./fig/implementati
+on.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+ (./Week11_2016_10454_이지원_2016_19516_손상준.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `Week11_2016_10454_이지원_2016_19516_손�
 �준.out' has not changed.
 (rerunfilecheck)             Checksum: 08B52BD41A41E46045A0E2C13F831E19;135.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 21645 strings out of 480994
- 418865 string characters out of 5916032
+ 21655 strings out of 480994
+ 419057 string characters out of 5916032
  897592 words of memory out of 5000000
- 36597 multiletter control sequences out of 15000+600000
- 552322 words of font info for 83 fonts, out of 8000000 for 9000
+ 36604 multiletter control sequences out of 15000+600000
+ 552615 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,97p,656b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2019/texm
@@ -999,45 +1008,46 @@ f-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb><c:/texlive/2019/texmf-dist
 /fonts/type1/public/nanumtype1/nanummjmad.pfb><c:/texlive/2019/texmf-dist/fonts
 /type1/public/nanumtype1/nanummjmae.pfb><c:/texlive/2019/texmf-dist/fonts/type1
 /public/nanumtype1/nanummjmb0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publi
-c/nanumtype1/nanummjmb2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanu
-mtype1/nanummjmb3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1
-/nanummjmb4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanum
-mjmb5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.
-pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c
-:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texl
-ive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/20
-19/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/texlive/2019/tex
-mf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/texlive/2019/texmf-dis
-t/fonts/type1/public/nanumtype1/nanummjmbc.pfb><c:/texlive/2019/texmf-dist/font
-s/type1/public/nanumtype1/nanummjmbe.pfb><c:/texlive/2019/texmf-dist/fonts/type
-1/public/nanumtype1/nanummjmc0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
-ic/nanumtype1/nanummjmc1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nan
-umtype1/nanummjmc2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype
-1/nanummjmc4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanu
-mmjmc5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6
-.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><
-c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/tex
-live/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2
-019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb><c:/texlive/2019/te
-xmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2019/texmf-di
-st/fonts/type1/public/nanumtype1/nanummjmce.pfb><c:/texlive/2019/texmf-dist/fon
-ts/type1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/2019/texmf-dist/fonts/typ
-e1/public/nanumtype1/nanummjmd0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pub
-lic/nanumtype1/nanummjmd1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/na
-numtype1/nanummjmd2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtyp
-e1/nanummjmd3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nan
-ummjmd4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd
-5.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb>
-<c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb><c:/te
-xlive/2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2019/texmf
--dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type
-1/urw/palatino/uplb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/
-uplr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+c/nanumtype1/nanummjmb1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanu
+mtype1/nanummjmb2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1
+/nanummjmb3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanum
+mjmb4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb5.
+pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb6.pfb><c
+:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb><c:/texl
+ive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb><c:/texlive/20
+19/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb><c:/texlive/2019/tex
+mf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb><c:/texlive/2019/texmf-dis
+t/fonts/type1/public/nanumtype1/nanummjmbb.pfb><c:/texlive/2019/texmf-dist/font
+s/type1/public/nanumtype1/nanummjmbc.pfb><c:/texlive/2019/texmf-dist/fonts/type
+1/public/nanumtype1/nanummjmbe.pfb><c:/texlive/2019/texmf-dist/fonts/type1/publ
+ic/nanumtype1/nanummjmc0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nan
+umtype1/nanummjmc1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype
+1/nanummjmc2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanu
+mmjmc4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5
+.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb><
+c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb><c:/tex
+live/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb><c:/texlive/2
+019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb><c:/texlive/2019/te
+xmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb><c:/texlive/2019/texmf-di
+st/fonts/type1/public/nanumtype1/nanummjmcd.pfb><c:/texlive/2019/texmf-dist/fon
+ts/type1/public/nanumtype1/nanummjmce.pfb><c:/texlive/2019/texmf-dist/fonts/typ
+e1/public/nanumtype1/nanummjmcf.pfb><c:/texlive/2019/texmf-dist/fonts/type1/pub
+lic/nanumtype1/nanummjmd0.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/na
+numtype1/nanummjmd1.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtyp
+e1/nanummjmd2.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nan
+ummjmd3.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd
+4.pfb><c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb>
+<c:/texlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb><c:/te
+xlive/2019/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd7.pfb><c:/texlive/
+2019/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/texlive/2019/texmf-dist/
+fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/
+palatino/uplb8a.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplr8a
+.pfb><c:/texlive/2019/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
 Output written on Week11_2016_10454_이지원_2016_19516_손상준.pdf (4 pages
-, 2031862 bytes).
+, 2199649 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
