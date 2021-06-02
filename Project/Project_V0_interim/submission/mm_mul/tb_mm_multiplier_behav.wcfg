@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_mm_multiplier_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_mm_multiplier" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1593000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/tb_mm_multiplier/rddata" type="array">
+      <obj_property name="ElementShortName">rddata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rddata[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/rdaddr" type="array">
+      <obj_property name="ElementShortName">rdaddr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">rdaddr[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/wrgb" type="array">
+      <obj_property name="ElementShortName">wrgb[0:63][31:0]</obj_property>
+      <obj_property name="ObjectShortName">wrgb[0:63][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/wrdata" type="array">
+      <obj_property name="ElementShortName">wrdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wrdata[31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/wraddr" type="array">
+      <obj_property name="ElementShortName">wraddr[6:0]</obj_property>
+      <obj_property name="ObjectShortName">wraddr[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/MM_MULTIPLIER/present_state" type="array">
+      <obj_property name="ElementShortName">present_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">present_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/MM_MULTIPLIER/out" type="array">
+      <obj_property name="ElementShortName">out[0:63][31:0]</obj_property>
+      <obj_property name="ObjectShortName">out[0:63][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/MM_MULTIPLIER/ain" type="array">
+      <obj_property name="ElementShortName">ain[0:7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">ain[0:7][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/MM_MULTIPLIER/bin" type="array">
+      <obj_property name="ElementShortName">bin[0:7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">bin[0:7][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/MM_MULTIPLIER/dout" type="array">
+      <obj_property name="ElementShortName">dout[0:63][31:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[0:63][31:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">FLOATINGPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">24</obj_property>
+      <obj_property name="radix_otherWidth">8</obj_property>
+   </wvobject>
+</wave_config>

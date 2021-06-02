@@ -1,0 +1,1216 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jun  2 20:48:31 2021
+# Process ID: 13216
+# Current directory: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1
+# Command line: vivado.exe -log mm_multiplier.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mm_multiplier.tcl
+# Log file: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/mm_multiplier.vds
+# Journal file: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mm_multiplier.tcl -notrace
+Command: synth_design -top mm_multiplier -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15100 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 392.793 ; gain = 100.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:3]
+	Parameter L_RAM_SIZE bound to: 3 - type: integer 
+	Parameter BITWIDTH bound to: 32 - type: integer 
+	Parameter DONE_LATENCY bound to: 5 - type: integer 
+	Parameter S_IDLE bound to: 3'b000 
+	Parameter S_LOAD bound to: 3'b001 
+	Parameter S_CALC bound to: 3'b010 
+	Parameter S_HARV bound to: 3'b011 
+	Parameter S_DONE bound to: 3'b100 
+	Parameter MATRIX_SIZE bound to: 64 - type: integer 
+	Parameter VECTOR_SIZE bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'my_pe' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v:2]
+	Parameter L_RAM_SIZE bound to: 3 - type: integer 
+	Parameter BITWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'floating_point_MAC' [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/synth/floating_point_MAC.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 1 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 1 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 1 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 1 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/synth/floating_point_MAC.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_MAC' (35#1) [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/synth/floating_point_MAC.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'my_pe' (36#1) [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:52]
+WARNING: [Synth 8-567] referenced signal 'cnt_load' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:74]
+WARNING: [Synth 8-567] referenced signal 'out' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:80]
+WARNING: [Synth 8-567] referenced signal 'cnt_calc' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:85]
+WARNING: [Synth 8-567] referenced signal 'gb1' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:85]
+WARNING: [Synth 8-567] referenced signal 'gb2' should be on the sensitivity list [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'mm_multiplier' (37#1) [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:3]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized19 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized25 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized77 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design special_detect__parameterized0 has unconnected port A[56]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized75 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized69 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized73 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized12 has unconnected port B[9]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized71 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized71 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized71 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized11 has unconnected port B[9]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized67 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port ZERO_ALIGN
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A0[56]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A1[56]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[46]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[45]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[44]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[43]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[42]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[41]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[40]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[39]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[38]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[37]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[36]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[35]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[34]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[33]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[32]
+WARNING: [Synth 8-3331] design flt_fma_add_exp has unconnected port A_NORM[31]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 553.715 ; gain = 260.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 553.715 ; gain = 260.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 553.715 ; gain = 260.926
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 20736 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.390 . Memory (MB): peak = 1453.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 64 instances were transformed.
+  FDE => FDRE: 64 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.361 . Memory (MB): peak = 1453.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.777 . Memory (MB): peak = 1453.742 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:05 ; elapsed = 00:01:04 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:05 ; elapsed = 00:01:04 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for \MATRIX[0].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[1].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[2].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[3].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[4].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[5].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[6].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[7].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[8].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[9].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[10].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[11].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[12].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[13].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[14].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[15].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[16].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[17].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[18].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[19].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[20].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[21].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[22].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[23].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[24].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[25].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[26].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[27].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[28].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[29].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[30].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[31].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[32].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[33].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[34].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[35].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[36].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[37].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[38].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[39].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[40].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[41].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[42].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[43].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[44].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[45].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[46].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[47].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[48].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[49].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[50].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[51].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[52].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[53].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[54].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[55].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[56].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[57].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[58].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[59].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[60].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[61].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[62].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \MATRIX[63].MY_PE /UUT. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:07 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "flow_sel_pre_op" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c_nan" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c_inf" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "c_zero" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[49]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[50]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[51]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[52]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[53]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[54]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[55]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[56]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[57]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[58]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[59]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[60]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[61]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[62]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[63]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "gb2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_load_reg' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:62]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_harv_reg' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:64]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[0]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[1]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[2]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[3]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[4]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[5]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[6]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[7]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[8]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[9]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[10]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[11]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[12]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[13]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[14]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[15]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[16]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[17]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[18]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[19]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[20]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[21]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[22]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[23]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[24]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[25]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[26]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[27]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[28]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[29]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[30]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[31]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[32]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[33]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[34]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[35]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[36]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[37]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[38]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[39]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[40]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[41]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[42]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[43]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[44]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[45]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[46]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[47]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[48]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[49]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[50]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[51]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[52]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[53]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[54]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[55]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[56]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[57]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[58]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[59]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[60]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[61]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[62]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg[63]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'cnt_calc_reg' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_done_reg' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:65]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[0]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[0]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'valid_reg' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[1]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[2]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[3]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[4]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[5]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[6]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[7]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:94]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[1]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[2]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[3]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[4]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[5]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[6]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[7]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_calc_reg' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:63]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:76]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:19 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized8) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized8) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized8) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized8) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXP_INC_RND1_DELAY'
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |mm_multiplier__GB0  |           1|     32516|
+|2     |mm_multiplier__GB1  |           1|     10908|
+|3     |mm_multiplier__GB2  |           1|     11036|
+|4     |mm_multiplier__GB3  |           1|     18180|
+|5     |mm_multiplier__GB4  |           1|     21816|
+|6     |mm_multiplier__GB5  |           1|     25452|
+|7     |mm_multiplier__GB6  |           1|     25228|
+|8     |mm_multiplier__GB7  |           1|     14640|
+|9     |mm_multiplier__GB8  |           1|     11036|
+|10    |mm_multiplier__GB9  |           1|     32724|
+|11    |mm_multiplier__GB10 |           1|     14559|
+|12    |mm_multiplier__GB11 |           1|     30032|
+|13    |mm_multiplier__GB12 |           1|     10520|
+|14    |mm_multiplier__GB13 |           1|     14700|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Synth 8-3936] Found unconnected internal register 'aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[2].DEL_Z_D/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '16' to '1' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3936] Found unconnected internal register 'EXP_OFF.LRG_EXP_DELAY/i_pipe/opt_has_pipe.first_q_reg' and it is trimmed from '10' to '9' bits. [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/xbip_pipe_v3_0_vh_rfs.vhd:368]
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5544' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5545] ROM "gb2_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:27 ; elapsed = 00:03:29 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |mm_multiplier__GB0  |           1|     18934|
+|2     |mm_multiplier__GB1  |           1|      8884|
+|3     |mm_multiplier__GB2  |           1|      9012|
+|4     |mm_multiplier__GB3  |           1|     15125|
+|5     |mm_multiplier__GB4  |           1|     18150|
+|6     |mm_multiplier__GB5  |           1|     21175|
+|7     |mm_multiplier__GB6  |           1|     20951|
+|8     |mm_multiplier__GB7  |           1|     12166|
+|9     |mm_multiplier__GB8  |           1|      8981|
+|10    |mm_multiplier__GB9  |           1|     27225|
+|11    |mm_multiplier__GB10 |           1|     12112|
+|12    |mm_multiplier__GB11 |           1|     13036|
+|13    |mm_multiplier__GB12 |           1|      5895|
+|14    |mm_multiplier__GB13 |           1|     11782|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:42 ; elapsed = 00:03:45 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:43 ; elapsed = 00:03:45 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |mm_multiplier__GB0  |           1|     18934|
+|2     |mm_multiplier__GB1  |           1|      8884|
+|3     |mm_multiplier__GB2  |           1|      9012|
+|4     |mm_multiplier__GB3  |           1|     15125|
+|5     |mm_multiplier__GB4  |           1|     18150|
+|6     |mm_multiplier__GB5  |           1|     21175|
+|7     |mm_multiplier__GB6  |           1|     20951|
+|8     |mm_multiplier__GB7  |           1|     12166|
+|9     |mm_multiplier__GB8  |           1|      8981|
+|10    |mm_multiplier__GB9  |           1|     27225|
+|11    |mm_multiplier__GB10 |           1|     12112|
+|12    |mm_multiplier__GB11 |           1|     13033|
+|13    |mm_multiplier__GB12 |           1|      5895|
+|14    |mm_multiplier__GB13 |           1|     11782|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:00 ; elapsed = 00:04:13 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |mm_multiplier__GB0  |           1|      8563|
+|2     |mm_multiplier__GB1  |           1|      4005|
+|3     |mm_multiplier__GB2  |           1|      4133|
+|4     |mm_multiplier__GB3  |           1|      6675|
+|5     |mm_multiplier__GB4  |           1|      8010|
+|6     |mm_multiplier__GB5  |           1|      9345|
+|7     |mm_multiplier__GB6  |           1|      9313|
+|8     |mm_multiplier__GB7  |           1|      5372|
+|9     |mm_multiplier__GB8  |           1|      4069|
+|10    |mm_multiplier__GB9  |           1|     12015|
+|11    |mm_multiplier__GB10 |           1|      5345|
+|12    |mm_multiplier__GB11 |           1|      7088|
+|13    |mm_multiplier__GB12 |           1|      3787|
+|14    |mm_multiplier__GB13 |           1|      5493|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][31]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][30]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][29]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][28]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][27]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][26]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][25]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][24]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][23]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][22]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][21]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][20]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][19]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][18]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][17]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][16]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][15]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][14]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][13]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][12]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][11]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][10]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][9]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][8]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][7]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][6]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][5]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][4]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][3]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][2]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][1]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[63][0]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][31]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][30]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][29]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][28]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][27]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][26]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][25]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][24]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][23]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][22]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][21]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][20]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][19]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][18]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][17]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][16]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][15]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][14]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][13]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][12]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][11]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][10]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][9]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][8]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][7]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][6]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][5]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][4]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][3]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][2]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][1]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[62][0]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][31]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][30]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][29]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][28]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][27]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][26]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][25]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][24]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][23]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][22]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][21]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][20]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][19]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][18]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][17]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][16]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][15]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][14]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][13]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][12]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][11]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][10]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][9]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][8]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][7]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][6]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][5]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][4]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][3]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][2]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][1]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[59][0]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[61][31]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[61][30]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[61][29]) is unused and will be removed from module mm_multiplier.
+WARNING: [Synth 8-3332] Sequential element (gb2_reg[61][28]) is unused and will be removed from module mm_multiplier.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[3] with 1st driver pin 'cnt_calc_reg[3]/Q' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[3] with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net B2[3] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[2] with 1st driver pin 'cnt_calc_reg[2]/Q' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[2] with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net B2[2] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[1] with 1st driver pin 'cnt_calc_reg[1]/Q' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[1] with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net B2[1] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[0] with 1st driver pin 'cnt_calc_reg[0]/Q' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin B2[0] with 2nd driver pin 'GND' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net B2[0] is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:88]
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:11 ; elapsed = 00:04:25 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        1|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:12 ; elapsed = 00:04:26 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:20 ; elapsed = 00:04:34 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:22 ; elapsed = 00:04:36 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:23 ; elapsed = 00:04:37 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:24 ; elapsed = 00:04:38 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |    12|
+|2     |CARRY4    |   448|
+|3     |DSP48E1   |    64|
+|4     |DSP48E1_1 |    64|
+|5     |LUT1      |   457|
+|6     |LUT2      |  4690|
+|7     |LUT3      |  5261|
+|8     |LUT4      |  9459|
+|9     |LUT5      |  7757|
+|10    |LUT6      | 23090|
+|11    |MUXCY     | 14144|
+|12    |MUXF7     |   704|
+|13    |MUXF8     |   192|
+|14    |XORCY     |  6144|
+|15    |FDCE      |    82|
+|16    |FDE       |    64|
+|17    |FDRE      | 11840|
+|18    |LD        |  3079|
+|19    |IBUF      |    35|
+|20    |OBUF      |    48|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:24 ; elapsed = 00:04:38 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 12 critical warnings and 4003 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:22 ; elapsed = 00:03:54 . Memory (MB): peak = 1453.742 ; gain = 260.926
+Synthesis Optimization Complete : Time (s): cpu = 00:03:24 ; elapsed = 00:04:39 . Memory (MB): peak = 1453.742 ; gain = 1160.953
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 24903 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1494.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7175 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 4032 instances
+  FDE => FDRE: 64 instances
+  LD => LDCE: 3079 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+439 Infos, 305 Warnings, 12 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:08 ; elapsed = 00:05:24 . Memory (MB): peak = 1494.355 ; gain = 1208.207
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1494.355 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/mm_multiplier.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 1494.355 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file mm_multiplier_utilization_synth.rpt -pb mm_multiplier_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  2 20:54:19 2021...
