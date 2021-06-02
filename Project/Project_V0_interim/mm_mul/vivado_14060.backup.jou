@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri May 28 16:02:06 2021
+# Process ID: 14060
+# Current directory: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16676 C:\Users\lucetre\Documents\semester\21s-hardware-system-design\Project\Project_V0_interim\mm_mul\mm_mul.xpr
+# Log file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/vivado.log
+# Journal file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mv_multiplier_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mv_multiplier_behav.wcfg
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+relaunch_sim
+save_wave_config {C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+relaunch_sim
+save_wave_config {C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+relaunch_sim
+save_wave_config {C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+relaunch_sim
+close_sim

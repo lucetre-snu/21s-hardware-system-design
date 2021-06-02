@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module mm_multiplier #(
-    parameter L_RAM_SIZE = 6,
+    parameter L_RAM_SIZE = 3,
     parameter BITWIDTH = 32
 )(
     input start,

@@ -29,13 +29,15 @@ module tb_mm_multiplier #(
     initial begin
         $readmemh(INFILE, rdgb);
         clk <= 0;
-        start <= 0; reset <= 1;
+        start <= 0; reset <= 1; 
         #10 start <= 1; reset <= 0;
     end
     always @(*)
         if (we) wrgb[wraddr] = wrdata;
-    always @(posedge done)
+    always @(posedge done) begin
         $writememh(OUTFILE, wrgb);
+        start <= 0;
+    end
     
     always #1 clk = ~clk;
     mm_multiplier #(L_RAM_SIZE, BITWIDTH) MM_MULTIPLIER(

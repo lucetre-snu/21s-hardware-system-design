@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{lab6}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 6: BRAM to PE controller}.
+\newblock Hardware System Design, April 2021.
+
+\bibitem{lab9}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 9: Convolution Lowering SW}.
+\newblock Hardware System Design, May 2021.
+
+\end{thebibliography}

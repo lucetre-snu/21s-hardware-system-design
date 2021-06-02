@@ -16,30 +16,28 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\citation{chellapilla2006high}
-\citation{chetlur2014cudnn}
-\citation{lab2}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of DMA with BRAM.}}{1}{figure.1}\protected@file@percent }
-\newlabel{fig1}{{1}{1}{Overview of DMA with BRAM}{figure.1}{}}
+\citation{lab6}
+\citation{lab9}
+\providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Implementation}{1}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Matrix-Vector Multiplication}{1}{subsection.1.1}\protected@file@percent }
-\newlabel{sec:mv}{{1.1}{1}{Matrix-Vector Multiplication}{subsection.1.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Matrix-Matrix Multiplication}{2}{subsection.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Block operation에 사용되는 행렬의 곱셈 연산 부분, 파란색 행렬을 곱셈하기 위해 Tiling Method으로 쪼개었을 때 연두색 행렬끼리의 곱셈으로 Output Matrix를 채워나갈 수 있다. 위 예시는 쪼개는 단위인 \texttt  {v\_size}가 64이다.}}{3}{figure.2}\protected@file@percent }
-\newlabel{fig3}{{2}{3}{Block operation에 사용되는 행렬의 곱셈 연산 부분, 파란색 행렬을 곱셈하기 위해 Tiling Method으로 쪼개었을 때 연두색 행렬끼리의 곱셈으로 Output Matrix를 채워나갈 수 있다. 위 예시는 쪼개는 단위인 \texttt {v\_size}가 64이다}{figure.2}{}}
-\citation{lab2}
-\citation{chetlur2014cudnn}
-\citation{lab9}
-\citation{chetlur2014cudnn}
-\citation{lab9}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Convolution Lowering}{5}{subsection.1.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Convolution Filter와 Image data에 해당하는 3차원 텐서를 행렬화 시키기 위한 과정을 도식화 한 것\nobreakspace  {}\cite  {chetlur2014cudnn, lab9}. 여기서 Convolution Lowering은 \textit  {inputs}와 \textit  {weight}를 각각 \textit  {new\_inputs}와 \textit  {new\_weight}로 매핑하는 과정이다.}}{5}{figure.3}\protected@file@percent }
-\newlabel{fig4}{{3}{5}{Convolution Filter와 Image data에 해당하는 3차원 텐서를 행렬화 시키기 위한 과정을 도식화 한 것~\cite {chetlur2014cudnn, lab9}. 여기서 Convolution Lowering은 \textit {inputs}와 \textit {weight}를 각각 \textit {new\_inputs}와 \textit {new\_weight}로 매핑하는 과정이다}{figure.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Result}{7}{section.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Zedboard CPU/FPGA상에서 Pre-trained MLP와 CNN를 사용해 MNIST 데이터셋에 대하여 test 한 결과. \texttt  {benchmark.sh}에 포함되지 않은 FPGA CNN은 포함하지 않았다.}}{7}{figure.4}\protected@file@percent }
-\newlabel{fig5}{{4}{7}{Zedboard CPU/FPGA상에서 Pre-trained MLP와 CNN를 사용해 MNIST 데이터셋에 대하여 test 한 결과. \texttt {benchmark.sh}에 포함되지 않은 FPGA CNN은 포함하지 않았다}{figure.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces  $\textit  {m\_size}=\textit  {v\_size}=16$과 $\textit  {num\_test\_images}=100$로 설정하고 매개 변수를 하나씩 바꿔가면서 측정한 연산 성능 \textit  {accuracy}, \textit  {total\_time}, \textit  {avg\_num\_call} 비교}}{8}{table.1}\protected@file@percent }
-\newlabel{tab1}{{1}{8}{$\textit {m\_size}=\textit {v\_size}=16$과 $\textit {num\_test\_images}=100$로 설정하고 매개 변수를 하나씩 바꿔가면서 측정한 연산 성능 \textit {accuracy}, \textit {total\_time}, \textit {avg\_num\_call} 비교}{table.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Sample Input Images from MNIST dataset.}}{1}{figure.1}\protected@file@percent }
+\newlabel{fig1}{{1}{1}{Sample Input Images from MNIST dataset}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces System Overview of the Final Project.}}{2}{figure.2}\protected@file@percent }
+\newlabel{fig2}{{2}{2}{System Overview of the Final Project}{figure.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Verilog Matrix-Matrix Multiplication Module}{2}{subsection.1.1}\protected@file@percent }
+\newlabel{sec:mm}{{1.1}{2}{Verilog Matrix-Matrix Multiplication Module}{subsection.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Broadcast \& PE computation process}}{5}{figure.3}\protected@file@percent }
+\newlabel{fig3}{{3}{5}{Broadcast \& PE computation process}{figure.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Result}{6}{section.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Broadcast \& PE computation process}}{7}{figure.4}\protected@file@percent }
+\newlabel{fig4}{{4}{7}{Broadcast \& PE computation process}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Broadcast \& PE computation process}}{7}{figure.5}\protected@file@percent }
+\newlabel{fig5}{{5}{7}{Broadcast \& PE computation process}{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Broadcast \& PE computation process}}{8}{figure.6}\protected@file@percent }
+\newlabel{fig6}{{6}{8}{Broadcast \& PE computation process}{figure.6}{}}
 \bibstyle{plain}
 \bibdata{other}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Conclusion}{9}{section.3}\protected@file@percent }
+\bibcite{lab6}{1}
+\bibcite{lab9}{2}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Conclusion}{10}{section.3}\protected@file@percent }
+\gdef \@abspage@last{10}

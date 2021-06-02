@@ -164,8 +164,9 @@ gettimeofday (&st[3], NULL);
 \caption{AXI CDMA Register Address map (cont.)}
 \label{fig5}
 \end{figure}
-
 \newpage
+위의 CDMA subsection 코드의 4-8번째 줄에서, *fpga\_dma는 integer pointer이므로, 4byte의 크기를 갖는다. 따라서, fpga\_dma+6은 fpga\_dma로부터 24(=0x18)의 Address Space Offset을 가지고, 이는 위의 표에서 확인할 수 있듯, SA register를 가리킨다. 마찬가지로, fpga\_dma+8은 32(=0x20)의 Address Space Offset을 가지고, 이는 DA register를 가리킨다. fpga\_dma+10은 40(=0x28)의 Address Space Offset을 가지고, 이는 BTT(Bytes To Transfer) register를 가리킴을 확인할 수 있다.
+
 \subsection*{\texttt{Memcopy \& Memory load, write}}
 \begin{lstlisting}[style={c-style}]
 struct timeval st[4];
@@ -192,12 +193,13 @@ gettimeofday (&st[2], NULL);
 \end{itemize}
 memcpy와 for문을 이용한 memory load에서 memcpy가 더 좋은 수행시간을 가질 것이라 예상해 볼 수 있는데, 그 이유는 memcpy는 byte포인터가 아닌 word pointer를 이용하여 메모리 복사를 수행하고, SIMD (single instruction, multiple data)를 이용하여 assembly instruction을 수행하기 때문이다.
 
+\newpage
 \section{Result}
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{fig/make2.png}
 \caption{\texttt{for-loop}(\textit{MCPY1})/\texttt{memcpy}(\textit{MCPY2}) 비교, DMA/CPU memory load의 수행시간 (micro second) 비교: DMA를 사용하여 non-cacheable memory에서 BRAM으로 데이터를 전달하는 시간이 CPU의 내장함수 \texttt{memcpy} 보다 훨씬 (약 7배) 적은 시간 이 걸렸다.}
-\label{fig6}
+\label{fig5}
 \end{figure}
 
 주어진 main.c코드를 zedboard위에서 수행하였을 때, 수행속도는 DMA, memcpy (MCPY2), memory load (MCPY1)순으로 빠르게 나타난 것을 확인할 수 있었다. 실험을 진행하기 전 예상과 일치하였는데, 이는 DMA는 CPU를 거치지 않고 바로 memory에 접근하여 copy하여, c코드를 통해 구현한 memcpy, memory load보다 속도 측면에서 더 효율적이었다.
@@ -206,8 +208,8 @@ memcpy, memory load는 위에서 언급했듯, memcpy의 구현이 for loop를 �
 \begin{figure}[htb!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{fig/implementation.jpg}
-\caption{Implementation, DMA 모듈을 함께 넣어 하드웨어 구현을 하였을 때의 모습이다.}
-\label{fig7}
+\caption{DMA 모듈을 함께 넣은 하드웨어 Implementation 모습이다.}
+\label{fig6}
 \end{figure}
 
 \section{Conclusion}
