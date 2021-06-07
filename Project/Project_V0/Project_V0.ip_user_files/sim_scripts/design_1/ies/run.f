@@ -57,10 +57,44 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
+-endlib
+-makelib ies_lib/xbip_utils_v3_0_9 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/axi_utils_v2_0_5 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xbip_pipe_v3_0_5 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xbip_dsp48_wrapper_v3_0_4 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xbip_dsp48_addsub_v3_0_5 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xbip_dsp48_multadd_v3_0_5 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xbip_bram18k_v3_0_5 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/mult_gen_v12_0_14 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/floating_point_v7_1_7 \
+  "../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/floating_point_v7_1_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/sim/floating_point_0.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v" \
   "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v" \
-  "../../../bd/design_1/ipshared/9faa/hdl/myip_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/9faa/hdl/myip_v1_0.v" \
+  "../../../bd/design_1/ipshared/mm_multiplier.v" \
+  "../../../bd/design_1/ipshared/my_pe.v" \
+  "../../../bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/554d/hdl/myip_v1_0.v" \
   "../../../bd/design_1/ip/design_1_myip_0_0/sim/design_1_myip_0_0.v" \
 -endlib
 -makelib ies_lib/axi_vip_v1_1_4 -sv \

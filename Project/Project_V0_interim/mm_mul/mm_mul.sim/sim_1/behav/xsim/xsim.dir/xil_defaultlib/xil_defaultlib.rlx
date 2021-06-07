@@ -2,8 +2,8 @@
 2018.3
 Dec  7 2018
 00:33:28
-C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.sim/sim_1/behav/xsim/glbl.v,1622629459,verilog,,,,glbl,,,,,,,,
-C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sim_1/new/tb_mm_multiplier.v,1622632479,verilog,,,,tb_mm_multiplier,,,,,,,,
-C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v,1622629460,verilog,,C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sim_1/new/tb_mm_multiplier.v,,my_pe,,,,,,,,
-C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.vhd,1622629460,vhdl,,,,floating_point_mac,,,,,,,,
-C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v,1622629460,verilog,,C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v,,mm_multiplier,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sim_1/new/tb_mm_multiplier.v,1623032854,verilog,,,,tb_mm_multiplier,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v,1623032854,verilog,,C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sim_1/new/tb_mm_multiplier.v,,my_pe,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.vhd,1623040341,vhdl,,,,floating_point_mac,,,,,,,,
+C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v,1623044215,verilog,,C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v,,mm_multiplier,,,,,,,,

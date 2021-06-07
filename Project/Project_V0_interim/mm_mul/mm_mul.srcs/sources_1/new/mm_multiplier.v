@@ -35,18 +35,24 @@ module mm_multiplier #(
     
     wire [BITWIDTH-1:0]  out[0:MATRIX_SIZE-1];
     wire [BITWIDTH-1:0] dout[0:MATRIX_SIZE-1];
-    wire dvalid;
+    wire [MATRIX_SIZE-1:0] dvalid;
     
     always @(posedge clk or posedge reset)
-        if (reset) present_state <= S_IDLE; else present_state <= next_state;
+        if (reset)          present_state <= S_IDLE; 
+        else                present_state <= next_state;
     always @(posedge clk or posedge rst_cnt_load) 
-        if (rst_cnt_load) cnt_load <= 0; else cnt_load <= cnt_load + 1;
-    always @(posedge clk or posedge rst_cnt_calc) 
-        if (rst_cnt_calc) cnt_calc <= 0;
+        if (rst_cnt_load)   cnt_load <= 0; 
+        else                cnt_load <= cnt_load + 1;
+    always @(posedge dvalid or posedge rst_cnt_calc) 
+        if (rst_cnt_calc)   cnt_calc <= 0;
+        else if (dvalid)    cnt_calc <= cnt_calc + 1;
+        else                cnt_calc <= cnt_calc;
     always @(posedge clk or posedge rst_cnt_harv) 
-        if (rst_cnt_harv) cnt_harv <= 0; else cnt_harv <= cnt_harv + 1;
+        if (rst_cnt_harv)   cnt_harv <= 0; 
+        else                cnt_harv <= cnt_harv + 1;
     always @(posedge clk or posedge rst_cnt_done) 
-        if (rst_cnt_done) cnt_done <= 0; else cnt_done <= cnt_done + 1;
+        if (rst_cnt_done)   cnt_done <= 0; 
+        else                cnt_done <= cnt_done + 1;
     
     always @(*)
         case (present_state)
@@ -84,10 +90,7 @@ module mm_multiplier #(
     
     always @(dvalid or present_state)
         if (present_state == S_CALC)
-            if (dvalid) begin
-                cnt_calc <= cnt_calc + 1;
-                valid <= 0;
-            end
+            if (dvalid) valid <= 0;
             else begin
                 for (j = 0; j < VECTOR_SIZE; j = j+1) begin
                     ain[j] <= gb1[j*VECTOR_SIZE + cnt_calc];
@@ -110,7 +113,7 @@ module mm_multiplier #(
             .ain(ain[i/VECTOR_SIZE]),
             .bin(bin[i%VECTOR_SIZE]),
             .valid(valid),
-            .dvalid(dvalid),
+            .dvalid(dvalid[i]),
             .dout(dout[i])
         );
         assign out[i] = present_state == S_HARV ? dout[i] : 0;

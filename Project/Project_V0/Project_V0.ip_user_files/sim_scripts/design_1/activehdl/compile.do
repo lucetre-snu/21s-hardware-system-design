@@ -13,6 +13,15 @@ vlib activehdl/fifo_generator_v13_2_3
 vlib activehdl/axi_data_fifo_v2_1_17
 vlib activehdl/axi_crossbar_v2_1_19
 vlib activehdl/blk_mem_gen_v8_4_2
+vlib activehdl/xbip_utils_v3_0_9
+vlib activehdl/axi_utils_v2_0_5
+vlib activehdl/xbip_pipe_v3_0_5
+vlib activehdl/xbip_dsp48_wrapper_v3_0_4
+vlib activehdl/xbip_dsp48_addsub_v3_0_5
+vlib activehdl/xbip_dsp48_multadd_v3_0_5
+vlib activehdl/xbip_bram18k_v3_0_5
+vlib activehdl/mult_gen_v12_0_14
+vlib activehdl/floating_point_v7_1_7
 vlib activehdl/axi_vip_v1_1_4
 vlib activehdl/processing_system7_vip_v1_0_6
 vlib activehdl/lib_cdc_v1_0_2
@@ -31,6 +40,15 @@ vmap fifo_generator_v13_2_3 activehdl/fifo_generator_v13_2_3
 vmap axi_data_fifo_v2_1_17 activehdl/axi_data_fifo_v2_1_17
 vmap axi_crossbar_v2_1_19 activehdl/axi_crossbar_v2_1_19
 vmap blk_mem_gen_v8_4_2 activehdl/blk_mem_gen_v8_4_2
+vmap xbip_utils_v3_0_9 activehdl/xbip_utils_v3_0_9
+vmap axi_utils_v2_0_5 activehdl/axi_utils_v2_0_5
+vmap xbip_pipe_v3_0_5 activehdl/xbip_pipe_v3_0_5
+vmap xbip_dsp48_wrapper_v3_0_4 activehdl/xbip_dsp48_wrapper_v3_0_4
+vmap xbip_dsp48_addsub_v3_0_5 activehdl/xbip_dsp48_addsub_v3_0_5
+vmap xbip_dsp48_multadd_v3_0_5 activehdl/xbip_dsp48_multadd_v3_0_5
+vmap xbip_bram18k_v3_0_5 activehdl/xbip_bram18k_v3_0_5
+vmap mult_gen_v12_0_14 activehdl/mult_gen_v12_0_14
+vmap floating_point_v7_1_7 activehdl/floating_point_v7_1_7
 vmap axi_vip_v1_1_4 activehdl/axi_vip_v1_1_4
 vmap processing_system7_vip_v1_0_6 activehdl/processing_system7_vip_v1_0_6
 vmap lib_cdc_v1_0_2 activehdl/lib_cdc_v1_0_2
@@ -96,10 +114,44 @@ vlog -work blk_mem_gen_v8_4_2  -v2k5 "+incdir+../../../../Project_V0.srcs/source
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
+
+vcom -work xbip_utils_v3_0_9 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+
+vcom -work axi_utils_v2_0_5 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+
+vcom -work xbip_pipe_v3_0_5 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_wrapper_v3_0_4 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_addsub_v3_0_5 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_multadd_v3_0_5 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_bram18k_v3_0_5 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+
+vcom -work mult_gen_v12_0_14 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+
+vcom -work floating_point_v7_1_7 -93 \
+"../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/floating_point_v7_1_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/sim/floating_point_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v" \
-"../../../bd/design_1/ipshared/9faa/hdl/myip_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/9faa/hdl/myip_v1_0.v" \
+"../../../bd/design_1/ipshared/mm_multiplier.v" \
+"../../../bd/design_1/ipshared/my_pe.v" \
+"../../../bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/554d/hdl/myip_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myip_0_0/sim/design_1_myip_0_0.v" \
 
 vlog -work axi_vip_v1_1_4  -sv2k12 "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \

@@ -2,30 +2,30 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Jun  2 20:55:13 2021
-# Process ID: 15672
-# Current directory: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1
+# Start of session at: Mon Jun  7 14:44:33 2021
+# Process ID: 14116
+# Current directory: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1
 # Command line: vivado.exe -log mm_multiplier.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mm_multiplier.tcl -notrace
-# Log file: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1/mm_multiplier.vdi
-# Journal file: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1\vivado.jou
+# Log file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1/mm_multiplier.vdi
+# Journal file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source mm_multiplier.tcl -notrace
 Command: link_design -top mm_multiplier -part xc7z020clg484-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 5504 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 5888 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.3
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.067 . Memory (MB): peak = 993.223 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.225 . Memory (MB): peak = 1222.090 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 993.223 ; gain = 704.730
+link_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1222.090 ; gain = 934.398
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -33,15 +33,212 @@ Running DRC as a precondition to command opt_design
 
 Starting DRC Task
 INFO: [DRC 23-27] Running DRC with 2 threads
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net MATRIX[9].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/m_axis_result_tvalid has multiple drivers: MATRIX[61].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[63].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[0].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[9].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[10].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[11].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[12].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[13].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[14].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[15].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[16].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[17].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[18].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[24].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q, MATRIX[1].MY_PE/UUT/U0/i_synth/i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]/Q... and (the first 15 of 64 listed).
-INFO: [Project 1-461] DRC finished with 1 Errors
+INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
-ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 993.223 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1222.090 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: a77ba266
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.371 ; gain = 622.777
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 64 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1332d4eca
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1925.844 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 34 cells and removed 163 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1ae074389
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1925.844 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 192 cells and removed 576 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 19eca2acf
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1925.844 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1088 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 19eca2acf
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.844 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 59dc3fe6
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 1925.844 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 59dc3fe6
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1925.844 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              34  |             163  |                                              0  |
+|  Constant propagation         |             192  |             576  |                                              0  |
+|  Sweep                        |               0  |            1088  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.456 . Memory (MB): peak = 1925.844 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 59dc3fe6
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 1925.844 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 59dc3fe6
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.335 . Memory (MB): peak = 1925.844 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 59dc3fe6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1925.844 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.225 . Memory (MB): peak = 1925.844 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 59dc3fe6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.225 . Memory (MB): peak = 1925.844 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-12 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
-opt_design failed
-ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:05 . Memory (MB): peak = 1925.844 ; gain = 703.754
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.220 . Memory (MB): peak = 1925.844 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1/mm_multiplier_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:55 ; elapsed = 00:00:31 . Memory (MB): peak = 1925.844 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file mm_multiplier_drc_opted.rpt -pb mm_multiplier_drc_opted.pb -rpx mm_multiplier_drc_opted.rpx
+Command: report_drc -file mm_multiplier_drc_opted.rpt -pb mm_multiplier_drc_opted.pb -rpx mm_multiplier_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1/mm_multiplier_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 1925.844 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  2 20:55:45 2021...
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.226 . Memory (MB): peak = 1925.844 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 3502d389
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.291 . Memory (MB): peak = 1925.844 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.227 . Memory (MB): peak = 1925.844 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 109514662
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 2000.574 ; gain = 74.730
+
+Phase 1.3 Build Placer Netlist Model
+WARNING: [Place 30-770] High register utilization is forcing place_design to place up to 8 registers per slice which may impact placement success and/or routing congestion.
+Phase 1.3 Build Placer Netlist Model | Checksum: 16bf4b982
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:31 . Memory (MB): peak = 2044.438 ; gain = 118.594
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 16bf4b982
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:31 . Memory (MB): peak = 2044.438 ; gain = 118.594
+Phase 1 Placer Initialization | Checksum: 16bf4b982
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:31 . Memory (MB): peak = 2044.438 ; gain = 118.594
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 16bf4b982
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:31 . Memory (MB): peak = 2054.570 ; gain = 128.727
+WARNING: [Place 46-29] place_design is not in timing mode. Skip physical synthesis in placer
+Phase 2 Global Placement | Checksum: 2333506ae
+
+Time (s): cpu = 00:01:58 ; elapsed = 00:01:52 . Memory (MB): peak = 2214.617 ; gain = 288.773
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 2333506ae
+
+Time (s): cpu = 00:01:59 ; elapsed = 00:01:52 . Memory (MB): peak = 2214.617 ; gain = 288.773
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1d2e962a2
+
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:59 . Memory (MB): peak = 2214.617 ; gain = 288.773
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1dc6d7c0c
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:02:00 . Memory (MB): peak = 2214.617 ; gain = 288.773
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1c9dc5b11
+
+Time (s): cpu = 00:02:05 ; elapsed = 00:02:01 . Memory (MB): peak = 2214.617 ; gain = 288.773
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 201949aeb
+
+Time (s): cpu = 00:02:36 ; elapsed = 00:02:31 . Memory (MB): peak = 2214.617 ; gain = 288.773
+Phase 3 Detail Placement | Checksum: 201949aeb
+
+Time (s): cpu = 00:02:37 ; elapsed = 00:02:32 . Memory (MB): peak = 2214.617 ; gain = 288.773
+ERROR: [Place 30-487] The packing of instances into the device could not be obeyed. There are a total of 13300 slices in the device, of which 8387 slices are available, however, the unplaced instances require 8834 slices. Please analyze your design to determine if the number of LUTs, FFs, and/or control sets can be reduced.
+
+Number of control sets and instances constrained to the design
+	Control sets: 846
+	Luts: 49710 (combined) 57432 (total), available capacity: 53200 
+	Flip flops: 78208, available capacity: 106400
+	NOTE: each slice can only accommodate 1 unique control set so FFs cannot be packed to fully fill every slice
+
+
+ERROR: [Place 30-99] Placer failed with error: 'Detail Placement failed please check previous errors for details.'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: f50955c4
+
+Time (s): cpu = 00:02:37 ; elapsed = 00:02:32 . Memory (MB): peak = 2214.617 ; gain = 288.773
+INFO: [Common 17-83] Releasing license: Implementation
+38 Infos, 3 Warnings, 0 Critical Warnings and 3 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  7 14:49:48 2021...
