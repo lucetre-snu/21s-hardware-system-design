@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun  7 14:47:10 2021
+| Date         : Mon Jun  7 23:36:17 2021
 | Host         : lucetre running 64-bit major release  (build 9200)
 | Command      : report_drc -file mm_multiplier_drc_opted.rpt -pb mm_multiplier_drc_opted.pb -rpx mm_multiplier_drc_opted.rpx
 | Design       : mm_multiplier

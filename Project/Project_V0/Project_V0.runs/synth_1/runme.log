@@ -19,9 +19,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18040 
+INFO: Helper process launched with PID 14924 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 420.336 ; gain = 113.879
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 419.766 ; gain = 112.578
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
@@ -1825,13 +1825,13 @@ INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_2' declared at 'c:/Users/lucetre/D
 INFO: [Synth 8-256] done synthesizing module 'design_1_blk_mem_gen_0_0' (63#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/synth/design_1_blk_mem_gen_0_0.vhd:80]
 WARNING: [Synth 8-350] instance 'blk_mem_gen_0' of module 'design_1_blk_mem_gen_0_0' requires 16 connections, but only 14 given [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:336]
 INFO: [Synth 8-6157] synthesizing module 'design_1_myip_0_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/synth/design_1_myip_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'myip_v1_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_v1_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0.v:4]
 	Parameter C_M00_BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_BRAM_WE_WIDTH bound to: 4 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:4]
 	Parameter BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_WE_WIDTH bound to: 4 - type: integer 
@@ -1839,15 +1839,10 @@ INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/D
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-	Parameter NUM bound to: 4'b1010 
-	Parameter BRAM_IDLE bound to: 2'b00 
-	Parameter BRAM_READ bound to: 2'b01 
-	Parameter BRAM_WRITE bound to: 2'b10 
-	Parameter BRAM_WAIT bound to: 2'b11 
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:232]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:373]
+INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:232]
+INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:373]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v:68]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
@@ -1911,7 +1906,6 @@ INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.3/scripts
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (66#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (67#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (68#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v:70]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:430]
 INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:3]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
@@ -2000,20 +1994,18 @@ INFO: [Synth 8-638] synthesizing module 'floating_point_0' [c:/Users/lucetre/Doc
 INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/synth/floating_point_0.vhd:208]
 INFO: [Synth 8-256] done synthesizing module 'floating_point_0' (103#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/synth/floating_point_0.vhd:74]
 INFO: [Synth 8-6155] done synthesizing module 'my_pe' (104#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/my_pe.v:2]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:52]
-WARNING: [Synth 8-567] referenced signal 'cnt_load' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:74]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:57]
+WARNING: [Synth 8-567] referenced signal 'cnt_load' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:80]
 WARNING: [Synth 8-567] referenced signal 'out' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:80]
-WARNING: [Synth 8-567] referenced signal 'cnt_calc' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:85]
-WARNING: [Synth 8-567] referenced signal 'gb1' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:85]
-WARNING: [Synth 8-567] referenced signal 'gb2' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:85]
+WARNING: [Synth 8-567] referenced signal 'gb1' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:88]
+WARNING: [Synth 8-567] referenced signal 'cnt_calc' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:88]
+WARNING: [Synth 8-567] referenced signal 'gb2' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:88]
 INFO: [Synth 8-6155] done synthesizing module 'mm_multiplier' (105#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:3]
-WARNING: [Synth 8-689] width (32) of port connection 'rdaddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:465]
-WARNING: [Synth 8-689] width (32) of port connection 'wraddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:467]
-WARNING: [Synth 8-6104] Input port 'BRAM_RDDATA' has an internal driver [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:468]
-WARNING: [Synth 8-3848] Net bram_counter in module/entity myip_v1_0_S00_AXI does not have driver. [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:410]
-WARNING: [Synth 8-3848] Net BRAM_WRDATA in module/entity myip_v1_0_S00_AXI does not have driver. [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0_S00_AXI' (106#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0' (107#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0.v:4]
+WARNING: [Synth 8-689] width (32) of port connection 'rdaddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:430]
+WARNING: [Synth 8-689] width (32) of port connection 'wraddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:432]
+WARNING: [Synth 8-689] width (4) of port connection 'we' does not match port width (1) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:434]
+INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0_S00_AXI' (106#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0' (107#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_myip_0_0' (108#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/synth/design_1_myip_0_0.v:56]
 INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
@@ -2271,7 +2263,7 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnec
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SSET
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:07 ; elapsed = 00:02:15 . Memory (MB): peak = 893.363 ; gain = 586.906
+Finished RTL Elaboration : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 886.660 ; gain = 579.473
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2284,13 +2276,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:08 ; elapsed = 00:02:17 . Memory (MB): peak = 893.363 ; gain = 586.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 886.660 ; gain = 579.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:08 ; elapsed = 00:02:17 . Memory (MB): peak = 893.363 ; gain = 586.906
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 886.660 ; gain = 579.473
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 23065 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -2309,16 +2301,16 @@ Finished Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-syst
 Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.467 . Memory (MB): peak = 1888.660 ; gain = 0.000
-write_xdc: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1888.660 ; gain = 127.270
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.509 . Memory (MB): peak = 1890.137 ; gain = 0.000
+write_xdc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1890.137 ; gain = 126.406
 Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.461 . Memory (MB): peak = 1893.402 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.543 . Memory (MB): peak = 1894.168 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.459 . Memory (MB): peak = 1895.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.543 . Memory (MB): peak = 1897.629 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2194 instances were transformed.
   FDE => FDRE: 2176 instances
@@ -2326,17 +2318,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MUXCY_L => MUXCY: 4 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.479 . Memory (MB): peak = 1895.949 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1895.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.555 . Memory (MB): peak = 1897.629 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1897.629 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:32 ; elapsed = 00:03:41 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Constraint Validation : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:32 ; elapsed = 00:03:41 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2420,7 +2412,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint
 Applied set_property DONT_TOUCH = true for design_1_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_mem_intercon/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:36 ; elapsed = 00:03:46 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:31 ; elapsed = 00:03:35 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "max_wrap_burst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "max_wrap_burst" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -2519,6 +2511,7 @@ INFO: [Synth 8-5544] ROM "c_nan" won't be mapped to Block RAM because address si
 INFO: [Synth 8-5544] ROM "c_inf" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "c_zero" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "gb1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gb1_reg[3]" won't be mapped to RAM because it is too sparse
@@ -2646,15 +2639,11 @@ INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address si
 INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "gb2_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-802] inferred FSM for state register 'bram_state_reg' in module 'myip_v1_0_S00_AXI'
-INFO: [Synth 8-5544] ROM "bram_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bram_state0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -2722,78 +2711,78 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' usin
                   iSTATE |                             0100 |                               00
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo'
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_load_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:62]
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_harv_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:64]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[20]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[21]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[22]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[23]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[24]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[25]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[26]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[27]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[28]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[29]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[30]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[31]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[32]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[33]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[34]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[35]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[36]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[37]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[38]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[39]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[40]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[41]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[42]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[43]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[44]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[45]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[46]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[47]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[48]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[49]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[50]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[51]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[52]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[53]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[54]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[55]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[56]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[57]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[58]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[59]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[60]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[61]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[62]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'data_reg[63]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:53]
-WARNING: [Synth 8-327] inferring latch for variable 'cnt_calc_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:88]
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_done_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:65]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_load_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:67]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_harv_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:69]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[20]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[21]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[22]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[23]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[24]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[25]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[26]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[27]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[28]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[29]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[30]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[31]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[32]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[33]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[34]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[35]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[36]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[37]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[38]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[39]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[40]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[41]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[42]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[43]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[44]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[45]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[46]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[47]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[48]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[49]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[50]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[51]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[52]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[53]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[54]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[55]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[56]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[57]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[58]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[59]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[60]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[61]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[62]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[63]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:58]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_calc_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_done_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:70]
 WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
 WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'valid_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'valid_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:90]
 WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
 WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
 WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
@@ -2808,32 +2797,23 @@ WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[4]' [c:/Users/lucet
 WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
 WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
 WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_calc_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:63]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
 INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-               BRAM_IDLE |                             0001 |                               00
-               BRAM_READ |                             0010 |                               01
-               BRAM_WAIT |                             0100 |                               11
-              BRAM_WRITE |                             1000 |                               10
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'bram_state_reg' using encoding 'one-hot' in module 'myip_v1_0_S00_AXI'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:56 ; elapsed = 00:04:07 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:50 ; elapsed = 00:03:57 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'floating_point_0:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_0:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
 INFO: [Synth 8-223] decloning instance 'floating_point_0:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_0:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
@@ -2909,11 +2889,10 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        64|
 |65    |my_pe__xdcDup__63__GC0 |           1|        64|
 |66    |my_pe__GC0             |           1|        64|
-|67    |mm_multiplier__GCB0    |           1|     18643|
-|68    |mm_multiplier__GCB1    |           1|     17568|
-|69    |mm_multiplier__GCB2    |           1|     12889|
-|70    |myip_v1_0_S00_AXI__GC0 |           1|       983|
-|71    |design_1__GC0          |           1|      9653|
+|67    |mm_multiplier__GCB0    |           1|     24424|
+|68    |mm_multiplier__GCB1    |           1|     22808|
+|69    |myip_v1_0_S00_AXI__GC0 |           1|       907|
+|70    |design_1__GC0          |           1|      9653|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -2966,8 +2945,8 @@ INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" w
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
@@ -2980,44 +2959,45 @@ INFO: [Synth 8-5546] ROM "gb1_reg[8]" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5546] ROM "gb1_reg[9]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gb1_reg[10]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gb1_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb1_reg[13]" won't be mapped to RAM because it is too sparse
 INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5545] ROM "gb2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/I_WRAP_BRST/max_wrap_burst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/I_WRAP_BRST/max_wrap_burst" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/I_WRAP_BRST/max_wrap_burst" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -3058,97 +3038,10 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
 INFO: [Synth 8-3332] Sequential element (FMA_OP.OP/addsub/add/EXP/bma_exp_cc/CARRYS_Q_DEL.FAST_DEL.CARRY_FD) is unused and will be removed from module floating_point_v7_1_7_viv.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_66/cnt_calc_reg[3]__0/Q' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_66/cnt_calc_reg[2]__0/Q' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_66/cnt_calc_reg[1]__0/Q' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_66/cnt_calc_reg[0]__0/Q' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:45]
-INFO: [Synth 8-3886] merging instance 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/axi_rresp_reg[0]' (FDRE) to 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/axi_rresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/\axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/axi_bresp_reg[0]' (FDRE) to 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/axi_bresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/\axi_bresp_reg[1] )
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[7] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[7] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[7] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[8] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[8] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[8] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[9] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[9] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[9] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[10] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[10] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[10] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[11] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[11] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[11] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[12] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[12] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[12] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[13] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[13] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[13] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[14] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[14] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[14] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[15] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[15] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[15] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[16] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[16] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[16] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[17] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[17] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[17] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[18] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[18] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[18] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[19] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[19] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[19] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[20] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[20]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[20] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[20] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[21] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[21]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[21] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[21] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[22] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[22]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[22] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[22] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[23] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[23]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[23] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[23] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[24] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[24]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[24] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[24] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[25] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[25]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[25] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[25] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[26] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[26]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[26] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[26] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[27] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[27]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[27] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[27] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[28] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[28]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[28] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[28] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[29] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[29]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[29] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[29] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[30] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[30]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[30] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[30] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[31] with 1st driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_67/BRAM_ADDR0_inferred/BRAM_ADDR0[31]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin BRAM_ADDR0[31] with 2nd driver pin 'GND' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net BRAM_ADDR0[31] is connected to at least one constant driver which has been preserved, other driver is ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:411]
+INFO: [Synth 8-3886] merging instance 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/axi_rresp_reg[0]' (FDRE) to 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/axi_bresp_reg[0]' (FDRE) to 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/\axi_bresp_reg[1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_0/axi_bram_ctrl_0/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_NO_RD_CMD_OPT.axi_b2b_brst_reg )
 INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/axi_bram_ctrl_0/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_NO_RD_CMD_OPT.GEN_RRESP.axi_rresp_int_reg[0]' (FDRE) to 'design_1_i/i_0/axi_bram_ctrl_0/U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_NO_RD_CMD_OPT.GEN_RRESP.axi_rresp_int_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/i_0/axi_bram_ctrl_0/\U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/GEN_NO_RD_CMD_OPT.GEN_RRESP.axi_rresp_int_reg[1] )
@@ -3270,7 +3163,7 @@ INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_
 INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:50 ; elapsed = 00:05:03 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:35 ; elapsed = 00:04:42 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3343,11 +3236,10 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        96|
 |65    |my_pe__xdcDup__63__GC0 |           1|        96|
 |66    |my_pe__GC0             |           1|        96|
-|67    |mm_multiplier__GCB0    |           1|       784|
-|68    |mm_multiplier__GCB1    |           1|       256|
-|69    |mm_multiplier__GCB2    |           1|      6304|
-|70    |myip_v1_0_S00_AXI__GC0 |           1|       511|
-|71    |design_1__GC0          |           1|      6418|
+|67    |mm_multiplier__GCB0    |           1|      9490|
+|68    |mm_multiplier__GCB1    |           1|      6884|
+|69    |myip_v1_0_S00_AXI__GC0 |           1|       557|
+|70    |design_1__GC0          |           1|      6418|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -3355,13 +3247,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/myip_0/inst/myip_v1_0_S00_AXI_inst/u_clk_180/inst/clk_in1' to pin 'processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:07 ; elapsed = 00:05:20 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:52 ; elapsed = 00:05:00 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:15 ; elapsed = 00:05:28 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Timing Optimization : Time (s): cpu = 00:05:03 ; elapsed = 00:05:11 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3434,17 +3326,16 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        96|
 |65    |my_pe__xdcDup__63__GC0 |           1|        96|
 |66    |my_pe__GC0             |           1|        96|
-|67    |mm_multiplier__GCB0    |           1|       784|
-|68    |mm_multiplier__GCB1    |           1|       256|
-|69    |mm_multiplier__GCB2    |           1|      6304|
-|70    |myip_v1_0_S00_AXI__GC0 |           1|       511|
-|71    |design_1__GC0          |           1|      6418|
+|67    |mm_multiplier__GCB0    |           1|      9490|
+|68    |mm_multiplier__GCB1    |           1|      6884|
+|69    |myip_v1_0_S00_AXI__GC0 |           1|       557|
+|70    |design_1__GC0          |           1|      6418|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:06:01 ; elapsed = 00:06:15 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Technology Mapping : Time (s): cpu = 00:05:48 ; elapsed = 00:05:57 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3464,69 +3355,39 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5778] max_fanout handling on net m00_bram_we[0] is sub-optimal because some of its loads are not in same hierarchy as its driver   
 INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/aresetn_d_reg[1] is being inverted and renamed to inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/aresetn_d_reg[1]_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:06:09 ; elapsed = 00:06:23 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished IO Insertion : Time (s): cpu = 00:05:57 ; elapsed = 00:06:06 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[31] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_939/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[30] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_940/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[29] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_941/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[28] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_942/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[27] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_943/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[26] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_944/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[25] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_945/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[24] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_946/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[23] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_947/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[22] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_948/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[21] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_949/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[20] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_950/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[19] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_951/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[18] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_952/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[17] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_953/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[16] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_954/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[15] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_955/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[14] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_956/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[13] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_957/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[12] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_958/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[11] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_959/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[10] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_960/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[9] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_961/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[8] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_962/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[7] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_963/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[6] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_964/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[5] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_965/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[4] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_966/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[3] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_967/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[2] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_968/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[1] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_969/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_rddata[0] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_970/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 1st driver pin 'design_1_i/myip_0/i_10_28/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:43]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_973/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 3rd driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_10_1058/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:126]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 1st driver pin 'design_1_i/myip_0/i_10_33/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:43]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 2nd driver pin 'design_1_i/myip_0/MM_MULTIPLIERi_10_974/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:41]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 3rd driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_10_1059/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:126]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 1st driver pin 'design_1_i/myip_0/i_10_37/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:43]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 2nd driver pin 'design_1_i/myip_0/i_10_48/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:43]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 3rd driver pin 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_10_1060/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/554d/hdl/myip_v1_0_S00_AXI.v:126]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 1st driver pin 'design_1_i/myip_0/i_10_42/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:43]
-INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 1st driver pin 'design_1_i/myip_0/i_11_5152/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 2nd driver pin 'design_1_i/myip_0/i_11_3440/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 1st driver pin 'design_1_i/myip_0/i_11_5151/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 2nd driver pin 'design_1_i/myip_0/i_11_3441/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 1st driver pin 'design_1_i/myip_0/i_11_5150/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 2nd driver pin 'design_1_i/myip_0/i_11_3442/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 1st driver pin 'design_1_i/myip_0/i_11_5149/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 2nd driver pin 'design_1_i/myip_0/i_11_3443/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 1st driver pin 'design_1_i/myip_0/i_11_5148/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 2nd driver pin 'design_1_i/myip_0/i_11_3444/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 1st driver pin 'design_1_i/myip_0/i_11_5147/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 2nd driver pin 'design_1_i/myip_0/i_11_3445/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 1st driver pin 'design_1_i/myip_0/i_11_5153/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 2nd driver pin 'design_1_i/myip_0/i_11_3508/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|       38|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        7|Failed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:06:11 ; elapsed = 00:06:25 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:58 ; elapsed = 00:06:07 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3538,25 +3399,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:55 ; elapsed = 00:07:10 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:37 ; elapsed = 00:06:46 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:57 ; elapsed = 00:07:11 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:38 ; elapsed = 00:06:47 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:07:02 ; elapsed = 00:07:17 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:44 ; elapsed = 00:06:53 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:07:03 ; elapsed = 00:07:18 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:45 ; elapsed = 00:06:54 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3574,64 +3435,64 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BIBUF      |   130|
 |2     |BUFG       |    15|
-|3     |CARRY4     |   500|
+|3     |CARRY4     |   498|
 |4     |DSP48E1    |    64|
 |5     |DSP48E1_1  |    64|
-|6     |LUT1       |   901|
-|7     |LUT2       |  5667|
-|8     |LUT3       | 11480|
-|9     |LUT4       | 10345|
-|10    |LUT5       |  6016|
-|11    |LUT6       | 19278|
+|6     |LUT1       |   909|
+|7     |LUT2       |  6972|
+|8     |LUT3       |  9696|
+|9     |LUT4       | 10460|
+|10    |LUT5       |  7295|
+|11    |LUT6       | 21233|
 |12    |MMCME2_ADV |     1|
 |13    |MUXCY      | 14272|
 |14    |MUXCY_L    |     3|
-|15    |MUXF7      |   832|
-|16    |MUXF8      |   128|
+|15    |MUXF7      |  1344|
+|16    |MUXF8      |    64|
 |17    |PS7        |     1|
 |18    |RAMB36E1   |     2|
 |19    |SRL16      |     1|
 |20    |SRL16E     |  4708|
 |21    |SRLC32E    |    49|
 |22    |XORCY      |  6148|
-|23    |FDCE       |    32|
+|23    |FDCE       |   106|
 |24    |FDE        |  2112|
 |25    |FDR        |     9|
-|26    |FDRE       | 71954|
-|27    |FDSE       |    28|
-|28    |LD         |  3079|
+|26    |FDRE       | 71984|
+|27    |FDSE       |    27|
+|28    |LD         |  4616|
 |29    |IBUF       |     1|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:07:03 ; elapsed = 00:07:18 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:45 ; elapsed = 00:06:54 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 134 critical warnings and 257 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:35 ; elapsed = 00:05:57 . Memory (MB): peak = 1898.453 ; gain = 586.906
-Synthesis Optimization Complete : Time (s): cpu = 00:07:04 ; elapsed = 00:07:18 . Memory (MB): peak = 1898.453 ; gain = 1591.996
+Synthesis finished with 0 errors, 14 critical warnings and 160 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:22 ; elapsed = 00:05:34 . Memory (MB): peak = 1900.180 ; gain = 579.473
+Synthesis Optimization Complete : Time (s): cpu = 00:06:45 ; elapsed = 00:06:54 . Memory (MB): peak = 1900.180 ; gain = 1592.992
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 27215 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 29198 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/myip_0/inst/myip_v1_0_S00_AXI_inst/u_clk_180/inst/clkin1_ibufg 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.251 . Memory (MB): peak = 2167.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.302 . Memory (MB): peak = 2178.895 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 9298 instances were transformed.
+  A total of 10835 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 4097 instances
   FDE => FDRE: 2112 instances
   FDR => FDRE: 9 instances
-  LD => LDCE: 3079 instances
+  LD => LDCE: 4616 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-779 Infos, 261 Warnings, 129 Critical Warnings and 0 Errors encountered.
+773 Infos, 259 Warnings, 14 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:08:17 ; elapsed = 00:08:33 . Memory (MB): peak = 2167.520 ; gain = 1868.453
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.261 . Memory (MB): peak = 2167.520 ; gain = 0.000
+synth_design: Time (s): cpu = 00:08:03 ; elapsed = 00:08:12 . Memory (MB): peak = 2178.895 ; gain = 1879.121
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.295 . Memory (MB): peak = 2178.895 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:54 ; elapsed = 00:00:32 . Memory (MB): peak = 2167.520 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:58 ; elapsed = 00:00:36 . Memory (MB): peak = 2178.895 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun  7 13:11:56 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  7 23:23:24 2021...

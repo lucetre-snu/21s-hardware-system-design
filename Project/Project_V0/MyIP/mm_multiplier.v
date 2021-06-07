@@ -9,7 +9,7 @@ module mm_multiplier #(
     input clk,
     output [2*L_RAM_SIZE:0] rdaddr,
     output [2*L_RAM_SIZE:0] wraddr,
-    input [BITWIDTH-1:0] rddata,
+    input  [BITWIDTH-1:0] rddata,
     output [BITWIDTH-1:0] wrdata,
     output we,
     output done
@@ -27,7 +27,6 @@ module mm_multiplier #(
     
     reg [BITWIDTH-1:0] gb1[0:MATRIX_SIZE-1];
     reg [BITWIDTH-1:0] gb2[0:MATRIX_SIZE-1];
-    reg [BITWIDTH-1:0] data[0:MATRIX_SIZE-1];
     
     reg [BITWIDTH-1:0] ain[0:VECTOR_SIZE-1];
     reg [BITWIDTH-1:0] bin[0:VECTOR_SIZE-1];
@@ -35,18 +34,24 @@ module mm_multiplier #(
     
     wire [BITWIDTH-1:0]  out[0:MATRIX_SIZE-1];
     wire [BITWIDTH-1:0] dout[0:MATRIX_SIZE-1];
-    wire dvalid;
+    wire [MATRIX_SIZE-1:0] dvalid;
     
     always @(posedge clk or posedge reset)
-        if (reset) present_state <= S_IDLE; else present_state <= next_state;
+        if (reset)          present_state <= S_IDLE; 
+        else                present_state <= next_state;
     always @(posedge clk or posedge rst_cnt_load) 
-        if (rst_cnt_load) cnt_load <= 0; else cnt_load <= cnt_load + 1;
-    always @(posedge clk or posedge rst_cnt_calc) 
-        if (rst_cnt_calc) cnt_calc <= 0;
+        if (rst_cnt_load)   cnt_load <= 0; 
+        else                cnt_load <= cnt_load + 1;
+    always @(posedge dvalid or posedge rst_cnt_calc) 
+        if (rst_cnt_calc)   cnt_calc <= 0;
+        else if (dvalid)    cnt_calc <= cnt_calc + 1;
+        else                cnt_calc <= cnt_calc;
     always @(posedge clk or posedge rst_cnt_harv) 
-        if (rst_cnt_harv) cnt_harv <= 0; else cnt_harv <= cnt_harv + 1;
+        if (rst_cnt_harv)   cnt_harv <= 0; 
+        else                cnt_harv <= cnt_harv + 1;
     always @(posedge clk or posedge rst_cnt_done) 
-        if (rst_cnt_done) cnt_done <= 0; else cnt_done <= cnt_done + 1;
+        if (rst_cnt_done)   cnt_done <= 0; 
+        else                cnt_done <= cnt_done + 1;
     
     always @(*)
         case (present_state)
@@ -71,23 +76,18 @@ module mm_multiplier #(
             end
         endcase
         
+    integer j;
     always @(rddata or present_state)
         if (present_state == S_LOAD) 
-            if (cnt_load < MATRIX_SIZE) gb1[cnt_load]             = rddata; 
-            else                        gb2[cnt_load-MATRIX_SIZE] = rddata;
-        
-    integer j;
-    always @(present_state)
-        if (present_state == S_HARV)
+            if (cnt_load < MATRIX_SIZE) gb1[cnt_load]             <= rddata; 
+            else                        gb2[cnt_load-MATRIX_SIZE] <= rddata;
+        else if (present_state == S_HARV)
             for (j = 0; j < MATRIX_SIZE; j = j+1)
-                data[j] <= out[j];
+                gb1[j] <= out[j];
     
     always @(dvalid or present_state)
         if (present_state == S_CALC)
-            if (dvalid) begin
-                cnt_calc <= cnt_calc + 1;
-                valid <= 0;
-            end
+            if (dvalid) valid <= 0;
             else begin
                 for (j = 0; j < VECTOR_SIZE; j = j+1) begin
                     ain[j] <= gb1[j*VECTOR_SIZE + cnt_calc];
@@ -97,7 +97,7 @@ module mm_multiplier #(
             end
     
     assign rdaddr = (present_state == S_LOAD) ? cnt_load : 0;
-    assign wrdata = (present_state == S_HARV) ? data[cnt_harv] : 0;
+    assign wrdata = (present_state == S_HARV) ? gb1[cnt_harv] : 0;
     assign wraddr = (present_state == S_HARV) ? cnt_harv : 0;
     assign we     = (present_state == S_HARV);
     assign done   = (present_state == S_DONE);
@@ -110,7 +110,7 @@ module mm_multiplier #(
             .ain(ain[i/VECTOR_SIZE]),
             .bin(bin[i%VECTOR_SIZE]),
             .valid(valid),
-            .dvalid(dvalid),
+            .dvalid(dvalid[i]),
             .dout(dout[i])
         );
         assign out[i] = present_state == S_HARV ? dout[i] : 0;

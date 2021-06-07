@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:myip:1.0
-// IP Revision: 8
+// IP Revision: 11
 
 (* X_CORE_INFO = "myip_v1_0,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "design_1_myip_0_0,myip_v1_0,{}" *)
