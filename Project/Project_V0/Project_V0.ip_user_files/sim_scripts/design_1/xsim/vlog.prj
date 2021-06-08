@@ -5,8 +5,8 @@ verilog xil_defaultlib --include "../../../../Project_V0.srcs/sources_1/bd/desig
 "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v" \
 "../../../bd/design_1/ipshared/mm_multiplier.v" \
 "../../../bd/design_1/ipshared/my_pe.v" \
-"../../../bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/58b5/hdl/myip_v1_0.v" \
+"../../../bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/494f/hdl/myip_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myip_0_0/sim/design_1_myip_0_0.v" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \

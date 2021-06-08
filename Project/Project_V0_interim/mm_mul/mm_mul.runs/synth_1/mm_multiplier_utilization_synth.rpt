@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun  7 23:33:27 2021
+| Date         : Tue Jun  8 14:33:56 2021
 | Host         : lucetre running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mm_multiplier_utilization_synth.rpt -pb mm_multiplier_utilization_synth.pb
 | Design       : mm_multiplier
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs*                | 49693 |     0 |     53200 | 93.41 |
-|   LUT as Logic             | 45021 |     0 |     53200 | 84.63 |
+| Slice LUTs*                | 48998 |     0 |     53200 | 92.10 |
+|   LUT as Logic             | 44326 |     0 |     53200 | 83.32 |
 |   LUT as Memory            |  4672 |     0 |     17400 | 26.85 |
 |     LUT as Distributed RAM |     0 |     0 |           |       |
 |     LUT as Shift Register  |  4672 |     0 |           |       |
-| Slice Registers            | 76977 |     0 |    106400 | 72.35 |
-|   Register as Flip Flop    | 72361 |     0 |    106400 | 68.01 |
-|   Register as Latch        |  4616 |     0 |    106400 |  4.34 |
+| Slice Registers            | 76935 |     0 |    106400 | 72.31 |
+|   Register as Flip Flop    | 72327 |     0 |    106400 | 67.98 |
+|   Register as Latch        |  4608 |     0 |    106400 |  4.33 |
 | F7 Muxes                   |  1344 |     0 |     26600 |  5.05 |
-| F8 Muxes                   |    64 |     0 |     13300 |  0.48 |
+| F8 Muxes                   |   128 |     0 |     13300 |  0.96 |
 +----------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 4721  |          Yes |           - |        Reset |
+| 4679  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 72256 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -150,19 +150,19 @@ Table of Contents
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
 | FDRE     | 72256 |        Flop & Latch |
-| LUT6     | 20648 |                 LUT |
-| LUT4     | 10245 |                 LUT |
-| LUT3     |  9248 |                 LUT |
-| LUT5     |  7115 |                 LUT |
-| LUT2     |  6897 |                 LUT |
+| LUT6     | 20994 |                 LUT |
+| LUT4     | 10165 |                 LUT |
+| LUT3     |  9280 |                 LUT |
+| LUT5     |  6763 |                 LUT |
+| LUT2     |  5594 |                 LUT |
 | SRL16E   |  4672 |  Distributed Memory |
-| LDCE     |  4616 |        Flop & Latch |
+| LDCE     |  4608 |        Flop & Latch |
 | CARRY4   |  4544 |          CarryLogic |
 | MUXF7    |  1344 |               MuxFx |
-| LUT1     |   720 |                 LUT |
+| LUT1     |   721 |                 LUT |
+| MUXF8    |   128 |               MuxFx |
 | DSP48E1  |   128 |    Block Arithmetic |
-| FDCE     |   105 |        Flop & Latch |
-| MUXF8    |    64 |               MuxFx |
+| FDCE     |    71 |        Flop & Latch |
 | OBUF     |    48 |                  IO |
 | IBUF     |    35 |                  IO |
 | BUFG     |    12 |               Clock |

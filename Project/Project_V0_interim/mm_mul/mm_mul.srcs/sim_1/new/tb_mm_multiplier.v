@@ -17,7 +17,7 @@ module tb_mm_multiplier #(
     wire done, we;
     
     reg start, clk, reset;
-//    integer i;
+    integer i;
 //    initial begin
 //        for(i = 0; i < MATRIX_SIZE; i = i+1) begin
 //            rdgb[i]               = $urandom_range(2**30, 2**30+2**24);
@@ -28,6 +28,7 @@ module tb_mm_multiplier #(
     assign rddata = start ? rdgb[rdaddr] : 0;
     initial begin
         $readmemh(INFILE, rdgb);
+        for(i = 0; i < MATRIX_SIZE; i = i+1) wrgb[i] <= 0;
         clk <= 0;
         start <= 0; reset <= 1; 
         #10 start <= 1; reset <= 0;

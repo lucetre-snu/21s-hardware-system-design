@@ -19,9 +19,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14924 
+INFO: Helper process launched with PID 11344 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 419.766 ; gain = 112.578
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 419.809 ; gain = 113.137
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
@@ -1825,13 +1825,13 @@ INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_2' declared at 'c:/Users/lucetre/D
 INFO: [Synth 8-256] done synthesizing module 'design_1_blk_mem_gen_0_0' (63#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/synth/design_1_blk_mem_gen_0_0.vhd:80]
 WARNING: [Synth 8-350] instance 'blk_mem_gen_0' of module 'design_1_blk_mem_gen_0_0' requires 16 connections, but only 14 given [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:336]
 INFO: [Synth 8-6157] synthesizing module 'design_1_myip_0_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/synth/design_1_myip_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'myip_v1_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_v1_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0.v:4]
 	Parameter C_M00_BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_BRAM_WE_WIDTH bound to: 4 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:4]
 	Parameter BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_WE_WIDTH bound to: 4 - type: integer 
@@ -1841,8 +1841,8 @@ INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/D
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:232]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:373]
+INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:232]
+INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:373]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v:68]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
@@ -1909,14 +1909,15 @@ INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (68#1) [c:/Users/lucet
 INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:3]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
-	Parameter DONE_LATENCY bound to: 5 - type: integer 
 	Parameter S_IDLE bound to: 3'b000 
 	Parameter S_LOAD bound to: 3'b001 
 	Parameter S_CALC bound to: 3'b010 
 	Parameter S_HARV bound to: 3'b011 
 	Parameter S_DONE bound to: 3'b100 
+	Parameter DONE_LATENCY bound to: 5 - type: integer 
 	Parameter MATRIX_SIZE bound to: 64 - type: integer 
 	Parameter VECTOR_SIZE bound to: 8 - type: integer 
+	Parameter ZERO bound to: 0 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'my_pe' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/my_pe.v:2]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
@@ -1994,18 +1995,12 @@ INFO: [Synth 8-638] synthesizing module 'floating_point_0' [c:/Users/lucetre/Doc
 INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/synth/floating_point_0.vhd:208]
 INFO: [Synth 8-256] done synthesizing module 'floating_point_0' (103#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/synth/floating_point_0.vhd:74]
 INFO: [Synth 8-6155] done synthesizing module 'my_pe' (104#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/my_pe.v:2]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:57]
-WARNING: [Synth 8-567] referenced signal 'cnt_load' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:80]
-WARNING: [Synth 8-567] referenced signal 'out' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:80]
-WARNING: [Synth 8-567] referenced signal 'gb1' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:88]
-WARNING: [Synth 8-567] referenced signal 'cnt_calc' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:88]
-WARNING: [Synth 8-567] referenced signal 'gb2' should be on the sensitivity list [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:88]
 INFO: [Synth 8-6155] done synthesizing module 'mm_multiplier' (105#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:3]
-WARNING: [Synth 8-689] width (32) of port connection 'rdaddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:430]
-WARNING: [Synth 8-689] width (32) of port connection 'wraddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:432]
-WARNING: [Synth 8-689] width (4) of port connection 'we' does not match port width (1) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:434]
-INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0_S00_AXI' (106#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0' (107#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/58b5/hdl/myip_v1_0.v:4]
+WARNING: [Synth 8-689] width (32) of port connection 'rdaddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:422]
+WARNING: [Synth 8-689] width (32) of port connection 'wraddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:424]
+WARNING: [Synth 8-689] width (4) of port connection 'we' does not match port width (1) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:426]
+INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0_S00_AXI' (106#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0' (107#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_myip_0_0' (108#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/synth/design_1_myip_0_0.v:56]
 INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
@@ -2263,7 +2258,7 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnec
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SSET
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 886.660 ; gain = 579.473
+Finished RTL Elaboration : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 894.238 ; gain = 587.566
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2276,13 +2271,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 886.660 ; gain = 579.473
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:03 ; elapsed = 00:02:09 . Memory (MB): peak = 894.238 ; gain = 587.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 886.660 ; gain = 579.473
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:03 ; elapsed = 00:02:09 . Memory (MB): peak = 894.238 ; gain = 587.566
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 23065 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -2301,16 +2296,15 @@ Finished Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-syst
 Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.509 . Memory (MB): peak = 1890.137 ; gain = 0.000
-write_xdc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1890.137 ; gain = 126.406
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.470 . Memory (MB): peak = 1890.145 ; gain = 0.000
 Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.543 . Memory (MB): peak = 1894.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.577 . Memory (MB): peak = 1894.887 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.543 . Memory (MB): peak = 1897.629 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.544 . Memory (MB): peak = 1896.742 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2194 instances were transformed.
   FDE => FDRE: 2176 instances
@@ -2318,17 +2312,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MUXCY_L => MUXCY: 4 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.555 . Memory (MB): peak = 1897.629 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1897.629 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.495 . Memory (MB): peak = 1896.742 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1896.742 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Constraint Validation : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2412,7 +2406,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint
 Applied set_property DONT_TOUCH = true for design_1_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_mem_intercon/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:31 ; elapsed = 00:03:35 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:31 ; elapsed = 00:03:35 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "max_wrap_burst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "max_wrap_burst" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -2510,140 +2504,11 @@ INFO: [Synth 8-5544] ROM "flow_sel_pre_op" won't be mapped to Block RAM because 
 INFO: [Synth 8-5544] ROM "c_nan" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "c_inf" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "c_zero" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "gb1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[3]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[4]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[5]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[6]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[7]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[8]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[9]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[10]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[11]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[12]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[13]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[14]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[15]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[16]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[17]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[18]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[19]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[20]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[21]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[22]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[23]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[24]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[25]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[26]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[27]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[28]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[29]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[30]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[31]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[32]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[33]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[34]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[35]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[36]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[37]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[38]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[39]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[40]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[41]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[42]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[43]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[44]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[45]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[46]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[47]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[48]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[49]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[50]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[51]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[52]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[53]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[54]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[55]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[56]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[57]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[58]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[59]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[60]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[61]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[62]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[63]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "gb2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "bin" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -2711,109 +2576,109 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' usin
                   iSTATE |                             0100 |                               00
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo'
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_load_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:67]
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_harv_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:69]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[20]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[21]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[22]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[23]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[24]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[25]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[26]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[27]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[28]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[29]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[30]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[31]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[32]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[33]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[34]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[35]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[36]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[37]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[38]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[39]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[40]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[41]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[42]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[43]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[44]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[45]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[46]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[47]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[48]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[49]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[50]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[51]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[52]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[53]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[54]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[55]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[56]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[57]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[58]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[59]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[60]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[61]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[62]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[63]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:82]
-WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:58]
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_calc_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:68]
-WARNING: [Synth 8-327] inferring latch for variable 'rst_cnt_done_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:70]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'valid_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:90]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:94]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:93]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[20]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[21]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[22]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[23]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[24]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[25]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[26]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[27]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[28]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[29]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[30]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[31]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[32]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[33]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[34]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[35]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[36]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[37]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[38]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[39]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[40]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[41]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[42]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[43]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[44]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[45]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[46]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[47]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[48]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[49]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[50]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[51]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[52]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[53]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[54]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[55]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[56]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[57]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[58]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[59]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[60]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[61]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[62]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[63]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
+WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
 INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:50 ; elapsed = 00:03:57 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:49 ; elapsed = 00:03:56 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'floating_point_0:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_0:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
 INFO: [Synth 8-223] decloning instance 'floating_point_0:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_0:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
@@ -2889,9 +2754,9 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        64|
 |65    |my_pe__xdcDup__63__GC0 |           1|        64|
 |66    |my_pe__GC0             |           1|        64|
-|67    |mm_multiplier__GCB0    |           1|     24424|
-|68    |mm_multiplier__GCB1    |           1|     22808|
-|69    |myip_v1_0_S00_AXI__GC0 |           1|       907|
+|67    |mm_multiplier__GCB0    |           1|     24463|
+|68    |mm_multiplier__GCB1    |           1|     20168|
+|69    |myip_v1_0_S00_AXI__GC0 |           1|       905|
 |70    |design_1__GC0          |           1|      9653|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -2945,64 +2810,16 @@ INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" w
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[3]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[4]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[5]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[6]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[7]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[8]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[9]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[10]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[11]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[12]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[13]" won't be mapped to RAM because it is too sparse
-INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/I_WRAP_BRST/max_wrap_burst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/I_WRAP_BRST/max_wrap_burst" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/I_WRAP_BRST/max_wrap_burst" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_RD_CHNL/act_rd_burst_two" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '73' to '65' bits. [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '73' to '65' bits. [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
+INFO: [Synth 8-5546] ROM "gen_axi.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gen_axi.read_cs" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3886] merging instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ZERO_SMALLEST_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.zero_smallest_i_delay/i_pipe/opt_has_pipe.first_q_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1] )
@@ -3163,7 +2980,7 @@ INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_
 INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:35 ; elapsed = 00:04:42 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:29 ; elapsed = 00:04:36 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3236,9 +3053,9 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        96|
 |65    |my_pe__xdcDup__63__GC0 |           1|        96|
 |66    |my_pe__GC0             |           1|        96|
-|67    |mm_multiplier__GCB0    |           1|      9490|
-|68    |mm_multiplier__GCB1    |           1|      6884|
-|69    |myip_v1_0_S00_AXI__GC0 |           1|       557|
+|67    |mm_multiplier__GCB0    |           1|      9567|
+|68    |mm_multiplier__GCB1    |           1|      5817|
+|69    |myip_v1_0_S00_AXI__GC0 |           1|       555|
 |70    |design_1__GC0          |           1|      6418|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -3247,13 +3064,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/myip_0/inst/myip_v1_0_S00_AXI_inst/u_clk_180/inst/clk_in1' to pin 'processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:52 ; elapsed = 00:05:00 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:46 ; elapsed = 00:04:54 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:03 ; elapsed = 00:05:11 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Timing Optimization : Time (s): cpu = 00:04:55 ; elapsed = 00:05:03 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3326,16 +3143,16 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        96|
 |65    |my_pe__xdcDup__63__GC0 |           1|        96|
 |66    |my_pe__GC0             |           1|        96|
-|67    |mm_multiplier__GCB0    |           1|      9490|
-|68    |mm_multiplier__GCB1    |           1|      6884|
-|69    |myip_v1_0_S00_AXI__GC0 |           1|       557|
+|67    |mm_multiplier__GCB0    |           1|      9567|
+|68    |mm_multiplier__GCB1    |           1|      5817|
+|69    |myip_v1_0_S00_AXI__GC0 |           1|       555|
 |70    |design_1__GC0          |           1|      6418|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:48 ; elapsed = 00:05:57 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Technology Mapping : Time (s): cpu = 00:05:39 ; elapsed = 00:05:48 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3360,22 +3177,22 @@ INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:57 ; elapsed = 00:06:06 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished IO Insertion : Time (s): cpu = 00:05:47 ; elapsed = 00:05:56 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 1st driver pin 'design_1_i/myip_0/i_11_5152/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 2nd driver pin 'design_1_i/myip_0/i_11_3440/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 1st driver pin 'design_1_i/myip_0/i_11_5151/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 2nd driver pin 'design_1_i/myip_0/i_11_3441/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 1st driver pin 'design_1_i/myip_0/i_11_5150/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 2nd driver pin 'design_1_i/myip_0/i_11_3442/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 1st driver pin 'design_1_i/myip_0/i_11_5149/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 2nd driver pin 'design_1_i/myip_0/i_11_3443/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 1st driver pin 'design_1_i/myip_0/i_11_5148/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 2nd driver pin 'design_1_i/myip_0/i_11_3444/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 1st driver pin 'design_1_i/myip_0/i_11_5147/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 2nd driver pin 'design_1_i/myip_0/i_11_3445/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 1st driver pin 'design_1_i/myip_0/i_11_5153/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 2nd driver pin 'design_1_i/myip_0/i_11_3508/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:36]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 1st driver pin 'design_1_i/myip_0/i_2151/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 2nd driver pin 'design_1_i/myip_0/i_2158/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 1st driver pin 'design_1_i/myip_0/i_2152/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 2nd driver pin 'design_1_i/myip_0/i_2159/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 1st driver pin 'design_1_i/myip_0/i_2153/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 2nd driver pin 'design_1_i/myip_0/i_2160/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 1st driver pin 'design_1_i/myip_0/i_2154/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 2nd driver pin 'design_1_i/myip_0/i_2161/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 1st driver pin 'design_1_i/myip_0/i_2155/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 2nd driver pin 'design_1_i/myip_0/i_2162/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 1st driver pin 'design_1_i/myip_0/i_2156/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 2nd driver pin 'design_1_i/myip_0/i_2163/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 1st driver pin 'design_1_i/myip_0/i_2157/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 2nd driver pin 'design_1_i/myip_0/i_2164/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
@@ -3387,7 +3204,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:58 ; elapsed = 00:06:07 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:48 ; elapsed = 00:05:57 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3399,25 +3216,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:37 ; elapsed = 00:06:46 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:26 ; elapsed = 00:06:35 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:38 ; elapsed = 00:06:47 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:27 ; elapsed = 00:06:36 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:44 ; elapsed = 00:06:53 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Handling Custom Attributes : Time (s): cpu = 00:06:33 ; elapsed = 00:06:43 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:45 ; elapsed = 00:06:54 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Renaming Generated Nets : Time (s): cpu = 00:06:34 ; elapsed = 00:06:44 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3438,61 +3255,63 @@ Report Cell Usage:
 |3     |CARRY4     |   498|
 |4     |DSP48E1    |    64|
 |5     |DSP48E1_1  |    64|
-|6     |LUT1       |   909|
-|7     |LUT2       |  6972|
-|8     |LUT3       |  9696|
-|9     |LUT4       | 10460|
-|10    |LUT5       |  7295|
-|11    |LUT6       | 21233|
+|6     |LUT1       |   910|
+|7     |LUT2       |  5668|
+|8     |LUT3       |  9736|
+|9     |LUT4       | 10385|
+|10    |LUT5       |  8111|
+|11    |LUT6       | 20421|
 |12    |MMCME2_ADV |     1|
 |13    |MUXCY      | 14272|
 |14    |MUXCY_L    |     3|
 |15    |MUXF7      |  1344|
-|16    |MUXF8      |    64|
+|16    |MUXF8      |   128|
 |17    |PS7        |     1|
 |18    |RAMB36E1   |     2|
 |19    |SRL16      |     1|
 |20    |SRL16E     |  4708|
 |21    |SRLC32E    |    49|
 |22    |XORCY      |  6148|
-|23    |FDCE       |   106|
+|23    |FDCE       |    89|
 |24    |FDE        |  2112|
 |25    |FDR        |     9|
-|26    |FDRE       | 71984|
+|26    |FDRE       | 71983|
 |27    |FDSE       |    27|
-|28    |LD         |  4616|
-|29    |IBUF       |     1|
+|28    |LD         |  4096|
+|29    |LDC        |   512|
+|30    |IBUF       |     1|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:45 ; elapsed = 00:06:54 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Finished Writing Synthesis Report : Time (s): cpu = 00:06:34 ; elapsed = 00:06:44 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 14 critical warnings and 160 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:22 ; elapsed = 00:05:34 . Memory (MB): peak = 1900.180 ; gain = 579.473
-Synthesis Optimization Complete : Time (s): cpu = 00:06:45 ; elapsed = 00:06:54 . Memory (MB): peak = 1900.180 ; gain = 1592.992
+Synthesis finished with 0 errors, 14 critical warnings and 154 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:10 ; elapsed = 00:05:26 . Memory (MB): peak = 1899.316 ; gain = 587.566
+Synthesis Optimization Complete : Time (s): cpu = 00:06:34 ; elapsed = 00:06:44 . Memory (MB): peak = 1899.316 ; gain = 1592.645
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 29198 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Netlist 29-17] Analyzing 29254 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/myip_0/inst/myip_v1_0_S00_AXI_inst/u_clk_180/inst/clkin1_ibufg 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.302 . Memory (MB): peak = 2178.895 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.336 . Memory (MB): peak = 2173.188 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10835 instances were transformed.
+  A total of 10827 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 4097 instances
   FDE => FDRE: 2112 instances
   FDR => FDRE: 9 instances
-  LD => LDCE: 4616 instances
+  LD => LDCE: 4096 instances
+  LDC => LDCE: 512 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-773 Infos, 259 Warnings, 14 Critical Warnings and 0 Errors encountered.
+595 Infos, 254 Warnings, 14 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:08:03 ; elapsed = 00:08:12 . Memory (MB): peak = 2178.895 ; gain = 1879.121
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.295 . Memory (MB): peak = 2178.895 ; gain = 0.000
+synth_design: Time (s): cpu = 00:07:55 ; elapsed = 00:08:06 . Memory (MB): peak = 2173.188 ; gain = 1873.914
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.275 . Memory (MB): peak = 2173.188 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:58 ; elapsed = 00:00:36 . Memory (MB): peak = 2178.895 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:01:03 ; elapsed = 00:00:40 . Memory (MB): peak = 2173.188 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun  7 23:23:24 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  8 14:26:52 2021...
