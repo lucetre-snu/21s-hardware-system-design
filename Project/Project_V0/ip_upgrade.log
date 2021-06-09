@@ -1,112 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jun  8 14:17:00 2021
-| Host         : lucetre running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_myip_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of design_1_myip_0_0 (user.org:user:myip:1.0) from (Rev. 12) to (Rev. 13)
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue Jun  8 11:24:42 2021
-| Host         : lucetre running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_myip_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of design_1_myip_0_0 (user.org:user:myip:1.0) from (Rev. 11) to (Rev. 12)
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun  7 23:13:43 2021
-| Host         : lucetre running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_myip_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of design_1_myip_0_0 (user.org:user:myip:1.0) from (Rev. 10) to (Rev. 11)
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun  7 22:45:50 2021
-| Host         : lucetre running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_myip_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of design_1_myip_0_0 (user.org:user:myip:1.0) from (Rev. 9) to (Rev. 10)
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun  7 22:24:50 2021
-| Host         : lucetre running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_myip_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the upgrade of design_1_myip_0_0 (user.org:user:myip:1.0) from (Rev. 8) to (Rev. 9)
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun  7 13:01:53 2021
+| Date         : Wed Jun  9 16:15:20 2021
 | Host         : lucetre running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -127,7 +22,7 @@ SUCCESS in the upgrade of design_1_myip_0_0 (user.org:user:myip:1.0) from (Rev. 
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Jun  7 12:44:45 2021
+| Date         : Wed Jun  9 15:35:09 2021
 | Host         : lucetre running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
 | Device       : xc7z020clg484-1
@@ -139,25 +34,4 @@ Upgrade Log for IP 'design_1_myip_0_0'
 ----------
 
 SUCCESS in the upgrade of design_1_myip_0_0 (user.org:user:myip:1.0) from (Rev. 6) to (Rev. 7)
-
-
-
-
-
-
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri May 28 00:55:04 2021
-| Host         : lucetre running 64-bit major release  (build 9200)
-| Command      : upgrade_ip
-| Device       : xc7z020clg484-1
-------------------------------------------------------------------------------------
-
-Upgrade Log for IP 'design_1_myip_0_0'
-
-1. Summary
-----------
-
-SUCCESS in the conversion of design_1_myip_0_0 (user.org:user:myip:1.0 (Rev. 6)) to Vivado generation flows.
 

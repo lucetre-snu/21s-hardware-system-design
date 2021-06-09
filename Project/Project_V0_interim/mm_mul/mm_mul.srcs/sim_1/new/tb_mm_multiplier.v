@@ -12,8 +12,7 @@ module tb_mm_multiplier #(
     reg [BITWIDTH-1:0] wrgb[0:MATRIX_SIZE-1];
     wire [BITWIDTH-1:0] rddata;
     wire [BITWIDTH-1:0] wrdata;
-    wire [2*L_RAM_SIZE:0] rdaddr;
-    wire [2*L_RAM_SIZE:0] wraddr;
+    wire [2*L_RAM_SIZE:0] addr;
     wire done, we;
     
     reg start, clk, reset;
@@ -25,7 +24,7 @@ module tb_mm_multiplier #(
 //        end
 //        $writememh(INFILE, rdgb);
 //    end
-    assign rddata = start ? rdgb[rdaddr] : 0;
+    assign rddata = start ? rdgb[addr] : 0;
     initial begin
         $readmemh(INFILE, rdgb);
         for(i = 0; i < MATRIX_SIZE; i = i+1) wrgb[i] <= 0;
@@ -34,7 +33,7 @@ module tb_mm_multiplier #(
         #10 start <= 1; reset <= 0;
     end
     always @(*)
-        if (we) wrgb[wraddr] = wrdata;
+        if (we) wrgb[addr] = wrdata;
     always @(posedge done) begin
         $writememh(OUTFILE, wrgb);
         start <= 0;
@@ -45,11 +44,10 @@ module tb_mm_multiplier #(
         .start(start),
         .reset(reset),
         .clk(clk),
-        .rdaddr(rdaddr),
+        .addr(addr),
         .rddata(rddata),
-        .we(we),
-        .wraddr(wraddr),
         .wrdata(wrdata),
+        .we(we),
         .done(done)
     );
 endmodule

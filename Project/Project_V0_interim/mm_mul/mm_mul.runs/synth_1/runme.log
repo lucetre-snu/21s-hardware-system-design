@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11404 
+INFO: Helper process launched with PID 17880 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 394.492 ; gain = 100.559
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 392.809 ; gain = 97.750
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:3]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
@@ -210,7 +210,7 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized95 has unconne
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized95 has unconnected port SSET
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 557.996 ; gain = 264.063
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 561.066 ; gain = 266.008
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -223,13 +223,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 557.996 ; gain = 264.063
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 561.066 ; gain = 266.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 557.996 ; gain = 264.063
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 561.066 ; gain = 266.008
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 23040 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -239,22 +239,22 @@ Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design
 Finished Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.407 . Memory (MB): peak = 1637.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.847 . Memory (MB): peak = 1645.891 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2176 instances were transformed.
   FDE => FDRE: 2176 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.414 . Memory (MB): peak = 1637.840 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.950 . Memory (MB): peak = 1637.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.455 . Memory (MB): peak = 1645.891 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1645.891 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Constraint Validation : Time (s): cpu = 00:01:26 ; elapsed = 00:01:32 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:26 ; elapsed = 00:01:32 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -324,7 +324,7 @@ Applied set_property DONT_TOUCH = true for \MATRIX[61].MY_PE /UUT. (constraint f
 Applied set_property DONT_TOUCH = true for \MATRIX[62].MY_PE /UUT. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for \MATRIX[63].MY_PE /UUT. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:25 ; elapsed = 00:01:24 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:01:37 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
@@ -357,110 +357,8 @@ INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bin" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[13]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[14]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[15]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[16]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[17]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[18]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[19]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[20]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[21]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[22]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[23]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[24]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[25]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[26]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[27]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[28]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[29]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[30]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[31]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[32]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[33]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[34]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[35]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[36]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[37]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[38]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[39]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[40]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[41]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[42]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[43]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[44]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[45]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[46]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[47]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[48]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[49]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[50]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[51]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[52]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[53]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[54]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[55]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[56]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[57]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[58]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[59]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[60]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[61]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[62]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[63]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[0]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[0]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[1]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[2]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[3]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[4]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[5]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[6]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[7]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[1]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[2]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[3]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[4]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[5]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[6]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[7]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[0]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[1]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[2]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[3]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[4]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[5]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[6]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[7]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[8]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[9]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[10]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[11]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[12]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[13]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[14]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[15]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[16]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[17]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[18]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[19]' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:77]
-INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:39 ; elapsed = 00:01:40 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:45 ; elapsed = 00:01:56 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized25) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
 INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized25) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
@@ -535,8 +433,8 @@ Report RTL Partitions:
 |63    |my_pe__xdcDup__62__GC0 |           1|        64|
 |64    |my_pe__xdcDup__63__GC0 |           1|        64|
 |65    |my_pe__GC0             |           1|        64|
-|66    |mm_multiplier__GCB0    |           1|     24454|
-|67    |mm_multiplier__GCB1    |           1|     20170|
+|66    |mm_multiplier__GCB0    |           1|     22999|
+|67    |mm_multiplier__GCB1    |           1|     19399|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -588,9 +486,9 @@ INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_one_ip" wo
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ZERO_SMALLEST_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.zero_smallest_i_delay/i_pipe/opt_has_pipe.first_q_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1] )
@@ -628,7 +526,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_
 INFO: [Synth 8-3332] Sequential element (FMA_OP.OP/addsub/add/EXP/bma_exp_cc/CARRYS_Q_DEL.FAST_DEL.CARRY_FD) is unused and will be removed from module floating_point_v7_1_7_viv.
 INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/FLOW_SEL_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:01:59 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:20 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -700,20 +598,20 @@ Report RTL Partitions:
 |63    |my_pe__xdcDup__62__GC0 |           1|        96|
 |64    |my_pe__xdcDup__63__GC0 |           1|        96|
 |65    |my_pe__GC0             |           1|        96|
-|66    |mm_multiplier__GCB0    |           1|      9613|
-|67    |mm_multiplier__GCB1    |           1|      5826|
+|66    |mm_multiplier__GCB0    |           1|      8875|
+|67    |mm_multiplier__GCB1    |           1|      4361|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:13 ; elapsed = 00:02:15 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:23 ; elapsed = 00:02:36 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:13 ; elapsed = 00:02:15 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Timing Optimization : Time (s): cpu = 00:02:23 ; elapsed = 00:02:36 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -785,14 +683,14 @@ Report RTL Partitions:
 |63    |my_pe__xdcDup__62__GC0 |           1|        96|
 |64    |my_pe__xdcDup__63__GC0 |           1|        96|
 |65    |my_pe__GC0             |           1|        96|
-|66    |mm_multiplier__GCB0    |           1|      9613|
-|67    |mm_multiplier__GCB1    |           1|      5826|
+|66    |mm_multiplier__GCB0    |           1|      8875|
+|67    |mm_multiplier__GCB1    |           1|      4361|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:30 ; elapsed = 00:02:33 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Technology Mapping : Time (s): cpu = 00:02:40 ; elapsed = 00:02:55 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -816,7 +714,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:38 ; elapsed = 00:02:41 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished IO Insertion : Time (s): cpu = 00:02:48 ; elapsed = 00:03:03 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -829,7 +727,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:39 ; elapsed = 00:02:42 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:49 ; elapsed = 00:03:05 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -841,25 +739,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:57 ; elapsed = 00:03:00 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:09 ; elapsed = 00:03:26 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:58 ; elapsed = 00:03:01 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:10 ; elapsed = 00:03:28 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:02 ; elapsed = 00:03:05 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:15 ; elapsed = 00:03:33 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:03 ; elapsed = 00:03:06 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:16 ; elapsed = 00:03:34 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -875,56 +773,33 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |BUFG      |    12|
+|1     |BUFG      |     1|
 |2     |CARRY4    |   448|
 |3     |DSP48E1   |    64|
 |4     |DSP48E1_1 |    64|
-|5     |LUT1      |   721|
-|6     |LUT2      |  5594|
-|7     |LUT3      |  9280|
-|8     |LUT4      | 10165|
-|9     |LUT5      |  6763|
-|10    |LUT6      | 20994|
+|5     |LUT1      |   719|
+|6     |LUT2      |  5615|
+|7     |LUT3      |  8983|
+|8     |LUT4      | 12736|
+|9     |LUT5      |  5988|
+|10    |LUT6      | 19751|
 |11    |MUXCY     | 14272|
-|12    |MUXF7     |  1344|
-|13    |MUXF8     |   128|
+|12    |MUXF7     |  1088|
+|13    |MUXF8     |   192|
 |14    |SRL16E    |  4672|
 |15    |XORCY     |  6144|
-|16    |FDCE      |    71|
+|16    |FDCE      |    68|
 |17    |FDE       |  2112|
-|18    |FDRE      | 70144|
-|19    |LD        |  4096|
-|20    |LDC       |   512|
-|21    |IBUF      |    35|
-|22    |OBUF      |    48|
+|18    |FDRE      | 74244|
+|19    |IBUF      |    35|
+|20    |OBUF      |    41|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:03 ; elapsed = 00:03:06 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:16 ; elapsed = 00:03:34 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 144 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:02:09 . Memory (MB): peak = 1640.359 ; gain = 264.063
-Synthesis Optimization Complete : Time (s): cpu = 00:03:04 ; elapsed = 00:03:07 . Memory (MB): peak = 1640.359 ; gain = 1346.426
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:53 ; elapsed = 00:02:27 . Memory (MB): peak = 1648.449 ; gain = 266.008
+Synthesis Optimization Complete : Time (s): cpu = 00:03:16 ; elapsed = 00:03:34 . Memory (MB): peak = 1648.449 ; gain = 1353.391
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 29184 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 1795.227 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10816 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 4096 instances
-  FDE => FDRE: 2112 instances
-  LD => LDCE: 4096 instances
-  LDC => LDCE: 512 instances
-
-INFO: [Common 17-83] Releasing license: Synthesis
-121 Infos, 200 Warnings, 0 Critical Warnings and 0 Errors encountered.
-synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:13 ; elapsed = 00:04:16 . Memory (MB): peak = 1795.227 ; gain = 1508.422
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.235 . Memory (MB): peak = 1795.227 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/mm_multiplier.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:54 ; elapsed = 00:00:33 . Memory (MB): peak = 1795.227 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_utilization -file mm_multiplier_utilization_synth.rpt -pb mm_multiplier_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  8 14:33:56 2021...
+INFO: [Netlist 29-17] Analyzing 24384 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds

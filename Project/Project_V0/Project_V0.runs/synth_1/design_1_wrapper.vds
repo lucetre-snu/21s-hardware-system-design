@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jun  8 14:17:58 2021
-# Process ID: 19036
+# Start of session at: Wed Jun  9 15:36:34 2021
+# Process ID: 9808
 # Current directory: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/design_1_wrapper.vds
@@ -11,7 +11,7 @@
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/MyIP'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/My_IP/myip_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.cache/ip 
@@ -20,17 +20,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11344 
+INFO: Helper process launched with PID 21988 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 419.809 ; gain = 113.137
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 420.434 ; gain = 113.258
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:108]
 	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
-	Parameter C_MEMORY_DEPTH bound to: 2048 - type: integer 
-	Parameter C_BRAM_ADDR_WIDTH bound to: 11 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_MEMORY_DEPTH bound to: 8192 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
@@ -49,9 +49,9 @@ INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [c:/Users/l
 INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30482' bound to instance 'U0' of component 'axi_bram_ctrl' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:264]
 INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30654]
 	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
-	Parameter C_MEMORY_DEPTH bound to: 2048 - type: integer 
-	Parameter C_BRAM_ADDR_WIDTH bound to: 11 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_MEMORY_DEPTH bound to: 8192 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
@@ -68,8 +68,8 @@ INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [c:/Users/lucetre/Docume
 	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29676]
-	Parameter C_BRAM_ADDR_WIDTH bound to: 11 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
@@ -84,7 +84,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [c:/Users/lucetre/Do
 	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'full_axi' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:28443]
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
@@ -108,10 +108,10 @@ INFO: [Synth 8-638] synthesizing module 'full_axi' [c:/Users/lucetre/Documents/s
 WARNING: [Synth 8-6774] Null subtype or type declaration found [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:28512]
 INFO: [Synth 8-3919] null assignment ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:28512]
 INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11670]
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (1#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11670]
 INFO: [Synth 8-638] synthesizing module 'wr_chnl' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:23322]
-	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 2 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
@@ -124,7 +124,7 @@ INFO: [Synth 8-638] synthesizing module 'wr_chnl' [c:/Users/lucetre/Documents/se
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
 INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:23289]
 INFO: [Synth 8-638] synthesizing module 'wrap_brst' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12669]
-	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 2 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (2#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12669]
@@ -180,7 +180,7 @@ WARNING: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was 
 INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (9#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:23322]
 WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29169]
 INFO: [Synth 8-638] synthesizing module 'rd_chnl' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/27fe/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14962]
-	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 15 - type: integer 
 	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 2 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 12 - type: integer 
@@ -1021,7 +1021,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' [c:
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
 	Parameter C_M_AXI_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000 
-	Parameter C_M_AXI_ADDR_WIDTH bound to: 64'b0000000000000000000000000001000000000000000000000000000000001101 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64'b0000000000000000000000000001000000000000000000000000000000001111 
 	Parameter C_S_AXI_BASE_ID bound to: 0 - type: integer 
 	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 12 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -1070,7 +1070,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_crossbar' [c:/Use
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_M_AXI_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000 
-	Parameter C_M_AXI_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000001111111111111 
+	Parameter C_M_AXI_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000111111111111111 
 	Parameter C_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_S_AXI_HIGH_ID bound to: 64'b0000000000000000000000000000000000000000000000000000111111111111 
 	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 12 - type: integer 
@@ -1145,7 +1145,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor' [c
 	Parameter C_BASE_ID bound to: 12'b000000000000 
 	Parameter C_HIGH_ID bound to: 12'b111111111111 
 	Parameter C_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000001111111111111 
+	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
 	Parameter C_TARGET_QUAL bound to: 2'b11 
 	Parameter C_M_AXI_SECURE bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
@@ -1176,7 +1176,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder' [c:
 	Parameter C_TARGET_HOT bound to: 1 - type: integer 
 	Parameter C_REGION_ENC bound to: 1 - type: integer 
 	Parameter C_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000001111111111111 
+	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000111111111111111 
 	Parameter C_TARGET_QUAL bound to: 3'b011 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
@@ -1266,7 +1266,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor__pa
 	Parameter C_BASE_ID bound to: 12'b000000000000 
 	Parameter C_HIGH_ID bound to: 12'b111111111111 
 	Parameter C_BASE_ADDR bound to: 128'b00000000000000000000000000000000010000111100000000000000000000000000000000000000000000000000000001000000000000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000001111111111111 
+	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000010000111100000011111111111111110000000000000000000000000000000001000000000000000111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
 	Parameter C_TARGET_QUAL bound to: 2'b11 
 	Parameter C_M_AXI_SECURE bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
@@ -1778,8 +1778,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_blk_mem_gen_0_0' [c:/Users/luc
 	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 2048 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 8192 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 8192 - type: integer 
 	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
 	Parameter C_HAS_RSTB bound to: 1 - type: integer 
 	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
@@ -1792,8 +1792,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_blk_mem_gen_0_0' [c:/Users/luc
 	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
 	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
 	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 2048 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 2048 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 8192 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 8192 - type: integer 
 	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -1819,20 +1819,20 @@ INFO: [Synth 8-638] synthesizing module 'design_1_blk_mem_gen_0_0' [c:/Users/luc
 	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 2 - type: string 
+	Parameter C_COUNT_36K_BRAM bound to: 8 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     10.7492 mW - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388 mW - type: string 
 INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_2' declared at 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/37c2/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_2' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/synth/design_1_blk_mem_gen_0_0.vhd:255]
-INFO: [Synth 8-256] done synthesizing module 'design_1_blk_mem_gen_0_0' (63#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/synth/design_1_blk_mem_gen_0_0.vhd:80]
+INFO: [Synth 8-256] done synthesizing module 'design_1_blk_mem_gen_0_0' (65#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/synth/design_1_blk_mem_gen_0_0.vhd:80]
 WARNING: [Synth 8-350] instance 'blk_mem_gen_0' of module 'design_1_blk_mem_gen_0_0' requires 16 connections, but only 14 given [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:336]
 INFO: [Synth 8-6157] synthesizing module 'design_1_myip_0_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/synth/design_1_myip_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'myip_v1_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_v1_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0.v:4]
 	Parameter C_M00_BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_BRAM_WE_WIDTH bound to: 4 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0_S00_AXI.v:4]
 	Parameter BRAM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_WE_WIDTH bound to: 4 - type: integer 
@@ -1842,8 +1842,8 @@ INFO: [Synth 8-6157] synthesizing module 'myip_v1_0_S00_AXI' [c:/Users/lucetre/D
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:232]
-INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:373]
+INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0_S00_AXI.v:232]
+INFO: [Synth 8-226] default block is never used [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0_S00_AXI.v:373]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v:70]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v:68]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
@@ -1852,7 +1852,7 @@ INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.3/scripts
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IBUF' (64#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (66#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
 INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26717]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
 	Parameter CLKFBOUT_MULT_F bound to: 20.000000 - type: float 
@@ -1902,12 +1902,12 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2018.3/s
 	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
 	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (65#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26717]
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (67#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26717]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (66#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (67#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (68#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v:70]
-INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (68#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (69#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (70#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_4/clk_wiz_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/src/mm_multiplier.v:3]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
 	Parameter S_IDLE bound to: 3'b000 
@@ -1919,10 +1919,10 @@ INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [c:/Users/lucetre/Docum
 	Parameter MATRIX_SIZE bound to: 64 - type: integer 
 	Parameter VECTOR_SIZE bound to: 8 - type: integer 
 	Parameter ZERO bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'my_pe' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/my_pe.v:2]
+INFO: [Synth 8-6157] synthesizing module 'my_pe' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/src/my_pe.v:2]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'floating_point_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/synth/floating_point_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'floating_point_MAC' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_MAC/synth/floating_point_MAC.vhd:74]
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_HAS_ADD bound to: 0 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -1993,16 +1993,15 @@ INFO: [Synth 8-638] synthesizing module 'floating_point_0' [c:/Users/lucetre/Doc
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/synth/floating_point_0.vhd:208]
-INFO: [Synth 8-256] done synthesizing module 'floating_point_0' (103#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_0/synth/floating_point_0.vhd:74]
-INFO: [Synth 8-6155] done synthesizing module 'my_pe' (104#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/my_pe.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'mm_multiplier' (105#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:3]
-WARNING: [Synth 8-689] width (32) of port connection 'rdaddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:422]
-WARNING: [Synth 8-689] width (32) of port connection 'wraddr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:424]
-WARNING: [Synth 8-689] width (4) of port connection 'we' does not match port width (1) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:426]
-INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0_S00_AXI' (106#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0' (107#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/494f/hdl/myip_v1_0.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_myip_0_0' (108#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/synth/design_1_myip_0_0.v:56]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_MAC/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_MAC/synth/floating_point_MAC.vhd:208]
+INFO: [Synth 8-256] done synthesizing module 'floating_point_MAC' (105#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/src/floating_point_MAC/synth/floating_point_MAC.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'my_pe' (106#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/src/my_pe.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mm_multiplier' (107#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/src/mm_multiplier.v:3]
+WARNING: [Synth 8-689] width (32) of port connection 'addr' does not match port width (7) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0_S00_AXI.v:423]
+WARNING: [Synth 8-689] width (4) of port connection 'we' does not match port width (1) of module 'mm_multiplier' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0_S00_AXI.v:425]
+INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0_S00_AXI' (108#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myip_v1_0' (109#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/7bc1/hdl/myip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_myip_0_0' (110#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_myip_0_0/synth/design_1_myip_0_0.v:56]
 INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
 	Parameter C_USE_DEFAULT_ACP_USER_VAL bound to: 0 - type: integer 
@@ -2064,12 +2063,12 @@ INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_sys
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1348]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1349]
 INFO: [Synth 8-6157] synthesizing module 'BIBUF' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:270]
-INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (109#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:270]
+INFO: [Synth 8-6155] done synthesizing module 'BIBUF' (111#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:270]
 INFO: [Synth 8-6157] synthesizing module 'PS7' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41553]
-INFO: [Synth 8-6155] done synthesizing module 'PS7' (110#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41553]
-INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (111#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
+INFO: [Synth 8-6155] done synthesizing module 'PS7' (112#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41553]
+INFO: [Synth 8-6155] done synthesizing module 'processing_system7_v5_5_processing_system7' (113#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:162]
 WARNING: [Synth 8-350] instance 'inst' of module 'processing_system7_v5_5_processing_system7' requires 685 connections, but only 672 given [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:329]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (112#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (114#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/synth/design_1_processing_system7_0_0.v:60]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' requires 68 connections, but only 63 given [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:382]
 INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -2125,7 +2124,7 @@ INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/lucetre/Documents/semest
 INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683]
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-6155] done synthesizing module 'SRL16' (113#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (115#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
@@ -2145,18 +2144,18 @@ INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_o
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (114#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (115#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (116#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (117#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
 INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (116#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (117#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (118#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'design_1_rst_ps7_0_50M_0' (119#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (118#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (119#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (120#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'design_1_rst_ps7_0_50M_0' (121#1) [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/synth/design_1_rst_ps7_0_50M_0.vhd:74]
 WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' requires 10 connections, but only 6 given [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:446]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (120#1) [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (121#1) [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (122#1) [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (123#1) [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
@@ -2259,7 +2258,7 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnec
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized5 has unconnected port SSET
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:02 ; elapsed = 00:02:08 . Memory (MB): peak = 894.238 ; gain = 587.566
+Finished RTL Elaboration : Time (s): cpu = 00:02:13 ; elapsed = 00:02:19 . Memory (MB): peak = 899.430 ; gain = 592.254
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2272,13 +2271,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:03 ; elapsed = 00:02:09 . Memory (MB): peak = 894.238 ; gain = 587.566
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:14 ; elapsed = 00:02:21 . Memory (MB): peak = 899.430 ; gain = 592.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:03 ; elapsed = 00:02:09 . Memory (MB): peak = 894.238 ; gain = 587.566
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:14 ; elapsed = 00:02:21 . Memory (MB): peak = 899.430 ; gain = 592.254
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 23065 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 23071 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -2297,15 +2296,16 @@ Finished Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-syst
 Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
 Finished Parsing XDC File [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.470 . Memory (MB): peak = 1890.145 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.541 . Memory (MB): peak = 1909.152 ; gain = 0.000
+write_xdc: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1909.152 ; gain = 130.883
 Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.577 . Memory (MB): peak = 1894.887 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.511 . Memory (MB): peak = 1913.891 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.544 . Memory (MB): peak = 1896.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.516 . Memory (MB): peak = 1915.477 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2194 instances were transformed.
   FDE => FDRE: 2176 instances
@@ -2313,17 +2313,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   MUXCY_L => MUXCY: 4 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.495 . Memory (MB): peak = 1896.742 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1896.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.513 . Memory (MB): peak = 1915.477 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1915.477 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Constraint Validation : Time (s): cpu = 00:03:39 ; elapsed = 00:03:43 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:27 ; elapsed = 00:03:31 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Loading Part and Timing Information : Time (s): cpu = 00:03:39 ; elapsed = 00:03:43 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -2407,7 +2407,7 @@ Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint
 Applied set_property DONT_TOUCH = true for design_1_i/axi_mem_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_mem_intercon/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:31 ; elapsed = 00:03:35 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:43 ; elapsed = 00:03:47 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "max_wrap_burst" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "max_wrap_burst" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -2509,7 +2509,6 @@ INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "bin" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -2577,120 +2576,19 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' usin
                   iSTATE |                             0100 |                               00
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo'
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[20]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[21]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[22]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[23]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[24]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[25]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[26]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[27]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[28]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[29]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[30]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[31]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[32]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[33]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[34]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[35]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[36]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[37]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[38]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[39]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[40]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[41]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[42]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[43]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[44]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[45]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[46]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[47]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[48]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[49]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[50]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[51]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[52]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[53]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[54]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[55]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[56]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[57]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[58]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[59]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[60]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[61]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[62]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb1_reg[63]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'bin_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'ain_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:89]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[0]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[1]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[2]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[3]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[4]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[5]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[6]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[7]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[8]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[9]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[10]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[11]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[12]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[13]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[14]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[15]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[16]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[17]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[18]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-WARNING: [Synth 8-327] inferring latch for variable 'gb2_reg[19]' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:77]
-INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:49 ; elapsed = 00:03:56 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:03 ; elapsed = 00:04:09 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-223] decloning instance 'floating_point_0:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_0:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
-INFO: [Synth 8-223] decloning instance 'floating_point_0:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_0:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
-INFO: [Synth 8-223] decloning instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXTRA_LSB_BIT_DEL' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXTRA_LSB_BIT_DEL' (floating_point_v7_1_7_delay__parameterized25) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ROUND/EXTRA_LSB_RND1_DEL'
 
 Report RTL Partitions: 
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
 |1     |clk_wiz_0_clk_wiz__GC0 |           1|         3|
-|2     |floating_point_0       |          64|      4739|
+|2     |floating_point_MAC     |          64|      4739|
 |3     |my_pe__xdcDup__1__GC0  |           1|        64|
 |4     |my_pe__xdcDup__2__GC0  |           1|        64|
 |5     |my_pe__xdcDup__3__GC0  |           1|        64|
@@ -2755,10 +2653,10 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        64|
 |65    |my_pe__xdcDup__63__GC0 |           1|        64|
 |66    |my_pe__GC0             |           1|        64|
-|67    |mm_multiplier__GCB0    |           1|     24463|
-|68    |mm_multiplier__GCB1    |           1|     20168|
+|67    |mm_multiplier__GCB0    |           1|     22905|
+|68    |mm_multiplier__GCB1    |           1|     19497|
 |69    |myip_v1_0_S00_AXI__GC0 |           1|       905|
-|70    |design_1__GC0          |           1|      9653|
+|70    |design_1__GC0          |           1|      9932|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -2810,6 +2708,7 @@ INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_one_ip" wo
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
@@ -2821,40 +2720,40 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '73' to '65' bits. [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
 INFO: [Synth 8-5546] ROM "gen_axi.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gen_axi.read_cs" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3886] merging instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ZERO_SMALLEST_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.zero_smallest_i_delay/i_pipe/opt_has_pipe.first_q_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[19] )
-INFO: [Synth 8-3886] merging instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ZERO_SMALLEST_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]' (FDE) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.zero_smallest_i_delay/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]'
-INFO: [Synth 8-3886] merging instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[50]' (FDE) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
-INFO: [Synth 8-3886] merging instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]'
-INFO: [Synth 8-3886] merging instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]'
-INFO: [Synth 8-3886] merging instance 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_0:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[49]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/NORM/ROUND/EXP_INC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_0:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ZERO_SMALLEST_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.zero_smallest_i_delay/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[19] )
+INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ZERO_SMALLEST_DEL/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.zero_smallest_i_delay/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[50]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_Z_D/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.ALIGN_SHIFT/ALIGN_SHIFT/MUX_LOOP[1].SKEW_DIST_DEL.DEL_DIST/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/NORMAL_NORM_DIST.ADD_MANT_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/NORM/ADD_MANT_DELAY_2/i_pipe/opt_has_pipe.first_q_reg[49]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/NORM/ROUND/EXP_INC_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[7] )
 INFO: [Synth 8-3332] Sequential element (FMA_OP.OP/addsub/add/EXP/bma_exp_cc/CARRYS_Q_DEL.FAST_DEL.CARRY_FD) is unused and will be removed from module floating_point_v7_1_7_viv.
 INFO: [Synth 8-3886] merging instance 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/axi_rresp_reg[0]' (FDRE) to 'design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_1_i/myip_0/myip_v1_0_S00_AXI_insti_66/\axi_rresp_reg[1] )
@@ -2962,26 +2861,26 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (design_1_
 INFO: [Synth 8-3332] Sequential element (inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module design_1_xbar_0.
 INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
 INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[2]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[2]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[4]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/rst_ps7_0_50M/U0/SEQ/pr_dec_reg[1]' (FD) to 'design_1_i/i_0/rst_ps7_0_50M/U0/SEQ/bsr_dec_reg[1]'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/rst_ps7_0_50M/U0/SEQ/bsr_dec_reg[1]' (FD) to 'design_1_i/i_0/rst_ps7_0_50M/U0/SEQ/core_dec_reg[1]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]' (FDS) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[0]'
+INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[1]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.POR_B_reg' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.POR_B_reg'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.POR_A_reg' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.POR_A_reg'
-INFO: [Synth 8-3886] merging instance 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg' (FD) to 'design_1_i/i_0/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:29 ; elapsed = 00:04:36 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:47 ; elapsed = 00:04:55 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2989,7 +2888,7 @@ Report RTL Partitions:
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
 |1     |clk_wiz_0_clk_wiz__GC0 |           1|         3|
-|2     |floating_point_0       |          64|      4022|
+|2     |floating_point_MAC     |          64|      4022|
 |3     |my_pe__xdcDup__1__GC0  |           1|        96|
 |4     |my_pe__xdcDup__2__GC0  |           1|        96|
 |5     |my_pe__xdcDup__3__GC0  |           1|        96|
@@ -3054,10 +2953,10 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        96|
 |65    |my_pe__xdcDup__63__GC0 |           1|        96|
 |66    |my_pe__GC0             |           1|        96|
-|67    |mm_multiplier__GCB0    |           1|      9567|
-|68    |mm_multiplier__GCB1    |           1|      5817|
+|67    |mm_multiplier__GCB0    |           1|      8792|
+|68    |mm_multiplier__GCB1    |           1|      4487|
 |69    |myip_v1_0_S00_AXI__GC0 |           1|       555|
-|70    |design_1__GC0          |           1|      6418|
+|70    |design_1__GC0          |           1|      6443|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
@@ -3065,13 +2964,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/myip_0/inst/myip_v1_0_S00_AXI_inst/u_clk_180/inst/clk_in1' to pin 'processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:46 ; elapsed = 00:04:54 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:05 ; elapsed = 00:05:13 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:55 ; elapsed = 00:05:03 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Timing Optimization : Time (s): cpu = 00:05:16 ; elapsed = 00:05:23 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3079,7 +2978,7 @@ Report RTL Partitions:
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
 |1     |clk_wiz_0_clk_wiz__GC0 |           1|         3|
-|2     |floating_point_0       |          64|      4022|
+|2     |floating_point_MAC     |          64|      4022|
 |3     |my_pe__xdcDup__1__GC0  |           1|        96|
 |4     |my_pe__xdcDup__2__GC0  |           1|        96|
 |5     |my_pe__xdcDup__3__GC0  |           1|        96|
@@ -3144,16 +3043,16 @@ Report RTL Partitions:
 |64    |my_pe__xdcDup__62__GC0 |           1|        96|
 |65    |my_pe__xdcDup__63__GC0 |           1|        96|
 |66    |my_pe__GC0             |           1|        96|
-|67    |mm_multiplier__GCB0    |           1|      9567|
-|68    |mm_multiplier__GCB1    |           1|      5817|
+|67    |mm_multiplier__GCB0    |           1|      8792|
+|68    |mm_multiplier__GCB1    |           1|      4487|
 |69    |myip_v1_0_S00_AXI__GC0 |           1|       555|
-|70    |design_1__GC0          |           1|      6418|
+|70    |design_1__GC0          |           1|      6443|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:39 ; elapsed = 00:05:48 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Technology Mapping : Time (s): cpu = 00:06:01 ; elapsed = 00:06:10 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3178,34 +3077,20 @@ INFO: [Synth 8-5365] Flop inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:47 ; elapsed = 00:05:56 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished IO Insertion : Time (s): cpu = 00:06:09 ; elapsed = 00:06:18 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 1st driver pin 'design_1_i/myip_0/i_2151/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[0] with 2nd driver pin 'design_1_i/myip_0/i_2158/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 1st driver pin 'design_1_i/myip_0/i_2152/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[1] with 2nd driver pin 'design_1_i/myip_0/i_2159/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 1st driver pin 'design_1_i/myip_0/i_2153/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[2] with 2nd driver pin 'design_1_i/myip_0/i_2160/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 1st driver pin 'design_1_i/myip_0/i_2154/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[3] with 2nd driver pin 'design_1_i/myip_0/i_2161/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 1st driver pin 'design_1_i/myip_0/i_2155/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[4] with 2nd driver pin 'design_1_i/myip_0/i_2162/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 1st driver pin 'design_1_i/myip_0/i_2156/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[5] with 2nd driver pin 'design_1_i/myip_0/i_2163/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 1st driver pin 'design_1_i/myip_0/i_2157/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:97]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin m00_bram_addr[6] with 2nd driver pin 'design_1_i/myip_0/i_2164/O' [c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.srcs/sources_1/bd/design_1/ipshared/mm_multiplier.v:95]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        7|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:48 ; elapsed = 00:05:57 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Renaming Generated Instances : Time (s): cpu = 00:06:11 ; elapsed = 00:06:20 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3217,25 +3102,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:26 ; elapsed = 00:06:35 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:06:54 ; elapsed = 00:07:03 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:06:27 ; elapsed = 00:06:36 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Renaming Generated Ports : Time (s): cpu = 00:06:55 ; elapsed = 00:07:05 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:06:33 ; elapsed = 00:06:43 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:02 ; elapsed = 00:07:11 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:06:34 ; elapsed = 00:06:44 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:03 ; elapsed = 00:07:12 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3252,67 +3137,63 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BIBUF      |   130|
-|2     |BUFG       |    15|
+|2     |BUFG       |     3|
 |3     |CARRY4     |   498|
 |4     |DSP48E1    |    64|
 |5     |DSP48E1_1  |    64|
-|6     |LUT1       |   910|
-|7     |LUT2       |  5668|
-|8     |LUT3       |  9736|
-|9     |LUT4       | 10385|
-|10    |LUT5       |  8111|
-|11    |LUT6       | 20421|
+|6     |LUT1       |   909|
+|7     |LUT2       |  5692|
+|8     |LUT3       |  9440|
+|9     |LUT4       | 12957|
+|10    |LUT5       |  6179|
+|11    |LUT6       | 20330|
 |12    |MMCME2_ADV |     1|
 |13    |MUXCY      | 14272|
 |14    |MUXCY_L    |     3|
-|15    |MUXF7      |  1344|
-|16    |MUXF8      |   128|
+|15    |MUXF7      |  1088|
+|16    |MUXF8      |   192|
 |17    |PS7        |     1|
-|18    |RAMB36E1   |     2|
+|18    |RAMB36E1   |     8|
 |19    |SRL16      |     1|
 |20    |SRL16E     |  4708|
 |21    |SRLC32E    |    49|
 |22    |XORCY      |  6148|
-|23    |FDCE       |    89|
+|23    |FDCE       |    75|
 |24    |FDE        |  2112|
 |25    |FDR        |     9|
-|26    |FDRE       | 71983|
+|26    |FDRE       | 76089|
 |27    |FDSE       |    27|
-|28    |LD         |  4096|
-|29    |LDC        |   512|
-|30    |IBUF       |     1|
+|28    |IBUF       |     1|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:06:34 ; elapsed = 00:06:44 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:03 ; elapsed = 00:07:12 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 14 critical warnings and 154 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:10 ; elapsed = 00:05:26 . Memory (MB): peak = 1899.316 ; gain = 587.566
-Synthesis Optimization Complete : Time (s): cpu = 00:06:34 ; elapsed = 00:06:44 . Memory (MB): peak = 1899.316 ; gain = 1592.645
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:27 ; elapsed = 00:05:54 . Memory (MB): peak = 1918.027 ; gain = 592.254
+Synthesis Optimization Complete : Time (s): cpu = 00:07:03 ; elapsed = 00:07:13 . Memory (MB): peak = 1918.027 ; gain = 1610.852
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 29254 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 24460 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/myip_0/inst/myip_v1_0_S00_AXI_inst/u_clk_180/inst/clkin1_ibufg 
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.336 . Memory (MB): peak = 2173.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.288 . Memory (MB): peak = 2200.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10827 instances were transformed.
+  A total of 6219 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 4097 instances
   FDE => FDRE: 2112 instances
   FDR => FDRE: 9 instances
-  LD => LDCE: 4096 instances
-  LDC => LDCE: 512 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-595 Infos, 254 Warnings, 14 Critical Warnings and 0 Errors encountered.
+594 Infos, 153 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:07:55 ; elapsed = 00:08:06 . Memory (MB): peak = 2173.188 ; gain = 1873.914
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.275 . Memory (MB): peak = 2173.188 ; gain = 0.000
+synth_design: Time (s): cpu = 00:08:21 ; elapsed = 00:08:31 . Memory (MB): peak = 2200.168 ; gain = 1900.438
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.285 . Memory (MB): peak = 2200.168 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.runs/synth_1/design_1_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:01:03 ; elapsed = 00:00:40 . Memory (MB): peak = 2173.188 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:59 ; elapsed = 00:00:36 . Memory (MB): peak = 2200.168 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  8 14:26:52 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  9 15:45:50 2021...

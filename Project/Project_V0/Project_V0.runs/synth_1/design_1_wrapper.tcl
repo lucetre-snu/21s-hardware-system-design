@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -29,7 +30,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_repo_paths c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/MyIP [current_project]
+set_property ip_repo_paths c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/My_IP/myip_1.0 [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

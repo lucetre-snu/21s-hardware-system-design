@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -71,7 +72,7 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.cache/wt [current_project]
   set_property parent.project_path C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.xpr [current_project]
-  set_property ip_repo_paths C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/MyIP [current_project]
+  set_property ip_repo_paths C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/My_IP/myip_1.0 [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
@@ -156,6 +157,27 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  catch { write_mem_info -force design_1_wrapper.mmi }
+  catch { write_bmm -force design_1_wrapper_bd.bmm }
+  write_bitstream -force design_1_wrapper.bit 
+  catch { write_sysdef -hwdef design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }
+  catch {write_debug_probes -quiet -force design_1_wrapper}
+  catch {file copy -force design_1_wrapper.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
