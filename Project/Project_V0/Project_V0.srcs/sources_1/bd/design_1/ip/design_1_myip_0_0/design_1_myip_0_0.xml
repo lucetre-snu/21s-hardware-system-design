@@ -898,11 +898,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 09 07:15:29 UTC 2021</spirit:value>
+            <spirit:value>Wed Jun 09 09:02:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce4d2572</spirit:value>
+            <spirit:value>9:6d3a1a8f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -918,11 +918,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 09 07:15:29 UTC 2021</spirit:value>
+            <spirit:value>Wed Jun 09 09:02:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ce4d2572</spirit:value>
+            <spirit:value>9:6d3a1a8f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -938,11 +938,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 09 07:15:29 UTC 2021</spirit:value>
+            <spirit:value>Wed Jun 09 09:02:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c41123a</spirit:value>
+            <spirit:value>9:158fdf1a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -958,11 +958,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jun 09 07:15:29 UTC 2021</spirit:value>
+            <spirit:value>Wed Jun 09 09:02:37 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c41123a</spirit:value>
+            <spirit:value>9:158fdf1a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1468,16 +1468,6 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/ce07/src/my_pe.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/ce07/src/mm_multiplier.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/floating_point_MAC/floating_point_MAC.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
@@ -1486,11 +1476,19 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce07/hdl/myip_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/0c90/src/mm_multiplier.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce07/hdl/myip_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/0c90/src/my_pe.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0c90/hdl/myip_v1_0_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/0c90/hdl/myip_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1513,19 +1511,19 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce07/src/mm_multiplier.v</spirit:name>
+        <spirit:name>../../ipshared/0c90/src/mm_multiplier.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce07/src/my_pe.v</spirit:name>
+        <spirit:name>../../ipshared/0c90/src/my_pe.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce07/hdl/myip_v1_0_S00_AXI.v</spirit:name>
+        <spirit:name>../../ipshared/0c90/hdl/myip_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ce07/hdl/myip_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/0c90/hdl/myip_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1616,7 +1614,7 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>8</xilinx:coreRevision>
+      <xilinx:coreRevision>13</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="user.org:user:myip:1.0_ARCHIVE_LOCATION">/home/ltmin/vivado_prj/zed/hsd2017/lab7/lab7_ip_repo/myip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1c217194_ARCHIVE_LOCATION">c:/Users/CMA/lab10_6/lab10_git/lab10_ip_repo.tar/lab10_ip_repo/myip_1.0</xilinx:tag>
@@ -1689,6 +1687,70 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@33648df3_ARCHIVE_LOCATION">c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2211a772_ARCHIVE_LOCATION">c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@68f68940_ARCHIVE_LOCATION">c:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75e97c5b_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d08d22d_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3229f8dd_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71043b11_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a0d6f2_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c2eaf2b_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6db14615_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47c807c4_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@788a145_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62bf4298_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64071663_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ac2fbef_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17282b92_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@457e629a_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f7cf966_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e18d8eb_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@642c399c_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@85ae0c1_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35589655_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41eeb08a_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@256cf583_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57c29002_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eb19b0b_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1801da94_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba31654_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51d6479c_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a5f2eed_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44ee1523_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76611b18_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@312ee23e_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38e8bdf_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63387303_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72ffc3c1_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21e1ff41_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@699fe731_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@86c3d14_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a1ed06_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16e587f7_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@307ee405_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a7f9313_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3927c919_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b451e1_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57eb9324_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e86e15c_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2448c39d_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a472a16_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@273f9b75_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58ccd063_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cf4647d_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d4974d4_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd22ccf_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d0d22b1_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b18be84_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41f4376e_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e50fd3_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20cadbe4_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eb4e6db_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b1b38eb_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@414a2a40_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c9f4d62_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c1077a1_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f81a426_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d1f9924_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7921e3ee_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
@@ -1724,7 +1786,7 @@
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="333c8cd4"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bf789b9f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2d7b78e9"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="0e2ce997"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="7345e6b0"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="a18d5507"/>

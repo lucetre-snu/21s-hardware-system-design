@@ -19,11 +19,11 @@ module mm_multiplier #(
     localparam VECTOR_SIZE  = 2**(L_RAM_SIZE);
     localparam ZERO         = {BITWIDTH{1'b0}};
     
-    reg [2*L_RAM_SIZE:0]    cnt_load, cnt_harv;
+    reg [2*L_RAM_SIZE:0]    cnt_buff;
     reg [L_RAM_SIZE:0]      cnt_calc;
     reg [2:0]               cnt_done;
     reg [2:0]               present_state, next_state;
-    reg                     rst_cnt_load, rst_cnt_calc, rst_cnt_harv, rst_cnt_done;
+    reg                     rst_cnt_buff, rst_cnt_calc, rst_cnt_done;
     reg [BITWIDTH-1:0]      gb1[0:MATRIX_SIZE-1];
     reg [BITWIDTH-1:0]      gb2[0:MATRIX_SIZE-1];
     
@@ -34,16 +34,13 @@ module mm_multiplier #(
     always @(posedge clk or posedge reset)
         if (reset)          present_state <= S_IDLE; 
         else                present_state <= next_state;
-    always @(posedge clk or posedge rst_cnt_load) 
-        if (rst_cnt_load)   cnt_load <= 0; 
-        else                cnt_load <= cnt_load + 1;
+    always @(posedge clk or posedge rst_cnt_buff) 
+        if (rst_cnt_buff)   cnt_buff <= 0; 
+        else                cnt_buff <= cnt_buff + 1;
     always @(posedge dvalid or posedge rst_cnt_calc) 
         if (rst_cnt_calc)   cnt_calc <= 0;
         else if (dvalid)    cnt_calc <= cnt_calc + 1;
         else                cnt_calc <= cnt_calc;
-    always @(posedge clk or posedge rst_cnt_harv) 
-        if (rst_cnt_harv)   cnt_harv <= 0; 
-        else                cnt_harv <= cnt_harv + 1;
     always @(posedge clk or posedge rst_cnt_done) 
         if (rst_cnt_done)   cnt_done <= 0; 
         else                cnt_done <= cnt_done + 1;
@@ -51,38 +48,37 @@ module mm_multiplier #(
     always @(*)
         case (present_state)
             S_IDLE: if (start)                          next_state = S_LOAD; else next_state = present_state;
-            S_LOAD: if (cnt_load == MATRIX_SIZE*2-1)    next_state = S_CALC; else next_state = present_state;
+            S_LOAD: if (cnt_buff == MATRIX_SIZE*2-1)    next_state = S_CALC; else next_state = present_state;
             S_CALC: if (cnt_calc == VECTOR_SIZE)        next_state = S_HARV; else next_state = present_state;
-            S_HARV: if (cnt_harv == MATRIX_SIZE-1)      next_state = S_DONE; else next_state = present_state;
+            S_HARV: if (cnt_buff == MATRIX_SIZE-1)      next_state = S_DONE; else next_state = present_state;
             S_DONE: if (cnt_done == DONE_LATENCY-1)     next_state = S_IDLE; else next_state = present_state;
             default: next_state = present_state;
         endcase
     
     always @(posedge clk)
         case (present_state)
-            S_LOAD:  {rst_cnt_load, rst_cnt_calc, rst_cnt_harv, rst_cnt_done} <= 4'b0111;
-            S_CALC:  {rst_cnt_load, rst_cnt_calc, rst_cnt_harv, rst_cnt_done} <= 4'b1011;
-            S_HARV:  {rst_cnt_load, rst_cnt_calc, rst_cnt_harv, rst_cnt_done} <= 4'b1101;
-            S_DONE:  {rst_cnt_load, rst_cnt_calc, rst_cnt_harv, rst_cnt_done} <= 4'b1110;
-            default: {rst_cnt_load, rst_cnt_calc, rst_cnt_harv, rst_cnt_done} <= 4'b1111;
+            S_LOAD:  {rst_cnt_buff, rst_cnt_calc, rst_cnt_done} <= 3'b011;
+            S_CALC:  {rst_cnt_buff, rst_cnt_calc, rst_cnt_done} <= 3'b101;
+            S_HARV:  {rst_cnt_buff, rst_cnt_calc, rst_cnt_done} <= 3'b011;
+            S_DONE:  {rst_cnt_buff, rst_cnt_calc, rst_cnt_done} <= 3'b110;
+            default: {rst_cnt_buff, rst_cnt_calc, rst_cnt_done} <= 3'b111;
         endcase
         
     integer j;
-    always @(posedge clk)
+    always @(posedge clk) begin
+        for (j = 0; j < MATRIX_SIZE; j = j+1)                   {gb1[j], gb2[j]} = {gb1[j], gb2[j]};
         case (present_state)
-            S_IDLE: for (j = 0; j < MATRIX_SIZE; j = j+1)                       {gb1[j], gb2[j]} = {ZERO, ZERO};
-            S_LOAD: for (j = 0; j < MATRIX_SIZE; j = j+1)
-                    if (cnt_load >= MATRIX_SIZE && j == cnt_load-MATRIX_SIZE)   {gb1[j], gb2[j]} = {gb1[j], rddata};
-                    else if (cnt_load < MATRIX_SIZE && j == cnt_load)           {gb1[j], gb2[j]} = {rddata, gb2[j]};
-                    else                                                        {gb1[j], gb2[j]} = {gb1[j], gb2[j]};
+            S_IDLE: for (j = 0; j < MATRIX_SIZE; j = j+1)       {gb1[j], gb2[j]} = {ZERO, ZERO};
+            S_LOAD: if (cnt_buff < MATRIX_SIZE)                 gb1[cnt_buff] = rddata;
+                    else                                        gb2[cnt_buff-MATRIX_SIZE] = rddata;
             S_HARV: for (j = 0; j < MATRIX_SIZE; j = j+1)
-                    if (dvalid)                                                 {gb1[j], gb2[j]} = {dout[j], ZERO};
-                    else                                                        {gb1[j], gb2[j]} = {gb1[j], ZERO};
-            default: for (j = 0; j < MATRIX_SIZE; j = j+1)                      {gb1[j], gb2[j]} = {gb1[j], gb2[j]};
+                    if (dvalid)                                 {gb1[j], gb2[j]} = {dout[j], ZERO};
+                    else                                        {gb1[j], gb2[j]} = {gb1[j], ZERO};
         endcase
+    end
     
-    assign addr   = (present_state == S_LOAD) ? cnt_load : ((present_state == S_HARV) ? cnt_harv : 0);
-    assign wrdata = (present_state == S_HARV) ? gb1[cnt_harv] : 0;
+    assign addr   = (present_state == S_LOAD || present_state == S_HARV) ? cnt_buff : 0;
+    assign wrdata = (present_state == S_HARV) ? gb1[cnt_buff] : 0;
     assign we     = (present_state == S_HARV);
     assign done   = (present_state == S_DONE);
     assign valid  = (present_state == S_CALC) ? ~dvalid : 0;
