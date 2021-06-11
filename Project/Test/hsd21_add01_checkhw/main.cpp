@@ -20,8 +20,11 @@ int main(void)
 
 	for(int i = 0 ; i < data_size_M*2 ; ++i)
 		flat[i] = 0;
-	mat[v_size*0+0] = mat[v_size*1+0] = 1;
-	input[v_size*0+0] = input[v_size*0+1] = 1;
+	for (int i = 0; i < 3; i++) {
+		mat[v_size*0+i] = 1;
+		input[v_size*i+0] = 1;
+
+	}
 
 	// computation
 	for(int i = 0; i < v_size; ++i)
