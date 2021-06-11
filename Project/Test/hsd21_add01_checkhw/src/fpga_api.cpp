@@ -38,9 +38,13 @@ float* FPGA::matrix_M2(void)
 
 const float* __attribute__((optimize("O0"))) FPGA::run()
 {
+    for (int i = 0; i < 128; i++) {
+      cout << data_[i] << " ";
+      if (i % 8 == 7) cout << endl;
+    }
     *api_ = 0x5555;
     while(*api_ == 0x5555);
-    for (int i = 0; i < 128; i++) {
+    for (int i = 0; i < 64; i++) {
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
