@@ -14,21 +14,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20592 
+INFO: Helper process launched with PID 7860 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 393.465 ; gain = 98.531
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 393.074 ; gain = 97.176
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mm_multiplier' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:3]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
 	Parameter BITWIDTH bound to: 32 - type: integer 
 	Parameter S_IDLE bound to: 3'b000 
-	Parameter S_LOAD bound to: 3'b001 
-	Parameter S_CALC bound to: 3'b010 
-	Parameter S_HARV bound to: 3'b011 
-	Parameter S_DONE bound to: 3'b100 
+	Parameter S_LD_1 bound to: 3'b010 
+	Parameter S_LD_2 bound to: 3'b011 
+	Parameter S_CC_1 bound to: 3'b100 
+	Parameter S_CC_2 bound to: 3'b101 
+	Parameter S_HV_1 bound to: 3'b110 
+	Parameter S_HV_2 bound to: 3'b111 
+	Parameter S_DONE bound to: 3'b001 
 	Parameter DONE_LATENCY bound to: 5 - type: integer 
-	Parameter MATRIX_SIZE bound to: 64 - type: integer 
-	Parameter VECTOR_SIZE bound to: 8 - type: integer 
+	Parameter MAT_SIZE bound to: 64 - type: integer 
+	Parameter VEC_SIZE bound to: 8 - type: integer 
 	Parameter ZERO bound to: 0 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'my_pe' [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v:3]
 	Parameter L_RAM_SIZE bound to: 3 - type: integer 
@@ -107,7 +110,8 @@ INFO: [Synth 8-638] synthesizing module 'floating_point_MAC' [c:/Users/lucet/sem
 INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/synth/floating_point_MAC.vhd:208]
 INFO: [Synth 8-256] done synthesizing module 'floating_point_MAC' (35#1) [c:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/synth/floating_point_MAC.vhd:74]
 INFO: [Synth 8-6155] done synthesizing module 'my_pe' (36#1) [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/imports/my_ip_repo/my_pe.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:70]
+INFO: [Synth 8-226] default block is never used [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:59]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:83]
 INFO: [Synth 8-6155] done synthesizing module 'mm_multiplier' (37#1) [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/new/mm_multiplier.v:3]
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SCLR
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized23 has unconnected port SSET
@@ -211,7 +215,7 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized95 has unconne
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized95 has unconnected port SSET
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 561.199 ; gain = 266.266
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 556.711 ; gain = 260.812
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -224,13 +228,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 561.199 ; gain = 266.266
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 556.711 ; gain = 260.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 561.199 ; gain = 266.266
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 556.711 ; gain = 260.812
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 23040 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 11520 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -240,22 +244,22 @@ Parsing XDC File [C:/Users/lucet/semester/21s-hardware-system-design/Project/Pro
 Finished Parsing XDC File [C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.472 . Memory (MB): peak = 1638.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 1240.227 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2176 instances were transformed.
-  FDE => FDRE: 2176 instances
+  A total of 1088 instances were transformed.
+  FDE => FDRE: 1088 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.468 . Memory (MB): peak = 1638.363 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1638.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.182 . Memory (MB): peak = 1240.227 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.476 . Memory (MB): peak = 1240.227 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:20 ; elapsed = 00:01:18 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Constraint Validation : Time (s): cpu = 00:00:52 ; elapsed = 00:00:51 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:20 ; elapsed = 00:01:18 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:52 ; elapsed = 00:00:51 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -292,40 +296,8 @@ Applied set_property DONT_TOUCH = true for \MATRIX[28].MY_PE /UUT. (constraint f
 Applied set_property DONT_TOUCH = true for \MATRIX[29].MY_PE /UUT. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for \MATRIX[30].MY_PE /UUT. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for \MATRIX[31].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[32].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[33].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[34].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[35].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[36].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[37].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[38].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[39].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[40].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[41].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[42].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[43].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[44].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[45].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[46].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[47].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[48].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[49].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[50].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[51].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[52].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[53].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[54].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[55].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[56].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[57].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[58].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[59].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[60].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[61].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[62].MY_PE /UUT. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \MATRIX[63].MY_PE /UUT. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:21 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:52 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
@@ -354,140 +326,110 @@ INFO: [Synth 8-5544] ROM "flow_sel_pre_op" won't be mapped to Block RAM because 
 INFO: [Synth 8-5544] ROM "c_nan" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "c_inf" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "c_zero" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "gb2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[36]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[37]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[38]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[39]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[40]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[41]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[42]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[43]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[44]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[45]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[46]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[47]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[48]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[49]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[50]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[51]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[52]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[53]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[54]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[55]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[56]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[57]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[58]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[59]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[60]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[61]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[62]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[63]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[3]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[4]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[5]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[6]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[7]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[8]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[9]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[10]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[11]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[12]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[13]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[14]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[15]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[16]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[17]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[18]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[19]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[20]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[21]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[22]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[23]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[24]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[25]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[26]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[27]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[28]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[29]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[30]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[31]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[32]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[33]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[34]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[35]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[36]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[37]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[38]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[39]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[40]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[41]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[42]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[43]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[44]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[45]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[46]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[47]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[48]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[49]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[50]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[51]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[52]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[53]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[54]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[55]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[56]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[57]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[58]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[59]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[60]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[61]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[62]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[63]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[32]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[33]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[34]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[35]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[36]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[37]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[38]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[39]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[40]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[41]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[42]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[43]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[44]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[45]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[46]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[47]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[48]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[49]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[50]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[51]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[52]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[53]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[54]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[55]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[56]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[57]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[58]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[59]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[60]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[61]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[62]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[63]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[64]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[65]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[66]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[67]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[68]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[69]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[70]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[71]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[72]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[73]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[74]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[75]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[76]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[77]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[78]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[79]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[80]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[81]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[82]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[83]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[84]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[85]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[86]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[87]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[88]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[89]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[90]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[91]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[92]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gb_reg[93]" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_cnt_done" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_cnt_harv" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_cnt_calc" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_cnt_load" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:36 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:01 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized25) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_OVERFLOW'
 INFO: [Synth 8-223] decloning instance 'floating_point_MAC:/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized25) to 'floating_point_MAC:/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
@@ -497,73 +439,42 @@ Report RTL Partitions:
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
-|1     |floating_point_MAC     |          64|      4739|
-|2     |my_pe__xdcDup__1__GC0  |           1|        64|
-|3     |my_pe__xdcDup__2__GC0  |           1|        64|
-|4     |my_pe__xdcDup__3__GC0  |           1|        64|
-|5     |my_pe__xdcDup__4__GC0  |           1|        64|
-|6     |my_pe__xdcDup__5__GC0  |           1|        64|
-|7     |my_pe__xdcDup__6__GC0  |           1|        64|
-|8     |my_pe__xdcDup__7__GC0  |           1|        64|
-|9     |my_pe__xdcDup__8__GC0  |           1|        64|
-|10    |my_pe__xdcDup__9__GC0  |           1|        64|
-|11    |my_pe__xdcDup__10__GC0 |           1|        64|
-|12    |my_pe__xdcDup__11__GC0 |           1|        64|
-|13    |my_pe__xdcDup__12__GC0 |           1|        64|
-|14    |my_pe__xdcDup__13__GC0 |           1|        64|
-|15    |my_pe__xdcDup__14__GC0 |           1|        64|
-|16    |my_pe__xdcDup__15__GC0 |           1|        64|
-|17    |my_pe__xdcDup__16__GC0 |           1|        64|
-|18    |my_pe__xdcDup__17__GC0 |           1|        64|
-|19    |my_pe__xdcDup__18__GC0 |           1|        64|
-|20    |my_pe__xdcDup__19__GC0 |           1|        64|
-|21    |my_pe__xdcDup__20__GC0 |           1|        64|
-|22    |my_pe__xdcDup__21__GC0 |           1|        64|
-|23    |my_pe__xdcDup__22__GC0 |           1|        64|
-|24    |my_pe__xdcDup__23__GC0 |           1|        64|
-|25    |my_pe__xdcDup__24__GC0 |           1|        64|
-|26    |my_pe__xdcDup__25__GC0 |           1|        64|
-|27    |my_pe__xdcDup__26__GC0 |           1|        64|
-|28    |my_pe__xdcDup__27__GC0 |           1|        64|
-|29    |my_pe__xdcDup__28__GC0 |           1|        64|
-|30    |my_pe__xdcDup__29__GC0 |           1|        64|
-|31    |my_pe__xdcDup__30__GC0 |           1|        64|
-|32    |my_pe__xdcDup__31__GC0 |           1|        64|
-|33    |my_pe__xdcDup__32__GC0 |           1|        64|
-|34    |my_pe__xdcDup__33__GC0 |           1|        64|
-|35    |my_pe__xdcDup__34__GC0 |           1|        64|
-|36    |my_pe__xdcDup__35__GC0 |           1|        64|
-|37    |my_pe__xdcDup__36__GC0 |           1|        64|
-|38    |my_pe__xdcDup__37__GC0 |           1|        64|
-|39    |my_pe__xdcDup__38__GC0 |           1|        64|
-|40    |my_pe__xdcDup__39__GC0 |           1|        64|
-|41    |my_pe__xdcDup__40__GC0 |           1|        64|
-|42    |my_pe__xdcDup__41__GC0 |           1|        64|
-|43    |my_pe__xdcDup__42__GC0 |           1|        64|
-|44    |my_pe__xdcDup__43__GC0 |           1|        64|
-|45    |my_pe__xdcDup__44__GC0 |           1|        64|
-|46    |my_pe__xdcDup__45__GC0 |           1|        64|
-|47    |my_pe__xdcDup__46__GC0 |           1|        64|
-|48    |my_pe__xdcDup__47__GC0 |           1|        64|
-|49    |my_pe__xdcDup__48__GC0 |           1|        64|
-|50    |my_pe__xdcDup__49__GC0 |           1|        64|
-|51    |my_pe__xdcDup__50__GC0 |           1|        64|
-|52    |my_pe__xdcDup__51__GC0 |           1|        64|
-|53    |my_pe__xdcDup__52__GC0 |           1|        64|
-|54    |my_pe__xdcDup__53__GC0 |           1|        64|
-|55    |my_pe__xdcDup__54__GC0 |           1|        64|
-|56    |my_pe__xdcDup__55__GC0 |           1|        64|
-|57    |my_pe__xdcDup__56__GC0 |           1|        64|
-|58    |my_pe__xdcDup__57__GC0 |           1|        64|
-|59    |my_pe__xdcDup__58__GC0 |           1|        64|
-|60    |my_pe__xdcDup__59__GC0 |           1|        64|
-|61    |my_pe__xdcDup__60__GC0 |           1|        64|
-|62    |my_pe__xdcDup__61__GC0 |           1|        64|
-|63    |my_pe__xdcDup__62__GC0 |           1|        64|
-|64    |my_pe__xdcDup__63__GC0 |           1|        64|
-|65    |my_pe__GC0             |           1|        64|
-|66    |mm_multiplier__GCB0    |           1|     23393|
-|67    |mm_multiplier__GCB1    |           1|     19313|
+|1     |floating_point_MAC     |          32|      4739|
+|2     |my_pe__xdcDup__1__GC0  |           1|        65|
+|3     |my_pe__xdcDup__2__GC0  |           1|        65|
+|4     |my_pe__xdcDup__3__GC0  |           1|        65|
+|5     |my_pe__xdcDup__4__GC0  |           1|        65|
+|6     |my_pe__xdcDup__5__GC0  |           1|        65|
+|7     |my_pe__xdcDup__6__GC0  |           1|        65|
+|8     |my_pe__xdcDup__7__GC0  |           1|        65|
+|9     |my_pe__xdcDup__8__GC0  |           1|        65|
+|10    |my_pe__xdcDup__9__GC0  |           1|        65|
+|11    |my_pe__xdcDup__10__GC0 |           1|        65|
+|12    |my_pe__xdcDup__11__GC0 |           1|        65|
+|13    |my_pe__xdcDup__12__GC0 |           1|        65|
+|14    |my_pe__xdcDup__13__GC0 |           1|        65|
+|15    |my_pe__xdcDup__14__GC0 |           1|        65|
+|16    |my_pe__xdcDup__15__GC0 |           1|        65|
+|17    |my_pe__xdcDup__16__GC0 |           1|        65|
+|18    |my_pe__xdcDup__17__GC0 |           1|        65|
+|19    |my_pe__xdcDup__18__GC0 |           1|        65|
+|20    |my_pe__xdcDup__19__GC0 |           1|        65|
+|21    |my_pe__xdcDup__20__GC0 |           1|        65|
+|22    |my_pe__xdcDup__21__GC0 |           1|        65|
+|23    |my_pe__xdcDup__22__GC0 |           1|        65|
+|24    |my_pe__xdcDup__23__GC0 |           1|        65|
+|25    |my_pe__xdcDup__24__GC0 |           1|        65|
+|26    |my_pe__xdcDup__25__GC0 |           1|        65|
+|27    |my_pe__xdcDup__26__GC0 |           1|        65|
+|28    |my_pe__xdcDup__27__GC0 |           1|        65|
+|29    |my_pe__xdcDup__28__GC0 |           1|        65|
+|30    |my_pe__xdcDup__29__GC0 |           1|        65|
+|31    |my_pe__xdcDup__30__GC0 |           1|        65|
+|32    |my_pe__xdcDup__31__GC0 |           1|        65|
+|33    |my_pe__GC0             |           1|        65|
+|34    |mm_multiplier__GCB0    |           1|     26836|
+|35    |mm_multiplier__GCB1    |           1|      9218|
+|36    |mm_multiplier__GCB2    |           1|      9217|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -606,74 +517,9 @@ INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because ad
 INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_one_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "conv_exp.downsize_exp/COND_DET/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "lrg_almost_over" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_one_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_a/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_one_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_b/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_one_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "FMA_OP.OP/special_detect/detector_c/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[0]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[1]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[2]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[3]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[4]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[5]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[6]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[7]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[8]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[9]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[10]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[11]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[12]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[13]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[14]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[15]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[16]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[17]" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "gb1_reg[18]" won't be mapped to RAM because it is too sparse
-INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "gb2_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[3]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[4]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[5]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[6]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[7]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[8]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[9]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[10]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[11]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[16]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[17]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[18]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[19]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[20]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[21]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[22]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[23]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[24]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[25]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[26]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[27]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[28]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[29]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[30]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[31]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[32]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[33]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[34]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "gb2_reg[35]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/ZERO_SMALLEST_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/ALIGN_BLK/aligner.zero_smallest_i_delay/i_pipe/opt_has_pipe.first_q_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_point_MAC:/U0/i_synth/\FMA_OP.OP/addsub/add/B_IP_DELAY/i_pipe/opt_has_pipe.first_q_reg[1] )
@@ -711,171 +557,109 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (floating_
 INFO: [Synth 8-3332] Sequential element (FMA_OP.OP/addsub/add/EXP/bma_exp_cc/CARRYS_Q_DEL.FAST_DEL.CARRY_FD) is unused and will be removed from module floating_point_v7_1_7_viv.
 INFO: [Synth 8-3886] merging instance 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/DEC_STATE_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'floating_point_MAC:/U0/i_synth/FMA_OP.OP/addsub/add/EXP/FLOW_SEL_PRE_OP_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:03 ; elapsed = 00:02:03 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
-|1     |floating_point_MAC     |          64|      4022|
-|2     |my_pe__xdcDup__1__GC0  |           1|        96|
-|3     |my_pe__xdcDup__2__GC0  |           1|        96|
-|4     |my_pe__xdcDup__3__GC0  |           1|        96|
-|5     |my_pe__xdcDup__4__GC0  |           1|        96|
-|6     |my_pe__xdcDup__5__GC0  |           1|        96|
-|7     |my_pe__xdcDup__6__GC0  |           1|        96|
-|8     |my_pe__xdcDup__7__GC0  |           1|        96|
-|9     |my_pe__xdcDup__8__GC0  |           1|        96|
-|10    |my_pe__xdcDup__9__GC0  |           1|        96|
-|11    |my_pe__xdcDup__10__GC0 |           1|        96|
-|12    |my_pe__xdcDup__11__GC0 |           1|        96|
-|13    |my_pe__xdcDup__12__GC0 |           1|        96|
-|14    |my_pe__xdcDup__13__GC0 |           1|        96|
-|15    |my_pe__xdcDup__14__GC0 |           1|        96|
-|16    |my_pe__xdcDup__15__GC0 |           1|        96|
-|17    |my_pe__xdcDup__16__GC0 |           1|        96|
-|18    |my_pe__xdcDup__17__GC0 |           1|        96|
-|19    |my_pe__xdcDup__18__GC0 |           1|        96|
-|20    |my_pe__xdcDup__19__GC0 |           1|        96|
-|21    |my_pe__xdcDup__20__GC0 |           1|        96|
-|22    |my_pe__xdcDup__21__GC0 |           1|        96|
-|23    |my_pe__xdcDup__22__GC0 |           1|        96|
-|24    |my_pe__xdcDup__23__GC0 |           1|        96|
-|25    |my_pe__xdcDup__24__GC0 |           1|        96|
-|26    |my_pe__xdcDup__25__GC0 |           1|        96|
-|27    |my_pe__xdcDup__26__GC0 |           1|        96|
-|28    |my_pe__xdcDup__27__GC0 |           1|        96|
-|29    |my_pe__xdcDup__28__GC0 |           1|        96|
-|30    |my_pe__xdcDup__29__GC0 |           1|        96|
-|31    |my_pe__xdcDup__30__GC0 |           1|        96|
-|32    |my_pe__xdcDup__31__GC0 |           1|        96|
-|33    |my_pe__xdcDup__32__GC0 |           1|        96|
-|34    |my_pe__xdcDup__33__GC0 |           1|        96|
-|35    |my_pe__xdcDup__34__GC0 |           1|        96|
-|36    |my_pe__xdcDup__35__GC0 |           1|        96|
-|37    |my_pe__xdcDup__36__GC0 |           1|        96|
-|38    |my_pe__xdcDup__37__GC0 |           1|        96|
-|39    |my_pe__xdcDup__38__GC0 |           1|        96|
-|40    |my_pe__xdcDup__39__GC0 |           1|        96|
-|41    |my_pe__xdcDup__40__GC0 |           1|        96|
-|42    |my_pe__xdcDup__41__GC0 |           1|        96|
-|43    |my_pe__xdcDup__42__GC0 |           1|        96|
-|44    |my_pe__xdcDup__43__GC0 |           1|        96|
-|45    |my_pe__xdcDup__44__GC0 |           1|        96|
-|46    |my_pe__xdcDup__45__GC0 |           1|        96|
-|47    |my_pe__xdcDup__46__GC0 |           1|        96|
-|48    |my_pe__xdcDup__47__GC0 |           1|        96|
-|49    |my_pe__xdcDup__48__GC0 |           1|        96|
-|50    |my_pe__xdcDup__49__GC0 |           1|        96|
-|51    |my_pe__xdcDup__50__GC0 |           1|        96|
-|52    |my_pe__xdcDup__51__GC0 |           1|        96|
-|53    |my_pe__xdcDup__52__GC0 |           1|        96|
-|54    |my_pe__xdcDup__53__GC0 |           1|        96|
-|55    |my_pe__xdcDup__54__GC0 |           1|        96|
-|56    |my_pe__xdcDup__55__GC0 |           1|        96|
-|57    |my_pe__xdcDup__56__GC0 |           1|        96|
-|58    |my_pe__xdcDup__57__GC0 |           1|        96|
-|59    |my_pe__xdcDup__58__GC0 |           1|        96|
-|60    |my_pe__xdcDup__59__GC0 |           1|        96|
-|61    |my_pe__xdcDup__60__GC0 |           1|        96|
-|62    |my_pe__xdcDup__61__GC0 |           1|        96|
-|63    |my_pe__xdcDup__62__GC0 |           1|        96|
-|64    |my_pe__xdcDup__63__GC0 |           1|        96|
-|65    |my_pe__GC0             |           1|        96|
-|66    |mm_multiplier__GCB0    |           1|      8992|
-|67    |mm_multiplier__GCB1    |           1|      4478|
+|1     |floating_point_MAC     |          32|      4022|
+|2     |my_pe__xdcDup__1__GC0  |           1|        97|
+|3     |my_pe__xdcDup__2__GC0  |           1|        97|
+|4     |my_pe__xdcDup__3__GC0  |           1|        97|
+|5     |my_pe__xdcDup__4__GC0  |           1|        97|
+|6     |my_pe__xdcDup__5__GC0  |           1|        97|
+|7     |my_pe__xdcDup__6__GC0  |           1|        97|
+|8     |my_pe__xdcDup__7__GC0  |           1|        97|
+|9     |my_pe__xdcDup__8__GC0  |           1|        97|
+|10    |my_pe__xdcDup__9__GC0  |           1|        97|
+|11    |my_pe__xdcDup__10__GC0 |           1|        97|
+|12    |my_pe__xdcDup__11__GC0 |           1|        97|
+|13    |my_pe__xdcDup__12__GC0 |           1|        97|
+|14    |my_pe__xdcDup__13__GC0 |           1|        97|
+|15    |my_pe__xdcDup__14__GC0 |           1|        97|
+|16    |my_pe__xdcDup__15__GC0 |           1|        97|
+|17    |my_pe__xdcDup__16__GC0 |           1|        97|
+|18    |my_pe__xdcDup__17__GC0 |           1|        97|
+|19    |my_pe__xdcDup__18__GC0 |           1|        97|
+|20    |my_pe__xdcDup__19__GC0 |           1|        97|
+|21    |my_pe__xdcDup__20__GC0 |           1|        97|
+|22    |my_pe__xdcDup__21__GC0 |           1|        97|
+|23    |my_pe__xdcDup__22__GC0 |           1|        97|
+|24    |my_pe__xdcDup__23__GC0 |           1|        97|
+|25    |my_pe__xdcDup__24__GC0 |           1|        97|
+|26    |my_pe__xdcDup__25__GC0 |           1|        97|
+|27    |my_pe__xdcDup__26__GC0 |           1|        97|
+|28    |my_pe__xdcDup__27__GC0 |           1|        97|
+|29    |my_pe__xdcDup__28__GC0 |           1|        97|
+|30    |my_pe__xdcDup__29__GC0 |           1|        97|
+|31    |my_pe__xdcDup__30__GC0 |           1|        97|
+|32    |my_pe__xdcDup__31__GC0 |           1|        97|
+|33    |my_pe__GC0             |           1|        97|
+|34    |mm_multiplier__GCB0    |           1|      8493|
+|35    |mm_multiplier__GCB1    |           1|      4000|
+|36    |mm_multiplier__GCB2    |           1|      1088|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:20 ; elapsed = 00:02:20 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:20 ; elapsed = 00:02:20 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:31 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
-|1     |floating_point_MAC     |          64|      4022|
-|2     |my_pe__xdcDup__1__GC0  |           1|        96|
-|3     |my_pe__xdcDup__2__GC0  |           1|        96|
-|4     |my_pe__xdcDup__3__GC0  |           1|        96|
-|5     |my_pe__xdcDup__4__GC0  |           1|        96|
-|6     |my_pe__xdcDup__5__GC0  |           1|        96|
-|7     |my_pe__xdcDup__6__GC0  |           1|        96|
-|8     |my_pe__xdcDup__7__GC0  |           1|        96|
-|9     |my_pe__xdcDup__8__GC0  |           1|        96|
-|10    |my_pe__xdcDup__9__GC0  |           1|        96|
-|11    |my_pe__xdcDup__10__GC0 |           1|        96|
-|12    |my_pe__xdcDup__11__GC0 |           1|        96|
-|13    |my_pe__xdcDup__12__GC0 |           1|        96|
-|14    |my_pe__xdcDup__13__GC0 |           1|        96|
-|15    |my_pe__xdcDup__14__GC0 |           1|        96|
-|16    |my_pe__xdcDup__15__GC0 |           1|        96|
-|17    |my_pe__xdcDup__16__GC0 |           1|        96|
-|18    |my_pe__xdcDup__17__GC0 |           1|        96|
-|19    |my_pe__xdcDup__18__GC0 |           1|        96|
-|20    |my_pe__xdcDup__19__GC0 |           1|        96|
-|21    |my_pe__xdcDup__20__GC0 |           1|        96|
-|22    |my_pe__xdcDup__21__GC0 |           1|        96|
-|23    |my_pe__xdcDup__22__GC0 |           1|        96|
-|24    |my_pe__xdcDup__23__GC0 |           1|        96|
-|25    |my_pe__xdcDup__24__GC0 |           1|        96|
-|26    |my_pe__xdcDup__25__GC0 |           1|        96|
-|27    |my_pe__xdcDup__26__GC0 |           1|        96|
-|28    |my_pe__xdcDup__27__GC0 |           1|        96|
-|29    |my_pe__xdcDup__28__GC0 |           1|        96|
-|30    |my_pe__xdcDup__29__GC0 |           1|        96|
-|31    |my_pe__xdcDup__30__GC0 |           1|        96|
-|32    |my_pe__xdcDup__31__GC0 |           1|        96|
-|33    |my_pe__xdcDup__32__GC0 |           1|        96|
-|34    |my_pe__xdcDup__33__GC0 |           1|        96|
-|35    |my_pe__xdcDup__34__GC0 |           1|        96|
-|36    |my_pe__xdcDup__35__GC0 |           1|        96|
-|37    |my_pe__xdcDup__36__GC0 |           1|        96|
-|38    |my_pe__xdcDup__37__GC0 |           1|        96|
-|39    |my_pe__xdcDup__38__GC0 |           1|        96|
-|40    |my_pe__xdcDup__39__GC0 |           1|        96|
-|41    |my_pe__xdcDup__40__GC0 |           1|        96|
-|42    |my_pe__xdcDup__41__GC0 |           1|        96|
-|43    |my_pe__xdcDup__42__GC0 |           1|        96|
-|44    |my_pe__xdcDup__43__GC0 |           1|        96|
-|45    |my_pe__xdcDup__44__GC0 |           1|        96|
-|46    |my_pe__xdcDup__45__GC0 |           1|        96|
-|47    |my_pe__xdcDup__46__GC0 |           1|        96|
-|48    |my_pe__xdcDup__47__GC0 |           1|        96|
-|49    |my_pe__xdcDup__48__GC0 |           1|        96|
-|50    |my_pe__xdcDup__49__GC0 |           1|        96|
-|51    |my_pe__xdcDup__50__GC0 |           1|        96|
-|52    |my_pe__xdcDup__51__GC0 |           1|        96|
-|53    |my_pe__xdcDup__52__GC0 |           1|        96|
-|54    |my_pe__xdcDup__53__GC0 |           1|        96|
-|55    |my_pe__xdcDup__54__GC0 |           1|        96|
-|56    |my_pe__xdcDup__55__GC0 |           1|        96|
-|57    |my_pe__xdcDup__56__GC0 |           1|        96|
-|58    |my_pe__xdcDup__57__GC0 |           1|        96|
-|59    |my_pe__xdcDup__58__GC0 |           1|        96|
-|60    |my_pe__xdcDup__59__GC0 |           1|        96|
-|61    |my_pe__xdcDup__60__GC0 |           1|        96|
-|62    |my_pe__xdcDup__61__GC0 |           1|        96|
-|63    |my_pe__xdcDup__62__GC0 |           1|        96|
-|64    |my_pe__xdcDup__63__GC0 |           1|        96|
-|65    |my_pe__GC0             |           1|        96|
-|66    |mm_multiplier__GCB0    |           1|      8992|
-|67    |mm_multiplier__GCB1    |           1|      4478|
+|1     |floating_point_MAC     |          32|      4022|
+|2     |my_pe__xdcDup__1__GC0  |           1|        97|
+|3     |my_pe__xdcDup__2__GC0  |           1|        97|
+|4     |my_pe__xdcDup__3__GC0  |           1|        97|
+|5     |my_pe__xdcDup__4__GC0  |           1|        97|
+|6     |my_pe__xdcDup__5__GC0  |           1|        97|
+|7     |my_pe__xdcDup__6__GC0  |           1|        97|
+|8     |my_pe__xdcDup__7__GC0  |           1|        97|
+|9     |my_pe__xdcDup__8__GC0  |           1|        97|
+|10    |my_pe__xdcDup__9__GC0  |           1|        97|
+|11    |my_pe__xdcDup__10__GC0 |           1|        97|
+|12    |my_pe__xdcDup__11__GC0 |           1|        97|
+|13    |my_pe__xdcDup__12__GC0 |           1|        97|
+|14    |my_pe__xdcDup__13__GC0 |           1|        97|
+|15    |my_pe__xdcDup__14__GC0 |           1|        97|
+|16    |my_pe__xdcDup__15__GC0 |           1|        97|
+|17    |my_pe__xdcDup__16__GC0 |           1|        97|
+|18    |my_pe__xdcDup__17__GC0 |           1|        97|
+|19    |my_pe__xdcDup__18__GC0 |           1|        97|
+|20    |my_pe__xdcDup__19__GC0 |           1|        97|
+|21    |my_pe__xdcDup__20__GC0 |           1|        97|
+|22    |my_pe__xdcDup__21__GC0 |           1|        97|
+|23    |my_pe__xdcDup__22__GC0 |           1|        97|
+|24    |my_pe__xdcDup__23__GC0 |           1|        97|
+|25    |my_pe__xdcDup__24__GC0 |           1|        97|
+|26    |my_pe__xdcDup__25__GC0 |           1|        97|
+|27    |my_pe__xdcDup__26__GC0 |           1|        97|
+|28    |my_pe__xdcDup__27__GC0 |           1|        97|
+|29    |my_pe__xdcDup__28__GC0 |           1|        97|
+|30    |my_pe__xdcDup__29__GC0 |           1|        97|
+|31    |my_pe__xdcDup__30__GC0 |           1|        97|
+|32    |my_pe__xdcDup__31__GC0 |           1|        97|
+|33    |my_pe__GC0             |           1|        97|
+|34    |mm_multiplier__GCB0    |           1|      8493|
+|35    |mm_multiplier__GCB1    |           1|      4000|
+|36    |mm_multiplier__GCB2    |           1|      1088|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:39 ; elapsed = 00:02:40 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Technology Mapping : Time (s): cpu = 00:01:39 ; elapsed = 00:01:39 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -899,7 +683,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:49 ; elapsed = 00:02:50 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished IO Insertion : Time (s): cpu = 00:01:42 ; elapsed = 00:01:43 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -912,7 +696,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:50 ; elapsed = 00:02:51 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:43 ; elapsed = 00:01:44 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -924,25 +708,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:10 ; elapsed = 00:03:11 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:51 ; elapsed = 00:01:52 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:12 ; elapsed = 00:03:13 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:52 ; elapsed = 00:01:53 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:16 ; elapsed = 00:03:17 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:01:54 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:17 ; elapsed = 00:03:18 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -959,51 +743,51 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |BUFG      |     1|
-|2     |CARRY4    |   448|
-|3     |DSP48E1   |    64|
-|4     |DSP48E1_1 |    64|
-|5     |LUT1      |   721|
-|6     |LUT2      |  5641|
-|7     |LUT3      |  9000|
-|8     |LUT4      | 12717|
-|9     |LUT5      |  5877|
-|10    |LUT6      | 19852|
-|11    |MUXCY     | 14272|
-|12    |MUXF7     |  1088|
-|13    |MUXF8     |   160|
-|14    |SRL16E    |  4672|
-|15    |XORCY     |  6144|
-|16    |FDCE      |    71|
-|17    |FDE       |  2112|
-|18    |FDRE      | 74243|
+|2     |CARRY4    |   224|
+|3     |DSP48E1   |    32|
+|4     |DSP48E1_1 |    32|
+|5     |LUT1      |   370|
+|6     |LUT2      |  2812|
+|7     |LUT3      |  4497|
+|8     |LUT4      |  6174|
+|9     |LUT5      |  2928|
+|10    |LUT6      | 11521|
+|11    |MUXCY     |  7136|
+|12    |MUXF7     |   769|
+|13    |MUXF8     |    32|
+|14    |SRL16E    |  2336|
+|15    |XORCY     |  3072|
+|16    |FDCE      |    70|
+|17    |FDE       |  1056|
+|18    |FDRE      | 38148|
 |19    |IBUF      |    35|
 |20    |OBUF      |    41|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:17 ; elapsed = 00:03:18 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 1241.324 ; gain = 945.426
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:00 ; elapsed = 00:02:20 . Memory (MB): peak = 1640.949 ; gain = 266.266
-Synthesis Optimization Complete : Time (s): cpu = 00:03:17 ; elapsed = 00:03:18 . Memory (MB): peak = 1640.949 ; gain = 1346.016
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:24 . Memory (MB): peak = 1241.324 ; gain = 260.812
+Synthesis Optimization Complete : Time (s): cpu = 00:01:54 ; elapsed = 00:01:55 . Memory (MB): peak = 1241.324 ; gain = 945.426
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 24352 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 12353 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.313 . Memory (MB): peak = 1797.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1324.719 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 6208 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 4096 instances
-  FDE => FDRE: 2112 instances
+  A total of 3104 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 2048 instances
+  FDE => FDRE: 1056 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-304 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+210 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:40 ; elapsed = 00:05:50 . Memory (MB): peak = 1797.230 ; gain = 1510.273
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.332 . Memory (MB): peak = 1797.230 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:27 ; elapsed = 00:02:28 . Memory (MB): peak = 1324.719 ; gain = 1037.809
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1324.719 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/mm_multiplier.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:53 ; elapsed = 00:00:34 . Memory (MB): peak = 1797.230 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 1324.719 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file mm_multiplier_utilization_synth.rpt -pb mm_multiplier_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  9 18:08:01 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 11 16:18:35 2021...

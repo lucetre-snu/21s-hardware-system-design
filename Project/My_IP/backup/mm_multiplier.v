@@ -65,18 +65,17 @@ module mm_multiplier #(
         endcase
         
     integer j;
-    always @(posedge clk)
+    always @(posedge clk) begin
+        for (j = 0; j < MATRIX_SIZE; j = j+1)                   {gb1[j], gb2[j]} = {gb1[j], gb2[j]};
         case (present_state)
-            S_IDLE: for (j = 0; j < MATRIX_SIZE; j = j+1)                       {gb1[j], gb2[j]} = {ZERO, ZERO};
-            S_LOAD: for (j = 0; j < MATRIX_SIZE; j = j+1)
-                    if (cnt_buff >= MATRIX_SIZE && j == cnt_buff-MATRIX_SIZE)   {gb1[j], gb2[j]} = {gb1[j], rddata};
-                    else if (cnt_buff < MATRIX_SIZE && j == cnt_buff)           {gb1[j], gb2[j]} = {rddata, gb2[j]};
-                    else                                                        {gb1[j], gb2[j]} = {gb1[j], gb2[j]};
+            S_IDLE: for (j = 0; j < MATRIX_SIZE; j = j+1)       {gb1[j], gb2[j]} = {ZERO, ZERO};
+            S_LOAD: if (cnt_buff < MATRIX_SIZE)                 gb1[cnt_buff]             = rddata;
+                    else                                        gb2[cnt_buff-MATRIX_SIZE] = rddata;
             S_HARV: for (j = 0; j < MATRIX_SIZE; j = j+1)
-                    if (dvalid)                                                 {gb1[j], gb2[j]} = {dout[j], ZERO};
-                    else                                                        {gb1[j], gb2[j]} = {gb1[j], ZERO};
-            default: for (j = 0; j < MATRIX_SIZE; j = j+1)                      {gb1[j], gb2[j]} = {gb1[j], gb2[j]};
+                    if (dvalid)                                 {gb1[j], gb2[j]} = {dout[j], ZERO};
+                    else                                        {gb1[j], gb2[j]} = {gb1[j], ZERO};
         endcase
+    end
     
     assign addr   = (present_state == S_LOAD || present_state == S_HARV) ? cnt_buff : 0;
     assign wrdata = (present_state == S_HARV) ? gb1[cnt_buff] : 0;

@@ -29,7 +29,9 @@ module my_pe #(
     );
     
     always @(posedge aclk)
-        if (dvalid) cin = res;
+        if (!aresetn)       cin <= 0;
+        else if (dvalid)    cin <= res;
+        else                cin <= cin;
     assign dout = dvalid ? res : 0;
 
 endmodule
