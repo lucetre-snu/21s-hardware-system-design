@@ -21,7 +21,7 @@ int main(void)
 	for(int i = 0 ; i < data_size_M*2 ; ++i)
 		flat[i] = 1;
 	for (int i = 0; i < 8; i++) {
-		for (int j = 0; i < 8; i++) {
+		for (int j = 0; j < 8; j++) {
 			mat[v_size*i+j] = 0;
 			input[v_size*j+i] = 0;
 		}
