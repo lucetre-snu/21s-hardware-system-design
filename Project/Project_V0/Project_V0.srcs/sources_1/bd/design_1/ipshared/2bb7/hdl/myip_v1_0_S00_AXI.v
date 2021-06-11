@@ -399,25 +399,30 @@
 	end    
 
 	// Add user logic here
-	clk_wiz_0 u_clk_180 (.clk_out1(BRAM_CLK), .clk_in1(S_AXI_ACLK));
-    assign BRAM_EN = 1'b1;
-    assign BRAM_RST = 1'b0;
-    
-    wire start, done;
-    assign start = (slv_reg0 == 32'h5555);
-    
     localparam L_RAM_SIZE = 3;
     localparam BITWIDTH = 32;
+    
+    wire start, done, we;
+    wire [2*L_RAM_SIZE:0] addr;
+	clk_wiz_0 u_clk_180 (.clk_out1(BRAM_CLK), .clk_in1(S_AXI_ACLK));
+    
+    assign start = (slv_reg0 == 32'h5555);
+    assign run_complete = (done);
+	
+    assign BRAM_EN  = 1'b1;
+    assign BRAM_RST = 1'b0;
+    assign BRAM_WE  = we ? 4'hF : 4'h0;
+    assign BRAM_ADDR = {addr, 2'd0};
     
     mm_multiplier #(L_RAM_SIZE, BITWIDTH) MM_MULTIPLIER(
         .start(start),
         .reset(~S_AXI_ARESETN),
         .clk(S_AXI_ACLK),
         .rddata(BRAM_RDDATA),
-        .addr(BRAM_ADDR),
         .wrdata(BRAM_WRDATA),
-        .we(BRAM_WE),
-        .done(run_complete)
+        .addr(addr),
+        .we(we),
+        .done(done)
     );
 	// User logic ends
 

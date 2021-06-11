@@ -36,7 +36,6 @@ module tb_mm_multiplier #(
         if (we) wrgb[addr] = wrdata;
     always @(posedge done) begin
         $writememh(OUTFILE, wrgb);
-        start <= 0;
     end
     
     always #1 clk = ~clk;

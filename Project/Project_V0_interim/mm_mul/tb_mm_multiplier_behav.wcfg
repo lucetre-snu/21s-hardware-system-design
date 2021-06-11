@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="166770000fs"></ZoomStartTime>
-      <ZoomEndTime time="437033884fs"></ZoomEndTime>
-      <Cursor1Time time="269592000fs"></Cursor1Time>
+      <ZoomStartTime time="3425450000fs"></ZoomStartTime>
+      <ZoomEndTime time="3458750001fs"></ZoomEndTime>
+      <Cursor1Time time="3431000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <NameColumnWidth column_width="167"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="15" />
    <wvobject fp_name="/tb_mm_multiplier/rddata" type="array">
       <obj_property name="ElementShortName">rddata[31:0]</obj_property>
       <obj_property name="ObjectShortName">rddata[31:0]</obj_property>
@@ -95,5 +95,9 @@
    <wvobject fp_name="/tb_mm_multiplier/MM_MULTIPLIER/cnt_calc" type="array">
       <obj_property name="ElementShortName">cnt_calc[3:0]</obj_property>
       <obj_property name="ObjectShortName">cnt_calc[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_mm_multiplier/MM_MULTIPLIER/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
    </wvobject>
 </wave_config>
