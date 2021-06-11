@@ -19,7 +19,9 @@ int main(void)
 	float* output_fpga = new float[data_size_M]; // for fpga output
 
 	for(int i = 0 ; i < data_size_M*2 ; ++i)
-		flat[i] = i % 64;
+		flat[i] = 0;
+	mat[v_size*0+0] = mat[v_size*1+0] = 1;
+	input[v_size*0+0] = input[v_size*0+1] = 1;
 
 	// computation
 	for(int i = 0; i < v_size; ++i)
