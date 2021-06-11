@@ -20,7 +20,7 @@ int main(void)
 
 	for(int i = 0 ; i < data_size_M*2 ; ++i)
 		flat[i] = 1;
-	for (int i = 0; i < 3; i++) {
+	for (int i = 0; i < 4; i++) {
 		mat[v_size*6+i] = 0;
 		input[v_size*i+7] = 0;
 	}
