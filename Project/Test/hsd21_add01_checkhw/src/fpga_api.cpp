@@ -1,6 +1,7 @@
 #include "fpga_api.h"
 #include <cstdio>
 #include <cstring>
+#include <iostream>
 
 #include <fcntl.h>
 #include <unistd.h>

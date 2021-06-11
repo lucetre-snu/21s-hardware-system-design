@@ -11,3 +11,6 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.xpr
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.tmp/myip_v1_0_project c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0/component.xml
+update_compile_order -fileset sources_1

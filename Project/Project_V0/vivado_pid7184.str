@@ -103,3 +103,99 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // Tcl Message: Scanning sources... Finished scanning sources 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
 // [GUI Memory]: 110 MB (+551kb) [00:00:13]
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 772.273 ; gain = 115.375 
+// Project name: Project_V0; location: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0; part: xc7z020clg484-1
+// [Engine Memory]: 829 MB (+84155kb) [00:00:14]
+dismissDialog("Open Project"); // bx (cp)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 28 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 3); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci)]", 8, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci)]", 8, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // af (al, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cp): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// bx (cp):  Edit in IP Packager : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0/Project_V0.tmp/myip_v1_0_project c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0/component.xml 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'c:/users/lucet/semester/21s-hardware-system-design/project/project_v0/project_v0.tmp/myip_v1_0_project' 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 895 MB (+24926kb) [00:00:53]
+// WARNING: HEventQueue.dispatchEvent() is taking  1988 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 895 MB. GUI used memory: 71 MB. Current time: 6/11/21, 9:21:56 PM KST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucet/semester/21s-hardware-system-design/Project/My_IP/myip_1.0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [GUI Memory]: 124 MB (+8320kb) [00:00:58]
+// WARNING: HEventQueue.dispatchEvent() is taking  1174 ms.
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::edit_ip_in_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 928.707 ; gain = 0.000 
+// [GUI Memory]: 136 MB (+6390kb) [00:00:58]
+// 'i' command handler elapsed time: 9 seconds
+dismissDialog("Edit in IP Packager"); // bx (cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (Q, cp)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Verilog Simulation ;  ;  ; false ;  ;  ; myip_v1_0", 3, "Verilog Simulation", 0, true); // M (Q, cp) - Node
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Verilog Simulation ;  ;  ; false ;  ;  ; myip_v1_0", 3); // M (Q, cp)
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Verilog Simulation ;  ;  ; false ;  ;  ; myip_v1_0", 3, "Verilog Simulation", 0, true, false, false, false, false, true); // M (Q, cp) - Double Click - Node
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "src/mm_multiplier.v ;  ; verilogSource ; false ; false ; xilinx_verilogbehavioralsimulation ; ", 6, "src/mm_multiplier.v", 0, false); // M (Q, cp)
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "src/mm_multiplier.v ;  ; verilogSource ; false ; false ; xilinx_verilogbehavioralsimulation ; ", 6); // M (Q, cp)
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "src/mm_multiplier.v ;  ; verilogSource ; false ; false ; xilinx_verilogbehavioralsimulation ; ", 6, "src/mm_multiplier.v", 0, false, false, false, false, false, true); // M (Q, cp) - Double Click
+// [Engine Memory]: 941 MB (+1491kb) [00:01:06]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - myip", 1); // k (j, cp)
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "hdl/myip_v1_0_S00_AXI.v ;  ; verilogSource ; false ; false ; xilinx_verilogbehavioralsimulation ; ", 8, "hdl/myip_v1_0_S00_AXI.v", 0, false); // M (Q, cp)
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "hdl/myip_v1_0_S00_AXI.v ;  ; verilogSource ; false ; false ; xilinx_verilogbehavioralsimulation ; ", 8); // M (Q, cp)
+selectTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "hdl/myip_v1_0_S00_AXI.v ;  ; verilogSource ; false ; false ; xilinx_verilogbehavioralsimulation ; ", 8, "hdl/myip_v1_0_S00_AXI.v", 0, false, false, false, false, false, true); // M (Q, cp) - Double Click
+// Elapsed time: 271 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 528, 334); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 433, 188); // cl (w, cp)
+selectCodeEditor("myip_v1_0_S00_AXI.v", 433, 188); // cl (w, cp)
+selectCodeEditor("myip_v1_0_S00_AXI.v", 505, 292); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 179, 284); // cl (w, cp)
+selectCodeEditor("myip_v1_0_S00_AXI.v", 179, 284, false, false, false, false, true); // cl (w, cp) - Double Click
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "run_complete"); // l (aT, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 261, 116); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 521, 188); // cl (w, cp)
+// Elapsed time: 271 seconds
+selectCodeEditor("myip_v1_0_S00_AXI.v", 593, 309); // cl (w, cp)
