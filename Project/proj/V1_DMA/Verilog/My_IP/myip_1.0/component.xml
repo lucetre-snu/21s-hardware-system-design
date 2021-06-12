@@ -1217,8 +1217,8 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>myip_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>22</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-06-12T05:11:36Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>23</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-06-12T05:50:49Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="user.org:user:myip:1.0_ARCHIVE_LOCATION">/home/ltmin/vivado_prj/zed/hsd2017/lab7/lab7_ip_repo/myip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1c217194_ARCHIVE_LOCATION">c:/Users/CMA/lab10_6/lab10_git/lab10_ip_repo.tar/lab10_ip_repo/myip_1.0</xilinx:tag>
@@ -1455,6 +1455,11 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3735f48_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V0/Verilog/My_IP/myip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@348bc6a3_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V0/Verilog/My_IP/myip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7fd981ce_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V0/Verilog/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a19e44d_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@deed20e_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@580081c7_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@315fa757_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b1bd2b2_ARCHIVE_LOCATION">c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
