@@ -63,9 +63,9 @@ if __name__ == '__main__':
 
     for run_type in ['cpu']:
         print('[*] Changing run_type into {}'.format(run_type))
-        for network in ['cnn']: # 'mlp'
+        for network in ['cnn', 'mlp']:
             print('[*] Changing network into {}'.format(network))
-            for i in range(4):
+            for i in range(6):
                 num_test_images = 10**i
                 print('[*] Varying num_test_images to {}'.format(num_test_images))
                 args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type])
