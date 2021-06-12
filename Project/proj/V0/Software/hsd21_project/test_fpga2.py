@@ -61,25 +61,15 @@ if __name__ == '__main__':
 
     print('[*] Arguments: %s' % parser.parse_args())
 
-    for run_type in ['fpga']:
-        print('[*] Changing run_type into {}'.format(run_type))
-        for network in ['cnn']: # 'mlp'
-            print('[*] Changing network into {}'.format(network))
-            for i in range(4):
-                num_test_images = 10**i
-                print('[*] Varying num_test_images to {}'.format(num_test_images))
-                args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type])
-                model_stats = main(args)
-                filename = "results/{}_{}_num_test_images_{}.json".format(run_type, network, num_test_images)
-                with open(filename, 'w') as fp:
-                    json.dump(model_stats, fp)
-
-            if network == 'mlp':
-                for i in range(4):
-                    m_size = 2**i
-                    print('[*] Varying m_size to {}'.format(m_size))
-                    args = parser.parse_args(['--m_size', "{}".format(m_size), '--network', network, '--run_type', run_type])
-                    model_stats = main(args)
-                    filename = "results/{}_{}_m_size_{}.json".format(run_type, network, m_size)
-                    with open(filename, 'w') as fp:
-                        json.dump(model_stats, fp)
+    v_size = 2
+    run_type = 'fpga'
+    network = 'cnn'
+    
+    for i in range(4):
+        num_test_images = 10**i
+        print('[*] Varying num_test_images to {}'.format(num_test_images))
+        args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type, '--v_size', "{}".format(v_size)])
+        model_stats = main(args)
+        filename = "results/{}{}_{}_num_test_images_{}.json".format(run_type, v_size, network, num_test_images)
+        with open(filename, 'w') as fp:
+            json.dump(model_stats, fp)

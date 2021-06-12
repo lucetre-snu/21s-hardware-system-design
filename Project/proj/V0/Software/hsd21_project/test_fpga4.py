@@ -68,7 +68,7 @@ if __name__ == '__main__':
     for i in range(4):
         num_test_images = 10**i
         print('[*] Varying num_test_images to {}'.format(num_test_images))
-        args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type])
+        args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type, '--v_size', "{}".format(v_size)])
         model_stats = main(args)
         filename = "results/{}{}_{}_num_test_images_{}.json".format(run_type, v_size, network, num_test_images)
         with open(filename, 'w') as fp:
