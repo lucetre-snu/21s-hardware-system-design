@@ -61,7 +61,8 @@ if __name__ == '__main__':
     parser.add_argument('--network', type=str, default='cnn', help='The type of execution e.g. cnn, mlp')
 
     print('[*] Arguments: %s' % parser.parse_args())
-
+    
+    args = parser.parse_args()            
     model_stats = main(args)
     print(model_stats)
 
