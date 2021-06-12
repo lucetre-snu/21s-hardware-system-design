@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/DAUN/LAB005/LAB005.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/DAUN/LAB005/LAB005.srcs/sources_1/ip/floating_point_0/sim/floating_point_0.vhd,1586776369,vhdl,,,,floating_point_0,,,,,,,,
+C:/Users/DAUN/LAB005/LAB005.srcs/sources_1/new/my_bram.v,1586804941,verilog,,C:/Users/DAUN/LAB005/LAB005.srcs/sources_1/new/tb_bram.v,,my_bram,,,,,,,,
+C:/Users/DAUN/LAB005/LAB005.srcs/sources_1/new/my_pe.v,1586809316,verilog,,C:/Users/DAUN/LAB005/LAB005.srcs/sources_1/new/tb_pe.v,,my_pe,,,,,,,,
+C:/Users/DAUN/LAB005/LAB005.srcs/sources_1/new/tb_bram.v,1586810110,verilog,,,,tb_bram,,,,,,,,
+C:/Users/DAUN/LAB005/LAB005.srcs/sources_1/new/tb_pe.v,1586776405,verilog,,,,tb_pe,,,,,,,,

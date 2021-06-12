@@ -1,1 +1,0 @@
-multadd_0.vhd,vhdl,xil_defaultlib,../../../../lab4.srcs/sources_1/ip/multadd_0/sim/multadd_0.vhd,

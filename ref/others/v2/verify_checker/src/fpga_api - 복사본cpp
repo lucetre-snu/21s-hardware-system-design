@@ -1,0 +1,79 @@
+#include "fpga_api.h"
+#include <cstdio>
+#include <cstring>
+
+#include <fcntl.h>
+#include <unistd.h>
+#include <sys/mman.h>
+
+#define DATA_SIZE SIZE*(SIZE+1)*sizeof(int) // fpga bram data size
+
+#define min(x,y) (((x)<(y))?(x):(y))
+
+FPGA::FPGA(off_t data_addr, off_t api_addr)
+{
+    fd_ = open("/dev/mem", O_RDWR);
+    data_ = static_cast<int*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_addr));
+    api_ = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
+}
+
+FPGA::~FPGA()
+{
+    munmap(data_, DATA_SIZE );
+    munmap(api_, sizeof(unsigned int));
+    close(fd_);
+}
+
+int* FPGA::matrix(void)
+{
+	return data_ + SIZE;
+}
+
+int* FPGA::vector(void)
+{
+	return data_;
+}
+
+const int* __attribute__((optimize("O0"))) FPGA::run()
+{
+    *api_ = 0x5555;
+    while(*api_ == 0x5555);
+
+    return data_;    
+}
+
+// Test code for bitstream
+void FPGA::largeMV(const int* large_mat, const int* input,
+		int* output, int M, int N)
+{
+	// 0) Initialize output vector	
+	for(int m = 0; m < N ; ++m)
+		output[m] = 0;
+	
+	int* vec = this->vector();
+	int* mat = this->matrix();
+	
+	for(int n = 0; n < N ; n += SIZE)
+	{
+		for(int m = 0; m < M ; m += SIZE)
+		{
+			// 0) Initialize input vector
+			int n_remain = min(SIZE, N-n);
+			int m_remain = min(SIZE, M-m);
+			
+			memset(vec, 0, sizeof(int)*SIZE);
+      		memcpy(vec, input+m, sizeof(int)*m_remain);
+			memset(mat, 0, sizeof(int)*(SIZE * SIZE));
+      		for(int k=0; k< n_remain; k++){
+        		memcpy(mat+k*SIZE , large_mat +m+ (k+n)*SIZE, sizeof(int)*m_remain);
+      		}
+
+			// 3) Call a function `run() to execute MV multiplication
+			const int* rst = this->run();
+
+			// 4) Accumulate intermediate results
+			for(int nn = 0; nn < n_remain; ++nn)
+				output[n + nn] += rst[nn];
+		} 
+	}
+}

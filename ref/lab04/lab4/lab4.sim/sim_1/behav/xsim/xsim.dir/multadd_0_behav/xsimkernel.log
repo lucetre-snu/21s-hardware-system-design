@@ -1,7 +1,0 @@
-Running: xsim.dir/multadd_0_behav/xsimk.exe -simmode gui -wdb multadd_0_behav.wdb -simrunnum 0 -socket 60837
-Design successfully loaded
-Design Loading Memory Usage: 5764 KB (Peak: 5764 KB)
-Design Loading CPU Usage: 93 ms
-Simulation completed
-Simulation Memory Usage: 6896 KB (Peak: 6896 KB)
-Simulation CPU Usage: 109 ms

@@ -1,0 +1,212 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 25432
+License: Customer
+
+Current time: 	Tue Jun 23 21:25:39 KST 2020
+Time zone: 	Korean Standard Time (Asia/Seoul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 277 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	DAUN
+User home directory: C:/Users/DAUN
+User working directory: C:/Users/DAUN/Desktop/v1/project_v1_64
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/DAUN/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/DAUN/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/DAUN/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/DAUN/Desktop/v1/project_v1_64/vivado.log
+Vivado journal file location: 	C:/Users/DAUN/Desktop/v1/project_v1_64/vivado.jou
+Engine tmp dir: 	C:/Users/DAUN/Desktop/v1/project_v1_64/.Xil/Vivado-25432-DESKTOP-NE0V45F
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 608 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\DAUN\Desktop\v1\project_v1_64\project_v1_64.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// Tcl Message: open_project C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.xpr 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 640 MB. GUI used memory: 46 MB. Current time: 6/23/20, 9:25:41 PM KST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 59 MB (+58982kb) [00:00:13]
+// [Engine Memory]: 693 MB (+575560kb) [00:00:13]
+// [GUI Memory]: 92 MB (+32028kb) [00:00:13]
+// [GUI Memory]: 112 MB (+16210kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  3679 ms.
+// Tcl Message: open_project C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/DAUN/Desktop/v1/project_v1_64/lab10_git/lab10_ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 747.711 ; gain = 133.582 
+// Project name: project_v1_64; location: C:/Users/DAUN/Desktop/v1/project_v1_64; part: xc7z020clg484-1
+// [Engine Memory]: 806 MB (+82135kb) [00:00:18]
+dismissDialog("Open Project"); // bx (cp)
+// [GUI Memory]: 124 MB (+6161kb) [00:00:18]
+// [Engine Memory]: 856 MB (+9604kb) [00:00:18]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 50 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v)]", 1); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 3); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci)]", 8); // B (D, cp)
+// A (cp): Show IP Hierarchy: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Show IP Hierarchy"); // A (cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v)]", 9); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v)]", 14); // B (D, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cp): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Elaborate Design"); // A (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// A (cp): Run Synthesis: addNotify
+selectButton("PAResourceQtoS.RunRun_TASK_HAS_ALREADY_COMPLETED_AND_UP_TO_DATE_OK", "OK"); // JButton (C, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // A (cp)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Tue Jun 23 21:27:05 2020] Launched synth_1... Run output will be captured here: C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 130 MB (+321kb) [00:05:46]
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 317 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Tue Jun 23 21:32:25 2020] Launched impl_1... Run output will be captured here: C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v)]", 9, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v)]", 9, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), processing_system7_0 : design_1_processing_system7_0_0 (design_1_processing_system7_0_0.xci)]", 10, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), processing_system7_0 : design_1_processing_system7_0_0 (design_1_processing_system7_0_0.xci)]", 10, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// HOptionPane Warning: ''design_1_processing_system7_0_0.xci' IP is part of a block design. Please open the block design 'design_1.bd' and customize the IP. (Re-customize IP)'
+// HMemoryUtils.trashcanNow. Engine heap size: 891 MB. GUI used memory: 64 MB. Current time: 6/23/20, 9:32:31 PM KST
+selectButton("PAResourceQtoS.RecustomizeCore_THIS_IP_PART_OF_BLOCK_DESIGN_OK", "OK"); // JButton (C, I)
+// Elapsed time: 28 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v)]", 9, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v)]", 14, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[0].pe : my_pe (my_pe.v)]", 15, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[0].pe : my_pe (my_pe.v)]", 15, false, false, false, false, false, true); // B (D, cp) - Double Click
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 39 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_myip_0_0.v", 1); // k (j, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v)]", 12, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v), pe[2].pe : my_pe (my_pe.v)]", 17, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v)]", 14, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v), myip_0 : design_1_myip_0_0 (design_1_myip_0_0.xci), design_1_myip_0_0 (design_1_myip_0_0.v), inst : myip_v1_0 (myip_v1_0.v), myip_v1_0_S00_AXI_inst : myip_v1_0_S00_AXI (myip_v1_0_S00_AXI.v), my_pearray : my_pearray (my_pearray.v), PE : pe_control (pe_con.v)]", 14, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 131 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 3); // k (j, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 56 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Tue Jun 23 21:36:57 2020] Launched impl_1... Run output will be captured here: C:/Users/DAUN/Desktop/v1/project_v1_64/project_v1_64.runs/impl_1/runme.log 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pe_con.v", 4); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pearray.v", 3); // k (j, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 90 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+// Elapsed time: 33 seconds
+selectCodeEditor("my_pearray.v", 1076, 581); // D (w, cp)
