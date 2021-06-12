@@ -120,6 +120,7 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
       // 1) Assign a vector
       for (int col = 0; col < block_col; col++)
         data_[col] = input[j + col];
+      // memcpy(data_, input+j, block_col*sizeof(int));
       for (int col = block_col; col < v_size_; col++)
         data_[col] = 0;
       // memset(data_+block_col, 0, (v_size_-block_col)*sizeof(int));
@@ -128,6 +129,7 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
       for (int row = 0; row < block_row; row++)
         for (int col = 0; col < block_col; col++)
           data_[(row+1)*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
+        // memcpy(data_+(row+1)*v_size_, large_mat + (i+row)*num_input + j, block_col*sizeof(int));
 
       // 3) Call a function `blockMV() to execute MV multiplication
       const float* ret = this->blockMV();
@@ -162,6 +164,7 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
         for (int row = 0; row < block_row; row++) {
           for (int col = 0; col < block_col_1; col++)
             data_M[row*v_size_ + col] = weight_mat[(i+row)*num_input + (j+col)];
+          // memcpy(data_M + row*v_size_, weight_mat + (i+row)*num_input + j, block_col_1*sizeof(int));
           for (int col = block_col_1; col < v_size_; col++)
             data_M[row*v_size_ + col] = 0;
           // memset(data_M+(row*v_size_ + block_col_1), 0, (v_size_ - block_col_1)*sizeof(int));
@@ -174,6 +177,7 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
         for (int row = 0; row < block_col_1; row++) {
           for (int col = 0; col < block_col_2; col++)
             data_M[m1_size_ + row*v_size_ + col] = input_mat[(j+row)*num_matrix2 + (k+col)];
+          // memcpy(data_M + (m1_size_ + row*v_size_), input_mat + (j+row)*num_matrix2 + k, block_col_2*sizeof(int));
           for (int col = block_col_2; col < v_size_; col++)
             data_M[m1_size_ + row*v_size_ + col] = 0;
           // memset(data_M+(m1_size_ + row*v_size_ + block_col_2), 0, (v_size_ - block_col_2)*sizeof(int));
