@@ -65,7 +65,7 @@ if __name__ == '__main__':
         print('[*] Changing run_type into {}'.format(run_type))
         for network in ['cnn', 'mlp']:
             print('[*] Changing network into {}'.format(network))
-            for i in range(6):
+            for i in range(4):
                 num_test_images = 10**i
                 print('[*] Varying num_test_images to {}'.format(num_test_images))
                 args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type])
@@ -74,7 +74,7 @@ if __name__ == '__main__':
                 with open(filename, 'w') as fp:
                     json.dump(model_stats, fp)
 
-            for i in range(3):
+            for i in range(4):
                 v_size = 2**i
                 print('[*] Varying v_size to {}'.format(v_size))
                 args = parser.parse_args(['--v_size', "{}".format(v_size), '--network', network, '--run_type', run_type])
@@ -84,7 +84,7 @@ if __name__ == '__main__':
                     json.dump(model_stats, fp)
 
             if network == 'mlp':
-                for i in range(8):
+                for i in range(4):
                     m_size = 2**i
                     print('[*] Varying m_size to {}'.format(m_size))
                     args = parser.parse_args(['--m_size', "{}".format(m_size), '--network', network, '--run_type', run_type])
