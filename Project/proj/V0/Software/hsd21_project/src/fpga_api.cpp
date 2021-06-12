@@ -105,8 +105,10 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
   float* vec = this->vector();
   float* mat = this->matrix();
 
-  // 0) Initialize output vector
-  memset(output, 0, num_output*sizeof(int));
+  // 0) Initialize output vector	
+  for(int i = 0; i < num_output; ++i)
+    output[i] = 0;
+  // memset(output, 0, num_output*sizeof(int));
 
   for(int i = 0; i < num_output; i += m_size_) {
     for(int j = 0; j < num_input; j += v_size_) {		
@@ -114,11 +116,13 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
       // 0) Initialize input vector
       int block_row = min(m_size_, num_output-i);
       int block_col = min(v_size_, num_input-j);
-            
+             
       // 1) Assign a vector
       for (int col = 0; col < block_col; col++)
         data_[col] = input[j + col];
-      memset(data_+block_col, 0, (v_size_-block_col)*sizeof(int));
+      for (int col = block_col; col < v_size_; col++)
+        data_[col] = 0;
+      // memset(data_+block_col, 0, (v_size_-block_col)*sizeof(int));
 
       // 2) Assign a matrix
       for (int row = 0; row < block_row; row++)
@@ -141,7 +145,9 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
   float* m2 = this->matrix_M2();
 
   // 0) Initialize output vector		
-  memset(output, 0, num_output*num_matrix2*sizeof(int));
+  for(int i = 0; i < num_output*num_matrix2; ++i)
+    output[i] = 0;
+  // memset(output, 0, num_output*num_matrix2*sizeof(int));
 
   for(int i = 0; i < num_output; i += v_size_) {
     for(int j = 0; j < num_input; j += v_size_) {
@@ -156,17 +162,25 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
         for (int row = 0; row < block_row; row++) {
           for (int col = 0; col < block_col_1; col++)
             data_M[row*v_size_ + col] = weight_mat[(i+row)*num_input + (j+col)];
-          memset(data_M+(row*v_size_ + block_col_1), 0, (v_size_ - block_col_1)*sizeof(int));
+          for (int col = block_col_1; col < v_size_; col++)
+            data_M[row*v_size_ + col] = 0;
+          // memset(data_M+(row*v_size_ + block_col_1), 0, (v_size_ - block_col_1)*sizeof(int));
       	}
-        memset(data_M+(block_row*v_size_), 0, (m1_size_ - block_row*v_size_)*sizeof(int));
+        for (int l = block_row*v_size_; l < m1_size_; l++)
+            data_M[l] = 0;
+        // memset(data_M+(block_row*v_size_), 0, (m1_size_ - block_row*v_size_)*sizeof(int));
 
         // 2) Assign a m2
         for (int row = 0; row < block_col_1; row++) {
           for (int col = 0; col < block_col_2; col++)
             data_M[m1_size_ + row*v_size_ + col] = input_mat[(j+row)*num_matrix2 + (k+col)];
-          memset(data_M+(m1_size_ + row*v_size_ + block_col_2), 0, (v_size_ - block_col_2)*sizeof(int));
+          for (int col = block_col_2; col < v_size_; col++)
+            data_M[m1_size_ + row*v_size_ + col] = 0;
+          // memset(data_M+(m1_size_ + row*v_size_ + block_col_2), 0, (v_size_ - block_col_2)*sizeof(int));
       	}
-        memset(data_M+(m1_size_ + block_col_1*v_size_), 0, (m1_size_ - block_col_1*v_size_)*sizeof(int));
+        for (int l = block_col_1*v_size_; l < m2_size_; l++)
+            data_M[m1_size_ + l] = 0;
+        // memset(data_M+(m1_size_ + block_col_1*v_size_), 0, (m2_size_ - block_col_1*v_size_)*sizeof(int));
 
         // 3) Call a function `blockMM() to execute Matrix matrix multiplication
         const float* ret = this->blockMM();
