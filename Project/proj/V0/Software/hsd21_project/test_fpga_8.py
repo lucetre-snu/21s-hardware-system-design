@@ -74,15 +74,6 @@ if __name__ == '__main__':
                 with open(filename, 'w') as fp:
                     json.dump(model_stats, fp)
 
-            for i in range(4):
-                v_size = 2**i
-                print('[*] Varying v_size to {}'.format(v_size))
-                args = parser.parse_args(['--v_size', "{}".format(v_size), '--network', network, '--run_type', run_type])
-                model_stats = main(args)
-                filename = "results/{}_{}_v_size_{}.json".format(run_type, network, v_size)
-                with open(filename, 'w') as fp:
-                    json.dump(model_stats, fp)
-
             if network == 'mlp':
                 for i in range(4):
                     m_size = 2**i
