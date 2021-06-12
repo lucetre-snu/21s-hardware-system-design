@@ -130,17 +130,15 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
 
         // 1) Assign a m1
         for (int row = 0; row < block_row; row++) {
-          for (int col = 0; col < block_col_1; col++)
-            data_M[row*v_size_ + col] = weight_mat[(i+row)*num_input + (j+col)];
-          memset(data_M+(row*v_size_ + block_col_1), 0, (v_size_ - block_col_1)*sizeof(int));
+          memcpy(data_M + row*v_size_, weight_mat + (i+row)*num_input + j, block_col_1*sizeof(int));
+          memset(data_M + (row*v_size_ + block_col_1), 0, (v_size_ - block_col_1)*sizeof(int));
       	}
         memset(data_M+(block_row*v_size_), 0, (m1_size_ - block_row*v_size_)*sizeof(int));
 
         // 2) Assign a m2
         for (int row = 0; row < block_col_1; row++) {
-          for (int col = 0; col < block_col_2; col++)
-            data_M[m1_size_ + row*v_size_ + col] = input_mat[(j+row)*num_matrix2 + (k+col)];
-          memset(data_M+(m1_size_ + row*v_size_ + block_col_2), 0, (v_size_ - block_col_2)*sizeof(int));
+          memcpy(data_M + (m1_size_ + row*v_size_), input_mat + (j+row)*num_matrix2 + k, block_col_2*sizeof(int));
+          memset(data_M + (m1_size_ + row*v_size_ + block_col_2), 0, (v_size_ - block_col_2)*sizeof(int));
       	}
         memset(data_M+(m1_size_ + block_col_1*v_size_), 0, (m1_size_ - block_col_1*v_size_)*sizeof(int));
 
@@ -174,14 +172,12 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
       int block_col = min(v_size_, num_input-j);
             
       // 1) Assign a vector
-      for (int col = 0; col < block_col; col++)
-        data_[col] = input[j + col];
-      memset(data_+col, 0, (v_size_-block_col)*sizeof(int));
+      memcpy(data_, input+j, block_col*sizeof(int));
+      memset(data_+block_col, 0, (v_size_-block_col)*sizeof(int));
 
       // 2) Assign a matrix
       for (int row = 0; row < block_row; row++)
-        for (int col = 0; col < block_col; col++)
-          data_[(row+1)*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
+        memcpy(data_+(row+1)*v_size_, large_mat + (i+row)*num_input + j, block_col*sizeof(int));
 
       // 3) Call a function `blockMV() to execute MV multiplication
       const float* ret = this->blockMV();
