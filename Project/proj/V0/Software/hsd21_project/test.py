@@ -57,11 +57,14 @@ if __name__ == '__main__':
     parser.add_argument('--num_test_images', type=int, default=100, help='The number of test images (range: 1~10000)')
     parser.add_argument('--m_size', type=int, default=16, help='The number of row in the block operation')
     parser.add_argument('--v_size', type=int, default=8, help='The number of col in the block operation')
-    parser.add_argument('--run_type', type=str, default='cpu', help='The type of execution e.g. cpu, fpga')
+    parser.add_argument('--run_type', type=str, default='fpga', help='The type of execution e.g. cpu, fpga')
     parser.add_argument('--network', type=str, default='cnn', help='The type of execution e.g. cnn, mlp')
 
     print('[*] Arguments: %s' % parser.parse_args())
 
+    model_stats = main(args)
+    print(model_stats)
+    return          
     for run_type in ['fpga', 'cpu']:
         print('[*] Changing run_type into {}'.format(run_type))
         for network in ['cnn']: # 'mlp'
