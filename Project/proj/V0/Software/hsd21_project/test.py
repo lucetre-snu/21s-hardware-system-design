@@ -64,7 +64,8 @@ if __name__ == '__main__':
 
     model_stats = main(args)
     print(model_stats)
-    return          
+
+    '''
     for run_type in ['fpga', 'cpu']:
         print('[*] Changing run_type into {}'.format(run_type))
         for network in ['cnn']: # 'mlp'
@@ -96,3 +97,4 @@ if __name__ == '__main__':
                     filename = "results/{}_{}_m_size_{}.json".format(run_type, network, m_size)
                     with open(filename, 'w') as fp:
                         json.dump(model_stats, fp)
+    '''
