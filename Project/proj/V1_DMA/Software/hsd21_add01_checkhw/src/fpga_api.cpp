@@ -22,7 +22,7 @@ FPGA::FPGA(off_t data_cdma_addr, off_t data_noncache_addr, off_t data_bram_addr,
 FPGA::~FPGA()
 {
     munmap(data_cdma, sizeof(unsigned int)*16);
-    munmap(data_noncache, DATA_SIZE);
+    munmap(data_, DATA_SIZE);
     munmap(api_, sizeof(unsigned int));
     close(fd_);
 }
