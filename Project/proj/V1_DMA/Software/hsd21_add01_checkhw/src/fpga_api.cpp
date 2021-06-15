@@ -47,19 +47,19 @@ void __attribute__((optimize("O0"))) FPGA::transfer(const float *src, const floa
 
 const float* __attribute__((optimize("O0"))) FPGA::run()
 {
+    transfer(data_, data_bram, DATA_SIZE);
     for (int i = 0; i < 128; i++) {
-      cout << data_[i] << " ";
+      cout << data_bram[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
-    transfer(data_, data_bram, DATA_SIZE);
 
     *api_ = 0x5555;
     while(*api_ == 0x5555);
+    transfer(data_bram, data_, DATA_SIZE);
     for (int i = 0; i < 64; i++) {
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
-    transfer(data_bram, data_, DATA_SIZE);
 
     return data_;    
 }
