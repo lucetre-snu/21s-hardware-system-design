@@ -70,12 +70,12 @@ const float* __attribute__((optimize("O0"))) FPGA::run()
 
     *api_ = 0x5555;
     while(*api_ == 0x5555);
-    transfer(bram_addr, noncache_addr, DATA_SIZE);
+    transfer(bram_addr, noncache_addr, DATA_SIZE/2);
     for (int i = 0; i < 64; i++) {
       cout << data_noncache[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
-    memcpy(data_, data_noncache, DATA_SIZE); 
+    memcpy(data_, data_noncache, DATA_SIZE/2); 
     for (int i = 0; i < 64; i++) {
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
