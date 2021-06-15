@@ -110,8 +110,8 @@ const float* __attribute__((optimize("O0"))) FPGA::blockMM()
   *output_ = 0x5555;
   while(*output_ == 0x5555);
   
-  transfer(bram_addr, noncache_addr, DATA_SIZE/2);
-  memcpy(data_M, data_noncache, DATA_SIZE/2); 
+  transfer(bram_addr, noncache_addr, data_size_M/2);
+  memcpy(data_M, data_noncache, data_size_M/2); 
 
   return data_M;    
 }
