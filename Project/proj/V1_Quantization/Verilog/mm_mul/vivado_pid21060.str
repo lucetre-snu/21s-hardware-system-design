@@ -1,0 +1,472 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 21060
+License: Customer
+
+Current time: 	Wed Jun 09 16:19:06 KST 2021
+Time zone: 	Korean Standard Time (Asia/Seoul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Screen resolution (DPI): 120
+Available screens: 1
+Available disk space: 293 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	lucet
+User home directory: C:/Users/lucet
+User working directory: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul
+User country: 	KR
+User language: 	ko
+User locale: 	ko_KR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/lucet/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/lucet/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/lucet/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/vivado.log
+Vivado journal file location: 	C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/vivado.jou
+Engine tmp dir: 	C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/.Xil/Vivado-21060-lucetre
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 593 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\lucet\semester\21s-hardware-system-design\Project\Project_V0_interim\mm_mul\mm_mul.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 614 MB. GUI used memory: 46 MB. Current time: 6/9/21, 4:19:08 PM KST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 100 MB (+102686kb) [00:00:15]
+// [Engine Memory]: 642 MB (+521619kb) [00:00:15]
+// [Engine Memory]: 675 MB (+631kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  2816 ms.
+// Tcl Message: open_project C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul' INFO: [Project 1-313] Project file moved from 'C:/Users/lucetre/Documents/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// Project name: mm_mul; location: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul; part: xc7z020clg484-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 716.512 ; gain = 84.066 
+dismissDialog("Open Project"); // bx (cp)
+// [GUI Memory]: 114 MB (+9065kb) [00:00:18]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (mm_multiplier.v) elapsed time: 0.2s
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mm_multiplier (mm_multiplier.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mm_multiplier (mm_multiplier.v), MATRIX[0].MY_PE : my_pe (my_pe.v)]", 2, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectCodeEditor("mm_multiplier.v", 318, 190); // cl (w, cp)
+// Elapsed time: 30 seconds
+selectCodeEditor("mm_multiplier.v", 528, 299); // cl (w, cp)
+// WARNING: HEventQueue.dispatchEvent() is taking  838342 ms.
+// Elapsed time: 903 seconds
+selectTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "impl_1 ; constrs_1 ; Not started ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Vivado Implementation Defaults (Vivado Implementation 2018) ; Vivado Implementation Default Reports (Vivado Implementation 2018) ; xc7z020clg484-1 ; Default settings for Implementation.", 1, (String) null, 8, false); // ax (Q, cp)
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.6s
+// HMemoryUtils.trashcanNow. Engine heap size: 715 MB. GUI used memory: 59 MB. Current time: 6/9/21, 4:35:04 PM KST
+// [Engine Memory]: 715 MB (+6542kb) [00:16:15]
+// Elapsed time: 103 seconds
+selectCodeEditor("mm_multiplier.v", 249, 169); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mm_multiplier.v", 1); // k (j, cp)
+selectCodeEditor("mm_multiplier.v", 340, 196); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 338, 160); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 297, 218); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 386, 173); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 536, 244); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 364, 201); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 400, 260); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 421, 262); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 469, 197); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 221, 269); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 250, 257); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 249, 238); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 269, 242); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 256, 242); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 256, 242, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 336, 251); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 252, 224); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 252, 224, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 252, 224); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 344, 227); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 410, 245); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 99, 214); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 81, 220); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 224, 241); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 205, 246); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mm_multiplier.v", 1); // k (j, cp)
+// Elapsed time: 462 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cp)
+// bx (cp):  Resetting Runs : addNotify
+// Elapsed time: 96 seconds
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton (C, I)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bx (cp)
+selectCodeEditor("mm_multiplier.v", 319, 300); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bx (cp):  Starting Design Runs : addNotify
+selectButton("PAResourceQtoS.RunImplementation_THERE_NO_NETLIST_AVAILABLE_OK_OK", "OK"); // JButton (C, I)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Wed Jun  9 16:46:49 2021] Launched synth_1... Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/runme.log [Wed Jun  9 16:46:49 2021] Launched impl_1... Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// [GUI Memory]: 120 MB (+145kb) [00:30:32]
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 294 seconds
+selectCodeEditor("mm_multiplier.v", 375, 384); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("mm_multiplier.v", 250, 399); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectTreeTableHeader(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "BRAMs", 12); // ax (Q, cp)
+selectTreeTableHeader(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "FF", 11); // ax (Q, cp)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// Elapsed time: 538 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Implementation Completed"); // ah (cp)
+// Elapsed time: 43 seconds
+selectCodeEditor("mm_multiplier.v", 478, 402); // cl (w, cp)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aI (aF, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 729 MB. GUI used memory: 62 MB. Current time: 6/9/21, 5:05:04 PM KST
+// Elapsed time: 288 seconds
+selectCodeEditor("mm_multiplier.v", 263, 338); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 257, 337); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 257, 337, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 295, 297); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 484, 290); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 484, 290, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 348, 338); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 342, 196); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 342, 196, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 174, 219); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 341, 201); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 341, 201, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 169, 219); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 168, 219, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 267, 218); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 442, 329); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 251, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 437, 305); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 254, 302); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 254, 302, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 242, 363); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 242, 363, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 457, 360); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 249, 246); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 459, 244); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 459, 244, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 458, 260); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 458, 260, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 442, 288); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 442, 288, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 445, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 445, 309, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 445, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 445, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 445, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 445, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 479, 354); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 464, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 464, 309, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 444, 333); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 444, 333, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 565, 319); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 594, 312); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 314); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+selectCodeEditor("mm_multiplier.v", 244, 314); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 314, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 326); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 326, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 353); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 353, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 367); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 367, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("mm_multiplier.v", 244, 375); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 244, 375, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 250, 404); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 250, 404, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 583, 390); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("mm_multiplier.v", 271, 352); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 237, 316); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 234, 303); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 234, 303, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("mm_multiplier.v", 275, 336); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 275, 336, false, false, false, false, true); // cl (w, cp) - Double Click
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 510, 314); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 258, 314); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 506, 326); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 544, 327); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 456, 305); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 476, 327); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 764, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 672, 303); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 353, 315); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'v'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 834, 309); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 522, 317); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 343, 334); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 454, 341); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 343, 384); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 394, 358); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 213, 385); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("mm_multiplier.v", 287, 79); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 273, 68); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 286, 84); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 290, 77); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 255, 264); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 255, 305); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 429, 267); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 424, 306); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 266, 267); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 520, 279); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("mm_multiplier.v", 343, 265); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cp):  Run Simulation : addNotify
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (e)
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator... INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.sim/sim_1/behav/xsim' INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs INFO: [SIM-utils-51] Simulation object is 'sim_1' 
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: INFO: [USF-XSim-7] Finding pre-compiled libraries... INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.sim/sim_1/behav/xsim' INFO: [SIM-utils-54] Inspecting design source files for 'tb_mm_multiplier' in fileset 'sim_1'... 
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.2s
+// Tcl Message: INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvhdl --incr --relax -prj tb_mm_multiplier_vhdl.prj" INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.vhd" into library xil_defaultlib INFO: [VRFC 10-3107] analyzing entity 'floating_point_MAC' 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.sim/sim_1/behav/xsim' 
+// Tcl Message: Vivado Simulator 2018.3 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto c9777da09d2d4b71bfb63f0240fb306f --incr --debug typical --relax --mt 2 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L xbip_pipe_v3_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_5 -L xbip_dsp48_multadd_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L floating_point_v7_1_7 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_mm_multiplier_behav xil_defaultlib.tb_mm_multiplier xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. Starting static elaboration 
+// Tcl Message: Completed static elaboration 
+// Tcl Message: Starting simulation data flow analysis 
+// Tcl Message: Completed simulation data flow analysis 
+// Elapsed time: 41 seconds
+selectCodeEditor("mm_multiplier.v", 315, 391); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 271, 270); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+// Tcl Message: Compiling module xil_defaultlib.mm_multiplier_default Compiling module xil_defaultlib.tb_mm_multiplier Compiling module xil_defaultlib.glbl 
+// TclEventType: LAUNCH_SIM
+// Tcl Message: Built simulation snapshot tb_mm_multiplier_behav 
+// Tcl Message: run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:01:04 . Memory (MB): peak = 759.613 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '64' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "tb_mm_multiplier_behav -key {Behavioral:sim_1:Functional:tb_mm_multiplier} -tclbatch {tb_mm_multiplier.tcl} -view {C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// PAPropertyPanels.initPanels (impl_1) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  1133 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// Elapsed time: 28 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: open_wave_config C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/tb_mm_multiplier_behav.wcfg 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// HMemoryUtils.trashcanNow. Engine heap size: 729 MB. GUI used memory: 68 MB. Current time: 6/9/21, 5:11:44 PM KST
+// Tcl Message: source tb_mm_multiplier.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// HMemoryUtils.trashcanNow. Engine heap size: 729 MB. GUI used memory: 68 MB. Current time: 6/9/21, 5:11:48 PM KST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 822.262 ; gain = 62.648 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_mm_multiplier_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:13 ; elapsed = 00:01:17 . Memory (MB): peak = 822.262 ; gain = 62.648 
+dismissDialog("Run Simulation"); // e (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Elapsed time: 158 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cp)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - tb_mm_multiplier", "DesignTask.SIMULATION");
+// bx (cp):  Close : addNotify
+// TclEventType: WAVEFORM_CLOSE_WCFG
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+dismissDialog("Close"); // bx (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 17, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// [GUI Memory]: 127 MB (+1500kb) [00:55:37]
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bx (cp):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: [Wed Jun  9 17:14:34 2021] Launched synth_1... Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/runme.log [Wed Jun  9 17:14:34 2021] Launched impl_1... Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+selectCodeEditor("mm_multiplier.v", 167, 232); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 198, 228); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+// Elapsed time: 135 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mm_multiplier (mm_multiplier.v), MATRIX[0].MY_PE : my_pe (my_pe.v)]", 2, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mm_multiplier (mm_multiplier.v), MATRIX[0].MY_PE : my_pe (my_pe.v)]", 2, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectCodeEditor("my_pe.v", 189, 158); // cl (w, cp)
+typeControlKey((HResource) null, "my_pe.v", 'c'); // cl (w, cp)
+selectCodeEditor("my_pe.v", 242, 148); // cl (w, cp)
+selectCodeEditor("my_pe.v", 250, 12); // cl (w, cp)
+selectCodeEditor("my_pe.v", 343, 244); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 159 seconds
+selectCodeEditor("my_pe.v", 291, 282); // cl (w, cp)
+typeControlKey((HResource) null, "my_pe.v", 'c'); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mm_multiplier.v", 1); // k (j, cp)
+selectCodeEditor("mm_multiplier.v", 224, 183); // cl (w, cp)
+typeControlKey((HResource) null, "mm_multiplier.v", 'c'); // cl (w, cp)
+selectCodeEditor("mm_multiplier.v", 426, 308); // cl (w, cp)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pe.v", 2); // k (j, cp)
+selectCodeEditor("my_pe.v", 378, 182); // cl (w, cp)
+typeControlKey((HResource) null, "my_pe.v", 'c'); // cl (w, cp)
+// [GUI Memory]: 137 MB (+3134kb) [01:02:42]
+// Elapsed time: 108 seconds
+selectCodeEditor("my_pe.v", 545, 316); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mm_multiplier.v", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "my_pe.v", 2); // k (j, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Implementation Completed: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1838 ms.
+// Elapsed time: 758 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Implementation Completed"); // ah (cp)
+// Elapsed time: 39 seconds
+selectCodeEditor("my_pe.v", 275, 372); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mm_multiplier.v", 1); // k (j, cp)
