@@ -17,7 +17,7 @@ FPGA::FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t ap
     noncache_addr = (float *) _noncache_addr;
 
     fd_           = open("/dev/mem", O_RDWR);
-    data_         = static_cast<float *>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, noncache_addr));
+    data_         = static_cast<float *>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, _noncache_addr));
     fpga_dma      = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, fpga_dma_addr));
     api_          = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
 }
