@@ -16,7 +16,7 @@ FPGA::FPGA(off_t data_cdma_addr, off_t data_noncache_addr, off_t data_bram_addr,
     fd_ = open("/dev/mem", O_RDWR);
     data_cdma     = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_cdma_addr));
     data_         = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_noncache_addr));
-    data_bram     = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_bram_addr));
+    data_bram     = (float *) data_bram_addr;
     api_          = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
 }
 
