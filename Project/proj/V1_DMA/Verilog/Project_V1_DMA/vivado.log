@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jun 15 11:06:07 2021
+# Process ID: 38316
+# Current directory: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25848 C:\Users\lucet\semester\21s-hardware-system-design\Project\proj\V1_DMA\Verilog\Project_V1_DMA\Project_V1_DMA.xpr
+# Log file: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA/vivado.log
+# Journal file: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA/Project_V1_DMA.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 786.734 ; gain = 173.207
