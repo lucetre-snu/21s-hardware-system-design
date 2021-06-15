@@ -1,27 +1,28 @@
 #include "fpga_api.h"
 #include <cstdio>
 #include <cstring>
-#include <iostream>
-using namespace std;
-
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/mman.h>
+#include <iostream>
+using namespace std;
 
 #define DATA_SIZE SIZE*(SIZE+1)*sizeof(float) // fpga bram data size
 
 #define min(x,y) (((x)<(y))?(x):(y))
 
-FPGA::FPGA(off_t data_addr, off_t api_addr)
+FPGA::FPGA(off_t data_cdma_addr, off_t data_noncache_addr, off_t data_bram_addr, off_t api_addr)
 {
     fd_ = open("/dev/mem", O_RDWR);
-    data_ = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_addr));
-    api_ = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
+    data_cdma     = static_cast<float*>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_cdma_addr));
+    data_ = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_noncache_addr));
+    api_          = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
 }
 
 FPGA::~FPGA()
 {
-    munmap(data_, DATA_SIZE );
+    munmap(data_cdma, sizeof(unsigned int)*16);
+    munmap(data_noncache, DATA_SIZE);
     munmap(api_, sizeof(unsigned int));
     close(fd_);
 }
@@ -34,6 +35,13 @@ float* FPGA::matrix_M1(void)
 float* FPGA::matrix_M2(void)
 {
 	return data_ + SIZE * SIZE;
+}
+
+void __attribute__((optimize("O0"))) FPGA::transfer(const float *src, const float *dst, const unsigned int size) {
+  *(data_cdma + 6) = (unsigned int) src;
+  *(data_cdma + 8) = (unsigned int) dst;
+  *(data_cdma + 10) = size;
+  while ((*(data_cdma + 1) & 0x00000002) == 0);
 }
 
 const float* __attribute__((optimize("O0"))) FPGA::run()

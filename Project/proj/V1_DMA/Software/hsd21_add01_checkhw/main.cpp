@@ -33,7 +33,7 @@ int main(void)
 	}
 	// FPGA offloading
 	// memory load
-	FPGA dev(0x40000000, 0x43c00000);
+  	FPGA dev(0x7e200000, 0x10000000, 0xC0000000, 0x43c00000);
 	dev.largeMM(mat, input, output_fpga, v_size, v_size, v_size);
 
 	// display
