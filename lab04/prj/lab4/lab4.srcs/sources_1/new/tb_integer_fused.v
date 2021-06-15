@@ -13,9 +13,9 @@ module tb_integer_fused();
     
     initial begin
         for(i=0; i<32; i=i+1) begin
-            ain = $urandom%(2**31);
-            bin = $urandom%(2**31);
-            cin = $urandom%(2**31);
+            ain = (i+1);
+            bin = (i+1);
+            cin = $urandom%(100);
             #20;
         end
         

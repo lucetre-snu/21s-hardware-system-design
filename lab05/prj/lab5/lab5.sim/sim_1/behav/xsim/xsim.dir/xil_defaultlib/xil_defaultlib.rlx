@@ -2,9 +2,7 @@
 2018.3
 Dec  7 2018
 00:33:28
-C:/Users/82108/lab5/lab5.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-C:/Users/82108/lab5/lab5.srcs/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.vhd,1617549228,vhdl,,,,floating_point_mac,,,,,,,,
-C:/Users/82108/lab5/lab5.srcs/sources_1/new/my_bram.v,1617761807,verilog,,C:/Users/82108/lab5/lab5.srcs/sources_1/new/tb_my_bram.v,,my_bram,,,,,,,,
-C:/Users/82108/lab5/lab5.srcs/sources_1/new/my_pe.v,1617639462,verilog,,C:/Users/82108/lab5/lab5.srcs/sources_1/new/tb_my_pe.v,,my_pe,,,,,,,,
-C:/Users/82108/lab5/lab5.srcs/sources_1/new/tb_my_bram.v,1617761744,verilog,,,,tb_my_bram,,,,,,,,
-C:/Users/82108/lab5/lab5.srcs/sources_1/new/tb_my_pe.v,1617638854,verilog,,,,tb_my_pe,,,,,,,,
+C:/Users/lucet/semester/21s-hardware-system-design/lab05/prj/lab5/lab5.sim/sim_1/behav/xsim/glbl.v,1618275241,verilog,,,,glbl,,,,,,,,
+C:/Users/lucet/semester/21s-hardware-system-design/lab05/prj/lab5/lab5.srcs/sources_1/ip/floating_point_MAC/sim/floating_point_MAC.vhd,1618275242,vhdl,,,,floating_point_mac,,,,,,,,
+C:/Users/lucet/semester/21s-hardware-system-design/lab05/prj/lab5/lab5.srcs/sources_1/new/my_pe.v,1618275242,verilog,,C:/Users/lucet/semester/21s-hardware-system-design/lab05/prj/lab5/lab5.srcs/sources_1/new/tb_my_pe.v,,my_pe,,,,,,,,
+C:/Users/lucet/semester/21s-hardware-system-design/lab05/prj/lab5/lab5.srcs/sources_1/new/tb_my_pe.v,1618275242,verilog,,,,tb_my_pe,,,,,,,,

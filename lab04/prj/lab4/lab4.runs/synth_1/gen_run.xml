@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="tb_adder_array.tcl"/>
   <File Type="REPORTS-TCL" Name="tb_adder_array_reports.tcl"/>
   <File Type="RDS-RDS" Name="tb_adder_array.vds"/>
-  <File Type="RDS-UTIL" Name="tb_adder_array_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="tb_adder_array_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="tb_adder_array.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

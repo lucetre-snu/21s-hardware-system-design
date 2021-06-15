@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_float_fused_behav/xsimk.exe -simmode gui -wdb tb_float_fused_behav.wdb -simrunnum 0 -socket 4477
+Running: xsim.dir/tb_float_fused_behav/xsimk.exe -simmode gui -wdb tb_float_fused_behav.wdb -simrunnum 0 -socket 8368
 Design successfully loaded
-Design Loading Memory Usage: 7660 KB (Peak: 7660 KB)
-Design Loading CPU Usage: 61 ms
+Design Loading Memory Usage: 7764 KB (Peak: 7764 KB)
+Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 9224 KB (Peak: 9224 KB)
-Simulation CPU Usage: 93 ms
+Simulation Memory Usage: 9276 KB (Peak: 9276 KB)
+Simulation CPU Usage: 46 ms
