@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-#define DATA_SIZE SIZE*(SIZE+1)*sizeof(float) // fpga bram data size
+#define DATA_SIZE SIZE*(SIZE*2)*sizeof(float) // fpga bram data size
 
 #define min(x,y) (((x)<(y))?(x):(y))
 
@@ -52,21 +52,12 @@ void __attribute__((optimize("O0"))) FPGA::transfer(const float *src, const floa
 
 const float* __attribute__((optimize("O0"))) FPGA::run()
 {
-    for (int i = 0; i < 128; i++) {
-      cout << data_[i] << " ";
-      if (i % 8 == 7) cout << endl;
-    }
     memcpy(data_noncache, data_, DATA_SIZE); 
-    for (int i = 0; i < 128; i++) {
-      cout << data_[i] << " ";
-      if (i % 8 == 7) cout << endl;
-    }
-    transfer(noncache_addr, bram_addr, DATA_SIZE);
-
     for (int i = 0; i < 128; i++) {
       cout << data_noncache[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
+    transfer(noncache_addr, bram_addr, DATA_SIZE);
 
     *api_ = 0x5555;
     while(*api_ == 0x5555);
