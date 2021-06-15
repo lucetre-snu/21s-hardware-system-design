@@ -6,6 +6,7 @@ import os
 import time
 import argparse
 import json
+import sys
 
 from models import MLP, CNN
 from data.load_mnist import load_mnist
@@ -64,12 +65,11 @@ if __name__ == '__main__':
     v_size = 8
     run_type = 'fpga'
     network = 'cnn'
-    
-    for i in range(4):
-        num_test_images = 10**i
-        print('[*] Varying num_test_images to {}'.format(num_test_images))
-        args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type, '--v_size', "{}".format(v_size)])
-        model_stats = main(args)
-        filename = "results/{}{}_{}_num_test_images_{}.json".format(run_type, v_size, network, num_test_images)
-        with open(filename, 'w') as fp:
-            json.dump(model_stats, fp)
+    num_test_images = sys.argv[1]
+
+    print('[*] Varying num_test_images to {}'.format(num_test_images))
+    args = parser.parse_args(['--num_test_images', "{}".format(num_test_images), '--network', network, '--run_type', run_type, '--v_size', "{}".format(v_size)])
+    model_stats = main(args)
+    filename = "results/{}{}_{}_num_test_images_{}.json".format(run_type, v_size, network, num_test_images)
+    with open(filename, 'w') as fp:
+        json.dump(model_stats, fp)
