@@ -9,7 +9,7 @@
 void *getCaffeNet(void *network, int m_size, int v_size)
 {
   char *net_char = static_cast<char *>(network);
-  FPGA *dev = new FPGA(0x40000000, 0x43c00000, m_size, v_size);
+  FPGA *dev = new FPGA(0x7E200000, 0x10000000, 0xC0000000, 0x43C00000, m_size, v_size);
   return new CaffeDNN(std::string(net_char), dev);
 }
 
