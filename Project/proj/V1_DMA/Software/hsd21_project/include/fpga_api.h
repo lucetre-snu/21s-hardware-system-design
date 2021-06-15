@@ -19,6 +19,11 @@ private:
   unsigned int *output_M;
   unsigned int *output_MV;
 
+  float *noncache_addr;
+  float *bram_addr;
+  float *data_noncache;
+  unsigned int *fpga_dma;
+
   int m_size_;
   int v_size_;
   int m1_size_; // matrix matrix multiplication first matrix size
@@ -29,7 +34,7 @@ private:
   int num_block_call_;
 
 public:
-  FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size);
+  FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t output_addr, int m_size, int v_size);
   ~FPGA();
 
   // return internal pointer for the data
@@ -43,6 +48,7 @@ public:
   // perform matrix multiplication and return output array pointer
   const float *blockMV();
   const float *blockMM();
+  void transfer(const float *src, const float *dst, const unsigned int size);
 
   // Input vector size: num_input
   // Matrix size: num_output * num_input

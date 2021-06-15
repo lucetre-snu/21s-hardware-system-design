@@ -7,22 +7,24 @@
 
 #define min(x,y) (((x)<(y))?(x):(y))
 
-FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
+FPGA::FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t output_addr, int m_size, int v_size)
 {
-  m_size_ = m_size;
-  v_size_ = v_size;
-
-  m1_size_ = v_size * v_size;
-
-  data_size_ = (m_size_+1)*v_size_; // fpga bram data size
-  data_size_M = (2*v_size_)*v_size_*sizeof(float);
+  m_size_       = m_size;
+  v_size_       = v_size;
+  m1_size_      = v_size * v_size;
+  data_size_    = (m_size_+1)*v_size_;
+  data_size_M   = (2*v_size_)*v_size_*sizeof(float);
+  data_         = new float[data_size_];	
 
   fd_ = open("/dev/mem", O_RDWR);
-  data_M = static_cast<float*>(mmap(NULL, data_size_M, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_addr));
-  data_ = new float[data_size_];	
+  bram_addr     = (float *) _bram_addr;
+  noncache_addr = (float *) _noncache_addr;
+  data_noncache = static_cast<float*>(mmap(NULL, data_size_M, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, _noncache_addr));
+  fpga_dma      = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, fpga_dma_addr));
+  data_M        = new float[data_size_M];	
 
-  output_ = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, output_addr));
-  output_MV = new unsigned int[m_size_];
+  output_       = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, output_addr));
+  output_MV     = new unsigned int[m_size_];
   // output_M = static_cast<unsigned int*>(NULL);
 
   num_block_call_ = 0;
@@ -30,11 +32,13 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
 
 FPGA::~FPGA()
 {
-  munmap(data_M, data_size_M);
+  munmap(data_noncache, data_size_M);
+  munmap(fpga_dma, sizeof(unsigned int)*16);
   munmap(output_, sizeof(unsigned int));
   close(fd_);
 
   delete[] data_;
+  delete[] data_M;
 }
 
 float* FPGA::matrix(void)
@@ -89,13 +93,25 @@ const float* FPGA::blockMV()
   return data_;    
 }
 
+void __attribute__((optimize("O0"))) FPGA::transfer(const float *src, const float *dst, const unsigned int size) {
+  *(fpga_dma + 6) = (unsigned int) src;
+  *(fpga_dma + 8) = (unsigned int) dst;
+  *(fpga_dma + 10) = size;
+  while ((*(fpga_dma + 1) & 0x00000002) == 0);
+}
+
 const float* __attribute__((optimize("O0"))) FPGA::blockMM()
 {
   num_block_call_ += 1;
 
-  // fpga version
+  memcpy(data_noncache, data_M, data_size_M);
+  transfer(noncache_addr, bram_addr, data_size_M);
+
   *output_ = 0x5555;
   while(*output_ == 0x5555);
+  
+  transfer(bram_addr, noncache_addr, DATA_SIZE/2);
+  memcpy(data_M, data_noncache, DATA_SIZE/2); 
 
   return data_M;    
 }
