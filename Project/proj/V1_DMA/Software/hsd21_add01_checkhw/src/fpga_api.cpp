@@ -42,7 +42,9 @@ void __attribute__((optimize("O0"))) FPGA::transfer(const float *src, const floa
   *(data_cdma + 6) = (unsigned int) src;
   *(data_cdma + 8) = (unsigned int) dst;
   *(data_cdma + 10) = size;
-  while ((*(data_cdma + 1) & 0x00000002) == 0);
+  while ((*(data_cdma + 1) & 0x00000002) == 0) {
+    cout << "hello" << endl;
+  }
 }
 
 const float* __attribute__((optimize("O0"))) FPGA::run()
