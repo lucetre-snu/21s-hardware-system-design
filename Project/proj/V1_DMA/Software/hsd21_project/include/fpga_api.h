@@ -34,6 +34,7 @@ private:
   int num_block_call_;
 
 public:
+  FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size);
   FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t output_addr, int m_size, int v_size);
   ~FPGA();
 
