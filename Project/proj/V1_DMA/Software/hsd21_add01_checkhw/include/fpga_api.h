@@ -13,14 +13,16 @@
 class FPGA
 {
 private:
-    int fd_;	
+    float* noncache_addr;
+    float* bram_addr;
+
+	int fd_;	
     float* data_;
-	unsigned int *data_cdma;
-	float *data_bram;
+	unsigned int *fpga_dma;
     unsigned int* api_;
 	
 public:
-	FPGA(off_t data_cdma_addr, off_t data_noncache_addr, off_t data_bram_addr, off_t api_addr);
+	FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t api_addr);
     ~FPGA();
 	
 	// return internal pointer for the data

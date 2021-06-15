@@ -11,18 +11,20 @@ using namespace std;
 
 #define min(x,y) (((x)<(y))?(x):(y))
 
-FPGA::FPGA(off_t data_cdma_addr, off_t data_noncache_addr, off_t data_bram_addr, off_t api_addr)
+FPGA::FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t api_addr)
 {
-    fd_ = open("/dev/mem", O_RDWR);
-    data_cdma     = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_cdma_addr));
-    data_         = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_noncache_addr));
-    data_bram     = (float *) data_bram_addr;
-    api_          = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
+    bram_addr     = (float *) _bram_addr;
+    noncache_addr = (float *) _noncache_addr;
+
+    fd_           = open("/dev/mem", O_RDWR);
+    data_         = static_cast<float *>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_noncache_addr));
+    fpga_dma      = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, fpga_dma_addr));
+    api_          = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
 }
 
 FPGA::~FPGA()
 {
-    munmap(data_cdma, sizeof(unsigned int)*16);
+    munmap(fpga_dma, sizeof(unsigned int)*16);
     munmap(data_, DATA_SIZE);
     munmap(api_, sizeof(unsigned int));
     close(fd_);
@@ -39,17 +41,15 @@ float* FPGA::matrix_M2(void)
 }
 
 void __attribute__((optimize("O0"))) FPGA::transfer(const float *src, const float *dst, const unsigned int size) {
-  *(data_cdma + 6) = (unsigned int) src;
-  *(data_cdma + 8) = (unsigned int) dst;
-  *(data_cdma + 10) = size;
-  while ((*(data_cdma + 1) & 0x00000002) == 0) {
-    cout << "hello" << endl;
-  }
+  *(fpga_dma + 6) = (unsigned int) src;
+  *(fpga_dma + 8) = (unsigned int) dst;
+  *(fpga_dma + 10) = size;
+  while ((*(fpga_dma + 1) & 0x00000002) == 0);
 }
 
 const float* __attribute__((optimize("O0"))) FPGA::run()
 {
-    transfer(data_, data_bram, DATA_SIZE);
+    transfer(noncache_addr, bram_addr, DATA_SIZE);
     for (int i = 0; i < 128; i++) {
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
@@ -57,7 +57,7 @@ const float* __attribute__((optimize("O0"))) FPGA::run()
 
     *api_ = 0x5555;
     while(*api_ == 0x5555);
-    transfer(data_bram, data_, DATA_SIZE);
+    transfer(bram_addr, noncache_addr, DATA_SIZE/2);
     for (int i = 0; i < 64; i++) {
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
