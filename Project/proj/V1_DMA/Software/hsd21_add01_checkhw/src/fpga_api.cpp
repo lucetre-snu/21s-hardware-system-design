@@ -49,7 +49,7 @@ const float* __attribute__((optimize("O0"))) FPGA::run()
 {
     transfer(data_, data_bram, DATA_SIZE);
     for (int i = 0; i < 128; i++) {
-      cout << data_bram[i] << " ";
+      cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
 
