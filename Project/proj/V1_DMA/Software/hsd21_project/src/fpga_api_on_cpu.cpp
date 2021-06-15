@@ -7,7 +7,7 @@ using namespace std;
 
 #define min(x,y) (((x)<(y))?(x):(y))
 
-FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
+FPGA::FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t output_addr, int m_size, int v_size)
 {
   m_size_ = m_size;
   v_size_ = v_size;
