@@ -15,7 +15,8 @@ FPGA::FPGA(off_t data_cdma_addr, off_t data_noncache_addr, off_t data_bram_addr,
 {
     fd_ = open("/dev/mem", O_RDWR);
     data_cdma     = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_cdma_addr));
-    data_ = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_noncache_addr));
+    data_         = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_noncache_addr));
+    data_bram     = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_bram_addr));
     api_          = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
 }
 
@@ -50,12 +51,15 @@ const float* __attribute__((optimize("O0"))) FPGA::run()
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
+    transfer(data_, data_bram, DATA_SIZE);
+
     *api_ = 0x5555;
     while(*api_ == 0x5555);
     for (int i = 0; i < 64; i++) {
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
     }
+    transfer(data_bramm, data_, DATA_SIZE);
 
     return data_;    
 }
