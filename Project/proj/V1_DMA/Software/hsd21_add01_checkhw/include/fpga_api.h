@@ -15,9 +15,10 @@ class FPGA
 private:
     float* noncache_addr;
     float* bram_addr;
+    float* data_;
 
 	int fd_;	
-    float* data_;
+    float* data_noncache;
 	unsigned int *fpga_dma;
     unsigned int* api_;
 	

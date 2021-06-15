@@ -15,19 +15,22 @@ FPGA::FPGA(off_t fpga_dma_addr, off_t _noncache_addr, off_t _bram_addr, off_t ap
 {
     bram_addr     = (float *) _bram_addr;
     noncache_addr = (float *) _noncache_addr;
+    data_         = new float[DATA_SIZE];
 
     fd_           = open("/dev/mem", O_RDWR);
-    data_         = static_cast<float *>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, _noncache_addr));
+    data_noncache = static_cast<float *>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, _noncache_addr));
     fpga_dma      = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int)*16, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, fpga_dma_addr));
     api_          = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
 }
 
 FPGA::~FPGA()
 {
+    munmap(data_noncache, DATA_SIZE);
     munmap(fpga_dma, sizeof(unsigned int)*16);
-    munmap(data_, DATA_SIZE);
     munmap(api_, sizeof(unsigned int));
     close(fd_);
+
+    delete[] data_;
 }
 
 float* FPGA::matrix_M1(void)
@@ -49,6 +52,7 @@ void __attribute__((optimize("O0"))) FPGA::transfer(const float *src, const floa
 
 const float* __attribute__((optimize("O0"))) FPGA::run()
 {
+    memcpy(data_noncache, data_, DATA_SIZE); 
     transfer(noncache_addr, bram_addr, DATA_SIZE);
     for (int i = 0; i < 128; i++) {
       cout << data_[i] << " ";
@@ -58,6 +62,7 @@ const float* __attribute__((optimize("O0"))) FPGA::run()
     *api_ = 0x5555;
     while(*api_ == 0x5555);
     transfer(bram_addr, noncache_addr, DATA_SIZE/2);
+    memcpy(data_, data_noncache, DATA_SIZE); 
     for (int i = 0; i < 64; i++) {
       cout << data_[i] << " ";
       if (i % 8 == 7) cout << endl;
