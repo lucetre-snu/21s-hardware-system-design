@@ -15,6 +15,8 @@ class FPGA
 private:
     int fd_;	
     float* data_;
+	unsigned int *data_cdma;
+	float *data_bram;
     unsigned int* api_;
 	
 public:
