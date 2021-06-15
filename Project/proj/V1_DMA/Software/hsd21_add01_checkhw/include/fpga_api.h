@@ -18,7 +18,7 @@ private:
     unsigned int* api_;
 	
 public:
-    FPGA(off_t data_addr, off_t api_addr);
+	FPGA(off_t data_cdma_addr, off_t data_noncache_addr, off_t data_bram_addr, off_t api_addr);
     ~FPGA();
 	
 	// return internal pointer for the data
@@ -27,6 +27,7 @@ public:
 	
 	// perform matrix multiplication and return output array pointer
     const float* run();	
+	void transfer(const float *src, const float *dst, const unsigned int size);
 	
 	// input vector size: M
 	// matrix size: N by M
