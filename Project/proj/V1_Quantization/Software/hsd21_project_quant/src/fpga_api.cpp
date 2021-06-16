@@ -218,7 +218,7 @@ const float *FPGA::blockMV(Compute* comp)
   return data_;
 }
 
-void FPGA::largeMV(const float* large_mat, const float* input, float* output, int num_input, int num_output)
+void FPGA::largeMV(const float* large_mat, const float* input, float* output, int num_input, int num_output, Compute* comp)
 {
   float* vec = this->vector();
   float* mat = this->matrix();
@@ -246,7 +246,7 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
           vec[row*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
 
       // 3) Call a function `blockMV() to execute MV multiplication
-      const float* ret = this->blockMV();
+      const float* ret = this->blockMV(comp);
 
       // 4) Accumulate intermediate results
       for(int row = 0; row < block_row; ++row)
@@ -255,7 +255,7 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
   }
 }
 
-void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* output, int num_input, int num_output, int num_matrix2)
+void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* output, int num_input, int num_output, int num_matrix2, Compute* comp)
 {
   float* m1 = this->matrix_M1();
   float* m2 = this->matrix_M2();
@@ -294,7 +294,7 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
             m2[l] = 0;
         
         // 3) Call a function `blockMM() to execute Matrix matrix multiplication
-        const float* ret = this->blockMM();
+        const float* ret = this->blockMM(comp);
 
         // 4) Accumulate intermediate results
         for(int n = 0; n<block_row; ++n) {
