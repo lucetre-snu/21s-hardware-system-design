@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cstring>
+#include <cmath>
 
 using namespace std;
 
@@ -163,16 +164,20 @@ const float *FPGA::blockMV(Compute* comp)
     char act_bits_min = 0;
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
-    float act_scale = 0; // TODO calculate the scale factor
-    char act_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
+    float act_scale = (comp->act_max - comp->act_min) / 127; // TODO calculate the scale factor
+    printf("act_scale : %f\n", act_scale);
+    char act_offset = ceil(comp->act_min / act_scale); // TODO calculate the zero-offset
+    printf("act_offset : %c\n", act_offset);
+    quantize(vec, qvector(), v_size_, act_bits_min, act_bits_max, act_offset, act_scale); // TODO complete quantize function
 
     char weight_bits_min = 0;
     char weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
-    float weight_scale = 0; // TODO calculate the scale factor
-    char weight_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
+    float weight_scale = (comp->weight_max - comp->weight_min) / 127; // TODO calculate the scale factor
+    printf("weight_scale : %f\n", weight_scale);
+    char weight_offset = ceil(comp->weight_min / weight_scale); // TODO calculate the zero-offset
+    printf("weight_offset : %c\n", weight_offset);
+    quantize(mat, qmatrix(), m_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale); // TODO complete quantize function
 
     for (int i = 0; i < m_size_; ++i)
     {
