@@ -198,7 +198,7 @@ const float *FPGA::blockMV(Compute* comp)
   return data_;
 }
 
-void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* output, int num_input, int num_output, int num_matrix2)
+void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* output, int num_input, int num_output, int num_matrix2, Compute* comp)
 {
   float* m1 = this->matrix_M1();
   float* m2 = this->matrix_M2();
@@ -250,7 +250,7 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
   }
 }
 
-void FPGA::largeMV(const float* large_mat, const float* input, float* output, int num_input, int num_output)
+void FPGA::largeMV(const float *large_mat, const float *input, float *output, int num_input, int num_output, Compute* comp)
 {
   float* vec = this->vector();
   float* mat = this->matrix();
