@@ -134,14 +134,14 @@ void FPGA::largeMV(const float* large_mat, const float* input, float* output, in
              
       // 1) Assign a vector
       for (int col = 0; col < block_col; col++)
-        data_[col] = input[j + col];
+        vec[col] = input[j + col];
       for (int col = block_col; col < v_size_; col++)
-        data_[col] = 0;
+        vec[col] = 0;
 
       // 2) Assign a matrix
       for (int row = 0; row < block_row; row++)
         for (int col = 0; col < block_col; col++)
-          data_[(row+1)*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
+          vec[row*v_size_ + col] = large_mat[(i+row)*num_input + (j+col)];
 
       // 3) Call a function `blockMV() to execute MV multiplication
       const float* ret = this->blockMV();
@@ -174,22 +174,22 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
         // 1) Assign a m1
         for (int row = 0; row < block_row; row++) {
           for (int col = 0; col < block_col_1; col++)
-            data_M[row*v_size_ + col] = weight_mat[(i+row)*num_input + (j+col)];
+            m1[row*v_size_ + col] = weight_mat[(i+row)*num_input + (j+col)];
           for (int col = block_col_1; col < v_size_; col++)
-            data_M[row*v_size_ + col] = 0;
+            m1[row*v_size_ + col] = 0;
         }
         for (int l = block_row*v_size_; l < m1_size_; l++)
-            data_M[l] = 0;
+            m1[l] = 0;
         
         // 2) Assign a m2
         for (int row = 0; row < block_col_1; row++) {
           for (int col = 0; col < block_col_2; col++)
-            data_M[m1_size_ + row*v_size_ + col] = input_mat[(j+row)*num_matrix2 + (k+col)];
+            m2[row*v_size_ + col] = input_mat[(j+row)*num_matrix2 + (k+col)];
           for (int col = block_col_2; col < v_size_; col++)
-            data_M[m1_size_ + row*v_size_ + col] = 0;  
+            m2[row*v_size_ + col] = 0;  
         }
         for (int l = block_col_1*v_size_; l < m2_size_; l++)
-            data_M[m1_size_ + l] = 0;
+            m2[l] = 0;
         
         // 3) Call a function `blockMM() to execute Matrix matrix multiplication
         const float* ret = this->blockMM();
