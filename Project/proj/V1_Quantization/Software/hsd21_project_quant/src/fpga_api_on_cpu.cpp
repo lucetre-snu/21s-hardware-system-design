@@ -79,6 +79,7 @@ int FPGA::num_block_call(void)
 
 void quantize(const float* input, int* quantized, int num_input, int bits_min, int bits_max, int offset, float scale)
 {
+  printf("%f %d %d %d %d %d %f", *input, *quantized, num_input, bits_min, bits_max, offset, scale);
   for(int i = 0; i < num_input; i++)
   {
     quantized[i] = 0; // TODO: convert floating point to quantized value
