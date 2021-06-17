@@ -8,7 +8,7 @@ using namespace std;
 #include <unistd.h>
 #include <sys/mman.h>
 
-#define DATA_SIZE SIZE*(SIZE+1)*sizeof(float) // fpga bram data size
+#define DATA_SIZE SIZE*(SIZE*2)*sizeof(int) // fpga bram data size
 
 #define min(x,y) (((x)<(y))?(x):(y))
 #define max(x, y) (((x) > (y)) ? (x) : (y))
@@ -22,7 +22,7 @@ FPGA::FPGA(off_t data_addr, off_t api_addr)
 
 FPGA::~FPGA()
 {
-    munmap(data_, DATA_SIZE );
+    munmap(data_, DATA_SIZE);
     munmap(api_, sizeof(unsigned int));
     close(fd_);
 }
@@ -54,10 +54,10 @@ const float* __attribute__((optimize("O0"))) FPGA::run()
 }
 
 // Test code for bitstream
-void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* output, 
+void FPGA::largeMM(const int* weight_mat, const int* input_mat, int* output, 
 							int num_input, int num_output, int num_matrix2) {
-	float* m1 = this->matrix_M1();
-	float* m2 = this->matrix_M2();
+	int* m1 = this->matrix_M1();
+	int* m2 = this->matrix_M2();
 	for(int i = 0; i < num_output*num_matrix2; ++i)
     output[i] = 0;
 
@@ -93,7 +93,7 @@ void FPGA::largeMM(const float* weight_mat, const float* input_mat, float* outpu
             m2[l] = 0;
 
         // 3) Call a function `blockMM() to execute Matrix matrix multiplication
-        const float* rst = this->run();
+        const int* rst = this->run();
 
         // 4) Accumulate intermediate results
         // It is slightly different from the code for the project.

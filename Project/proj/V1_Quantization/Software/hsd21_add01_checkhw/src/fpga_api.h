@@ -3,7 +3,6 @@
 
 #include <sys/types.h>
 #include <vector>
-#include "compute.h"
 
 // matrix vector multiplicator
 // matrix M: SIZE by SIZE
@@ -16,7 +15,7 @@ class FPGA
 {
 private:
     int fd_;	
-    float* data_;
+    int* data_;
     unsigned int* api_;
 	
 public:
@@ -24,17 +23,17 @@ public:
     ~FPGA();
 	
 	// return internal pointer for the data
-	float* matrix_M1(void);
-	float* matrix_M2(void);
+	int* matrix_M1(void);
+	int* matrix_M2(void);
 	
 	// perform matrix multiplication and return output array pointer
-    const float* run();	
+    const int* run();	
 	
 	// input vector size: M
 	// matrix size: N by M
 	// output vector size: N
 	// O = M * I
-	void largeMM(const float* weight_mat, const float* input_mat, float* output, int num_input, int num_output, int num_matrix2, Compute* comp);
+	void largeMM(const int* weight_mat, const int* input_mat, int* output, int num_input, int num_output, int num_matrix2);
 };
 
 #endif
