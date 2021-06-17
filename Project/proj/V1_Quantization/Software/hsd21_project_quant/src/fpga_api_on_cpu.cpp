@@ -104,7 +104,7 @@ const float* FPGA::blockMM(Compute* comp)
   float* out  = reinterpret_cast<float*>(output_M);  
 
   if(comp->quantized)
-  {
+  { return data_M;
     char act_bits_min = 0;
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
