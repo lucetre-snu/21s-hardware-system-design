@@ -213,12 +213,28 @@ const float *FPGA::blockMV(Compute* comp)
     int weight_offset = -(comp->weight_min / weight_scale);
     quantize(mat, qmat_, m_size_*v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
+    int *offset = reinterpret_cast<int*>(qm1_);
+    int *a1 = reinterpret_cast<int*>(qm2_);
+    int *a2 = reinterpret_cast<int*>(qm2_+1);
+
+    a1[0] = 0;
+    for(int i = 0; i < v_size_; ++i) {
+      a1[0] = qvec_[i];
+      a2[i] = 0;
+      for(int k = 0; k < v_size_; ++k)
+        a2[i] += qmat_[v_size_*k+i];
+    }
+
+    for(int i = 0; i < v_size_; ++i) {
+      offset[i] = -v_size_*weight_offset*act_offset + weight_offset*a1[0] + act_offset*a2[i];
+    }
+    
     for (int i = 0; i < m_size_; ++i) {
       qout_[i] = 0;
       for (int j = 0; j < v_size_; ++j)
         qout_[i] += (qvec_[j] - act_offset) * (qmat_[v_size_*i+j] - weight_offset);
     }
-    dequantize1(qout_, out, v_size_, 0, act_scale*weight_scale);
+    dequantize(qout_, out, v_size_, offset, act_scale*weight_scale);
   }
   else
   {
