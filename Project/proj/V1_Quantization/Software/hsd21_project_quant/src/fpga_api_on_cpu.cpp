@@ -151,11 +151,13 @@ const float* FPGA::blockMM(Compute* comp)
 
     for(int i = 0; i < v_size_; ++i)
     {
-      for(int j = 0; j < v_size_; ++j){    
+      for(int j = 0; j < v_size_; ++j){
+        float tmp = 0;
+        // qout_M[v_size_*i+j] && printf("%10d %10f\n", qout_M[v_size_*i+j], out[v_size_*i+j]);
         for(int k = 0; k < v_size_; ++k){
-          // printf("dequantized : %10f ", out[v_size_*i+j]); 
-          // printf("quantized : %d\n", qm1_[v_size_*i+k] * qm2_[v_size_*k + j]);
+          tmp += m1[v_size_*i+k] * m2[v_size_*k + j];
         }
+        out[v_size_*i+j] && printf("before & after & diff: %10f %10f %10f\n", tmp, out[v_size_*i+j], tmp-out[v_size_*i+j]);
       }
     }
   }
