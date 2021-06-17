@@ -190,7 +190,7 @@ const float *FPGA::blockMV(Compute* comp)
         qout_[i] += (qvec_[j] - act_offset) * (qmat_[v_size_*i+j] - weight_offset);
     }
 
-    dequantize(qout_, out, v_size_, 0, act_scale*weight_scale));
+    dequantize(qout_, out, v_size_, 0, act_scale*weight_scale);
   }
   else
   {
