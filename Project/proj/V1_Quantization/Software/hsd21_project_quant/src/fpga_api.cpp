@@ -14,15 +14,15 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   v_size_ = v_size;
   data_size_ = (m_size_ + 1) * v_size_; // fpga bram data size
 
-  qvec_ = new char[v_size_];
-  qmat_ = new char[m_size_*v_size_];
+  qvec_ = new int[v_size_];
+  qmat_ = new int[m_size_*v_size_];
 
   m1_size_ = v_size * v_size;
   m2_size_ = v_size * v_size;
   data_size_M = (v_size_+v_size_)*v_size_;
   
-  qm1_ = new char[v_size_*v_size_];
-  qm2_ = new char[v_size_*v_size_];
+  qm1_ = new int[v_size_*v_size_];
+  qm2_ = new int[v_size_*v_size_];
   
   qout_ = new int[m_size_];
   qout_M = new int[v_size_*v_size_];
