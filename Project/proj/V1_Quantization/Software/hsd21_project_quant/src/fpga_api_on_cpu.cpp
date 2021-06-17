@@ -26,6 +26,7 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   
   qout_ = new int[m_size_];
   qout_M = new int[v_size_*v_size_];
+  offset = new int[v_size_*v_size_];
 
   output_ = new unsigned int[m_size_]; // use output_ as tempolar output
   output_M = new unsigned int[v_size_*v_size_]; // use output_M as tempolar output
@@ -96,11 +97,11 @@ void quantize(const float* input, int* quantized, int num_input, int bits_min, i
   }
 }
 
-void dequantize(int* quantized, float* output, int num_output, int offset, float scale)
+void dequantize(int* quantized, float* output, int num_output, int *offset, float scale)
 {
   // TODO: convert quantized value to floating point
   for(int i = 0; i < num_output; i++) {
-    output[i] = (quantized[i] - offset) * scale;
+    output[i] = (quantized[i] - offset[i]) * scale;
   }
 }
 
@@ -120,7 +121,7 @@ const float* FPGA::blockMM(Compute* comp)
   // cpu version
   float* m1 = this->matrix_M1();
   float* m2 = this->matrix_M2();
-  float* out  = reinterpret_cast<float*>(output_M);  
+  float* out = reinterpret_cast<float*>(output_M);  
 
   if(comp->quantized)
   {
@@ -130,7 +131,7 @@ const float* FPGA::blockMM(Compute* comp)
     // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
     float act_scale = (comp->act_max - comp->act_min) / (act_bits_max - act_bits_min);
     int act_offset = -(comp->act_min / act_scale);
-    quantize(m2, qm2_, m2_size_, act_bits_min, act_bits_max, act_offset, act_scale);
+    quantize1(m2, qm2_, m2_size_, act_bits_min, act_bits_max, act_offset, act_scale);
 
     int weight_bits_min = 0;
     int weight_bits_max = (1<<(comp->weight_bits-1))-1;
@@ -140,14 +141,26 @@ const float* FPGA::blockMM(Compute* comp)
     int weight_offset = -(comp->weight_min / weight_scale);
     quantize(m1, qm1_, m1_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
+    int *a1 = new int[v_size_];
+    int *a2 = new int[v_size_];
+    for(int i = 0; i < v_size_; ++i) {
+      a1[i] = a2[i] = 0;
+      for(int k = 0; k < v_size_; ++k) {
+        a1[i] += qm2_[v_size_*i+k];
+        a2[i] += qm1_[v_size_*k+i];
+      }
+    }
+
     for(int i = 0; i < v_size_; ++i) {
       for(int j = 0; j < v_size_; ++j) {    
         qout_M[v_size_*i+j] = 0;
+        offset[v_size_*i+j] = -v_size_*weight_offset*act_offset + act_offset*a1[i] + weight_offset*a2[j];
         for(int k = 0; k < v_size_; ++k)
-          qout_M[v_size_*i+j] += (qm1_[v_size_*i+k] - weight_offset) * (qm2_[v_size_*k+j] - act_offset);
+          qout_M[v_size_*i+j] += qm1_[v_size_*i+k] * qm2_[v_size_*k+j];
+        
       }
     }
-    dequantize(qout_M, out, m1_size_, 0, act_scale*weight_scale);
+    dequantize(qout_M, out, m1_size_, offset, weight_scale*act_scale);
   }
   else{
     for(int i = 0; i < v_size_; ++i)

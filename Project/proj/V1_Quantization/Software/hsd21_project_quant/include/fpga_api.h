@@ -27,6 +27,8 @@ private:
   int *qout_;
   int *qout_M;
   int *qout_MV;
+
+  int *offset;
   
   int *qdata_;
   int *qdata_M;
