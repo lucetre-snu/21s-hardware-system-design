@@ -18,8 +18,14 @@ int main(void)
 	int* output = new int[data_size_M];	//for output	
 	int* output_fpga = new int[data_size_M]; // for fpga output
 
-	for(int i = 0 ; i < data_size_M*2 ; ++i)
-		flat[i] = i;
+	// for(int i = 0 ; i < data_size_M*2 ; ++i)
+	// 	flat[i] = i;
+	for (int i = 0; i < 8; i++) {
+		for (int j = 0; j < i; j++) {
+			input[i][j] = 1;
+			mat[j][i] = 1;
+		}
+	}
 
 	// computation
 	for(int i = 0; i < v_size; ++i)
