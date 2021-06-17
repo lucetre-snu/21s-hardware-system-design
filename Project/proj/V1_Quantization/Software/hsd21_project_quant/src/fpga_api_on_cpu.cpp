@@ -105,14 +105,6 @@ void dequantize(int* quantized, float* output, int num_output, int *offset, floa
   }
 }
 
-void dequantize1(int* quantized, float* output, int num_output, int offset, float scale)
-{
-  // TODO: convert quantized value to floating point
-  for(int i = 0; i < num_output; i++) {
-    output[i] = (quantized[i] - offset) * scale;
-  }
-}
-
 const float* FPGA::blockMM(Compute* comp)
 {
   num_block_call_ += 1;

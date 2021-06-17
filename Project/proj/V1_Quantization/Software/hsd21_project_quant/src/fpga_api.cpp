@@ -93,11 +93,11 @@ void quantize(const float* input, int* quantized, int num_input, int bits_min, i
   }
 }
 
-void dequantize(int* quantized, float* output, int num_output, int offset, float scale)
+void dequantize(int* quantized, float* output, int num_output, int *offset, float scale)
 {
   // TODO: convert quantized value to floating point
   for(int i = 0; i < num_output; i++) {
-    output[i] = (quantized[i] - offset) * scale;
+    output[i] = (quantized[i] - offset[i]) * scale;
   }
 }
 
