@@ -7,6 +7,7 @@
 using namespace std;
 
 #define min(x, y) (((x) < (y)) ? (x) : (y))
+#define max(x, y) (((x) > (y)) ? (x) : (y))
 
 FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
 {
@@ -118,7 +119,7 @@ const float* FPGA::blockMM(Compute* comp)
   float* out  = reinterpret_cast<float*>(output_M);  
 
   if(comp->quantized)
-  {
+  { return data_M;
     char act_bits_min = 0;
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
@@ -127,7 +128,7 @@ const float* FPGA::blockMM(Compute* comp)
     char act_offset = char(ceil(-(comp->act_min)/act_scale)); // TODO calculate the zero-offset
     // printf("act_offset : %d\n", act_offset);
     quantize(m2, qm2_, v_size_ * v_size_, act_bits_min, act_bits_max, act_offset, act_scale); // TODO complete quantize function
-
+   
     char weight_bits_min = 0;
     char weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
@@ -146,7 +147,6 @@ const float* FPGA::blockMM(Compute* comp)
         }
       }
     }
-    // printf("MM called\n");
     dequantize(qout_M, out, v_size_*v_size_, 0, (act_scale * weight_scale));
 
     for(int i = 0; i < v_size_; ++i)
@@ -182,7 +182,7 @@ const float* FPGA::blockMM(Compute* comp)
 const float *FPGA::blockMV(Compute* comp)
 {
   num_block_call_ += 1;
-
+  cout << num_block_call_ << endl;
   // cpu version
   float *vec = this->vector();
   float *mat = this->matrix();
