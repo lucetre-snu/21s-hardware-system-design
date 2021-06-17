@@ -65,6 +65,16 @@ int *FPGA::qvector(void)
   return qdata_;
 }
 
+float* FPGA::matrix_M1(void)
+{
+  return data_M;
+}
+
+float* FPGA::matrix_M2(void)
+{
+  return data_M + m1_size_;
+}
+
 int *FPGA::qmatrix_M1(void)
 {
   return qdata_M;
