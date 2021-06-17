@@ -93,7 +93,7 @@ void quantize(const float* input, char* quantized, int num_input, int bits_min, 
 {
   // TODO: convert floating point to quantized value
   for(int i = 0; i < num_input; i++) {
-    quantized[i] = max(bits_min, min(bits_max, input[i] / scale) + offset));
+    quantized[i] = max(bits_min, min(bits_max, input[i]/scale + offset));
   }
 }
 
