@@ -160,7 +160,8 @@ const float* FPGA::blockMM(Compute* comp)
         
       }
     }
-    dequantize1(qout_M, out, m1_size_, offset, weight_scale*act_scale);
+    // dequantize(qout_M, out, m1_size_, offset, weight_scale*act_scale);
+    dequantize1(qout_M, out, m1_size_, 0, weight_scale*act_scale);
   }
   else{
     for(int i = 0; i < v_size_; ++i)
