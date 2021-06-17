@@ -90,21 +90,19 @@ int FPGA::num_block_call(void)
 
 void quantize(const float* input, int* quantized, int num_input, int bits_min, int bits_max, int offset, float scale)
 {
-  // printf("%10f %2d %2d %2d %3d %2d %10f\n", *input, *quantized, num_input, bits_min, bits_max, offset, scale);
-  for(int i = 0; i < num_input; i++)
-  {
-    quantized[i] = ceil(input[i] / scale) + offset; // TODO: convert floating point to quantized value
-    // printf("quantized : %d\n", quantized[i]);
+  // TODO: convert floating point to quantized value
+  for(int i = 0; i < num_input; i++) {
+    quantized[i] = ceil(input[i] / scale) + offset;
+    
+    quantized[i] = max(bits_min, min(bits_max, input[i]/scale + offset));
   }
 }
 
 void dequantize(int* quantized, float* output, int num_output, int offset, float scale)
 {
-  // printf("%5d %2d %2d %10f\n", *quantized, num_output, offset, scale);
-  for(int i = 0; i < num_output; i++)
-  {
-    output[i] = quantized[i] * scale; // TODO: convert quantized value to floating point
-    // printf("dequantized : %f\n", output[i]);
+  // TODO: convert quantized value to floating point
+  for(int i = 0; i < num_output; i++) {
+    output[i] = quantized[i] * scale;
   }
 }
 
@@ -137,27 +135,16 @@ const float* FPGA::blockMM(Compute* comp)
     // printf("weight_offset : %d\n", weight_offset);
     quantize(m1, qm1_, v_size_ * v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale); // TODO complete quantize function
 
-    for(int i = 0; i < v_size_; ++i)
-    {
-      for(int j = 0; j < v_size_; ++j){    
+    for(int i = 0; i < v_size_; ++i) {
+      for(int j = 0; j < v_size_; ++j) {    
         qout_M[v_size_*i+j] = 0;
         for(int k = 0; k < v_size_; ++k){
-          qout_M[v_size_*i+j] += (qm1_[v_size_*i+k]-weight_offset) * (qm2_[v_size_*k + j]-act_offset);
+          qout_M[v_size_*i+j] += (qm1_[v_size_*i+k] - weight_offset) * (qm2_[v_size_*k + j] - act_offset);
         }
       }
     }
     // printf("MM called\n");
     dequantize(qout_M, out, v_size_*v_size_, 0, (act_scale * weight_scale));
-
-    for(int i = 0; i < v_size_; ++i)
-    {
-      for(int j = 0; j < v_size_; ++j){    
-        for(int k = 0; k < v_size_; ++k){
-          // printf("dequantized : %10f ", out[v_size_*i+j]); 
-          // printf("quantized : %d\n", qm1_[v_size_*i+k] * qm2_[v_size_*k + j]);
-        }
-      }
-    }
   }
   else{
     for(int i = 0; i < v_size_; ++i)
