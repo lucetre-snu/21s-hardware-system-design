@@ -142,15 +142,15 @@ const float* FPGA::blockMM(Compute* comp)
     quantize(m1, qm1_, m1_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
 
-    int *a1 = (int *)output_;
-    int *a2 = (int *)output_ + v_size_;
-    for(int i = 0; i < v_size_; ++i) {
-      a1[i] = a2[i] = 0;
-      for(int k = 0; k < v_size_; ++k) {
-        a1[i] += qm2_[v_size_*i+k];
-        a2[i] += qm1_[v_size_*k+i];
-      }
-    }
+    // int *a1 = (int *)output_;
+    // int *a2 = (int *)output_ + v_size_;
+    // for(int i = 0; i < v_size_; ++i) {
+    //   a1[i] = a2[i] = 0;
+    //   for(int k = 0; k < v_size_; ++k) {
+    //     a1[i] += qm2_[v_size_*i+k];
+    //     a2[i] += qm1_[v_size_*k+i];
+    //   }
+    // }
 
     for(int i = 0; i < v_size_; ++i) {
       for(int j = 0; j < v_size_; ++j) {    
