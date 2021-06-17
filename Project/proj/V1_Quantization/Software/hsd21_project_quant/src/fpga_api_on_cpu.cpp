@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cstring>
+#include <cmath>
 
 using namespace std;
 
@@ -91,7 +92,7 @@ void quantize(const float* input, int* quantized, int num_input, int bits_min, i
 {
   // TODO: convert floating point to quantized value
   for(int i = 0; i < num_input; i++) {
-    quantized[i] = (input[i] / scale) + offset;
+    quantized[i] = ceil(input[i]/scale) + offset;
   }
 }
 
