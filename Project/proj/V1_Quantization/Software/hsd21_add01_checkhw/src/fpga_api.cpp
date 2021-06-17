@@ -11,6 +11,7 @@ using namespace std;
 #define DATA_SIZE SIZE*(SIZE+1)*sizeof(float) // fpga bram data size
 
 #define min(x,y) (((x)<(y))?(x):(y))
+#define max(x, y) (((x) > (y)) ? (x) : (y))
 
 FPGA::FPGA(off_t data_addr, off_t api_addr)
 {
