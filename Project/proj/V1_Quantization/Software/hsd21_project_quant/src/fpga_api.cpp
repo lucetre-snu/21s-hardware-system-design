@@ -27,8 +27,8 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   qout_ = new int[m_size_];
   qout_M = new int[v_size_*v_size_];
 
-  output_ = new unsigned int[m_size_]; // use output_ as tempolar output
-  // output_ = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ | PROT_WRITE, MAP_SHARED, fd_, output_addr));
+  // output_ = new unsigned int[m_size_]; // use output_ as tempolar output
+  output_ = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ | PROT_WRITE, MAP_SHARED, fd_, output_addr));
   output_M = new unsigned int[v_size_*v_size_]; // use output_M as tempolar output
 
   data_ = new float[data_size_];
@@ -37,8 +37,8 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   fd_ = open("/dev/mem", O_RDWR);
 
   qdata_ = new int[data_size_];
-  qdata_M = new int[data_size_M];
-  // qdata_M = static_cast<int *>(mmap(NULL, data_size_M, PROT_READ | PROT_WRITE, MAP_SHARED, fd_, data_addr));
+  // qdata_M = new int[data_size_M];
+  qdata_M = static_cast<int *>(mmap(NULL, data_size_M, PROT_READ | PROT_WRITE, MAP_SHARED, fd_, data_addr));
   num_block_call_ = 0;
 }
 
@@ -177,18 +177,18 @@ const float* FPGA::blockMM(Compute* comp)
       }
     }
     
-    for(int i = 0; i < v_size_; ++i) {
-      for(int j = 0; j < v_size_; ++j) {    
-        qout_M[v_size_*i+j] = 0;
-        for(int k = 0; k < v_size_; ++k)
-          qout_M[v_size_*i+j] += qm1_[v_size_*i+k] * qm2_[v_size_*k+j];
-      }
-    }
+    // for(int i = 0; i < v_size_; ++i) {
+    //   for(int j = 0; j < v_size_; ++j) {    
+    //     qout_M[v_size_*i+j] = 0;
+    //     for(int k = 0; k < v_size_; ++k)
+    //       qout_M[v_size_*i+j] += qm1_[v_size_*i+k] * qm2_[v_size_*k+j];
+    //   }
+    // }
     
-    // memcpy(qdata_M, qm1, sizeof(int)*m1_size_);
-    // memcpy(qdata_M + m1_size_, qm2, sizeof(int)*m2_size_);
-    // qblockMM(comp);
-    // memcpy(qout_M, qdata_M, sizeof(float)*m1_size_);
+    memcpy(qdata_M, qm1, sizeof(int)*m1_size_);
+    memcpy(qdata_M + m1_size_, qm2, sizeof(int)*m2_size_);
+    qblockMM(comp);
+    memcpy(qout_M, qdata_M, sizeof(float)*m1_size_);
     
     dequantize(qout_M, out, m1_size_, offset, weight_scale*act_scale);
   }
