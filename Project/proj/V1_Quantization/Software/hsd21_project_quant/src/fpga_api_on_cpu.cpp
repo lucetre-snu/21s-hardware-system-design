@@ -144,13 +144,13 @@ const float* FPGA::blockMM(Compute* comp)
 
     int *a1 = reinterpret_cast<int*>(output_M);
     int *a2 = reinterpret_cast<int*>(output_M + v_size_);
-    // for(int i = 0; i < v_size_; ++i) {
-    //   a1[i] = a2[i] = 0;
-    //   for(int k = 0; k < v_size_; ++k) {
-    //     a1[i] += qm2_[v_size_*i+k];
-    //     a2[i] += qm1_[v_size_*k+i];
-    //   }
-    // }
+    for(int i = 0; i < v_size_; ++i) {
+      a1[i] = a2[i] = 0;
+      for(int k = 0; k < v_size_; ++k) {
+        a1[i] += qm2_[v_size_*i+k];
+        a2[i] += qm1_[v_size_*k+i];
+      }
+    }
 
     for(int i = 0; i < v_size_; ++i) {
       for(int j = 0; j < v_size_; ++j) {    
