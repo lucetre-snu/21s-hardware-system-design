@@ -26,9 +26,9 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   
   qout_ = new int[m_size_];
   qout_M = new int[v_size_*v_size_];
-  offset = new int[v_size_*v_size_];
-  a1 = new int[v_size_];
-  a2 = new int[v_size_];
+  // offset = new int[v_size_*v_size_];
+  // a1 = new int[v_size_];
+  // a2 = new int[v_size_];
 
   output_ = new unsigned int[m_size_]; // use output_ as tempolar output
   output_M = new unsigned int[v_size_*v_size_]; // use output_M as tempolar output
