@@ -111,15 +111,9 @@ struct ConvOp : Op
     dev_->convLowering(raw_weights_, new_weights_, src_, new_src_);
 
     float *weights_ = vectorToArray(new_weights_);
-    for (int i = 0; i < new_src_[0].size(); i++)
-    {
-      vector<float> vec_src(new_src_.size());
-      for (int j = 0; j < new_src_.size(); j++)
-        vec_src[j] = new_src_[j][i];
-
-      float *new_src = &vec_src[0];
-      dev_->largeMV(weights_, new_src, dst + i * conv_channel_, conv_height_ * conv_width_ * input_channel_, conv_channel_, comp);
-    }
+    float *new_src = vectorToArray(new_src_);
+    int num_matrix = (input_height_ - conv_height_ + 1)*(input_width_ - conv_width_ + 1);
+    dev_->largeMM(weights_, new_src, dst, conv_height_ * conv_width_ * input_channel_, conv_channel_, num_matrix, comp);
   }
 };
 

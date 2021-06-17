@@ -68,6 +68,16 @@ float *FPGA::matrix_M2(void)
   return data_M + m1_size_;
 }
 
+int *FPGA::qmatrix(void)
+{
+  return qdata_M;
+}
+
+int *FPGA::qvector(void)
+{
+  return qdata_;
+}
+
 void FPGA::reset(void)
 {
   num_block_call_ = 0;
@@ -78,20 +88,23 @@ int FPGA::num_block_call(void)
   return num_block_call_;
 }
 
-void quantize(const float* input, int* quantized, int num_input, int bits_min, int bits_max, int offset, float scale)
+void quantize(const float* input, char* quantized, int num_input, int bits_min, int bits_max, int offset, float scale)
 {
-  printf("%f %d %d %d %d %d %f", *input, *quantized, num_input, bits_min, bits_max, offset, scale);
+  // printf("%10f %2d %2d %2d %3d %2d %10f\n", *input, *quantized, num_input, bits_min, bits_max, offset, scale);
   for(int i = 0; i < num_input; i++)
   {
-    quantized[i] = 0; // TODO: convert floating point to quantized value
+    quantized[i] = ceil(input[i] / scale) + offset; // TODO: convert floating point to quantized value
+    // printf("quantized : %d\n", quantized[i]);
   }
 }
 
 void dequantize(int* quantized, float* output, int num_output, int offset, float scale)
 {
+  // printf("%5d %2d %2d %10f\n", *quantized, num_output, offset, scale);
   for(int i = 0; i < num_output; i++)
   {
-    output[i] = 0; // TODO: convert quantized value to floating point
+    output[i] = quantized[i] * scale; // TODO: convert quantized value to floating point
+    // printf("dequantized : %f\n", output[i]);
   }
 }
 
@@ -109,28 +122,42 @@ const float* FPGA::blockMM(Compute* comp)
     char act_bits_min = 0;
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
-    float act_scale = 0; // TODO calculate the scale factor
-    char act_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
+    float act_scale = (comp->act_max - comp->act_min) / 127; // TODO calculate the scale factor
+    // printf("act_scale : %f\n", act_scale);
+    char act_offset = char(ceil(-(comp->act_min)/act_scale)); // TODO calculate the zero-offset
+    // printf("act_offset : %d\n", act_offset);
+    quantize(m2, qm2_, v_size_ * v_size_, act_bits_min, act_bits_max, act_offset, act_scale); // TODO complete quantize function
 
     char weight_bits_min = 0;
     char weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
-    float weight_scale = 0; // TODO calculate the scale factor
-    char weight_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
+    float weight_scale = (comp->weight_max - comp->weight_min) / 127; // TODO calculate the scale factor
+    // printf("weight_scale : %f\n", weight_scale);
+    char weight_offset = char(ceil(-(comp->weight_min)/weight_scale)); // TODO calculate the zero-offset
+    // printf("weight_offset : %d\n", weight_offset);
+    quantize(m1, qm1_, v_size_ * v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale); // TODO complete quantize function
 
     for(int i = 0; i < v_size_; ++i)
     {
       for(int j = 0; j < v_size_; ++j){    
         qout_M[v_size_*i+j] = 0;
         for(int k = 0; k < v_size_; ++k){
-          qout_M[v_size_*i+j] += m1[v_size_*i+k] * m2[v_size_*k + j];
+          qout_M[v_size_*i+j] += (qm1_[v_size_*i+k]-weight_offset) * (qm2_[v_size_*k + j]-act_offset);
         }
       }
     }
-    // dequantize(); // TODO complete dequantize function
+    // printf("MM called\n");
+    dequantize(qout_M, out, v_size_*v_size_, 0, (act_scale * weight_scale));
 
+    for(int i = 0; i < v_size_; ++i)
+    {
+      for(int j = 0; j < v_size_; ++j){    
+        for(int k = 0; k < v_size_; ++k){
+          // printf("dequantized : %10f ", out[v_size_*i+j]); 
+          // printf("quantized : %d\n", qm1_[v_size_*i+k] * qm2_[v_size_*k + j]);
+        }
+      }
+    }
   }
   else{
     for(int i = 0; i < v_size_; ++i)
@@ -164,16 +191,20 @@ const float *FPGA::blockMV(Compute* comp)
     char act_bits_min = 0;
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
-    float act_scale = 0; // TODO calculate the scale factor
-    char act_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
-
+    float act_scale = (comp->act_max - comp->act_min) / 127; // TODO calculate the scale factor
+    // printf("act_scale : %f\n", act_scale);
+    char act_offset = char(ceil(-(comp->act_min)/act_scale)); // TODO calculate the zero-offset
+    // printf("act_offset : %d\n", act_offset);
+    quantize(vec, qvec_, v_size_, act_bits_min, act_bits_max, act_offset, act_scale); // TODO complete quantize function
+    
     char weight_bits_min = 0;
     char weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
-    float weight_scale = 0; // TODO calculate the scale factor
-    char weight_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
+    float weight_scale = (comp->weight_max - comp->weight_min) / 127; // TODO calculate the scale factor
+    // printf("weight_scale : %f\n", weight_scale);
+    char weight_offset = char(ceil(-(comp->weight_min)/weight_scale)); // TODO calculate the zero-offset
+    // printf("weight_offset : %d\n", weight_offset);
+    quantize(mat, qmat_, m_size_ * v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale); // TODO complete quantize function
 
     for (int i = 0; i < m_size_; ++i)
     {
@@ -182,7 +213,7 @@ const float *FPGA::blockMV(Compute* comp)
         qout_[i] += (qvec_[j]-act_offset) * (qmat_[v_size_ * i + j]-weight_offset);
     }
 
-    // dequantize(); // TODO complete dequantize function
+    dequantize(qout_, out, v_size_, 0, (act_scale * weight_scale));
   }
   else
   {
