@@ -55,6 +55,16 @@ FPGA::~FPGA()
   delete[] qout_;
 }
 
+float* FPGA::matrix(void)
+{
+  return data_ + v_size_;
+}
+
+float* FPGA::vector(void)
+{
+  return data_;
+}
+
 int *FPGA::qmatrix(void)
 {
   return qdata_ + v_size_;
