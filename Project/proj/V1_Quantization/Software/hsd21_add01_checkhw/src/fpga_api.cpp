@@ -16,7 +16,7 @@ using namespace std;
 FPGA::FPGA(off_t data_addr, off_t api_addr)
 {
     fd_ = open("/dev/mem", O_RDWR);
-    data_ = static_cast<float*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_addr));
+    data_ = static_cast<int*>(mmap(NULL, DATA_SIZE, PROT_READ|PROT_WRITE, MAP_SHARED, fd_, data_addr));
     api_ = static_cast<unsigned int*>(mmap(NULL, sizeof(unsigned int), PROT_READ|PROT_WRITE, MAP_SHARED,fd_, api_addr));
 }
 
