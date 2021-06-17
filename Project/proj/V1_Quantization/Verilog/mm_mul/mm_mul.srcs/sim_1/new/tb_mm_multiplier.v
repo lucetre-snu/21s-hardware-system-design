@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module tb_mm_multiplier #(
-    parameter L_RAM_SIZE = 6,
+    parameter L_RAM_SIZE = 3,
     parameter BITWIDTH = 32,
     parameter INFILE = "global_buffer_in.txt",
     parameter OUTFILE = "global_buffer_out.txt"
@@ -18,7 +18,7 @@ module tb_mm_multiplier #(
     reg start, clk, reset;
     integer i;
     
-    // write
+//    // write
 //    initial begin
 //        for(i = 0; i < MATRIX_SIZE; i = i+1) begin
 //            rdgb[i]               = $urandom_range(-100, 100);

@@ -14,24 +14,23 @@ module my_pe #(
 );
     reg [BITWIDTH-1:0] cin = 0;
     wire [BITWIDTH-1:0] res;
-    
-    floating_point_MAC UUT(
-      .aclk(aclk),                                  // input wire aclk
-      .aresetn(aresetn),                            // input wire aresetn
-      .s_axis_a_tvalid(valid),                      // input wire s_axis_a_tvalid
-      .s_axis_a_tdata(ain),                         // input wire [31 : 0] s_axis_a_tdata
-      .s_axis_b_tvalid(valid),                      // input wire s_axis_b_tvalid
-      .s_axis_b_tdata(bin),                         // input wire [31 : 0] s_axis_b_tdata
-      .s_axis_c_tvalid(valid),                      // input wire s_axis_c_tvalid
-      .s_axis_c_tdata(cin),                         // input wire [31 : 0] s_axis_c_tdata
-      .m_axis_result_tvalid(dvalid),                // output wire m_axis_result_tvalid
-      .m_axis_result_tdata(res)                     // output wire [31 : 0] m_axis_result_tdata
+   
+    assign dout = dvalid ? res : 0;
+   
+    integer_MAC UUT(
+      .aclk(aclk),
+      .aresetn(aresetn),
+      .valid(valid),
+      .ain(ain),
+      .bin(bin),
+      .cin(cin),
+      .dvalid(dvalid),
+      .res(res)
     );
     
     always @(posedge aclk)
         if (!aresetn)       cin <= 0;
         else if (dvalid)    cin <= res;
         else                cin <= cin;
-    assign dout = dvalid ? res : 0;
 
 endmodule
