@@ -20,10 +20,10 @@ private:
   unsigned int *output_M;
   unsigned int *output_MV;
 
-  int *qvec_;
-  int *qmat_;
-  int *qm1_;
-  int *qm2_;
+  char *qvec_;
+  char *qmat_;
+  char *qm1_;
+  char *qm2_;
   int *qout_;
   int *qout_M;
   int *qout_MV;
