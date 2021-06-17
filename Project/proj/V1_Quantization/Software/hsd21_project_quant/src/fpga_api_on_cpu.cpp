@@ -113,7 +113,6 @@ void dequantize1(int* quantized, float* output, int num_output, int offset, floa
   }
 }
 
-
 const float* FPGA::blockMM(Compute* comp)
 {
   num_block_call_ += 1;
