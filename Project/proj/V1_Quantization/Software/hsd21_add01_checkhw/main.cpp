@@ -12,11 +12,11 @@ int main(void)
 	int v_size = 8;
 	int data_size_M = m_size * v_size; 
 
-	float* flat = new float[data_size_M*2]; // for input & weight
-	float* input = flat+ data_size_M;	// for input
-	float* mat = flat;  // for weight
-	float* output = new float[data_size_M];	//for output	
-	float* output_fpga = new float[data_size_M]; // for fpga output
+	int* flat = new int[data_size_M*2]; // for input & weight
+	int* input = flat+ data_size_M;	// for input
+	int* mat = flat;  // for weight
+	int* output = new int[data_size_M];	//for output	
+	int* output_fpga = new int[data_size_M]; // for fpga output
 
 	for(int i = 0 ; i < data_size_M*2 ; ++i)
 		flat[i] = i;
