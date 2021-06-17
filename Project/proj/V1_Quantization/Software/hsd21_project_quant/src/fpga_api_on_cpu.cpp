@@ -223,9 +223,6 @@ const float *FPGA::blockMV(Compute* comp)
       a2[i] = 0;
       for(int k = 0; k < v_size_; ++k)
         a2[i] += qmat_[v_size_*k+i];
-    }
-
-    for(int i = 0; i < v_size_; ++i) {
       offset[i] = -v_size_*weight_offset*act_offset + weight_offset*a1[0] + act_offset*a2[i];
     }
     
