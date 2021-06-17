@@ -27,17 +27,17 @@ FPGA::~FPGA()
     close(fd_);
 }
 
-float* FPGA::matrix_M1(void)
+int* FPGA::matrix_M1(void)
 {
 	return data_ ;
 }
 
-float* FPGA::matrix_M2(void)
+int* FPGA::matrix_M2(void)
 {
 	return data_ + SIZE * SIZE;
 }
 
-const float* __attribute__((optimize("O0"))) FPGA::run()
+const int* __attribute__((optimize("O0"))) FPGA::run()
 {
     for (int i = 0; i < 128; i++) {
       cout << data_[i] << " ";
