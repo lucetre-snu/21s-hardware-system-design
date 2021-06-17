@@ -180,7 +180,7 @@ const float *FPGA::blockMV(Compute* comp)
     int weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
     // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
-    float weight_scale = (comp->weight_max - comp->weight_min) / (act_bits_max - act_bits_min);
+    float weight_scale = (comp->weight_max - comp->weight_min) / (weight_bits_max - weight_bits_min);
     int weight_offset = -(comp->weight_min / weight_scale);
     quantize(mat, qmat_, m_size_*v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
