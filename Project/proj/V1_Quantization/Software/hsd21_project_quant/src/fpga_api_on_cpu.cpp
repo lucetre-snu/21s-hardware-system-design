@@ -91,21 +91,17 @@ int FPGA::num_block_call(void)
 
 void quantize(const float* input, char* quantized, int num_input, int bits_min, int bits_max, int offset, float scale)
 {
-  // printf("%10f %2d %2d %2d %3d %2d %10f\n", *input, *quantized, num_input, bits_min, bits_max, offset, scale);
-  for(int i = 0; i < num_input; i++)
-  {
-    quantized[i] = ceil(input[i] / scale) + offset; // TODO: convert floating point to quantized value
-    // printf("quantized : %d\n", quantized[i]);
+  // TODO: convert floating point to quantized value
+  for(int i = 0; i < num_input; i++) {
+    quantized[i] = max(bits_min, min(bits_max, input[i] / scale) + offset));
   }
 }
 
 void dequantize(int* quantized, float* output, int num_output, int offset, float scale)
 {
-  // printf("%5d %2d %2d %10f\n", *quantized, num_output, offset, scale);
-  for(int i = 0; i < num_output; i++)
-  {
-    output[i] = quantized[i] * scale; // TODO: convert quantized value to floating point
-    // printf("dequantized : %f\n", output[i]);
+  // TODO: convert quantized value to floating point
+  for(int i = 0; i < num_output; i++) {
+    output[i] = quantized[i] * scale;
   }
 }
 
@@ -123,41 +119,28 @@ const float* FPGA::blockMM(Compute* comp)
     char act_bits_min = 0;
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
-    float act_scale = (comp->act_max - comp->act_min) / 127; // TODO calculate the scale factor
-    // printf("act_scale : %f\n", act_scale);
-    char act_offset = char(ceil(-(comp->act_min)/act_scale)); // TODO calculate the zero-offset
-    // printf("act_offset : %d\n", act_offset);
-    quantize(m2, qm2_, v_size_ * v_size_, act_bits_min, act_bits_max, act_offset, act_scale); // TODO complete quantize function
+    // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
+    float act_scale = (comp->act_max - comp->act_min) / (act_bits_max - act_bits_min); 
+    char act_offset = char(ceil(-comp->act_min / act_scale));
+    quantize(m2, qm2_, v_size_ * v_size_, act_bits_min, act_bits_max, act_offset, act_scale);
    
     char weight_bits_min = 0;
     char weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
-    float weight_scale = (comp->weight_max - comp->weight_min) / 127; // TODO calculate the scale factor
-    // printf("weight_scale : %f\n", weight_scale);
-    char weight_offset = char(ceil(-(comp->weight_min)/weight_scale)); // TODO calculate the zero-offset
-    // printf("weight_offset : %d\n", weight_offset);
-    quantize(m1, qm1_, v_size_ * v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale); // TODO complete quantize function
+    // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
+    float weight_scale = (comp->weight_max - comp->weight_min) / (act_bits_max - act_bits_min);
+    char weight_offset = char(ceil(-comp->weight_min / weight_scale));
+    quantize(m1, qm1_, v_size_ * v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
-    for(int i = 0; i < v_size_; ++i)
-    {
-      for(int j = 0; j < v_size_; ++j){    
+    for(int i = 0; i < v_size_; ++i) {
+      for(int j = 0; j < v_size_; ++j) {    
         qout_M[v_size_*i+j] = 0;
         for(int k = 0; k < v_size_; ++k){
-          qout_M[v_size_*i+j] += (qm1_[v_size_*i+k]-weight_offset) * (qm2_[v_size_*k + j]-act_offset);
+          qout_M[v_size_*i+j] += (qm1_[v_size_*i+k] - weight_offset) * (qm2_[v_size_*k + j] - act_offset);
         }
       }
     }
     dequantize(qout_M, out, v_size_*v_size_, 0, (act_scale * weight_scale));
-
-    for(int i = 0; i < v_size_; ++i)
-    {
-      for(int j = 0; j < v_size_; ++j){    
-        for(int k = 0; k < v_size_; ++k){
-          // printf("dequantized : %10f ", out[v_size_*i+j]); 
-          // printf("quantized : %d\n", qm1_[v_size_*i+k] * qm2_[v_size_*k + j]);
-        }
-      }
-    }
   }
   else{
     for(int i = 0; i < v_size_; ++i)
@@ -180,7 +163,7 @@ const float* FPGA::blockMM(Compute* comp)
 const float *FPGA::blockMV(Compute* comp)
 {
   num_block_call_ += 1;
-  cout << num_block_call_ << endl;
+
   // cpu version
   float *vec = this->vector();
   float *mat = this->matrix();
