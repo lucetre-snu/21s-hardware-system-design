@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jun 17 22:34:01 2021
+# Process ID: 15724
+# Current directory: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16100 C:\Users\lucet\semester\21s-hardware-system-design\Project\proj\V1_Quantization\Verilog\Project_V1_Quantization\Project_V1_Quantization.xpr
+# Log file: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization/vivado.log
+# Journal file: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization/Project_V1_Quantization.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization'
+INFO: [Project 1-313] Project file moved from '/csehome/lgm0905/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/My_IP/myip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 770.930 ; gain = 118.211
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Process appears to be owned by user 'lgm0905' and cannot be killed by user 'lucet'
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Thu Jun 17 22:35:34 2021] Launched synth_1...
+Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization/Project_V1_Quantization.runs/synth_1/runme.log
+[Thu Jun 17 22:35:34 2021] Launched impl_1...
+Run output will be captured here: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/Project_V1_Quantization/Project_V1_Quantization.runs/impl_1/runme.log
+reset_run synth_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 17 23:03:34 2021...

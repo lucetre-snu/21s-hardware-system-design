@@ -8,7 +8,7 @@ using namespace std;
 #include <unistd.h>
 #include <sys/mman.h>
 
-#define DATA_SIZE SIZE*(SIZE+1)*sizeof(float) // fpga bram data size
+#define DATA_SIZE SIZE*(SIZE*2)*sizeof(float) // fpga bram data size
 
 #define min(x,y) (((x)<(y))?(x):(y))
 
