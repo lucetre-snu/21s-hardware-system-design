@@ -82,7 +82,7 @@ void quantize(const float* input, int* quantized, int num_input, int bits_min, i
 {
   for(int i = 0; i < num_input; i++) {
     // TODO: convert quantized value to floating point
-    quantized[i] = max(bits_min, min(bits_max, input[i]/scale + offset)); // TODO: convert floating point to quantized value
+    quantized[i] = max(bits_min, min(bits_max, scale*(input[i]-offset))); // TODO: convert floating point to quantized value
   }
 }
 
@@ -155,7 +155,7 @@ const float* FPGA::blockMM(Compute* comp)
 const float *FPGA::blockMV(Compute* comp)
 {
   num_block_call_ += 1;
-
+  cout << num_block_call_ << endl;
   // cpu version
   float *vec = this->vector();
   float *mat = this->matrix();
