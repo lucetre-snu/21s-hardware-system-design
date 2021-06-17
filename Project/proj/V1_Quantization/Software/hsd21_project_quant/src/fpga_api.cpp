@@ -185,8 +185,8 @@ const float* FPGA::blockMM(Compute* comp)
     //   }
     // }
     
-    memcpy(qdata_M, qm1, sizeof(int)*m1_size_);
-    memcpy(qdata_M + m1_size_, qm2, sizeof(int)*m2_size_);
+    memcpy(qdata_M, qm1_, sizeof(int)*m1_size_);
+    memcpy(qdata_M + m1_size_, qm2_, sizeof(int)*m2_size_);
     qblockMM(comp);
     memcpy(qout_M, qdata_M, sizeof(float)*m1_size_);
     
