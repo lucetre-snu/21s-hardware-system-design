@@ -94,6 +94,8 @@ void quantize(const float* input, char* quantized, int num_input, int bits_min, 
   // TODO: convert floating point to quantized value
   for(int i = 0; i < num_input; i++) {
     quantized[i] = ceil(input[i] / scale) + offset;
+    
+    quantized[i] = max(bits_min, min(bits_max, input[i]/scale + offset));
   }
 }
 
@@ -120,7 +122,7 @@ const float* FPGA::blockMM(Compute* comp)
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
     // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
-    float act_scale = (comp->act_max - comp->act_min) / (act_bits_max - act_bits_min); 
+    float act_scale = (comp->act_max - comp->act_min) / 127; 
     char act_offset = char(ceil(-comp->act_min / act_scale));
     quantize(m2, qm2_, v_size_ * v_size_, act_bits_min, act_bits_max, act_offset, act_scale);
    
@@ -128,7 +130,7 @@ const float* FPGA::blockMM(Compute* comp)
     char weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
     // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
-    float weight_scale = (comp->weight_max - comp->weight_min) / (act_bits_max - act_bits_min);
+    float weight_scale = (comp->weight_max - comp->weight_min) / 127;
     char weight_offset = char(ceil(-comp->weight_min / weight_scale));
     quantize(m1, qm1_, v_size_ * v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
