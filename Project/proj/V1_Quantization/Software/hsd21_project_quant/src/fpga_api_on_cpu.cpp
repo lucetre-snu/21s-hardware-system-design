@@ -143,20 +143,21 @@ const float* FPGA::blockMM(Compute* comp)
     int weight_offset = -(comp->weight_min / weight_scale);
     quantize(m1, qm1_, m1_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
-    for(int i = 0; i < v_size_; ++i) {
-      a1[i] = a2[i] = 0;
-      for(int k = 0; k < v_size_; ++k) {
-        a1[i] += qm2_[v_size_*i+k];
-        a2[i] += qm1_[v_size_*k+i];
-      }
-    }
+    // for(int i = 0; i < v_size_; ++i) {
+    //   a1[i] = a2[i] = 0;
+    //   for(int k = 0; k < v_size_; ++k) {
+    //     a1[i] += qm2_[v_size_*i+k];
+    //     a2[i] += qm1_[v_size_*k+i];
+    //   }
+    // }
 
     for(int i = 0; i < v_size_; ++i) {
       for(int j = 0; j < v_size_; ++j) {    
         qout_M[v_size_*i+j] = 0;
-        offset[v_size_*i+j] = -v_size_*weight_offset*act_offset + act_offset*a1[i] + weight_offset*a2[j];
+        // offset[v_size_*i+j] = -v_size_*weight_offset*act_offset + act_offset*a1[i] + weight_offset*a2[j];
         for(int k = 0; k < v_size_; ++k)
-          qout_M[v_size_*i+j] += qm1_[v_size_*i+k] * qm2_[v_size_*k+j];
+          // qout_M[v_size_*i+j] += qm1_[v_size_*i+k] * qm2_[v_size_*k+j];
+          qout_M[v_size_*i+j] += (qm1_[v_size_*i+k]-weight_offset) * (qm2_[v_size_*k+j]-act_offset);
         
       }
     }
