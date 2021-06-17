@@ -219,7 +219,7 @@ const float *FPGA::blockMV(Compute* comp)
 
     a1[0] = 0;
     for(int i = 0; i < v_size_; ++i) {
-      a1[0] = qvec_[i];
+      a1[0] += qvec_[i];
       a2[i] = 0;
       for(int k = 0; k < v_size_; ++k)
         a2[i] += qmat_[v_size_*k+i];
@@ -232,7 +232,7 @@ const float *FPGA::blockMV(Compute* comp)
     for (int i = 0; i < m_size_; ++i) {
       qout_[i] = 0;
       for (int j = 0; j < v_size_; ++j)
-        qout_[i] += (qvec_[j] - act_offset) * (qmat_[v_size_*i+j] - weight_offset);
+        qout_[i] += qvec_[j] * qmat_[v_size_*i+j];
     }
     dequantize(qout_, out, v_size_, offset, act_scale*weight_scale);
   }
