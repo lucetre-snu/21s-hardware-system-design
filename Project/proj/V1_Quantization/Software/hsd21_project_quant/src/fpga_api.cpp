@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <sys/mman.h>
 #include <cstring>
-
+#include <cmath>
 
 #define min(x, y) (((x) < (y)) ? (x) : (y))
 
@@ -89,7 +89,7 @@ void quantize(const float* input, int* quantized, int num_input, int bits_min, i
 {
   // TODO: convert floating point to quantized value
   for(int i = 0; i < num_input; i++) {
-    quantized[i] = (input[i] / scale) + offset;
+    quantized[i] = ceil(input[i]/scale) + offset;
   }
 }
 
