@@ -36,7 +36,9 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   fd_ = open("/dev/mem", O_RDWR);
 
   qdata_ = new int[data_size_];
-  qdata_M = static_cast<int *>(mmap(NULL, data_size_M, PROT_READ | PROT_WRITE, MAP_SHARED, fd_, data_addr));
+  
+  qdata_M = new int[data_size_M];
+  // qdata_M = static_cast<int *>(mmap(NULL, data_size_M, PROT_READ | PROT_WRITE, MAP_SHARED, fd_, data_addr));
   
   output_ = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ | PROT_WRITE, MAP_SHARED, fd_, output_addr));
   num_block_call_ = 0;
