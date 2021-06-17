@@ -29,7 +29,7 @@ private:
   int *qout_MV;
   int *a1;
   int *a2;
-  int *offset;
+  // int *offset;
   
   int *qdata_;
   int *qdata_M;
