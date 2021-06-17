@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module tb_mm_multiplier #(
-    parameter L_RAM_SIZE = 3,
+    parameter L_RAM_SIZE = 6,
     parameter BITWIDTH = 32,
     parameter INFILE = "global_buffer_in.txt",
     parameter OUTFILE = "global_buffer_out.txt"
@@ -17,14 +17,19 @@ module tb_mm_multiplier #(
     
     reg start, clk, reset;
     integer i;
+    
+    // write
 //    initial begin
 //        for(i = 0; i < MATRIX_SIZE; i = i+1) begin
-//            rdgb[i]               = $urandom_range(2**30, 2**30+2**24);
-//            rdgb[MATRIX_SIZE + i] = $urandom_range(2**30, 2**30+2**24);
+//            rdgb[i]               = $urandom_range(-100, 100);
+//            rdgb[MATRIX_SIZE + i] = $urandom_range(-100, 100);
 //        end
 //        $writememh(INFILE, rdgb);
 //    end
+    
     assign rddata = start ? rdgb[addr] : 0;
+    
+    // read
     initial begin
         $readmemh(INFILE, rdgb);
         for(i = 0; i < MATRIX_SIZE; i = i+1) wrgb[i] <= 0;
@@ -32,6 +37,7 @@ module tb_mm_multiplier #(
         start <= 0; reset <= 1; 
         #10 start <= 1; reset <= 0;
     end
+    
     always @(*)
         if (we) wrgb[addr] = wrdata;
     always @(posedge done) begin
