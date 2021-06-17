@@ -6,6 +6,7 @@
 using namespace std;
 
 #define min(x, y) (((x) < (y)) ? (x) : (y))
+#define max(x, y) (((x) > (y)) ? (x) : (y))
 
 FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
 {
@@ -79,17 +80,17 @@ int FPGA::num_block_call(void)
 
 void quantize(const float* input, int* quantized, int num_input, int bits_min, int bits_max, int offset, float scale)
 {
-  for(int i = 0; i < num_input; i++)
-  {
-    quantized[i] = 0; // TODO: convert floating point to quantized value
+  for(int i = 0; i < num_input; i++) {
+    // TODO: convert quantized value to floating point
+    quantized[i] = max(bits_min, min(bits_max, input[i]/scale + offset)); // TODO: convert floating point to quantized value
   }
 }
 
 void dequantize(int* quantized, float* output, int num_output, int offset, float scale)
 {
-  for(int i = 0; i < num_output; i++)
-  {
-    output[i] = 0; // TODO: convert quantized value to floating point
+  for(int i = 0; i < num_output; i++) {
+    // TODO: convert quantized value to floating point
+    output[i] = scale * (quantized[i] - offset);
   }
 }
 
@@ -107,27 +108,30 @@ const float* FPGA::blockMM(Compute* comp)
     char act_bits_min = 0;
     char act_bits_max = (1<<(comp->act_bits-1))-1;
 
-    float act_scale = 0; // TODO calculate the scale factor
-    char act_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
+    // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
+    float act_scale = (comp->act_max - comp->act_min) / (act_bits_max - act_bits_min); 
+    char act_offset = -comp->act_min / act_scale;
+    quantize(m2, qm2_, m2_size_, act_bits_min, act_bits_max, act_offset, act_scale);
 
     char weight_bits_min = 0;
     char weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
-    float weight_scale = 0; // TODO calculate the scale factor
-    char weight_offset = 0; // TODO calculate the zero-offset
-    // quantize(); // TODO complete quantize function
+    // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
+    float weight_scale = (comp->weight_max - comp->weight_min) / (weight_bits_max - weight_bits_min); 
+    char weight_offset = -comp->weight_min / weight_scale;
+    quantize(m1, qm1_, m1_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
     for(int i = 0; i < v_size_; ++i)
     {
       for(int j = 0; j < v_size_; ++j){    
         qout_M[v_size_*i+j] = 0;
         for(int k = 0; k < v_size_; ++k){
-          qout_M[v_size_*i+j] += m1[v_size_*i+k] * m2[v_size_*k + j];
+          qout_M[v_size_*i+j] += qm1_[v_size_*i+k] * qm2_[v_size_*k + j];
         }
       }
     }
-    // dequantize(); // TODO complete dequantize function
+    // TODO complete dequantize function
+    dequantize(qout_M, out, m1_size_, 0, weight_scale*act_scale); 
 
   }
   else{
