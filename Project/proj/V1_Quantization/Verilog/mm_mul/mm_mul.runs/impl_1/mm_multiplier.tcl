@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -69,12 +70,11 @@ set rc [catch {
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.cache/wt [current_project]
-  set_property parent.project_path C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.xpr [current_project]
-  set_property ip_output_repo C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.cache/ip [current_project]
+  set_property webtalk.parent_dir /csehome/lgm0905/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/mm_mul.cache/wt [current_project]
+  set_property parent.project_path /csehome/lgm0905/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/mm_mul.xpr [current_project]
+  set_property ip_output_repo /csehome/lgm0905/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/mm_mul.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.runs/synth_1/mm_multiplier.dcp
-  read_ip -quiet C:/Users/lucet/semester/21s-hardware-system-design/Project/Project_V0_interim/mm_mul/mm_mul.srcs/sources_1/ip/floating_point_MAC/floating_point_MAC.xci
+  add_files -quiet /csehome/lgm0905/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/mm_mul.runs/synth_1/mm_multiplier.dcp
   link_design -top mm_multiplier -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]
