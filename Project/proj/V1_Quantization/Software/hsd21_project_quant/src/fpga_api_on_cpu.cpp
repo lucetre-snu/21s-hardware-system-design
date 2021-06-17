@@ -99,7 +99,7 @@ void dequantize(int* quantized, float* output, int num_output, int offset, float
 {
   // TODO: convert quantized value to floating point
   for(int i = 0; i < num_output; i++) {
-    output[i] = quantized[i] * scale;
+    output[i] = (quantized[i] - offset) * scale;
   }
 }
 
@@ -119,7 +119,7 @@ const float* FPGA::blockMM(Compute* comp)
 
     // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
     float act_scale = (comp->act_max - comp->act_min) / (act_bits_max - act_bits_min);
-    int act_offset = int((-(comp->act_min)/act_scale));
+    int act_offset = -(comp->act_min / act_scale);
     quantize(m2, qm2_, m2_size_, act_bits_min, act_bits_max, act_offset, act_scale);
 
     int weight_bits_min = 0;
@@ -127,19 +127,17 @@ const float* FPGA::blockMM(Compute* comp)
 
     // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
     float weight_scale = (comp->weight_max - comp->weight_min) / (act_bits_max - act_bits_min);
-    int weight_offset = int((-(comp->weight_min)/weight_scale));
+    int weight_offset = -(comp->weight_min / weight_scale);
     quantize(m1, qm1_, m1_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
-    for(int i = 0; i < v_size_; ++i)
-    {
-      for(int j = 0; j < v_size_; ++j){    
+    for(int i = 0; i < v_size_; ++i) {
+      for(int j = 0; j < v_size_; ++j) {    
         qout_M[v_size_*i+j] = 0;
-        for(int k = 0; k < v_size_; ++k){
+        for(int k = 0; k < v_size_; ++k)
           qout_M[v_size_*i+j] += (qm1_[v_size_*i+k]-weight_offset) * (qm2_[v_size_*k + j]-act_offset);
-        }
       }
     }
-    dequantize(qout_M, out, v_size_*v_size_, 0, (act_scale * weight_scale));
+    dequantize(qout_M, out, m1_size_, 0, act_scale*weight_scale);
   }
   else{
     for(int i = 0; i < v_size_; ++i)
@@ -173,29 +171,26 @@ const float *FPGA::blockMV(Compute* comp)
     int act_bits_min = 0;
     int act_bits_max = (1<<(comp->act_bits-1))-1;
 
-    float act_scale = (comp->act_max - comp->act_min) / 127; // TODO calculate the scale factor
-    // printf("act_scale : %f\n", act_scale);
-    int act_offset = int(ceil(-(comp->act_min)/act_scale)); // TODO calculate the zero-offset
-    // printf("act_offset : %d\n", act_offset);
-    quantize(vec, qvec_, v_size_, act_bits_min, act_bits_max, act_offset, act_scale); // TODO complete quantize function
+    // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
+    float act_scale = (comp->act_max - comp->act_min) / (act_bits_max - act_bits_min);
+    int act_offset = -(comp->act_min / act_scale);
+    quantize(vec, qvec_, v_size_, act_bits_min, act_bits_max, act_offset, act_scale);
     
     int weight_bits_min = 0;
     int weight_bits_max = (1<<(comp->weight_bits-1))-1;
 
-    float weight_scale = (comp->weight_max - comp->weight_min) / 127; // TODO calculate the scale factor
-    // printf("weight_scale : %f\n", weight_scale);
-    int weight_offset = int(ceil(-(comp->weight_min)/weight_scale)); // TODO calculate the zero-offset
-    // printf("weight_offset : %d\n", weight_offset);
-    quantize(mat, qmat_, m_size_ * v_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale); // TODO complete quantize function
+    // TODO calculate the scale factor & calculate the zero-offset & complete quantize function
+    float weight_scale = (comp->weight_max - comp->weight_min) / (act_bits_max - act_bits_min);
+    int weight_offset = -(comp->weight_min / weight_scale);
+    quantize(mat, qmat_, m_size_, weight_bits_min, weight_bits_max, weight_offset, weight_scale);
 
-    for (int i = 0; i < m_size_; ++i)
-    {
+    for (int i = 0; i < m_size_; ++i) {
       qout_[i] = 0;
       for (int j = 0; j < v_size_; ++j)
-        qout_[i] += (qvec_[j]-act_offset) * (qmat_[v_size_ * i + j]-weight_offset);
+        qout_[i] += (qvec_[j] - act_offset) * (qmat_[v_size_*i+j] - weight_offset);
     }
 
-    dequantize(qout_, out, v_size_, 0, (act_scale * weight_scale));
+    dequantize(qout_, out, v_size_, 0, act_scale*weight_scale));
   }
   else
   {
