@@ -36,7 +36,6 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   fd_ = open("/dev/mem", O_RDWR);
 
   qdata_ = new int[data_size_];
-  
   qdata_M = new int[data_size_M];
   // qdata_M = static_cast<int *>(mmap(NULL, data_size_M, PROT_READ | PROT_WRITE, MAP_SHARED, fd_, data_addr));
   
@@ -57,34 +56,34 @@ FPGA::~FPGA()
   delete[] qout_;
 }
 
-float* FPGA::matrix(void)
+float *FPGA::matrix(void)
 {
   return data_ + v_size_;
 }
 
-float* FPGA::vector(void)
+float *FPGA::vector(void)
 {
   return data_;
 }
 
+float *FPGA::matrix_M1(void)
+{
+  return data_M;
+}
+
+float *FPGA::matrix_M2(void)
+{
+  return data_M + m1_size_;
+}
+
 int *FPGA::qmatrix(void)
 {
-  return qdata_ + v_size_;
+  return qdata_M;
 }
 
 int *FPGA::qvector(void)
 {
   return qdata_;
-}
-
-float* FPGA::matrix_M1(void)
-{
-  return data_M;
-}
-
-float* FPGA::matrix_M2(void)
-{
-  return data_M + m1_size_;
 }
 
 int *FPGA::qmatrix_M1(void)

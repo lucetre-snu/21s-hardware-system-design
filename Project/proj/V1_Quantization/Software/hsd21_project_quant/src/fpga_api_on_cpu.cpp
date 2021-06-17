@@ -26,7 +26,6 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   
   qout_ = new int[m_size_];
   qout_M = new int[v_size_*v_size_];
-  // offset = new int[v_size_*v_size_];
 
   output_ = new unsigned int[m_size_]; // use output_ as tempolar output
   output_M = new unsigned int[v_size_*v_size_]; // use output_M as tempolar output
@@ -77,6 +76,16 @@ int *FPGA::qmatrix(void)
 int *FPGA::qvector(void)
 {
   return qdata_;
+}
+
+int *FPGA::qmatrix_M1(void)
+{
+  return qdata_M;
+}
+
+int *FPGA::qmatrix_M2(void)
+{
+  return qdata_M + m1_size_;
 }
 
 void FPGA::reset(void)
