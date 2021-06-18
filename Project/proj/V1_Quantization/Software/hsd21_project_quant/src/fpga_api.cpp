@@ -7,6 +7,7 @@
 #include <cmath>
 
 #define min(x, y) (((x) < (y)) ? (x) : (y))
+#define max(x, y) (((x) > (y)) ? (x) : (y))
 
 FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
 {
@@ -27,8 +28,7 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   qout_ = new int[m_size_];
   qout_M = new int[v_size_*v_size_];
 
-  // output_ = new unsigned int[m_size_]; // use output_ as tempolar output
-  output_ = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ | PROT_WRITE, MAP_SHARED, fd_, output_addr));
+  output_ = new unsigned int[m_size_]; // use output_ as tempolar output
   output_M = new unsigned int[v_size_*v_size_]; // use output_M as tempolar output
 
   data_ = new float[data_size_];
@@ -37,15 +37,17 @@ FPGA::FPGA(off_t data_addr, off_t output_addr, int m_size, int v_size)
   fd_ = open("/dev/mem", O_RDWR);
 
   qdata_ = new int[data_size_];
-  // qdata_M = new int[data_size_M];
   qdata_M = static_cast<int *>(mmap(NULL, data_size_M, PROT_READ | PROT_WRITE, MAP_SHARED, fd_, data_addr));
+  
+  api_ = static_cast<unsigned int *>(mmap(NULL, sizeof(unsigned int), PROT_READ | PROT_WRITE, MAP_SHARED, fd_, output_addr));
+  
   num_block_call_ = 0;
 }
 
 FPGA::~FPGA()
 {
   munmap(qdata_M, data_size_);
-  munmap(output_, sizeof(unsigned int));
+  munmap(api_, sizeof(unsigned int));
   close(fd_);
 
   delete[] output_;
@@ -126,8 +128,8 @@ const int *__attribute__((optimize("O0"))) FPGA::qblockMM(Compute* comp)
   num_block_call_ += 1;
 
   // fpga version
-  *output_ = 0x5555;
-  while (*output_ == 0x5555);
+  *api_ = 0x5555;
+  while (*api_ == 0x5555);
 
   return qdata_;
 }
@@ -177,19 +179,20 @@ const float* FPGA::blockMM(Compute* comp)
       }
     }
     
-    // for(int i = 0; i < v_size_; ++i) {
-    //   for(int j = 0; j < v_size_; ++j) {    
-    //     qout_M[v_size_*i+j] = 0;
-    //     for(int k = 0; k < v_size_; ++k)
-    //       qout_M[v_size_*i+j] += qm1_[v_size_*i+k] * qm2_[v_size_*k+j];
-    //   }
-    // }
     
-    memcpy(qdata_M, qm1_, sizeof(int)*m1_size_);
-    memcpy(qdata_M + m1_size_, qm2_, sizeof(int)*m2_size_);
+    memcpy(this->qmatrix_M1(), qm1_, sizeof(int)*m1_size_);
+    memcpy(this->qmatrix_M2(), qm2_, sizeof(int)*m2_size_);
     qblockMM(comp);
-    memcpy(qout_M, qdata_M, sizeof(float)*m1_size_);
-    
+
+    for(int i = 0; i < v_size_; ++i)
+      for(int j = 0; j < v_size_; ++j) {    
+        int psum = 0;
+        for(int k = 0; k < v_size_; ++k)
+          psum += qm1_[v_size_*i+k] * qm2_[v_size_*k+j];
+        qdata_M[v_size_*i+j+1] = psum;
+      }
+
+    memcpy(qout_M, qdata_M+1, sizeof(int)*m1_size_);
     dequantize(qout_M, out, m1_size_, offset, weight_scale*act_scale);
   }
   else{

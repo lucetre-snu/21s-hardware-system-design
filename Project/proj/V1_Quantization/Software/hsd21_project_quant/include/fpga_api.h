@@ -19,6 +19,7 @@ private:
   unsigned int *output_;
   unsigned int *output_M;
   unsigned int *output_MV;
+  unsigned int* api_;
 
   int *qvec_;
   int *qmat_;

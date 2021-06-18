@@ -46,11 +46,11 @@ const int* __attribute__((optimize("O0"))) FPGA::run()
     *api_ = 0x5555;
     while(*api_ == 0x5555);
     for (int i = 0; i < 64; i++) {
-      cout << data_[i] << " ";
+      cout << data_[i+1] << " ";
       if (i % 8 == 7) cout << endl;
     }
 
-    return data_;    
+    return data_+1;    
 }
 
 // Test code for bitstream

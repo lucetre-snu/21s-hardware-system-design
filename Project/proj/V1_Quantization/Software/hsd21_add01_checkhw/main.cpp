@@ -22,8 +22,8 @@ int main(void)
 	// 	flat[i] = i;
 	for (int i = 0; i < 8; i++) {
 		for (int j = 0; j < i; j++) {
-			input[i*8+j] = 1;
-			mat[j*8+i] = 1;
+			input[i*8 + j] = 1;
+			mat[j*8 + i] = 1;
 		}
 	}
 
