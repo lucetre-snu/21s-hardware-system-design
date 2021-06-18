@@ -98,6 +98,9 @@
         
         genvar i;
         generate for (i = 0; i < MAT_SIZE/2; i = i+1) begin: MATRIX
+            wire [BITWIDTH-1:0] ai = (i/VEC_SIZE)*VEC_SIZE + cnt_calc;
+            wire [BITWIDTH-1:0] bi = cnt_calc*VEC_SIZE + (i%VEC_SIZE) + MAT_SIZE/2;
+            
             wire [BITWIDTH-1:0] ain = gb[(i/VEC_SIZE)*VEC_SIZE + cnt_calc];
             wire [BITWIDTH-1:0] bin = gb[cnt_calc*VEC_SIZE + (i%VEC_SIZE) + MAT_SIZE/2];
             my_pe #(L_RAM_SIZE, BITWIDTH) MY_PE(

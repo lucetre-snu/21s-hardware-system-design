@@ -1,20 +1,20 @@
 -makelib xcelium_lib/xilinx_vip -sv \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
-  "/csehome/lgm0905/tools/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
+  "C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/blk_mem_gen_v8_3_6 \
   "../../../../Project_V1_Quantization.srcs/sources_1/bd/design_1/ipshared/2751/simulation/blk_mem_gen_v8_3.v" \
@@ -59,11 +59,11 @@
   "../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
   "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_5/clk_wiz_0_clk_wiz.v" \
   "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_5/clk_wiz_0.v" \
-  "../../../bd/design_1/ipshared/efee/src/integer_MAC.v" \
-  "../../../bd/design_1/ipshared/efee/src/mm_multiplier.v" \
-  "../../../bd/design_1/ipshared/efee/src/my_pe.v" \
-  "../../../bd/design_1/ipshared/efee/hdl/myip_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/efee/hdl/myip_v1_0.v" \
+  "../../../bd/design_1/ipshared/89bb/src/integer_MAC.v" \
+  "../../../bd/design_1/ipshared/89bb/src/mm_multiplier.v" \
+  "../../../bd/design_1/ipshared/89bb/src/my_pe.v" \
+  "../../../bd/design_1/ipshared/89bb/hdl/myip_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/89bb/hdl/myip_v1_0.v" \
   "../../../bd/design_1/ip/design_1_myip_0_0/sim/design_1_myip_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_vip_v1_1_4 -sv \
