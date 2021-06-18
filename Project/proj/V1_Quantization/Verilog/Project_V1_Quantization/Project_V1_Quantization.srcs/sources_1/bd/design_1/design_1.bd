@@ -444,24 +444,6 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "m01_couplers_to_axi_mem_intercon": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
           "axi_mem_intercon_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
@@ -478,6 +460,24 @@
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_axi_mem_intercon": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
             ]
           }
         },
@@ -1383,16 +1383,16 @@
           "processing_system7_0/DDR"
         ]
       },
-      "myip_0_m00_bram": {
-        "interface_ports": [
-          "blk_mem_gen_0/BRAM_PORTB",
-          "myip_0/m00_bram"
-        ]
-      },
       "axi_mem_intercon_M01_AXI": {
         "interface_ports": [
           "axi_mem_intercon/M01_AXI",
           "myip_0/S00_AXI"
+        ]
+      },
+      "myip_0_m00_bram": {
+        "interface_ports": [
+          "blk_mem_gen_0/BRAM_PORTB",
+          "myip_0/m00_bram"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTA": {

@@ -22,8 +22,14 @@ module integer_MAC #(
     assign res = dout;
     
     always @(posedge aclk) begin
-        if (!aresetn)           {dout, cnt} <= {ZERO, 2'b00};
-        if (cnt == 2'b10)       {dout, cnt} <= {valid ? (ain*bin + cin) : dout, 2'b00};
-        else                    {dout, cnt} <= {valid ? (ain*bin + cin) : dout, cnt + ~valid};
+        if (!aresetn)           dout <= ZERO;
+        else if (valid)         dout <= ain*bin + cin;
+        else                    dout <= dout;
+    end
+    
+    always @(posedge aclk) begin
+        if (!aresetn)           cnt <= 2'b00;
+        else if (cnt == 2'b10)  cnt <= 2'b00;
+        else                    cnt <= cnt + 1;
     end    
 endmodule

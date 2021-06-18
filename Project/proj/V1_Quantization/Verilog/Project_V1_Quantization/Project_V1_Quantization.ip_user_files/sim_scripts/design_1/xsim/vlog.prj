@@ -3,11 +3,11 @@ verilog xil_defaultlib --include "../../../../Project_V1_Quantization.srcs/sourc
 "../../../bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" \
 "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_5/clk_wiz_0_clk_wiz.v" \
 "../../../bd/design_1/ip/design_1_myip_0_0/src/clk_wiz_0_5/clk_wiz_0.v" \
-"../../../bd/design_1/ipshared/efee/src/integer_MAC.v" \
-"../../../bd/design_1/ipshared/efee/src/mm_multiplier.v" \
-"../../../bd/design_1/ipshared/efee/src/my_pe.v" \
-"../../../bd/design_1/ipshared/efee/hdl/myip_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/efee/hdl/myip_v1_0.v" \
+"../../../bd/design_1/ipshared/89bb/src/integer_MAC.v" \
+"../../../bd/design_1/ipshared/89bb/src/mm_multiplier.v" \
+"../../../bd/design_1/ipshared/89bb/src/my_pe.v" \
+"../../../bd/design_1/ipshared/89bb/hdl/myip_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/89bb/hdl/myip_v1_0.v" \
 "../../../bd/design_1/ip/design_1_myip_0_0/sim/design_1_myip_0_0.v" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \

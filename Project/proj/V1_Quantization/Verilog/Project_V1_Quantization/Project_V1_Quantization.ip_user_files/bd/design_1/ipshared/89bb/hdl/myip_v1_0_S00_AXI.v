@@ -399,7 +399,7 @@
 	end    
 
 	// Add user logic here
-    localparam L_RAM_SIZE = 6;
+    localparam L_RAM_SIZE = 4;
     localparam BITWIDTH = 32;
     
     wire start, done, we;

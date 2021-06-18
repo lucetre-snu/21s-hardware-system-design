@@ -20,3 +20,26 @@ update_compile_order -fileset sim_1
 launch_simulation
 open_wave_config C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/tb_mm_multiplier_behav.wcfg
 source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/tb_mm_multiplier_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/tb_mm_multiplier_behav.wcfg
+source tb_mm_multiplier.tcl
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_Quantization/Verilog/mm_mul/tb_mm_multiplier_behav.wcfg}
+close_sim
