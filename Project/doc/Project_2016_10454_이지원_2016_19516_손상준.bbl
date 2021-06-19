@@ -1,0 +1,55 @@
+\begin{thebibliography}{10}
+
+\bibitem{crockett2014zynq}
+Louise~Helen Crockett, Ross Elliot, Martin Enderwitz, and Robert Stewart.
+\newblock {\em The Zynq Book: Embedded Processing with the Arm Cortex-A9 on the
+  Xilinx Zynq-7000 All Programmable Soc}.
+\newblock Strathclyde Academic Media, 2014.
+
+\bibitem{deng2012mnist}
+Li~Deng.
+\newblock The mnist database of handwritten digit images for machine learning
+  research [best of the web].
+\newblock {\em IEEE Signal Processing Magazine}, 29(6):141--142, 2012.
+
+\bibitem{lab11}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 11: DMA (Direct Memory Access)}.
+\newblock Hardware System Design, May 2021.
+
+\bibitem{lab2}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 2: SW app on MNIST}.
+\newblock Hardware System Design, March 2021.
+
+\bibitem{lab6}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 6: BRAM to PE controller}.
+\newblock Hardware System Design, April 2021.
+
+\bibitem{lab9}
+Computing Memory~Architecture Lab.
+\newblock {\em Practice 9: Convolution Lowering SW}.
+\newblock Hardware System Design, May 2021.
+
+\bibitem{CDMA}
+Xilinx.
+\newblock {\em AXI Central Direct Memory Access v4.1}.
+\newblock Xilinx, 2018.
+
+\bibitem{FP_MAC}
+Xilinx.
+\newblock {\em Floating-Point Operator v7.1}.
+\newblock Xilinx, 2020.
+
+\bibitem{Multiply_Addder}
+Xilinx.
+\newblock {\em Multiply Adder v3.0}.
+\newblock Xilinx, 2021.
+
+\bibitem{zhai2016mlp}
+Xiaojun Zhai, Amine Ait~Si Ali, Abbes Amira, and Faycal Bensaali.
+\newblock Mlp neural network based gas classification system on zynq soc.
+\newblock {\em IEEE Access}, 4:8138--8146, 2016.
+
+\end{thebibliography}
