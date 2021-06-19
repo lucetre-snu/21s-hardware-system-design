@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jun 15 17:02:16 2021
+# Process ID: 1376
+# Current directory: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30444 C:\Users\lucet\semester\21s-hardware-system-design\Project\proj\V1_DMA\Verilog\Project_V1_DMA\Project_V1_DMA.xpr
+# Log file: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA/vivado.log
+# Journal file: C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA/Project_V1_DMA.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 794.465 ; gain = 180.309
+update_compile_order -fileset sources_1
+ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory C:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/Project_V1_DMA/Project_V1_DMA.tmp/myip_v1_0_project c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/lucet/semester/21s-hardware-system-design/project/proj/v1_dma/verilog/project_v1_dma/project_v1_dma.tmp/myip_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 945.746 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0/src/mm_multiplier.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0/src/my_pe.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0/hdl/myip_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/lucet/semester/21s-hardware-system-design/Project/proj/V1_DMA/Verilog/My_IP/myip_1.0/hdl/myip_v1_0.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 945.746 ; gain = 0.000
+update_compile_order -fileset sources_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 15 17:44:40 2021...
